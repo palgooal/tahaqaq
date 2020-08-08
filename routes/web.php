@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('pg-admin', 'admin/index');
+Route::resource('/pg-admin/menus', 'MenuController');
+Route::resource('/pg-admin/upload', 'UploadController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
