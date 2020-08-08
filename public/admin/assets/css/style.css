@@ -1,0 +1,48 @@
+.colThemsBackground{
+    padding: 10px;
+}
+
+.boxColor ul li{
+   
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-right: 3px;
+        cursor: pointer;
+        /* margin-bottom: -6px; */
+        border-radius: 50%;
+}
+.backGroundColor ul li{
+    width: 100px;
+    height: 150px;
+    display: inline-block;
+    margin-right: 3px;
+    cursor: pointer;
+    /* margin-bottom: -6px; */
+
+}
+
+
+.aside-menu, .aside{
+    /* background-image: url(../media/bg/bg-6.jpg); */
+    /* background-color: #7F1734 !important; */
+    /* background-color: #004242 !important; */
+    /* background-color: #FF91A4 !important; */
+    /* background-color: #FF7E00 !important; */
+
+
+}
+
+#kt_content{
+    direction: rtl;
+}
+.form-body{
+    padding: 10px;
+}
+.form-body label{
+    float: right;
+}
+
+#kt_aside{
+    direction: rtl;
+}

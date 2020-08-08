@@ -1,0 +1,75 @@
+.cardImageTeam{
+    height: 100px;
+    width: 132px;
+}
+.cardImageTeam img{
+    width: 100%;
+    height: 100%;
+}
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+        padding-right: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    border-radius: .25rem;
+}
+.alert-warning{
+    color: #856404;
+background-color: #fff3cd;
+border-color: #ffeeba;
+}
+
+.alert-success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.spanAlertInb{
+    color: red; 
+    text-align: right;
+    /* line-height: 3px; */
+}
+
+#alertCopty{
+    display: none;
+}
+
+.imgUpload:hover, .colViewImg:hover{
+    border: 1px solid #1e1e2d;
+    -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+.colViewImg{
+    background-color: #eee;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.tableGetCustomerAllDataOne th{
+    background: #eeeeee56;
+    
+}
+
+
+.bodyImg{
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+@media only screen and (min-width: 768px){
+    .modalUpload{
+        margin-right: -248px;
+    }
+}
+
+
+
