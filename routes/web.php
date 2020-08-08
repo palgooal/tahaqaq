@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +19,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::resource('/', 'HomeController');
+Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('pg-admin', 'admin/index');
 Route::resource('/pg-admin/menus', 'MenuController');
 Route::resource('/pg-admin/upload', 'UploadController');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
