@@ -138,7 +138,7 @@
                                 </g>
                             </svg><!--end::Svg Icon-->
                         </span>
-                       <span class="menu-text">اضافة صورة</span>
+                       <span class="menu-text">رفع صورة</span>
                     </a>
                  </li>
                 </ul>
