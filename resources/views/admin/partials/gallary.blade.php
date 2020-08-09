@@ -1,5 +1,5 @@
 <div class="row">
-  
+<div class="container">
     <div class="col-sm-12">
       <!-- BEGIN SAMPLE TABLE PORTLET-->
       <div class="portlet light bordered">
@@ -60,5 +60,6 @@
         </div>
       </div>
     </div>
+</div>
 </div>
 {{-- end content --}}
