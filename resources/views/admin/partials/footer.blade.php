@@ -1680,3 +1680,4 @@
                                     <!--begin::Page Scripts(used by this page)-->
                     <script src="{{asset('admin/assets/js/pages/widgets.js')}}"></script>
                                         <!--end::Page Scripts-->
+                    <script src="{{asset('admin/assets/js/adminCsspublic.js')}}"></script>

@@ -40,7 +40,7 @@ border-color: #ffeeba;
     display: none;
 }
 
-.imgUpload:hover, .colViewImg:hover{
+ .colViewImg:hover{
     border: 1px solid #1e1e2d;
     -webkit-transition-duration: 0.7s;
     -moz-transition-duration: 0.7s;
@@ -49,11 +49,13 @@ border-color: #ffeeba;
     cursor: pointer;
 }
 .colViewImg{
-    background-color: #eee;
+    background-color: #eeeeee29;
     margin: 15px;
     border-radius: 5px;
 }
-
+.imgUpload:hover{
+    cursor: pointer;
+}
 .tableGetCustomerAllDataOne th{
     background: #eeeeee56;
     
@@ -71,5 +73,7 @@ border-color: #ffeeba;
     }
 }
 
-
+.inptPath{
+    opacity: 0;
+}
 

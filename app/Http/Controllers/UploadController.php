@@ -17,6 +17,13 @@ class UploadController extends Controller
         return view('admin.upload.upload')->with('uploads', upload::get());
     }
 
+    public function addMedia(){
+        return view('admin.upload.formAddMedia');
+    }
+
+    public function selectMedia(){
+        return view('admin.upload.selectMedia')->with('uploads', upload::get());
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -24,7 +31,7 @@ class UploadController extends Controller
      */
     public function create()
     {
-        return view('admin/upload/upload');
+        return view('admin.upload.formAddMedia');
     }
 
     /**

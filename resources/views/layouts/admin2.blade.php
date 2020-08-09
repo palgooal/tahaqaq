@@ -49,8 +49,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Body-->
 <body  id="kt_body"  class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"  >
 
-            @include('admin.partials.header')
-            @include('admin.partials.sidebar')
+          
+            
             @yield('content')
             @include('admin.partials.footer')
 
