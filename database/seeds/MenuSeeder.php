@@ -23,12 +23,7 @@ class MenuSeeder extends Seeder
             'url'=>"#",
             'sort' =>"1",
         ]);
-        DB::table('menus')->insert([
-            'name_ar'=>"لماذا تحقق",
-            'name_en'=>"Why Tahaqaq",
-            'url'=>"#",
-            'sort' =>"1",
-        ]);
+
         DB::table('menus')->insert([
             'name_ar'=>"الخدمات",
             'name_en'=>"Services",
