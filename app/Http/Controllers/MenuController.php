@@ -37,13 +37,14 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $data = request()->validate([
-            'name' => 'required',
+            'name_ar' => 'required',
             'url'=> 'required',
             'sort' => 'required'
 
         ]);
         $menus = new Menu();
-        $menus->name = $request->name;
+        $menus->name_ar = $request->name_ar;
+        $menus->name_en = $request->name_en;
         $menus->url = $request->url;
         $menus->sort = $request->sort;
         $menus->save();
@@ -83,7 +84,8 @@ class MenuController extends Controller
     public function update(Request $request, $id)
     {
         $menu = Menu::find($id);
-        $menu->name = $request->name;
+        $menu->name_ar = $request->name_ar;
+        $menu->name_en = $request->name_en;
         $menu->url = $request->url;
         $menu->sort = $request->sort;
         $menu->save();
