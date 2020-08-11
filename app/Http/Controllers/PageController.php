@@ -24,7 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.AddPages');
     }
 
     /**
@@ -57,7 +57,7 @@ class PageController extends Controller
      */
     public function edit(Page $page)
     {
-        //
+        return view('admin.pages.EditPages');
     }
 
     /**

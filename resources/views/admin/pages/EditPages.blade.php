@@ -1,8 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-واجهة الصفحات
+تعديل صفحة جديدة
 
 @endsection
-
-
-
