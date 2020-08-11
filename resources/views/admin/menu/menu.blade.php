@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label>اسم القائمة<span class="text-danger">*</span></label>
-                <input type="text" name="name" class="form-control" placeholder="اكتب عنوان القائمة">
+                <input type="text" name="name_ar" class="form-control" placeholder="اكتب عنوان القائمة">
                 <span class="form-text text-muted">يمكنك تعريف قائمة جديدة بأضافة اسم القائمة لكي تظهر في الموقع</span>
             </div>
             <div class="form-group">
@@ -137,7 +137,7 @@
                           </div>
                         <tr>
                             <td>{{$menu->sort}}</td>
-                            <td>{{$menu->name}}</td>
+                            <td>{{$menu->name_ar}}</td>
                             <td>{{$menu->url}}</td>
                             <td>
                                 <button  class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"{{$menu->id}}>تعديل</button>
