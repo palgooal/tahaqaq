@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Model\Page;
+use Str;
 use Illuminate\Http\Request;
+
 
 class PageController extends Controller
 {
@@ -14,7 +16,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.IndexPages');
+        return view('admin.pages.IndexPages')->with('pages', Page::get());
     }
 
     /**
@@ -35,7 +37,16 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
+        $page = new Page();
+        $page->slug = $slug;
+        $page->title_ar = $request->title_ar;
+        $page->content_ar = $request->content_ar;
+        $page->title_en = $request->title_en;
+        $page->content_en = $request->content_en;
+        $page->tags = $request->tags;
+        $page->save();
+        return back();
     }
 
     /**
@@ -55,9 +66,9 @@ class PageController extends Controller
      * @param  \App\Model\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function edit(Page $page)
+    public function edit($id)
     {
-        return view('admin.pages.EditPages');
+        return view('admin.pages.EditPages')->with('pages', Page::find($id));
     }
 
     /**
@@ -69,7 +80,16 @@ class PageController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        //
+        $slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
+        $page = $page;
+        $page->slug = $slug;
+        $page->title_ar = $request->title_ar;
+        $page->content_ar = $request->content_ar;
+        $page->title_en = $request->title_en;
+        $page->content_en = $request->content_en;
+        $page->tags = $request->tags;
+        $page->save();
+        return back();
     }
 
     /**
