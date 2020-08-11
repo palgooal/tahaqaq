@@ -92,7 +92,7 @@
                     </thead>
                     <tbody>
                         @foreach ($menus as $menu)
-                        @include('admin.partials.editMenu')
+                        @include('admin.menu.editMenu')
                                     
                                  
                         <tr>
