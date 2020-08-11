@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
 
 
 <div class="container">
@@ -93,54 +92,59 @@
                     </thead>
                     <tbody>
                         @foreach ($menus as $menu)
-                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                              <div class="modal-content">
-                                <div class="container">
-                                  <div class="card card-custom">
-                                      <div class="card-header">
-                                       <h3 class="card-title">
-                                          تعديل القائمة
-                                       </h3>
-                                      </div>
-                                      <form method="post" action="/pg-admin/menus/{{$menu->id}}" accept-charset="UTF-8" class="form-horizontal" role="form" >
-                          
-                                          <input type="hidden" name="_method" value="put">
-                                          @csrf
-                                            <div class="form-body">
-                                                <div class="form-group">
-                                                    <label>اسم القائمة</label>
-                                                    <input class="form-control spinner" type="text" placeholder="اكتب عنوان القائمة بالعربية" value="{{$menu->name}}" name="name" required/>                
-                                                  </div>
-                                    
-                                                <div class="form-group">
-                                                  <label>رابط عنوان القائمة </label>
-                                                <input class="form-control spinner" type="text" placeholder="اكتب هنا رابط القائمة url http://" name="url" id="url" value="{{$menu->sort}}" required>
-                                    
-                                                </div>
-                                                <div class="form-group">
-                                                  <label>ترتيب القائمة</label>
-                                                <input class="form-control spinner" type="number" placeholder="ترتيب القائمة" name="sort" value="{{$menu->sort}}" required>
-                                              </div>
-                                    
-                                            </div>
-                                            <div class="form-actions">
-                                            <button type="submit" class="btn blue" data-toggle="modal" data-target=".bd-example-modal-lg">تعديل</button>
-                                                <a href="/pg-admin/menus" type="button" class="btn default">الغاء</a>
-                                            </div>
-                                    
-                                        </form>
+                        <div class="modal fade" id="exampleModals{{$menu->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                               <div class="modal-content">
+                                  <div class="modal-header">
+                                     <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                     </button>
                                   </div>
-                                </div>
-                              </div>
+                                  <div class="modal-body">
+                                     <div class="card-header">
+                                        <h3 class="card-title">
+                                           تعديل القائمة
+                                        </h3>
+                                     </div>
+                                     <form method="post" action="/pg-admin/menus/{{$menu->id}}" accept-charset="UTF-8" class="form-horizontal" role="form" >
+                                        <input type="hidden" name="_method" value="put">
+                                        @csrf
+                                        <div class="form-body">
+                                           <div class="form-group">
+                                              <label>اسم القائمة</label>
+                                              <input class="form-control spinner" type="text" placeholder="اكتب عنوان القائمة بالعربية" value="{{$menu->name_ar}}" name="name_ar" required/>                
+                                           </div>
+                                           <div class="form-group">
+                                              <label>رابط عنوان القائمة </label>
+                                              <input class="form-control spinner" type="text" placeholder="اكتب هنا رابط القائمة url http://" name="url" id="url" value="{{$menu->sort}}" required>
+                                           </div>
+                                           <div class="form-group">
+                                              <label>ترتيب القائمة</label>
+                                              <input class="form-control spinner" type="number" placeholder="ترتيب القائمة" name="sort" value="{{$menu->sort}}" required>
+                                           </div>
+                                        </div>
+                                        <div class="form-actions">
+                                           <button type="submit" class="btn blue" data-toggle="modal" data-target=".bd-example-modal-lg"{{$menu->id}}>تعديل</button>
+                                           <a href="/pg-admin/menus" type="button" class="btn default">الغاء</a>
+                                        </div>
+                                     </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                     <button type="button" class="btn btn-primary">Send message</button>
+                                  </div>
+                               </div>
                             </div>
-                          </div>
+                         </div>
+                                    
+                                 
                         <tr>
                             <td>{{$menu->sort}}</td>
                             <td>{{$menu->name_ar}}</td>
                             <td>{{$menu->url}}</td>
                             <td>
-                                <button  class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"{{$menu->id}}>تعديل</button>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#exampleModals{{$menu->id}}" data-whatever="@getbootstrap">تعديل</button>
                                 {{-- href="/pg-admin/menus/{{$menu->id}}/edit" --}}
                             </td>
                             <td>
