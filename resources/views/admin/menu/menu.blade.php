@@ -113,7 +113,7 @@
                                            </div>
                                            <div class="form-group">
                                               <label>رابط عنوان القائمة </label>
-                                              <input class="form-control spinner" type="text" placeholder="اكتب هنا رابط القائمة url http://" name="url" id="url" value="{{$menu->sort}}" required>
+                                              <input class="form-control spinner" type="text" placeholder="اكتب هنا رابط القائمة url http://" name="url" id="url" value="{{$menu->url}}" required>
                                            </div>
                                            <div class="form-group">
                                               <label>ترتيب القائمة</label>
