@@ -1345,7 +1345,7 @@
                     <!--end::Header-->
 
                     <!--begin::Content-->
-                    
+
                     <!--end::Content-->
                 </div>
                 <!--end::Demo Panel-->
@@ -1429,11 +1429,14 @@
                                         <!--end::Page Scripts-->
                     <script src="{{asset('admin/assets/js/adminCsspublic.js')}}"></script>
 
-                    
-                     
+
+
                     <!--begin::Page Scripts(used by this page)-->
                     <script src="{{asset('admin/assets/js/pages/crud/forms/editors/summernote.js')}}"></script>
                     <!--end::Page Scripts-->
                     <!--begin::Page Scripts(used by this page)-->
                     <script src="{{asset('admin/assets/js/pages/crud/forms/widgets/tagify.js')}}"></script>
                     <!--end::Page Scripts-->
+                     <!--begin::Page Scripts(used by this page)-->
+                    <script src="{{asset('admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js')}}"></script>
+                     <!--end::Page Scripts-->
