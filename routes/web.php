@@ -28,6 +28,8 @@ Route::resource('/pg-admin/menus', 'MenuController');
 Route::resource('/pg-admin/upload', 'UploadController');
 Route::get('/pg-admin/addMedia', 'UploadController@addMedia');
 Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia');
+// pages
 Route::resource('/pg-admin/pages', 'PageController');
+Route::get('/pages/{slug}', 'PageController@show');
 
 
