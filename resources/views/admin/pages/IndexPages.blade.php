@@ -55,7 +55,7 @@
                                 </td>
                                     @endforeach
                                 </tr>
-                                              <!-- Button trigger modal -->
+   <!-- Button trigger modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="deletepage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
