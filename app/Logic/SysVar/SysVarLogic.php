@@ -34,4 +34,18 @@ class SysVarLogic{
     public function GetTypes(){
         return SysVar::select('type')->distinct()->get();
     }
+
+    public function UpdateSysVarValue($id, $lang,$value){
+        $obj = SysVar::findOrFail($id);
+        switch (strtolower($lang)) {
+            case 'ar':
+                $obj->value_ar = $value;
+                break;
+            case 'en':
+                $obj->value_en = $value;
+                break;
+        }
+
+        $obj->save();
+    }
 }

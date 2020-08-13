@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Logic\SysVar\SysVarLogic;
 use App\Model\SysVar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class SysVarController extends Controller
 {
@@ -80,6 +81,7 @@ class SysVarController extends Controller
     public function editAsCards(SysVar $sysVar)
     {
         //
+        Log::debug('$$$$$$$$message');
         $sysVars = $this->sysVarLogic->GetAll();
         $data = $sysVars->groupBy('type');
 
@@ -96,6 +98,24 @@ class SysVarController extends Controller
     public function updateAsCard(Request $request, SysVar $sysVar)
     {
         //
+        // $out = new \Symfony\Component\Console\Output\ConsoleOutput();
+
+        foreach ($request->all() as $key => $value) {
+            // $out->writeln(json_encode($key));
+            if(!str_starts_with($key, 'value_'))
+                continue;
+
+            $data = explode('_',$key);
+            if(count($data) != 3)
+                continue;
+            list($v,$lang, $id) = $data;
+
+            $this->sysVarLogic->UpdateSysVarValue($id, $lang, $value);
+
+            // $out->writeln('key:'.$key.', id:'.$id.', value:'.$value);
+        }
+        return redirect()->back()->with('success', trans('تم الحفظ بنجاح'));
+        // return redirect('/pg-admin/sysVars_editAsCards');
     }
 
 
