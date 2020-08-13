@@ -22,7 +22,7 @@
 					<h3>{{__('login.Login')}}</h3>
 					<p class="opacity-60 font-weight-bold">{{__('login.Enter your details to login to your account:')}}</p>
 				</div>
-                <form class="form" action="{{ route('login') }}" method="POST">
+                <form class="form" id="kt_login_signin_form" action="{{ route('login') }}" method="POST">
                     @csrf
 					<div class="form-group">
                         <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5 @error('email') is-invalid @enderror" type="email" value="{{ old('email') }}" placeholder="{{__('login.Email')}}" name="email" required autocomplete="email" autofocus/>
@@ -51,7 +51,7 @@
 						<a href="javascript:;" id="kt_login_forgot" class="text-white font-weight-bold">{{__('login.Forget Password ?')}}</a>
 					</div>
 					<div class="form-group text-center mt-10">
-						<button type="submit"  class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">{{__('login.Sign In')}}</button>
+						<button  id="kt_login_signin_submit"  type="submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">{{__('login.Sign In')}}</button>
 					</div>
 				</form>
 

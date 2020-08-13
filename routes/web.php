@@ -24,15 +24,15 @@ Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('pg-admin', 'admin/index')->middleware('auth');
-Route::resource('/pg-admin/menus', 'MenuController');
-Route::resource('/pg-admin/upload', 'UploadController');
-Route::get('/pg-admin/addMedia', 'UploadController@addMedia');
-Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia');
+Route::resource('/pg-admin/menus', 'MenuController')->middleware('auth');
+Route::resource('/pg-admin/upload', 'UploadController')->middleware('auth');
+Route::get('/pg-admin/addMedia', 'UploadController@addMedia')->middleware('auth');
+Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia')->middleware('auth');
 // pages
-Route::resource('/pg-admin/pages', 'PageController');
+Route::resource('/pg-admin/pages', 'PageController')->middleware('auth');
 Route::get('/pages/{slug}', 'PageController@show');
 
-Route::resource('/pg-admin/users', 'UserController');
+Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 
 
 

@@ -130,10 +130,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
             <!--begin::Page Scripts(used by this page)-->
-<script src="{{asset('admin/assets/js/pages/custom/login/login-general.js')}}"></script>
+{{-- <script src="{{asset('admin/assets/js/pages/custom/login/login-general.js')}}"></script> --}}
+<script src="{{asset('admin/assets/js/pages/custom/login/login-3.min.js')}}"></script>
                 <!--end::Page Scripts-->
 <script src="{{asset('asset/js/public.js')}}"></script>
 
     </body>
 <!--end::Body-->
 </html>
+
+
