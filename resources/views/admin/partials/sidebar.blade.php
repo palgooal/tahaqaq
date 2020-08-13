@@ -110,7 +110,7 @@
                     </a>
                  </li>
                  {{-- start upload --}}
-                     
+
 
 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
    <a href="javascript:;" class="menu-link menu-toggle">
@@ -139,7 +139,7 @@
             <span class="menu-text">المعرض</span>
          </a>
       </li>
-         
+
          <li class="menu-item " aria-haspopup="true">
             <a href="/pg-admin/addMedia" class="menu-link ">
                <i class="menu-bullet menu-bullet-dot">
@@ -159,7 +159,7 @@
 
 
                  {{-- start pages --}}
-                     
+
 
                  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                   <a href="javascript:;" class="menu-link menu-toggle">
@@ -187,7 +187,7 @@
                            <span class="menu-text">الصفحات</span>
                         </a>
                      </li>
-                        
+
                         <li class="menu-item " aria-haspopup="true">
                            <a href="/pg-admin/pages/create" class="menu-link ">
                               <i class="menu-bullet menu-bullet-dot">
@@ -197,6 +197,16 @@
                               <span class="menu-text">اضافة صفحة</span>
                            </a>
                         </li>
+
+                        <li class="menu-item " aria-haspopup="true">
+                            <a href="/pg-admin/sysVars_editAsCards" class="menu-link ">
+                               <i class="menu-bullet menu-bullet-dot">
+                                  <span>
+                                  </span>
+                               </i>
+                               <span class="menu-text">sys vars</span>
+                            </a>
+                         </li>
                      </ul>
                   </div>
                </li>
