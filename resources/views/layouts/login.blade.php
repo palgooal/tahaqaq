@@ -26,7 +26,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css"/>
                         <!--end::Page Vendors Styles-->
-
+ <!--begin::Page Custom Styles(used by this page)-->
+    <link href="{{asset('admin/assets/css/pages/login/classic/login-3.css')}}" rel="stylesheet" type="text/css"/>
+ <!--end::Page Custom Styles-->
 
         <!--begin::Global Theme Styles(used by all pages)-->
         <link href="{{asset('admin/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
@@ -41,7 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{asset('admin/assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
                 <!--end::Layout Themes-->
-    
+
 
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
 
@@ -131,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{asset('admin/assets/js/pages/custom/login/login-general.js')}}"></script>
                 <!--end::Page Scripts-->
 <script src="{{asset('asset/js/public.js')}}"></script>
+
     </body>
 <!--end::Body-->
 </html>

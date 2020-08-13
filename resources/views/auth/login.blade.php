@@ -22,7 +22,8 @@
 					<h3>{{__('login.Login')}}</h3>
 					<p class="opacity-60 font-weight-bold">{{__('login.Enter your details to login to your account:')}}</p>
 				</div>
-				<form class="form" id="kt_login_signin_form" action="{{ route('login') }}" method="POST">
+                <form class="form" action="{{ route('login') }}" method="POST">
+                    @csrf
 					<div class="form-group">
                         <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5 @error('email') is-invalid @enderror" type="email" value="{{ old('email') }}" placeholder="{{__('login.Email')}}" name="email" required autocomplete="email" autofocus/>
                         @error('email')
@@ -50,7 +51,7 @@
 						<a href="javascript:;" id="kt_login_forgot" class="text-white font-weight-bold">{{__('login.Forget Password ?')}}</a>
 					</div>
 					<div class="form-group text-center mt-10">
-						<button id="kt_login_signin_submit" class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">{{__('login.Sign In')}}</button>
+						<button type="submit"  class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3">{{__('login.Sign In')}}</button>
 					</div>
 				</form>
 
@@ -58,7 +59,7 @@
 			<!--end::Login Sign in form-->
 
 			<!--begin::Login Sign up form-->
-			{{-- <div class="login-signup">
+			<div class="login-signup">
 				<div class="mb-20">
 					<h3>Sign Up</h3>
 					<p class="opacity-60">Enter your details to create your account</p>
@@ -91,7 +92,7 @@
 						<button id="kt_login_signup_cancel" class="btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15 py-3 m-2">Cancel</button>
 					</div>
 				</form>
-			</div> --}}
+			</div>
 			<!--end::Login Sign up form-->
 
 			<!--begin::Login forgot password form-->

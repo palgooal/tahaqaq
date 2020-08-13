@@ -23,7 +23,7 @@ Route::resource('/', 'HomeController');
 Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('pg-admin', 'admin/index');
+Route::view('pg-admin', 'admin/index')->middleware('auth');
 Route::resource('/pg-admin/menus', 'MenuController');
 Route::resource('/pg-admin/upload', 'UploadController');
 Route::get('/pg-admin/addMedia', 'UploadController@addMedia');
