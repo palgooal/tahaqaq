@@ -41,6 +41,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{asset('admin/assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
                 <!--end::Layout Themes-->
+    
 
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
 
@@ -129,6 +130,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('admin/assets/js/pages/custom/login/login-general.js')}}"></script>
                 <!--end::Page Scripts-->
+<script src="{{asset('asset/js/public.js')}}"></script>
     </body>
 <!--end::Body-->
 </html>

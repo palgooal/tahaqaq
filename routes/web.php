@@ -30,4 +30,7 @@ Route::get('/pg-admin/addMedia', 'UploadController@addMedia');
 Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia');
 Route::resource('/pg-admin/pages', 'PageController');
 
+Route::resource('/pg-admin/users', 'UserController');
+
+
 
