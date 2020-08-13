@@ -1440,3 +1440,7 @@
                      <!--begin::Page Scripts(used by this page)-->
                     <script src="{{asset('admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js')}}"></script>
                      <!--end::Page Scripts-->
+
+
+                     <script src="{{asset('admin\assets\js\alertsDelete.js')}}"></script>
+

@@ -93,8 +93,8 @@
                     <tbody>
                         @foreach ($menus as $menu)
                         @include('admin.menu.editMenu')
-                                    
-                                 
+
+
                         <tr>
                             <td>{{$menu->sort}}</td>
                             <td>{{$menu->name_ar}}</td>
@@ -104,13 +104,38 @@
                                 {{-- href="/pg-admin/menus/{{$menu->id}}/edit" --}}
                             </td>
                             <td>
-                                <button type="button" class="btn btn-danger" data-menuid="{{$menu->id}}" data-toggle="modal" data-target="#delete">
+                                <button type="button" class="btn btn-danger" data-menuid="{{$menu->id}}" data-toggle="modal" data-target="#deletemenu">
                                    حذف
                                 </button>
                             </td>
                             @endforeach
                         </tr>
+<!-- Button trigger modal -->
 
+<!-- Modal -->
+<div class="modal fade" id="deletemenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">تحذير من حذف الصفحة</h4>
+        </div>
+        <form action="{{route('menus.destroy', 'test')}}" method="post">
+          @method('delete')
+          @csrf
+        <div class="modal-body">
+          هل انت متأكد انك تريد الحذف
+
+        <input type="hidden" name="menu_id" id="menu_id" value="">
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">لا ارجع للقائمة</button>
+          <button type="submit" class="btn btn-primary">نعم احذف</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
                     </tbody>
                 </table>
             </div>

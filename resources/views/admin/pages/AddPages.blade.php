@@ -50,7 +50,7 @@
 				<div class="col-lg-3"></div>
 				<div class="col-lg-9">
 					<button type="submit" class="btn btn-primary mr-2">اضافة</button>
-					<button type="reset" class="btn btn-secondary">الغاء</button>
+					<a type="reset" class="btn btn-secondary" href="/pg-admin/pages">الغاء </a>
 				</div>
 			</div>
 		</div>

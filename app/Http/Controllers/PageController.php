@@ -46,7 +46,7 @@ class PageController extends Controller
         $page->content_en = $request->content_en;
         $page->tags = $request->tags;
         $page->save();
-        return back();
+        return redirect('/pg-admin/pages');
     }
 
     /**
@@ -55,9 +55,9 @@ class PageController extends Controller
      * @param  \App\Model\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function show(Page $page)
+    public function show($slug)
     {
-        //
+        return view('pages')->with('page', Page::where('slug', $slug)->first());
     }
 
     /**
@@ -98,8 +98,10 @@ class PageController extends Controller
      * @param  \App\Model\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Page $page)
+    public function destroy(Request $request)
     {
-        //
+        $page = Page::findOrFail($request->page_id);
+        $page->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }
