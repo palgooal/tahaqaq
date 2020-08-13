@@ -35,4 +35,8 @@ Route::get('/pages/{slug}', 'PageController@show');
 Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 
 
+//sysVars
+Route::resource('/pg-admin/sysVars', 'SysVarController');
+Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards');
+Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard');
 

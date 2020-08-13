@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Page;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 
