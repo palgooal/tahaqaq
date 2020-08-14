@@ -31,7 +31,7 @@ Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia')->middleware(
 // pages
 Route::resource('/pg-admin/pages', 'PageController')->middleware('auth');
 Route::get('/pages/{slug}', 'PageController@show');
-
+// show user
 Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 
 
