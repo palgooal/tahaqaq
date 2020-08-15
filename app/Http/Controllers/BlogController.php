@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Blog;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 use function Ramsey\Uuid\v1;
@@ -37,13 +38,15 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
+        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_en)  ;
         $blog = new Blog();
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;
         $blog->Body_ar = $request->Body_ar;
         $blog->Body_en = $request->Body_en;
         $blog->image = $request->image;
-        $blog->slug = $request->slug;
+        $blog->slug = $slug;
         $blog->Tags = $request->Tags;
         $blog->save();
         return back();
@@ -80,16 +83,17 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_en)  ;
         $blog = Blog::find($id);
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;
         $blog->Body_ar = $request->Body_ar;
         $blog->Body_en = $request->Body_en;
         $blog->image = $request->image;
-        $blog->slug = $request->slug;
+        $blog->slug = $slug;
         $blog->Tags = $request->Tags;
-
         $blog->save();
+        return redirect('/pg-admin/blogs');
 
     }
 
@@ -99,8 +103,10 @@ class BlogController extends Controller
      * @param  \App\Model\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(Request $request)
     {
-        //
+        $blog = Blog::findOrFail($request->blog_id);
+        $blog->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }
