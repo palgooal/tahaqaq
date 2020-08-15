@@ -24,7 +24,9 @@ Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('pg-admin', 'admin/index')->middleware('auth');
+// menus
 Route::resource('/pg-admin/menus', 'MenuController')->middleware('auth');
+// upload
 Route::resource('/pg-admin/upload', 'UploadController')->middleware('auth');
 Route::get('/pg-admin/addMedia', 'UploadController@addMedia')->middleware('auth');
 Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia')->middleware('auth');
@@ -33,10 +35,12 @@ Route::resource('/pg-admin/pages', 'PageController')->middleware('auth');
 Route::get('/pages/{slug}', 'PageController@show');
 // show user
 Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
-
-
 //sysVars
 Route::resource('/pg-admin/sysVars', 'SysVarController');
 Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards');
 Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard');
+
+// blogs
+
+Route::resource('/pg-admin/blogs', 'BlogController');
 
