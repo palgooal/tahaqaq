@@ -15,10 +15,13 @@ class CreateTemplatesTable extends Migration
     {
         Schema::create('templates', function (Blueprint $table) {
             $table->id();
-
             $table->string('name')->index('name');
-            $table->string('small_details')->nullable();
-            $table->longText('details');
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->string('small_details_ar')->nullable();
+            $table->string('small_details_en')->nullable();
+            $table->longText('details_ar');
+            $table->longText('details_en');
             $table->integer('category_id')->unsigned()->index('category');
             $table->string('image_url');
             $table->string('preview_url');
@@ -36,8 +39,8 @@ class CreateTemplatesTable extends Migration
     {
 
         Schema::table('templates', function (Blueprint $table) {
-            $table->dropIndex('templates_name_index');
-            $table->dropIndex('templates_category_index');
+            // $table->dropIndex('templates_name_index');
+            // $table->dropIndex('templates_category_index');
         });
         Schema::dropIfExists('templates');
     }

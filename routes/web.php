@@ -36,11 +36,14 @@ Route::get('/pages/{slug}', 'PageController@show');
 // show user
 Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 //sysVars
-Route::resource('/pg-admin/sysVars', 'SysVarController');
-Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards');
-Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard');
+Route::resource('/pg-admin/sysVars', 'SysVarController')->middleware('auth');
+Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards')->middleware('auth');
+Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->middleware('auth');
 
 // blogs
-
 Route::resource('/pg-admin/blogs', 'BlogController');
+
+//template
+Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->middleware('auth');
+Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth');
 

@@ -16,7 +16,8 @@ class CreateTemplateSpecificationsTable extends Migration
         Schema::create('template_specifications', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('template_id')->unsigned()->index('template');
-            $table->string('text');
+            $table->string('text_ar');
+            $table->string('text_en');
             $table->string('image');
             $table->timestamps();
         });
@@ -30,7 +31,7 @@ class CreateTemplateSpecificationsTable extends Migration
     public function down()
     {
         Schema::table('template_specifications', function (Blueprint $table) {
-            $table->dropIndex('template_specifications_template_index');
+            // $table->dropIndex('template_specifications_template_index');
         });
         Schema::dropIfExists('template_specifications');
     }

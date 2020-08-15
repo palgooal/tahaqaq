@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Model\TemplateCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class TemplateCategoryController extends Controller
 {
@@ -15,6 +17,8 @@ class TemplateCategoryController extends Controller
     public function index()
     {
         //
+        $categoris = TemplateCategory::all();
+        return view('admin.templateCategories.category', compact(['categoris']));
     }
 
     /**
@@ -25,6 +29,7 @@ class TemplateCategoryController extends Controller
     public function create()
     {
         //
+        return view('admin.templateCategories.category');
     }
 
     /**
@@ -36,6 +41,15 @@ class TemplateCategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $data = request()->validate([
+            'text_ar' => 'required',
+            'text_en'=> 'required'
+        ]);
+        $menus = new TemplateCategory();
+        $menus->text_ar = $request->text_ar;
+        $menus->text_en = $request->text_en;
+        $menus->save();
+        return back()->with('success',trans('تم اضافة التصنيف بنجاح'));
     }
 
     /**
@@ -55,9 +69,10 @@ class TemplateCategoryController extends Controller
      * @param  \App\Model\TemplateCategory  $templateCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(TemplateCategory $templateCategory)
+    public function edit($id)
     {
         //
+        return view('admin.templateCategories.category')->with('category', TemplateCategory::find($id));
     }
 
     /**
@@ -67,9 +82,14 @@ class TemplateCategoryController extends Controller
      * @param  \App\Model\TemplateCategory  $templateCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TemplateCategory $templateCategory)
+    public function update(Request $request, $id)
     {
         //
+        $category = TemplateCategory::find($id);
+        $category->text_ar = $request->text_ar;
+        $category->text_en = $request->text_en;
+        $category->save();
+        return redirect('pg-admin/templateCategories');
     }
 
     /**
@@ -78,8 +98,11 @@ class TemplateCategoryController extends Controller
      * @param  \App\Model\TemplateCategory  $templateCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TemplateCategory $templateCategory)
+    public function destroy(Request $request)
     {
         //
+        $categroy = TemplateCategory::findOrFail($request->category_id);
+        $categroy->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }
