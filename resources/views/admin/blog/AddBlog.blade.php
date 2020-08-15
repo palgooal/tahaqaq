@@ -25,23 +25,27 @@
 		<div class="card-body">
             <div class="form-group">
                 <label>عنوان المدونة<span class="text-danger">*</span></label>
-                <input type="text" name="title_ar" class="form-control" placeholder="اكتب عنوان الصفحة هنا">
+                <input type="text" name="Title_ar" class="form-control" placeholder="اكتب عنوان التدوينة هنا">
                 <span class="form-text text-muted">معرف slug</span>
             </div>
             <div class="form-group">
                 <label>الكلمات الدلالية (Tags)</label>
 
-                    <input id="kt_tagify_1" class="form-control tagify" name='tags' placeholder='اضافة الكلمات الدلالية هنا ثم اضغط Enter ثم اضف كلمة اخري' value='css, html, javascript'  data-blacklist='.NET,PHP'/>
+                    <input id="kt_tagify_1" class="form-control tagify" name='Tags' placeholder='اضافة الكلمات الدلالية هنا ثم اضغط Enter ثم اضف كلمة اخري' value='css, html, javascript'  data-blacklist='.NET,PHP'/>
 
                     <div class="mt-3">
                         <a href="javascript:;" id="kt_tagify_1_remove" class="btn btn-sm btn-light-primary font-weight-bold">مسح الكلمات الدلالية</a>
                     </div>
 
                 </div>
+                <div class="form-group">
+                    <label>الصورة البارزة<span class="text-danger">*</span></label>
+                    <input type="file" name="image" class="form-control">
+                </div>
 			<div class="form-group row">
 
 				<div class="col-lg-12 col-md-12 col-sm-12">
-					<textarea class="summernote" id="kt_summernote_1" name="content_ar"></textarea>
+					<textarea class="summernote" id="kt_summernote_1" name="Body_ar"></textarea>
 				</div>
 			</div>
 		</div>

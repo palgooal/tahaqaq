@@ -17,3 +17,13 @@ var modal = $(this)
 
 modal.find('.modal-body #page_id').val(page_id)
 })
+
+// blogs delete
+$('#deleteblog').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+    var blog_id = button.data('blogid')
+    var modal = $(this)
+
+    modal.find('.modal-body #blog_id').val(blog_id)
+    })

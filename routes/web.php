@@ -41,6 +41,5 @@ Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards');
 Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard');
 
 // blogs
-
 Route::resource('/pg-admin/blogs', 'BlogController');
 
