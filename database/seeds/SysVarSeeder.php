@@ -4,6 +4,7 @@ use App\Logic\SysVar\SysVarTypes;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
+
 class SysVarSeeder extends Seeder
 {
     /**

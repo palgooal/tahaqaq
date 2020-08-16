@@ -229,7 +229,7 @@
                    <i class="menu-arrow"></i>
                    <ul class="menu-subnav">
                       <li class="menu-item " aria-haspopup="true">
-                         <a href="/pg-admin/templateCategories" class="menu-link ">
+                         <a href="/pg-admin/templates" class="menu-link ">
                          <i class="menu-bullet menu-bullet-dot">
                             <span></span>
                          </i>
@@ -238,7 +238,7 @@
                    </li>
 
                       <li class="menu-item " aria-haspopup="true">
-                         <a href="/pg-admin/pages/templates" class="menu-link ">
+                         <a href="/pg-admin/templateCategories" class="menu-link ">
                             <i class="menu-bullet menu-bullet-dot">
                                <span>
                                </span>

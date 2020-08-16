@@ -81,7 +81,6 @@ class SysVarController extends Controller
     public function editAsCards(SysVar $sysVar)
     {
         //
-        Log::debug('$$$$$$$$message');
         $sysVars = $this->sysVarLogic->GetAll();
         $data = $sysVars->groupBy('type');
 
