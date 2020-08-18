@@ -1,6 +1,9 @@
 .cardImageTeam{
-    height: 100px;
-    width: 132px;
+    height: 175px;
+    width: 218px;
+}
+.cardImageTeam .card-body{
+    padding: 0.25rem !important;
 }
 .cardImageTeam img{
     width: 100%;

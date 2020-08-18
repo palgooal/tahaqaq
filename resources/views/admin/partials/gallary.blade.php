@@ -1,6 +1,6 @@
 <div class="row">
 <div class="container">
-    <div class="col-sm-12">
+    {{-- <div class="col-sm-12"> --}}
       <!-- BEGIN SAMPLE TABLE PORTLET-->
       <div class="portlet light bordered">
           <div class="card card-custom">
@@ -41,7 +41,7 @@
             <div class="row text-center text-lg-left">
 
               @foreach ($uploads as $upload)
-              <div class="col-lg-2 col-md-4 col-6 colViewImg">
+              <div class="col-lg-2 col-md-4 col-sm-4 colViewImg">
                 {{-- <a href="#" class="d-block mb-4 h-100"> --}}
 
                     {{-- <span class="btn btn-info" onclick="FunctionCopy('{{$upload->path}}')">نسخ رابط الصورة</span> --}}
@@ -69,7 +69,7 @@
         </div>
             </div>
         </div>
-      </div>
+      {{-- </div> --}}
     </div>
 </div>
 </div>
