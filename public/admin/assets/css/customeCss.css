@@ -67,11 +67,7 @@ border-color: #ffeeba;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-@media only screen and (min-width: 768px){
-    .modalUpload{
-        margin-right: -248px;
-    }
-}
+
 
 .inptPath{
     opacity: 0;
