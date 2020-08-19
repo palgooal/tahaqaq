@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -24,8 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('index')->with('menus', Menu::get());
     }
+
+
+
+    //lang
     function lang($local){
         Session::put('lang', $local);
         return redirect()->back();

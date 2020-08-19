@@ -44,7 +44,15 @@
                 <label for="exampleInputPassword1">ترتيب القائمة<span class="text-danger">*</span></label>
                 <input type="number" class="form-control" placeholder="ترتيب القائمة" name="sort">
             </div>
+            <div class="form-group">
+            <select name="slug" id="">
+                <option value="1" selected></option>
+                @foreach ($pages as $page)
+                <option value="/pages/{{$page->slug}}">{{$page->title_ar}}</option>
+                @endforeach
 
+            </select>
+            </div>
         </div>
         <div class="card-footer">
             <button type="submit" class="btn btn-primary mr-2">اضافة</button>

@@ -10,6 +10,7 @@ return [
     'Remember me'=>'تذكرني',
     'Forget Password ?'=>'هل نسيت كلمة المرور ؟',
     'Sign In'=>'تسجيل الدخول',
+    'Home'=>"الرئيسية"
 
 
 ];

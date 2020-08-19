@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Menu;
+use App\Model\Page;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -14,7 +15,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('admin.menu.menu')->with('menus',Menu::orderBy('sort','asc')->get());
+        return view('admin.menu.menu')->with('menus',Menu::orderBy('sort','asc')->get())
+        ->with('pages', Page::get());
 
     }
 
@@ -38,14 +40,22 @@ class MenuController extends Controller
     {
         $data = request()->validate([
             'name_ar' => 'required',
-            'url'=> 'required',
+
             'sort' => 'required'
 
         ]);
         $menus = new Menu();
+
+        if($request->url !== null){
+
+            $menus->url = $request->url;
+        }else if($request->slug !== "1"){
+
+            $menus->url = $request->slug;
+        }
         $menus->name_ar = $request->name_ar;
         $menus->name_en = $request->name_en;
-        $menus->url = $request->url;
+
         $menus->sort = $request->sort;
         $menus->save();
         return back()->with('success',trans('تم اضافة القائمة بنجاح'));

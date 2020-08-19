@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Menu;
 use App\Model\Page;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -17,6 +18,8 @@ class PageController extends Controller
     public function index()
     {
         return view('admin.pages.IndexPages')->with('pages', Page::get());
+
+
     }
 
     /**
@@ -57,7 +60,8 @@ class PageController extends Controller
      */
     public function show($slug)
     {
-        return view('pages')->with('page', Page::where('slug', $slug)->first());
+        return view('pages')->with('page', Page::where('slug', $slug)->first())
+                            ->with('menus', Menu::get());
     }
 
     /**

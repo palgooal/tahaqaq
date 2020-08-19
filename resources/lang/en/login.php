@@ -10,6 +10,7 @@ return [
     'Remember me'=>'Remember me',
     'Forget Password ?'=>'Forget Password ?',
     'Sign In'=>'Sign In',
+    'Home'=>'Home'
 
 
 

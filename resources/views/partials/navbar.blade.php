@@ -10,12 +10,17 @@
             <a href="#" class="nav-toggle"><img width="20" src="images/font-icons/close.svg" /></a>
         </div>
             <ul>
-                <li class="active"><a href="#">الرئيسية</a></li>
-                <li><a href="#">لماذا تحقق</a></li>
+                @foreach ($menus as $menu)
+                <li class="@if($loop->first)active @endif"><a href="{{$menu->url}}">{{$menu->name_ar}}</a></li>
+
+
+                @endforeach
+
+                {{-- <li><a href="#">لماذا تحقق</a></li>
                 <li><a href="#">الخدمات</a></li>
                 <li><a href="#">كيف نعمل </a></li>
                 <li><a href="#">الأسعار</a></li>
-                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="blog.html">المدونة</a></li> --}}
             </ul>
             <div class="login-btns">
                 <a href="#" class="login">تسجيل الدخول </a>
