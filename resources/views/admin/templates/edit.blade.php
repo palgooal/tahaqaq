@@ -13,8 +13,9 @@
                         <h3 class="card-title">تعديل القالب</h3>
                     </div>
                     <!--begin::Form-->
-                    <form id="frmCreate" action="/pg-admin/templates" method="POST">
+                    <form id="frmCreate" action="/pg-admin/templates/{{$template->id}}" method="POST">
                         @csrf
+                        @method('PUT');
                         <input type="hidden" name="templateSpecification" id="templateSpecification">
                         <div class="card-body">
                             <div class="form-group row">

@@ -139,6 +139,51 @@ class TemplateController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $data = request()->validate([
+            'title_ar' => 'required',
+            'title_en'=> 'required',
+            'name' => 'required'
+        ]);
+
+        $t = Template::findOrFail($id);
+        $t->name = $request->name;
+        $t->title_ar = $request->title_ar;
+        $t->title_en = $request->title_en;
+        $t->small_details_ar = $request->small_details_ar;
+        $t->small_details_en = $request->small_details_en;
+        $t->details_ar = $request->details_ar;
+        $t->details_en = $request->details_en;
+        $t->category_id = $request->category_id;
+        $t->image_url = $request->image_url;
+        $t->preview_url = $request->preview_url;
+        $t->save();
+        $templateId = $t->id;
+
+        $templateSpecificationParamStr  = $request->templateSpecification;
+        $tsManage  = json_decode($templateSpecificationParamStr,true);
+
+        if(count($tsManage) >=1){
+            for ($i=0; $i < (count($tsManage) / 4) ; $i++) {
+                $ts_id =  $tsManage['['.$i.'][ts_id]'];
+                $ts_img =  $tsManage['['.$i.'][ts_img]'];
+                $ts_text_ar =  $tsManage['['.$i.'][ts_text_ar]'];
+                $ts_text_en =  $tsManage['['.$i.'][ts_text_en]'];
+                $ts = null;
+                if(empty($ts_id)){
+                    $ts = new TemplateSpecification();
+                    $ts->template_id = $templateId;
+                }else{
+                    $ts = TemplateSpecification::findOrFail($ts_id);
+                }
+
+                $ts->text_ar = $ts_text_ar;
+                $ts->text_en = $ts_text_en;
+                $ts->image = $ts_img;
+                $ts->save();
+            }
+        }
+        return back()->with('success','save succes');
+
     }
 
     /**
