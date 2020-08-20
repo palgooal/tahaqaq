@@ -1428,7 +1428,7 @@
                     <script src="{{asset('admin/assets/js/pages/widgets.js')}}"></script>
                                         <!--end::Page Scripts-->
                     <script src="{{asset('admin/assets/js/adminCsspublic.js')}}"></script>
-
+                    <script src="{{asset('admin/assets/js/public.js')}}"></script>
 
 
                     <!--begin::Page Scripts(used by this page)-->
