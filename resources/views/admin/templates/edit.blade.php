@@ -10,7 +10,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">اضافة قالب جديد</h3>
+                        <h3 class="card-title">تعديل القالب</h3>
                     </div>
                     <!--begin::Form-->
                     <form id="frmCreate" action="/pg-admin/templates" method="POST">
@@ -21,7 +21,7 @@
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label for="name">الاسم<span class="text-danger">*</span></label>
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="" value="{{$template->name}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                                         <select name="category_id" id="category_id" class="form-control">
                                             <option></option>
                                             @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->text_ar}}</option>
+                                                <option {{$category->id == $template->category_id ? 'selected' : ''}} value="{{$category->id}}">{{$category->text_ar}}</option>
                                             @endforeach
                                         </select>
                                         <span class="form-text text-muted"></span>
@@ -42,14 +42,14 @@
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label for="image_url">رابط صورة القالب<span class="text-danger">*</span></label>
-                                        <input type="text" name="image_url" id="image_url" class="form-control" placeholder="http:\\">
+                                    <input type="text" name="image_url" id="image_url" class="form-control" placeholder="http:\\" value="{{$template->image_url}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label for="preview_url">رابط تصفح القالب<span class="text-danger">*</span></label>
-                                        <input type="text" name="preview_url" id="preview_url" class="form-control" placeholder="http:\\">
+                                    <input type="text" name="preview_url" id="preview_url" class="form-control" placeholder="http:\\" value="{{$template->preview_url}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
@@ -65,14 +65,14 @@
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label>عنوان القالب<span class="text-danger">*</span></label>
-                                        <input type="text" name="title_ar" id="title_ar" class="form-control" placeholder="اكتب عنوان القالب هنا">
+                                        <input type="text" name="title_ar" id="title_ar" class="form-control" placeholder="اكتب عنوان القالب هنا" value="{{$template->title_ar}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label>Title<span class="text-danger">*</span></label>
-                                        <input type="text" name="title_en" class="form-control" placeholder="Enter title en here">
+                                        <input type="text" name="title_en" class="form-control" placeholder="Enter title en here" value="{{$template->title_en}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
@@ -81,14 +81,14 @@
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label>وصف مختصر<span class="text-danger"></span></label>
-                                        <input type="text" name="small_details_ar" class="form-control" placeholder="">
+                                        <input type="text" name="small_details_ar" class="form-control" placeholder="" value="{{$template->small_details_ar}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div class="form-group">
                                         <label>Brief description<span class="text-danger"></span></label>
-                                        <input type="text" name="small_details_en" class="form-control" placeholder="">
+                                        <input type="text" name="small_details_en" class="form-control" placeholder="" value="{{$template->small_details_en}}">
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
@@ -97,14 +97,14 @@
                                 <div class="col-md">
                                     <div class="form-group row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
-                                            <textarea class="summernote" name="details_ar"></textarea>
+                                        <textarea class="summernote" name="details_ar">{{$template->details_ar}}</textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div class="form-group row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
-                                            <textarea class="summernote" name="details_en"></textarea>
+                                            <textarea class="summernote" name="details_en">{{$template->details_en}}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -158,8 +158,7 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9">
-                                    <button type="submit" class="btn btn-primary mr-2">اضافة</button>
-                                    <button id="btnGetVal" type="button" class="btn btn-secondary">getVal</button>
+                                    <button type="submit" class="btn btn-primary mr-2">حفظ التعديلات</button>
                                     <a type="reset" class="btn btn-secondary" href="/pg-admin/templates">الغاء </a>
                                 </div>
                             </div>
@@ -178,7 +177,7 @@ var KTFormRepeater = function() {
 
 // Private functions
     var demo1 = function() {
-        $('#kt_repeater_1').repeater({
+       var rep = $('#kt_repeater_1').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -193,6 +192,8 @@ var KTFormRepeater = function() {
                 $(this).slideUp(deleteElement);
             }
         });
+        let list  = {!! $tsJson !!};
+        rep.setList(list);
     }
 
 return {
@@ -216,9 +217,6 @@ return {
             let strResult = JSON.stringify($('#kt_repeater_1').inputVal());
             $("#templateSpecification").val(strResult);
         });
-        // $('#btnGetVal').click(function(){
-        //     console.log( $('#kt_repeater_1').repeaterVal());
-        // });
     });
 
 

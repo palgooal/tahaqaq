@@ -1567,3 +1567,4 @@
 
                      <script src="{{asset('admin\assets\js\alertsDelete.js')}}"></script>
 
+@yield('footerLib')

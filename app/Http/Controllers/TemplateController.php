@@ -110,9 +110,23 @@ class TemplateController extends Controller
      * @param  \App\Model\Template  $template
      * @return \Illuminate\Http\Response
      */
-    public function edit(Template $template)
+    public function edit($id)
     {
         //
+        $template = Template::findOrFail($id);
+        $categories = TemplateCategory::all();
+        $templateSpecifications = TemplateSpecification::where('template_id',$id)->get();
+        $ts_array = array();
+        foreach ($templateSpecifications as $ts) {
+            array_push($ts_array,array(
+                "ts_id"=>$ts->id,
+                "ts_img"=>$ts->image,
+                "ts_text_ar"=>$ts->text_ar,
+                "ts_text_en"=>$ts->text_en,
+            ));
+        }
+        $tsJson = json_encode($ts_array);
+        return view('admin.templates.edit', compact(['template','tsJson','categories']));
     }
 
     /**
@@ -122,7 +136,7 @@ class TemplateController extends Controller
      * @param  \App\Model\Template  $template
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Template $template)
+    public function update(Request $request, $id)
     {
         //
     }
