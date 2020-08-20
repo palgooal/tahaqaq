@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Template;
 use App\Model\TemplateCategory;
+use App\Model\TemplateSpecification;
 use Illuminate\Http\Request;
 
 class TemplateController extends Controller
@@ -41,6 +42,10 @@ class TemplateController extends Controller
      */
     public function store(Request $request)
     {
+        // dump($request);
+        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
+        // $out->writeln(json_encode($request->all()));
+        // return back()->with('req', json_encode($request->all()));
         //
         $data = request()->validate([
             'title_ar' => 'required',
@@ -60,8 +65,32 @@ class TemplateController extends Controller
         $t->image_url = $request->image_url;
         $t->preview_url = $request->preview_url;
         $t->save();
+        $templateId = $t->id;
 
-        return back()->with('success','save succes');
+        $templateSpecificationParamStr  = $request->templateSpecification;
+        $tsManage  = json_decode($templateSpecificationParamStr,true);
+
+        if(count($tsManage) >=1){
+            for ($i=0; $i < (count($tsManage) / 4) ; $i++) {
+                $ts_id =  $tsManage['['.$i.'][ts_id]'];
+                $ts_img =  $tsManage['['.$i.'][ts_img]'];
+                $ts_text_ar =  $tsManage['['.$i.'][ts_text_ar]'];
+                $ts_text_en =  $tsManage['['.$i.'][ts_text_en]'];
+                $ts = null;
+                if(empty($ts_id)){
+                    $ts = new TemplateSpecification();
+                    $ts->template_id = $templateId;
+                }else{
+                    $ts = TemplateSpecification::findOrFail($ts_id);
+                }
+
+                $ts->text_ar = $ts_text_ar;
+                $ts->text_en = $ts_text_en;
+                $ts->image = $ts_img;
+                $ts->save();
+            }
+        }
+        return redirect('/pg-admin/templates')->with('success','save succes');
     }
 
     /**
