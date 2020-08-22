@@ -28,7 +28,14 @@ class SysVarLogic{
         return SysVar::where([
             ['type',$sysVarType],
             ['key', $sysVarKey]
-        ])->get();
+        ])->get()->first();
+    }
+
+    public function GetValueByKey($sysVarType,$sysVarKey,$lang){
+        return SysVar::where([
+            ['type',$sysVarType],
+            ['key', $sysVarKey]
+        ])->get()->first()->getValue($lang);
     }
 
     public function GetTypes(){

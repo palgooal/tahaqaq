@@ -149,7 +149,7 @@ body{
     width:100%;
 }
 .login-btns .login{
-    color: #7657E5; 
+    color: #7657E5;
     border: 2px solid;
     border-radius: 12px;
 }
@@ -160,7 +160,7 @@ body{
     font-size:16px;
     transition: all 0.3s;
     line-height:20px;
-    
+
 
 }
 .section-1-r {
@@ -194,11 +194,11 @@ body{
 }
 .home-wrap .text{
     width:50%;
-    
+
 }
 .home-wrap img{
     width:calc(40% - 5px);
-    
+
 }
 .home-wrap .text span{
     font-size:30px;
@@ -224,9 +224,10 @@ body{
     background-size: 100%;
     margin-top:100px;
     margin-right: 5%;
+
 }
 .firstsection .text{
-    width: calc(40% - 5px); 
+    width: calc(40% - 5px);
 
 }
 section .home-section wow fadeIn {
@@ -2753,7 +2754,7 @@ a.lang:hover{
     font-size:14px;
     color: #666;
     line-height:10px;
-    
+
 }
 header{
     transition: all 0.3s;

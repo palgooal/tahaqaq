@@ -81,7 +81,20 @@ The project",
         ]);
 
 
+           //Footer section
+           DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_About,
+            'value_en'=>"About",
+            'value_ar' =>"من نحن",
+        ]);
 
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Services,
+            'value_en'=>"Services",
+            'value_ar' =>"خدماتنا",
+        ]);
     }
 
 
