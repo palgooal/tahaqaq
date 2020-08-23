@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Blog;
+use App\Model\Menu;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -58,9 +59,10 @@ class BlogController extends Controller
      * @param  \App\Model\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($slug)
     {
-       //
+       return view('SinglePost')->with('blogs', Blog::where('slug', $slug)->first())
+                                ->with('menus', Menu::get())    ;
     }
 
     /**

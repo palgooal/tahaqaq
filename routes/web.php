@@ -58,6 +58,7 @@ Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->
 
 // blogs
 Route::resource('/pg-admin/blogs', 'BlogController');
+Route::get('/blogs/{slug}', 'BlogController@show');
 
 //template
 Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->middleware('auth');
