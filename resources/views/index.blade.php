@@ -2,11 +2,12 @@
 @section('content')
 <!--section one -->
 <section class="firstsection">
-<div class="container">
-    <div class="home-wrap">
-        <div class="text">
-            <h2 class=" wow fadeInDown">{{$header_title}}</h2>
-            <p class=" wow fadeInDown">{{$header_details}}</p>
+    <div class="container">
+        <div class="home-wrap">
+            <div class="text">
+                <h2 class=" wow fadeInDown">{{$header_title}}</h2>
+                <p class=" wow fadeInDown">{{$header_details}}</p>
+                <br><br>
             <a href="{{$header_startNowUrl}}" class="def-btn wow fadeInDown">أبدا الان</a>
             <a href="{{$header_tryNowUrl}}" class="def-btn-l wow fadeInDown">تجربه تحقق</a>
         </div>
