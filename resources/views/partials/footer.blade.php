@@ -18,25 +18,25 @@
                     <li><a href="#">خدماتنا</a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <div class="footer-contact-wrap">
+            <div class="col-xs-12 col-sm-6" style="width: 55%;">
+                <div class="footer-contact-wrap" >
                     <ul class="footer-ul">
                         <li><a href="#">وسائل الدفع</a></li>
                         <li>
-                            <a href="#"><img src="images/images/visa.png"></a>
-                            <a href="#"><img src="images/images/mastercard.png"></a>
-                            <a href="#"><img src="images/images/paypal.png"></a>
+                        <a href="#"><img src="{{asset ('img/visa.png')}}"></a>
+                            <a href="#"><img src="img/mastercard.png"></a>
+                            <a href="#"><img src="img/paypal.png"></a>
                         </li>
                     </ul>
                     <ul class="footer-ul">
-                        <li><a href="#">وسائل التواصل</a></li>
-                        <li>
-                            <a href="#"><img src="images/images/logo-fb-simple.png"></a>
-                            <a href="#"><img src="images/images/logo-twitter.png"></a>
-                            <a href="#"><img src="images/images/logo-instagram.png"></a>
-                            <a href="#"><img src="images/images/logo-youtube.png"></a>
+                        <li><a href="#">تابعنا على</a></li>
+                        <li class="socialmedia">
+                            <a href="#"><img src="img/logo-fb-simple.png"></a>
+                            <a href="#"><img src="img/logo-twitter.png"></a>
+                            <a href="#"><img src="img/logo-instagram.png"></a>
+                            <a href="#"><img src="img/logo-youtube.png"></a>
                         </li>
-                        <li><a href="#"> جميع الحقوق محفوظة لـ تدريب</a> </li>
+                        <li><a href="#" style="font-size: 9px;"> جميع الحقوق محفوظة لـ تدريب</a> </li>
                     </ul>
 
             </div>

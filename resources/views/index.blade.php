@@ -1,10 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
-
-
-
-
 <!--section one -->
 <section class="firstsection">
 <div class="container">
