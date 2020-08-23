@@ -1,36 +1,45 @@
 @charset "utf-8";
-
+/* font converted using font-converter.net. thank you! */
 @font-face {
-    font-family: "FF Shamel Family Sans One Bold";
-    src: url('../fonts/HelveticaNeueLT.eot');
-    src: url('../fonts/HelveticaNeueLT.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/HelveticaNeueLT.woff') format('woff'),
-    url('../fonts/HelveticaNeueLT.ttf') format('truetype'),
-    url('../fonts/HelveticaNeueLT.svg#HelveticaNeueLTStd-LtCn') format('svg');
+    font-family: "FFShamelFamily-SansOneMedium";
+    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue LT';
-    src: url('../fonts/HelveticaNeueLT-B.eot');
-    src: url('../fonts/HelveticaNeueLT-B.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/HelveticaNeueLT-B.woff') format('woff'),
-    url('../fonts/HelveticaNeueLT-B.ttf') format('truetype'),
-    url('../fonts/HelveticaNeueLT-B.svg#HelveticaNeueLTStd-LtCn') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
+  }
 
+  /* font converted using font-converter.net. thank you! */
 @font-face {
-    font-family: 'Glyphter';
-    src: url('../fonts/Glyphter.eot');
-    src: url('../fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Glyphter.woff') format('woff'),
-    url('../fonts/Glyphter.ttf') format('truetype'),
-    url('../fonts/Glyphter.svg#Glyphter') format('svg');
+    font-family: "FFShamelFamily-SansOneBold";
+    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
-}
+  }
+
+  /* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "FFShamelFamily-SansOneBook";
+    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
 [class*='icon-']:before{
     display: inline-block;
     font-family: 'Glyphter';
@@ -50,6 +59,13 @@ ul{
 a, a:hover, a:active a:focus{
     outline:0px !important;
     text-decoration:none!important;
+    padding: 4%;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 21px;
 }
 .clear{
     clear:both;
@@ -78,13 +94,14 @@ body, html{
     overflow-x: hidden;
 }
 body{
-    font-family: "FF Shamel Family Sans One Bold";
     font-weight: normal;
     font-size:16px;
     overflow-x: hidden;
     color: #555555;
     background: #FFFFFF;
     min-height:100vh;
+    font-family: "FFShamelFamily-SansOneBold";
+
 }
 body{
     background-color: #F6F3FF;
@@ -109,11 +126,11 @@ body{
 .navbar-wrap{
     display: flex;
     align-items:center;
-    margin-top:28px;
+    margin-top: -10px;
     position: relative;
+    font-family: "FF Shamel Family Sans One";
     transition: all 0.3s;
-    margin-bottom: 8%;
-}
+    }
 .main-nav{
     display: flex;
     align-items:center;
@@ -126,9 +143,9 @@ body{
 }
 .main-nav li a{
     color: #221950;
-    font-size:15px;
+    font-size:12px;
     transition: all 0.3s;
-    padding:5px 0;
+    padding:15px 0;
     position: relative;
     line-height:20px;
 }
@@ -148,19 +165,37 @@ body{
 .main-nav li a:hover:before, .main-nav li.active a:before{
     width:100%;
 }
-.login-btns .login{
-    color: #7657E5;
-    border: 2px solid;
-    border-radius: 12px;
+.login-btns {
+    margin-right: 19px;
+    
 }
 .login-btns a{
+    margin-left: 19px;
+    
+}
+.login-btns .login{
+    color: #7657E5; 
+    border: 2px solid;
+    border-radius: 12px;
+
+}
+.login-btns .login:hover {
+    color: white;
+    background-color:#7657E5 ;
+    transform: scale(1.1) ;
+
+}
+.login-btns a{
+    border: 2px solid;
+    border-radius: 12px;
+    font-family: "FF Shamel Family Sans One";
     display: inline-block;
-    padding:5px 15px 10px;
+    padding: 10px 25px 5px;
     color: #FFFFFF;
-    font-size:16px;
+    font-size:12px;
     transition: all 0.3s;
     line-height:20px;
-
+    
 
 }
 .section-1-r {
@@ -174,19 +209,32 @@ body{
 .login-btns .langu{
     background-color: #69E4F9;
     border-radius: 7px;
+    font-family: "FFShamelFamily-SansOneBook";
+
+}
+.login-btns .langu:hover{
+
+    transform: scale(1.1) ;
+
 }
 
 .login-btns a.register{
     border-radius: 7px;
     background-color: #7657E5;
+    transition: all 0.3s;
+
 }
 .login-btns a.register:hover{
-    border:1px solid #2e6da4;
-    background: #2e6da4;
+    transform: scale(1.1) ;
     color: #ffffff;
 }
 .home-wrap{
     margin-right: 5%;
+    background-image: url(../img/b.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
 .home-wrap .text, .home-wrap img {
     display: inline-block;
@@ -194,73 +242,95 @@ body{
 }
 .home-wrap .text{
     width:50%;
-
+    
 }
 .home-wrap img{
     width:calc(40% - 5px);
-
+    
 }
 .home-wrap .text span{
     font-size:30px;
     color: #173771;
+    font-family: "FF Shamel Family Sans One";
+    font-weight:bold;
 }
 .home-wrap .text h2{
-    font-size:35px;
+    font-size:28px;
     color: #7657E5;
     font-weight:bold;
-    margin-top:25px;
-    margin-bottom:30px;
+    margin-top:0px;
+    margin-bottom:3%;
     width: 80%;
+    font-family: "FF Shamel Family Sans One";
+    line-height: 180%;
+
 }
 .home-wrap .text p{
-    font-size: 10px;
+    font-size: 8px;
     color: #173771;
     margin-bottom: 30px;
-    line-height: 35px;
+    line-height: 25px;
+    font-family: "FFShamelFamily-SansOneMedium";
+    margin-bottom: 0%;
+
 }
 /*section1*/
 .firstsection {
-    background-image: url(../../images/images/b.png);
+    background-image: url(img/b.png);
     background-size: 100%;
-    margin-top:100px;
-    margin-right: 5%;
-
+    width: 110%;
 }
 .firstsection .text{
-    width: calc(40% - 5px);
+    width: calc(40% - 5px); 
+    margin-top: 5%;
 
 }
 section .home-section wow fadeIn {
-    background-image: url("../../images/images/Path 28.png");
-    background-color: #F4F1FF;
+    background-image: url("../img/Path 28.png");
+    background-color: #F3EFFF;
 }
 .firstsection img {
     float: left;
-    margin-left: 5%;
+    margin-left: 17%;
     visibility: visible;
     animation-name: fadeInDown;
-    width: calc(55% - 5px);
+    margin-top: 9%;
+    margin-bottom: 5%;
 }
 /*section 2 */
 /* Float four columns side by side */
 .boxes {
-    width: 80%;
-    margin: 3%;
-    margin-bottom: 3%;
-    margin-top: 10%;
+    width: 100%;
+    margin-top: -13%;
+    background-color: #F6F3FF;
+}
+.boxes .img-box img {
+    /* background-image: url(../img/section2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center; */
+    width: 100%;
 }
 .column {
     float: left;
     width: 20%;
     padding: 0 5px;
     margin-left: 2%;
+    display: none;
 }
 .card:hover {
-    background-color:#23527c;
+    background-color:#1da1f2;
     transform: scale(1.1);
 }
 
-.row {margin: 0 -5px;}
+.row {
+    margin: 0 -5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -286,6 +356,9 @@ section .home-section wow fadeIn {
     background-color: #7657E5;
     color: white;
     border-radius: 50px;
+    font-family: "FFShamelFamily-SansOneMedium";
+    transition: all 0.3s;
+
 }
 
 .fa {font-size:50px;}
@@ -303,6 +376,8 @@ section .home-section wow fadeIn {
 }
 .commerce-e{
     background-color: #FFFFFF;
+    font-family: "FFShamelFamily-SansOnebook";
+
 }
 .commerce-e .container .home-wrap .coomerce .text {
     width: 60%;
@@ -323,7 +398,9 @@ section .home-section wow fadeIn {
 }
 .coomerce li {
     display: flow-root;
-    margin-right: 35px;
+    margin-right: 118px;
+    font-size: 9px;
+    margin-top: 15px;
 }
 .coomerce img {
     width: 40px;
@@ -336,7 +413,7 @@ section .home-section wow fadeIn {
 /*end*/
 /*section 5 */
 .how-do {
-    /* background-image: url("../../images/images/18.png"); */
+    /* background-image: url("../img/18.png"); */
     text-align: center;
     width: 100%;
     margin-bottom: 8%;
@@ -350,7 +427,7 @@ section .home-section wow fadeIn {
     color: #7657E5;
 }
 .how-do-img {
-   background-image: url("../../images/images/asa.png");
+   background-image: url("../img/asa.png");
     width: 100%;
     margin: auto;
     padding:45%;
@@ -410,6 +487,16 @@ section .home-section wow fadeIn {
     flex-wrap: wrap;
     color: #7657E5;
 }
+.packages img{
+    margin-left: -100%;
+    margin-bottom: -33%;
+    margin-top: -78px;
+}
+.packages ul li img{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
 .top h1{
 color: #221950;
 }
@@ -435,28 +522,51 @@ color: #221950;
 }
 
 .list li {
-    font-size: 20px;
+    font-size: 18px;
     list-style: none;
     padding-inline-start: 0;
     border-width: 1px;
     padding: 15px;
+    font-family: "FFShamelFamily-SansOnemedium";
 }
 /* section 7  */
 .blogs {
     background-color: #FFFFFF ;
 }
+.blogs .container {
+    width: 100% !important;
+}
 .blogs .time img{
     margin-left: 12px;
 
 }
+.blogs .container .bloglist-img-head .time {
+    background-color: #F582EA;
+    border-radius: 20px; 
+    padding: 5px 24px;
+}
+.blogs .container .bloglist-img-head a {
+    color: white;
+}
+.blogs .container .bloglist-img-head p {
+    color: white ;
+}
+.blogs .container .bloglist-img-head ul {
+    display: inline-flex;
+     float: right
+}
+
 .blogs ul {
     display: inline-flex;
-    float: left
+    float: left;
+    margin-top: -5%;
 }
 /* end section */
 ol,
 ul {
     padding: 0;
+    font-family: "FFShamelFamily-SansOneBook";
+
 }
 
 .top {
@@ -470,14 +580,16 @@ label {
     display: inline-block;
     vertical-align: middle;
     margin: 10px 0;
+    font-size: 9px;
+    color: #173771
 }
 
 .button {
-    padding: 10px 30px;
+    padding: 15px 50px;
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 21px;
     margin: 15px 15px;
-    border-radius: 50px;
+    border-radius: 25px;
     color: #f4f4f4;
     transition: all 0.3s ease 0s;
 }
@@ -570,6 +682,8 @@ input:checked + .slider:before {
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 65px;
+    font-family: "FFShamelFamily-SansOneMedium";
+
 }
 
 /*end section*/
@@ -764,18 +878,20 @@ span.round-tab:hover {
 /*toggle*/
 .toggle {
     background-color: #F6F3FF;
-    background-image: url("../../images/images/18.png");
+    background-image: url("../img/18.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size:  cover;
     position: relative;}
 .def-btn{
-    padding:5px 40px 8px;
+    padding: 8px 35px 2px;
     border-radius: 10px;
     background: #7657E5;
     color: #ffffff !important;
-    font-size:18px;
+    font-size:12px;
     transition: all 0.3s;
+    font-family: "FFShamelFamily-SansOnebook";
+
 }
 
 .def-btn:hover{
@@ -783,12 +899,14 @@ span.round-tab:hover {
     color: #ffffff;
 }
 .def-btn-l {
-    padding:5px 40px 8px;
+    padding: 8px 35px 2px;
     border-radius: 10px;
     background: #F582EA;
     color: #ffffff !important;
-    font-size:18px;
+    font-size:12px;
     transition: all 0.3s;
+    font-family: "FFShamelFamily-SansOnebook";
+    margin-right: 2%;
 
 }
 .def-btn-l:hover {
@@ -837,7 +955,7 @@ span.round-tab:hover {
     color: #002a80;
     margin-bottom:60px;
     display: inline-block;
-    margin-right: 34%;
+    margin-right: 20%;
 }
 .search {
     display: contents;
@@ -846,29 +964,90 @@ span.round-tab:hover {
 
 }
 .searchTerm {
-    margin-right: 26%;
+    margin-right: 13%;
     border: 1px solid;
     border-radius: 20px;
     border-color: #DFD6FF;
     background-color: #F7F5FF;
-    padding: 1%;
+    width: 25%;
+    height: 50px;
+    padding: 16px;
+    font-family: "FFShamelFamily-SansOnebook";
 }
 .bloglist-img-head {
-    background-image: url(../../images/images/12.png);
+    background-image: url(../img/12.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
     padding: 10%;
     margin-bottom: 10%;
     color: white;
     padding-top: 300px;
 }
 /*price*/
+.table-price{
+    margin-top: 10%;
+    margin-right: 5%;
+}
+.bouquet{
+    width: 90%;
+    display: inline-flex;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    box-shadow: 0  25px 50px rgba(0,0,0,0.08);
+    padding: 1%;
+
+}
+}
+.bouquet ul {
+
+}
+.bouquet ul li {
+    display: inline-flex ;
+}
+.bouquet ul li img {
+    margin-left: 5%;
+    height: 80%;
+    margin-top: 3%;
+}
+.bouquet ul li h2 {
+    
+}
+.bouquet ul li p {
+    display: inline;
+    margin-top: 17%;
+    margin-right: -44%;
+}
+.bouquet ul li h6 {
+    margin-top: 24%;
+    margin-right: -50%;
+    background-color: #684EC5;
+    border-radius: 50px;
+    border: 1px solid  #684EC5;
+    color: white;
+    padding: 5%;    
+    display: inline-flex;
+}
+.bouquet ul li h6:hover {
+    background-color: white;
+    color:  #684EC5;
+}
+.bouquet ul li h6 p {
+    display: contents;
+    
+}
 #customers {
     border-collapse: collapse;
     width: 100%;
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 1%;
+    text-align: right;
+    
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -876,11 +1055,9 @@ span.round-tab:hover {
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: right;
-    background-color: #4CAF50;
-    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: white;
 }
 /*end price*/
 .courses{
@@ -1012,7 +1189,7 @@ span.round-tab:hover {
     background-size: 100% auto, 7% auto;
 }
 .maillist{
-    background-image: url("../../images/images/18.png");
+    background-image: url("../img/18.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size:  cover;
@@ -1024,6 +1201,7 @@ footer{
     background-color: #FFFFFF;
      padding-top: 2% ;
     width: 105%;
+    font-family: "FFShamelFamily-SansOneBold";
 }
 footer .container{
     width: 100%;
@@ -1104,19 +1282,22 @@ footer .container{
 
 .footer-ul-r{
     display: inline-block;
-    width: calc(30% - -15px);
+    width: calc(27% - -15px);
     list-style: none;
     vertical-align: top;
 }
 .footer-ul-r li{
-    margin-bottom:30px;
+    margin-bottom: 10px;
+    font-family: "FF Shamel Family Sans One Bold";
 }
 .footer-ul-r li a{
-    font-size:17px;
-    color: #707070;
+    font-size:12px;
+    color: #221950;
     display: inline-block;
     padding:2px 0;
     transition: all 0.3s;
+    font-family: "FFShamelFamily-SansOneBold";
+
 }
 .footer-ul{
     display: inline-block;
@@ -1124,12 +1305,17 @@ footer .container{
     list-style: none;
     vertical-align: top;
 }
+.col-xs-12{
+    width: 45%;
+}
 .footer-ul li{
     margin-bottom:30px;
+    font-family: "FFShamelFamily-SansOneBold";
+
 }
 .footer-ul li a{
     font-size:17px;
-    color: #707070;
+    color: #221950;
     display: inline-block;
     padding:2px 0;
     transition: all 0.3s;
@@ -1141,9 +1327,11 @@ footer .container{
 .footer-ul li img {
     margin-left: 12px;
 }
+.footer-ul .socialmedia img {
+    width: 50%;
+}
 .footer-contact-wrap{
-    padding-right:10px;
-    border-right:1px solid #E1E1E1;
+    
 }
 .footer-contact-item{
     margin-bottom:15px;
@@ -1233,7 +1421,7 @@ footer .container{
     width:calc(62% - 5px);
 }
 .blog-item-text{
-    padding: 20px 15px;
+    padding: 0px 20px;
 }
 .blog-item-text a{
     font-size:20px;
@@ -1254,7 +1442,7 @@ footer .container{
     margin-left: 10px;
 }
 .blog-item-text p{
-    font-size:16px;
+    font-size:12px;
     color: #173771;
     height:70px;
     line-height:30px;
@@ -1367,7 +1555,8 @@ footer .container{
     border-radius: 23px;
     background: #f5f5f5;
     padding: 0 15px;
-    margin: 0 -23px;
+    margin: 5px 18px;
+    float: none;
 }
 .custom-pagination .pagination-ul li {
     display: inline-block;
@@ -1389,15 +1578,50 @@ footer .container{
     margin-left: -2%;
 
 }
+.login{
+    padding: 10%;
+}
+.login .login-img{
+    float: right;
+    width: 45%;
+}
+.login .login-text {
+    float: left;
+    width: 45%;
+    font-family: "FF Shamel Family Sans One";
+}
+.login .login-img img{
+    width: 85%;
+    padding: 2%;
+}
+.login .login-img span {
+    display: block;
+    color: #000000;
+}
+.login .login-img h2 {
+    color: #7657E5;
+}
+.login .login-img p {
+    font-size: 8px;
+    line-height: 24px;
+}
 .form-input{
     width:100%;
     height:50px;
-    border-radius: 8px;
+    border-radius: 50px;
     outline:none;
     border:1px solid #e1e1e1;
     padding:0 20px;
-    background: #ffffff;
-    font-size:16px;
+    background: #F7F5FF;
+    font-size:9px;
+}
+.form-wrap h1 {
+    color: #7657E5;
+    font-family: "FFShamelFamily-SansOneBold";
+    margin-bottom: 10%;
+}
+.form-wrap h6 {
+    margin-right: 6%;
 }
 .form-submit{
     width:100%;
@@ -1405,7 +1629,7 @@ footer .container{
     line-height:45px;
     outline:none;
     border:none;
-    border-radius: 8px;
+    border-radius: 50px;
     padding:0;
     text-align: center;
     background: #2e6da4;
@@ -1426,7 +1650,7 @@ footer .container{
     display: inline-flex;
     align-items:center;
     font-size:16px;
-    color: #2e6da4;
+    color: #D8232F;
 }
 .form-links a.forget-pass{
     margin-right:auto;
@@ -1440,9 +1664,7 @@ footer .container{
     max-width:100%;
     width:500px;
     padding:40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    background: #ffffff;
+   
 }
 .form-input::-webkit-input-placeholder { /* Chrome */
     color: #bbc0c9;
@@ -2754,7 +2976,7 @@ a.lang:hover{
     font-size:14px;
     color: #666;
     line-height:10px;
-
+    
 }
 header{
     transition: all 0.3s;
@@ -2763,7 +2985,7 @@ header{
 }
 header.fixed {
     position: fixed;
-    height: 70px;
+    height: 80px;
     top:0;
     left:0;
     right:0;
@@ -2772,7 +2994,7 @@ header.fixed {
     background: #f4f0ff;
 }
 header.fixed .navbar-wrap{
-    margin-top:15px;
+    margin-top: -28px;
     visibility: visible !important;
 }
 body.fixed{
