@@ -1,7 +1,8 @@
 <!--footer-->
+<hr style="margin: 0px !important">
 <footer class="wow fadeIn">
     <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex;">
             <div class="col-xs-12 col-sm-6">
                 <ul class="footer-ul-r">
                     <li><a href="#">الأشتراك</a></li>
@@ -23,7 +24,7 @@
                     <ul class="footer-ul">
                         <li><a href="#">وسائل الدفع</a></li>
                         <li>
-                        <a href="#"><img src="{{asset ('img/visa.png')}}"></a>
+                            <a href="#"><img src="img/visa.png"></a>
                             <a href="#"><img src="img/mastercard.png"></a>
                             <a href="#"><img src="img/paypal.png"></a>
                         </li>
