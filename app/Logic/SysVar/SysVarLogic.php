@@ -24,6 +24,16 @@ class SysVarLogic{
         return SysVar::where('type',$sysVarType)->get();
     }
 
+    public function GetByTypeAsResult($sysVarType,$lang){
+        $vars = SysVar::where('type',$sysVarType)->get();
+        $data = array();
+        foreach ($vars as $key => $value) {
+            $data[$value->key] = $value->getValue($lang);
+        }
+        $result = new SysVarResult($sysVarType,$data);
+        return $result;
+    }
+
     public function GetByKey($sysVarType,$sysVarKey){
         return SysVar::where([
             ['type',$sysVarType],
@@ -36,6 +46,15 @@ class SysVarLogic{
             ['type',$sysVarType],
             ['key', $sysVarKey]
         ])->get()->first()->getValue($lang);
+
+        // try {
+        //     //code...
+        //     return $valueObj->getValue($lang);
+        // } catch (\Throwable $th) {
+        //     //throw $th;
+        //     return 'null';
+        // }
+
     }
 
     public function GetTypes(){

@@ -81,19 +81,102 @@ The project",
         ]);
 
 
-           //Footer section
-           DB::table('sys_vars')->insert([
+        //Tahaqaq info
+        // DB::table('sys_vars')->insert([
+        //     'type'=> SysVarTypes::Type_,
+        //     'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Title,
+        //     'value_en'=>"http:\\",
+        //     'value_ar' =>"إدارة المتجر",
+        // ]);
+        // DB::table('sys_vars')->insert([
+        //     'type'=> SysVarTypes::Type_TahaqaqInfo,
+        //     'key'=>SysVarTypes::Type_TahaqaqInfo_Key_StoreManagement,
+        //     'value_en'=>"http:\\",
+        //     'value_ar' =>"http:\\",
+        // ]);
+
+
+        //Footer section
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Subscription,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Pricing,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Blog,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+
+        DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_About,
-            'value_en'=>"About",
-            'value_ar' =>"من نحن",
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_PrivacyPolicy,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_HowDoWeWork,
+            'value_en'=>"http:\\",
+            'value_ar' =>"كيف نعمل",
+        ]);
+
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Contact,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
         ]);
 
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_Services,
-            'value_en'=>"Services",
-            'value_ar' =>"خدماتنا",
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+
+        //Social media
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_SocialMedia,
+            'key'=>SysVarTypes::Type_SocialMedia_Facbook,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_SocialMedia,
+            'key'=>SysVarTypes::Type_SocialMedia_Twitter,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_SocialMedia,
+            'key'=>SysVarTypes::Type_SocialMedia_Instagram,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_SocialMedia,
+            'key'=>SysVarTypes::Type_SocialMedia_Youtube,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
         ]);
     }
 
