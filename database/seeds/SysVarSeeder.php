@@ -81,19 +81,94 @@ The project",
         ]);
 
 
-        //Tahaqaq info
-        // DB::table('sys_vars')->insert([
-        //     'type'=> SysVarTypes::Type_,
-        //     'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Title,
-        //     'value_en'=>"http:\\",
-        //     'value_ar' =>"إدارة المتجر",
-        // ]);
-        // DB::table('sys_vars')->insert([
-        //     'type'=> SysVarTypes::Type_TahaqaqInfo,
-        //     'key'=>SysVarTypes::Type_TahaqaqInfo_Key_StoreManagement,
-        //     'value_en'=>"http:\\",
-        //     'value_ar' =>"http:\\",
-        // ]);
+        //Tahaqaq info1
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo1,
+            'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Title,
+            'value_en'=>"Store management",
+            'value_ar' =>"إدارة المتجر",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo1,
+            'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Details,
+            'value_en'=>"",
+            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
+            ابتداء من ادراجها في المتجر وانتهاء بادارتها
+            .وتسويقها",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo1,
+            'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_URL,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+        //Tahaqaq info2
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo2,
+            'key'=>SysVarTypes::Type_TahaqaqInfo2_Key_Title,
+            'value_en'=>"Payment Method",
+            'value_ar' =>"وسائل الدفع",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo2,
+            'key'=>SysVarTypes::Type_TahaqaqInfo2_Key_Details,
+            'value_en'=>"",
+            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
+            ابتداء من ادراجها في المتجر وانتهاء بادارتها
+            .وتسويقها",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo2,
+            'key'=>SysVarTypes::Type_TahaqaqInfo2_Key_URL,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+        //Tahaqaq info3
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo3,
+            'key'=>SysVarTypes::Type_TahaqaqInfo3_Key_Title,
+            'value_en'=>"Professional designs",
+            'value_ar' =>"تصاميم احترافية",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo3,
+            'key'=>SysVarTypes::Type_TahaqaqInfo3_Key_Details,
+            'value_en'=>"",
+            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
+            ابتداء من ادراجها في المتجر وانتهاء بادارتها
+            .وتسويقها",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo3,
+            'key'=>SysVarTypes::Type_TahaqaqInfo3_Key_URL,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
+
+        //Tahaqaq info4
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo4,
+            'key'=>SysVarTypes::Type_TahaqaqInfo4_Key_Title,
+            'value_en'=>"Advanced reports",
+            'value_ar' =>"تقارير متقدمة",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo4,
+            'key'=>SysVarTypes::Type_TahaqaqInfo4_Key_Details,
+            'value_en'=>"",
+            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
+            ابتداء من ادراجها في المتجر وانتهاء بادارتها
+            .وتسويقها",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_TahaqaqInfo4,
+            'key'=>SysVarTypes::Type_TahaqaqInfo4_Key_URL,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
 
 
         //Footer section

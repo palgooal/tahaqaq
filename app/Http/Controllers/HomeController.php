@@ -80,12 +80,16 @@ class HomeController extends Controller
         // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Youtube,$lang);
 
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        //
+        $sysVarTahaqaqInfo1 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo1,$lang);
+        $sysVarTahaqaqInfo2 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo2,$lang);
+        $sysVarTahaqaqInfo3 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo3,$lang);
+        $sysVarTahaqaqInfo4 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo4,$lang);
+
 
         return view('index', compact(['menus','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
-        'sysVarFooter','sysVarSocialMedia']));
+        'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
     }
 
 

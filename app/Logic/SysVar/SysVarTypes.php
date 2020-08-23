@@ -17,6 +17,7 @@ class SysVarTypes {
     //WhyTahaqaq
     const Type_WhyTahaqaq = "Why Tahaqaq";
     const Type_WhyTahaqaq_Key_Title = "Title";
+    const Type_WhyTahaqaq_Key_SubTitle = "Sub Title";
     const Type_WhyTahaqaq_Key_Details = "Details";
 
 

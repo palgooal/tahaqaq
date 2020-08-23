@@ -83,35 +83,27 @@
             <div class="text">
             <div class="coomerce">
                 <img src="images/images/wallet.png">
-                <h6> ادارة المتجر </h6>
-                <p> تتيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-                    ابتداء من ادراجها في المتجر وانتهاء بادارتها
-                    .وتسويقها </p>
-                <li href="#">     معلومات اضافية   <i href=""></i></li>
+                <h6> {{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Title)}} </h6>
+                <p>  {{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Details)}} </p>
+                <li href="{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_URL)}}">     معلومات اضافية   <i href=""></i></li>
             </div>
                 <div class="coomerce">
                     <img src="images/images/wallet.png">
-                    <h6> ادارة المتجر </h6>
-                    <p> تتيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-                        ابتداء من ادراجها في المتجر وانتهاء بادارتها
-                        .وتسويقها </p>
-                        <li href="#">     معلومات اضافية   <i href=""></i></li>
+                    <h6> {{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Title)}}</h6>
+                    <p> {{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Details)}} </p>
+                        <li href="{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_URL)}}">     معلومات اضافية   <i href=""></i></li>
                     </div>
             <div class="coomerce">
                 <img src="images/images/tab.png">
-                <h6> ادارة المتجر </h6>
-                <p> تتيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-                    ابتداء من ادراجها في المتجر وانتهاء بادارتها
-                    .وتسويقها </p>
-                    <li href="#">     معلومات اضافية   <i href=""></i></li>
+                <h6> {{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Title)}} </h6>
+                <p>  {{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Details)}} </p>
+                    <li href="{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_URL)}}">     معلومات اضافية   <i href=""></i></li>
             </div>
             <div class="coomerce">
                 <img src="images/images/news.png">
-                <h6> ادارة المتجر </h6>
-                <p> تتيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-                    ابتداء من ادراجها في المتجر وانتهاء بادارتها
-                    .وتسويقها </p>
-                    <li href="#">     معلومات اضافية   <i href=""></i></li>
+                <h6> {{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Title)}} </h6>
+                <p>  {{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Details)}} </p>
+                    <li href="{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_URL)}}">     معلومات اضافية   <i href=""></i></li>
             </div>
             </div>
             <img src="images/images/Image-Browser-1.png" class="imge">
