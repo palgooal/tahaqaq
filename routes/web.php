@@ -58,6 +58,7 @@ Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->
 
 // blogs
 Route::resource('/pg-admin/blogs', 'BlogController');
+Route::get('/blogs', 'BlogController@Indexshow');
 Route::get('/blogs/{slug}', 'BlogController@show');
 
 //template

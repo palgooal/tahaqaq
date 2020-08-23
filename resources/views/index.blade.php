@@ -2,56 +2,64 @@
 @section('content')
 <!--section one -->
 <section class="firstsection">
-<div class="container">
-    <div class="home-wrap">
-        <div class="text">
-            <h2 class=" wow fadeInDown">{{$header_title}}</h2>
-            <p class=" wow fadeInDown">{{$header_details}}</p>
+    <div class="container">
+        <div class="home-wrap">
+            <div class="text">
+                <h2 class=" wow fadeInDown">{{$header_title}}</h2>
+                <p class=" wow fadeInDown">{{$header_details}}</p>
+                <br><br>
             <a href="{{$header_startNowUrl}}" class="def-btn wow fadeInDown">أبدا الان</a>
             <a href="{{$header_tryNowUrl}}" class="def-btn-l wow fadeInDown">تجربه تحقق</a>
         </div>
             <img src="images/images/Illustration4.png" class="wow fadeInDown">
         </div>
-    </div>
-</section>
-<!--end section-->
+    </section>
+    <!--end section-->
 <!--section two-->
 <section class="boxes">
     <div class="row">
+        <div class="img-box">
+            <!-- <div class="right">
+                <i class="fa-heart"></i>
+            </div>
+            <div class="left">
+                <h4>ads </h4>
+                <p> safs</p>
+                <i class="fa-heart"></i>
+            </div> -->
+        <img src="img/section2.png">
+        </div>
         <div class="column">
         <a href="#">
             <div class="card">
-                <p><img src="images/images/price.png"></p>
+                <p><img src="img/price.png"></p>
                 <h3>2450</h3>
                 <p>مبيعات</p>
             </div>
         </a>
         </div>
-
         <div class="column">
             <a href="#">
             <div class="card">
-                <p><img src="images/images/sticker.png"></p>
+                <p><img src="img/sticker.png"></p>
                 <h3>2450</h3>
                 <p>طلبات</p>
             </div>
             </a>
         </div>
-
         <div class="column">
             <a href="#">
             <div class="card">
-                <p><img src="images/images/shop.png"></p>
+                <p><img src="img/shop.png"></p>
                 <h3>2450</h3>
                 <p>موقع الكتروني</p>
             </div>
             </a>
         </div>
-
         <div class="column">
             <a href="#">
             <div class="card">
-                <p><img src="images/images/shop.png"></p>
+                <p><img src="img/shop.png"></p>
                 <h3>100+</h3>
                 <p>مشاهدة</p>
             </div>
@@ -64,14 +72,14 @@
 <section class="courses wow fadeIn">
     <div class="container">
         <div class="home-wrap">
-            <div class="text" style="margin-right: 8%">
+            <div class="text">
                 <span class=" wow fadeInDown">لماذا تحقق</span>
             <h2 class=" wow fadeInDown">{{$header_title}}</h2>
             <p class=" wow fadeInDown">{!! $header_details !!}</p>
                 {{-- <p class=" wow fadeInDown">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع
                 </p> --}}
             </div>
-            <img src="images/images/Elements-Image-Browser-1.png" class="wow fadeInDown" style="float: right;">
+            <img src="img/Elements-Image-Browser-1.png" class="wow fadeInDown" style="float: right; margin-left: 4%;">
         </div>
     </div>
 </section>
@@ -106,7 +114,7 @@
                     <li href="{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_URL)}}">     معلومات اضافية   <i href=""></i></li>
             </div>
             </div>
-            <img src="images/images/Image-Browser-1.png" class="imge">
+            <img src="img/Image-Browser-1.png" class="imge">
         </div>
     </div>
 </section>
@@ -116,7 +124,6 @@
     <div class="container">
         <div class="how-do">
         <h2> كيف يعمل تحقق </h2>
-            <br>
         <h3> نحن نساعدك بالوصول السريع لاعمالك </h3>
             <div class="how-do-img">
 
@@ -146,27 +153,28 @@
                 <h1>الباقة البرونزية</h1>
                 <h2 class="text1">423 ريال سعودي</h2>
                 <ul class="list">
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
                 </ul>
                 <a href="#" class="button button1">أبدا الان</a>
             </div>
             <div class="packages" style="background-color: #7657E5; color: #F6F6F6">
+                <img src="img/star.png">
                 <h1>الباقة الفضية</h1>
                 <h2 class="text1">1102 ريال سعودي</h2>
                 <ul class="list">
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
                 </ul>
                 <a href="#" class="button button2">ابدا الان</a>
             </div>
@@ -174,13 +182,13 @@
                 <h1>الباقة الذهبية</h1>
                 <h2 class="text1">2500 ريال سعودي</h2>
                 <ul class="list">
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-                    <li><img src="images/images/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
+                    <li><img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
 
                 </ul>
                 <a href="#" class="button button3">ابدا الان</a>
@@ -207,11 +215,11 @@
         <div class="col-xs-12 col-sm-6">
             <div class="blog-item">
                 <div class="blog-item-img">
-                    <a href="#"><img src="images/images/shutterstock_1109232059%20(1).png"></a>
+                    <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
                     </div>
                     <div class="blog-item-content">
                     <div class="blog-item-text">
-                        <span class="time"> <img src="images/images/calendar-date.png">20.08.2019</span>
+                        <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
                         <a href="#">نموذج نص</a>
                        <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
 
@@ -227,93 +235,71 @@
 
             </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <a href="#"><img src="images/images/shutterstock_1109232059%20(1).png"></a>
-                </div>
-                <div class="blog-item-content">
-                    <div class="blog-item-text">
-                        <span class="time"> <img src="images/images/calendar-date.png">20.08.2019</span>
-                        <a href="#">نموذج نص</a>
-                        <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
+                <div class="blog-item">
+                    <div class="blog-item-img">
+                        <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
+                        </div>
+                        <div class="blog-item-content">
+                        <div class="blog-item-text">
+                            <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
+                            <a href="#">نموذج نص</a>
+                           <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
 
-                        <ul>
-                            <li>    <h6> 22</h6></li>
-                            <li>     <i class='far fa-heart'></i> </li>
-                            <li>    <h6> 22</h6> </li>
-                            <li>  <i class='far fa-comment-alt'></i>
-                        </ul>
+                            <ul>
+                                <li>    <h6> 22</h6></li>
+                                <li>     <i class='far fa-heart'></i> </li>
+                                <li>    <h6> 22</h6> </li>
+                                <li>  <i class='far fa-comment-alt'></i>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
+            </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <a href="#"><img src="images/images/shutterstock_1109232059%20(1).png"></a>
-                </div>
-                <div class="blog-item-content">
-                    <div class="blog-item-text">
-                        <span class="time"> <img src="images/images/calendar-date.png">20.08.2019</span>
-                        <a href="#">نموذج نص</a>
-                        <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
+                <div class="blog-item">
+                    <div class="blog-item-img">
+                        <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
+                        </div>
+                        <div class="blog-item-content">
+                        <div class="blog-item-text">
+                            <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
+                            <a href="#">نموذج نص</a>
+                           <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
 
-                        <ul>
-                            <li>    <h6> 22</h6></li>
-                            <li>     <i class='far fa-heart'></i> </li>
-                            <li>    <h6> 22</h6> </li>
-                            <li>  <i class='far fa-comment-alt'></i>
-                        </ul>
+                            <ul>
+                                <li>    <h6> 22</h6></li>
+                                <li>     <i class='far fa-heart'></i> </li>
+                                <li>    <h6> 22</h6> </li>
+                                <li>  <i class='far fa-comment-alt'></i>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
+            </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <a href="#"><img src="images/images/shutterstock_1109232059%20(1).png"></a>
-                </div>
-                <div class="blog-item-content">
-                    <div class="blog-item-text">
-                        <span class="time"> <img src="images/images/calendar-date.png">20.08.2019</span>
-                        <a href="#">نموذج نص</a>
-                        <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
+                <div class="blog-item">
+                    <div class="blog-item-img">
+                        <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
+                        </div>
+                        <div class="blog-item-content">
+                        <div class="blog-item-text">
+                            <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
+                            <a href="#">نموذج نص</a>
+                           <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
 
-                        <ul>
-                            <li>    <h6> 22</h6></li>
-                            <li>     <i class='far fa-heart'></i> </li>
-                            <li>    <h6> 22</h6> </li>
-                            <li>  <i class='far fa-comment-alt'></i>
-                        </ul>
+                            <ul>
+                                <li>    <h6> 22</h6></li>
+                                <li>     <i class='far fa-heart'></i> </li>
+                                <li>    <h6> 22</h6> </li>
+                                <li>  <i class='far fa-comment-alt'></i>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
-                </div>
+
             </div>
-
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <div class="blog-item">
-                <div class="blog-item-img">
-                    <a href="#"><img src="images/images/shutterstock_1109232059%20(1).png"></a>
-                </div>
-                <div class="blog-item-content">
-                    <div class="blog-item-text">
-                        <span class="time"> <img src="images/images/calendar-date.png">20.08.2019</span>
-                        <a href="#">نموذج نص</a>
-                        <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
-
-                        <ul>
-                            <li>    <h6> 22</h6></li>
-                            <li>     <i class='far fa-heart'></i> </li>
-                            <li>    <h6> 22</h6> </li>
-                            <li>  <i class='far fa-comment-alt'></i>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
     </div>
             </div>

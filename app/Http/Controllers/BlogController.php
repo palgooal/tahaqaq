@@ -65,6 +65,11 @@ class BlogController extends Controller
                                 ->with('menus', Menu::get())    ;
     }
 
+    public function Indexshow()
+    {
+        return view('blog')->with('blogs', Blog::get())->with('menus', Menu::get());
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
