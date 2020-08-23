@@ -36,6 +36,15 @@ class SysVarLogic{
             ['type',$sysVarType],
             ['key', $sysVarKey]
         ])->get()->first()->getValue($lang);
+
+        // try {
+        //     //code...
+        //     return $valueObj->getValue($lang);
+        // } catch (\Throwable $th) {
+        //     //throw $th;
+        //     return 'null';
+        // }
+
     }
 
     public function GetTypes(){

@@ -34,12 +34,30 @@ class HomeController extends Controller
         $menus =  Menu::get();
 
         $lang = App::getLocale();
+        //header vars
         $header_title= $this->sysVarLogic
         ->GetValueByKey(SysVarTypes::Type_Header, SysVarTypes::Type_Header_Key_Title,$lang);
         $header_details = $this->sysVarLogic
         ->GetValueByKey(SysVarTypes::Type_Header, SysVarTypes::Type_Header_Key_Details,$lang);
+        $header_startNowUrl = $this->sysVarLogic
+        ->GetValueByKey(SysVarTypes::Type_Header, SysVarTypes::Type_Header_Key_StartNowUrl,$lang);
+        $header_tryNowUrl = $this->sysVarLogic
+        ->GetValueByKey(SysVarTypes::Type_Header, SysVarTypes::Type_Header_Key_TryNowUrl,$lang);
 
-        return view('index', compact(['menus','header_title','header_details']));
+        //why tahaqaq vars
+        $header_title = $this->sysVarLogic
+        ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Title,$lang);
+        $header_details = $this->sysVarLogic
+        ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Details,$lang);
+
+        //footer
+        $footer_subscription = $this->sysVarLogic
+        ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Subscription,$lang);
+
+
+
+        return view('index', compact(['menus','header_title','header_details','header_startNowUrl','header_tryNowUrl',
+        'footer_subscription']));
     }
 
 

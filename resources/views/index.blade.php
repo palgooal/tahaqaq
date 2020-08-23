@@ -10,11 +10,11 @@
 <div class="container">
     <div class="home-wrap">
         <div class="text">
-        <h2 class=" wow fadeInDown">{{$header_title}}</h2>
-            <p class=" wow fadeInDown">ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير</p>
-            <a href="#" class="def-btn wow fadeInDown">أبدا الان</a>
-            <a href="#" class="def-btn-l wow fadeInDown">تجربه تحقق</a>
-            </div>
+            <h2 class=" wow fadeInDown">{{$header_title}}</h2>
+            <p class=" wow fadeInDown">{{$header_details}}</p>
+            <a href="{{$header_startNowUrl}}" class="def-btn wow fadeInDown">أبدا الان</a>
+            <a href="{{$header_tryNowUrl}}" class="def-btn-l wow fadeInDown">تجربه تحقق</a>
+        </div>
             <img src="images/images/Illustration4.png" class="wow fadeInDown">
         </div>
     </div>
@@ -71,11 +71,10 @@
         <div class="home-wrap">
             <div class="text" style="margin-right: 8%">
                 <span class=" wow fadeInDown">لماذا تحقق</span>
-                <h2 class=" wow fadeInDown">!كيف يمكننا مساعدتك في تحقق</h2>
-                <p class=" wow fadeInDown">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية
-                </p>
-                <p class=" wow fadeInDown">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع
-                </p>
+            <h2 class=" wow fadeInDown">{{$header_title}}</h2>
+            <p class=" wow fadeInDown">{!! $header_details !!}</p>
+                {{-- <p class=" wow fadeInDown">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع
+                </p> --}}
             </div>
             <img src="images/images/Elements-Image-Browser-1.png" class="wow fadeInDown" style="float: right;">
         </div>
