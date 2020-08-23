@@ -45,10 +45,12 @@ class HomeController extends Controller
         ->GetValueByKey(SysVarTypes::Type_Header, SysVarTypes::Type_Header_Key_TryNowUrl,$lang);
 
         //why tahaqaq vars
-        $header_title = $this->sysVarLogic
-        ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Title,$lang);
-        $header_details = $this->sysVarLogic
-        ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Details,$lang);
+        $sysVarWhyTahaqaq = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_WhyTahaqaq,$lang);
+
+        // $header_title = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Title,$lang);
+        // $header_details = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Details,$lang);
 
         //footer
         // $footer_subscription = $this->sysVarLogic
@@ -89,7 +91,7 @@ class HomeController extends Controller
         return view('index', compact(['menus','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
-        'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
+       'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
     }
 
 

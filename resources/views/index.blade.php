@@ -73,9 +73,9 @@
     <div class="container">
         <div class="home-wrap">
             <div class="text">
-                <span class=" wow fadeInDown">لماذا تحقق</span>
-            <h2 class=" wow fadeInDown">{{$header_title}}</h2>
-            <p class=" wow fadeInDown">{!! $header_details !!}</p>
+                <span class=" wow fadeInDown">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</span>
+            <h2 class=" wow fadeInDown">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_SubTitle)}}</h2>
+            <p class=" wow fadeInDown">{!! $sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Details) !!}</p>
                 {{-- <p class=" wow fadeInDown">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع
                 </p> --}}
             </div>

@@ -55,6 +55,12 @@ class SysVarSeeder extends Seeder
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_WhyTahaqaq,
             'key'=>SysVarTypes::Type_WhyTahaqaq_Key_Title,
+            'value_en'=>"Why Tahaqaq",
+            'value_ar' =>"لماذا تحقق",
+        ]);
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_WhyTahaqaq,
+            'key'=>SysVarTypes::Type_WhyTahaqaq_Key_SubTitle,
             'value_en'=>"How can we help you check",
             'value_ar' =>"!كيف يمكننا مساعدتك في تحقق",
         ]);
