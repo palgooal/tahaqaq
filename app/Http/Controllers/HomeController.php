@@ -70,7 +70,7 @@ class HomeController extends Controller
         // $footer_services = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Services,$lang);
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
-
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         //social media
         // $socialMedia_facbook = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Facbook,$lang);
@@ -81,7 +81,7 @@ class HomeController extends Controller
         // $socialMedia_youtube = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Youtube,$lang);
 
-        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+
         $sysVarTahaqaqInfo1 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo1,$lang);
         $sysVarTahaqaqInfo2 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo2,$lang);
         $sysVarTahaqaqInfo3 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo3,$lang);
