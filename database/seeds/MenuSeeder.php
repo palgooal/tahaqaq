@@ -45,7 +45,7 @@ class MenuSeeder extends Seeder
         DB::table('menus')->insert([
             'name_ar'=>"المدونة",
             'name_en'=>"Blog",
-            'url'=>"#",
+            'url'=>"/blogs",
             'sort' =>"5",
         ]);
     }
