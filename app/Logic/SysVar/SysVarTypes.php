@@ -19,8 +19,31 @@ class SysVarTypes {
     const Type_WhyTahaqaq_Key_Title = "Title";
     const Type_WhyTahaqaq_Key_Details = "Details";
 
-    //Footer
 
+    //Tahaqaq Info
+    const Type_TahaqaqInfo1 = "Tahaqaq Info 1";
+    const Type_TahaqaqInfo1_Key_Title = "Title";
+    const Type_TahaqaqInfo1_Key_Details = "Details";
+    const Type_TahaqaqInfo1_Key_URL = "URL";
+
+    const Type_TahaqaqInfo2 = "Tahaqaq Info 2";
+    const Type_TahaqaqInfo2_Key_Title = "Title";
+    const Type_TahaqaqInfo2_Key_Details = "Details";
+    const Type_TahaqaqInfo2_Key_URL = "URL";
+
+    const Type_TahaqaqInfo3 = "Tahaqaq Info 3";
+    const Type_TahaqaqInfo3_Key_Title = "Title";
+    const Type_TahaqaqInfo3_Key_Details = "Details";
+    const Type_TahaqaqInfo3_Key_URL = "URL";
+
+    const Type_TahaqaqInfo4 = "Tahaqaq Info 4";
+    const Type_TahaqaqInfo4_Key_Title = "Title";
+    const Type_TahaqaqInfo4_Key_Details = "Details";
+    const Type_TahaqaqInfo4_Key_URL = "URL";
+
+
+
+    //Footer
     const Type_Footer = "Footer";
     const Type_Footer_Key_Subscription = "Subscription";
     const Type_Footer_Key_Pricing =  "Pricing";

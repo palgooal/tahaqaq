@@ -81,7 +81,22 @@ The project",
         ]);
 
 
-           //Footer section
+        //Tahaqaq info
+        // DB::table('sys_vars')->insert([
+        //     'type'=> SysVarTypes::Type_,
+        //     'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Title,
+        //     'value_en'=>"http:\\",
+        //     'value_ar' =>"إدارة المتجر",
+        // ]);
+        // DB::table('sys_vars')->insert([
+        //     'type'=> SysVarTypes::Type_TahaqaqInfo,
+        //     'key'=>SysVarTypes::Type_TahaqaqInfo_Key_StoreManagement,
+        //     'value_en'=>"http:\\",
+        //     'value_ar' =>"http:\\",
+        // ]);
+
+
+        //Footer section
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_Subscription,

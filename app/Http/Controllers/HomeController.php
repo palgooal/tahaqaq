@@ -51,13 +51,41 @@ class HomeController extends Controller
         ->GetValueByKey(SysVarTypes::Type_WhyTahaqaq, SysVarTypes::Type_WhyTahaqaq_Key_Details,$lang);
 
         //footer
-        $footer_subscription = $this->sysVarLogic
-        ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Subscription,$lang);
+        // $footer_subscription = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Subscription,$lang);
+        // $footer_pricing = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Pricing,$lang);
+        // $footer_blog = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Blog,$lang);
+        // $footer_about = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_About,$lang);
+        // $footer_privacyPolicy = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_PrivacyPolicy,$lang);
+        // $footer_howDoWeWork = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_HowDoWeWork,$lang);
+        // $footer_contact = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Contact,$lang);
+        // $footer_services = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Services,$lang);
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
 
+        //social media
+        // $socialMedia_facbook = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Facbook,$lang);
+        // $socialMedia_twitter = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Twitter,$lang);
+        // $socialMedia_instagram = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Instagram,$lang);
+        // $socialMedia_youtube = $this->sysVarLogic
+        // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Youtube,$lang);
 
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        //
 
         return view('index', compact(['menus','header_title','header_details','header_startNowUrl','header_tryNowUrl',
-        'footer_subscription']));
+        // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
+        // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
+        'sysVarFooter','sysVarSocialMedia']));
     }
 
 
