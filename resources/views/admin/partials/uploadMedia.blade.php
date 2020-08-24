@@ -13,7 +13,7 @@
                           </div>
                         </div>
                   </h3>
-                  <a href="/pg-admin/selectMedia" data-toggle="tooltip" data-placement="top" title="معرض الصور">
+                  <a href="/pg-admin/selectMedia" class="iconMediaHidden" data-toggle="tooltip" data-placement="top" title="معرض الصور">
                     <span class="svg-icon svg-icon-primary svg-icon-2x">
                       <!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Design\Image.svg-->
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

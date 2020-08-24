@@ -9,7 +9,7 @@
                       <i class="icon-social-dribbble font-green"></i>
                       <span class="caption-subject font-green bold uppercase" >ألبوم الملفات</span>
                   </h3>
-                  <a href="/pg-admin/addMedia" data-toggle="tooltip" data-placement="top" title="رفع صورة">
+                  <a href="/pg-admin/addMediaModal" class="iconMediaHidden" data-toggle="tooltip" data-placement="top" title="رفع صورة">
                     <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Communication\Outgoing-box.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <rect x="0" y="0" width="24" height="24"/>

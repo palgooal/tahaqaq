@@ -24,6 +24,10 @@ class UploadController extends Controller
     public function selectMedia(){
         return view('admin.upload.selectMedia')->with('uploads', upload::get());
     }
+
+    public function addMediaModal(){
+        return view('admin.upload.formAddMediaModal');
+    }
     
     /**
      * Show the form for creating a new resource.

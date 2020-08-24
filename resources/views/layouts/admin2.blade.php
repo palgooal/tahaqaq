@@ -43,6 +43,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{asset('admin/assets/css/customeCss.css')}}" rel="stylesheet" type="text/css">         
 
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
+    <link href="{{asset('admin/assets/css/cssCustomeAdmin2.css')}}" rel="stylesheet" type="text/css">         
 
             </head>
     <!--end::Head-->

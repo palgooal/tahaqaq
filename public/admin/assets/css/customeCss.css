@@ -76,3 +76,7 @@ border-color: #ffeeba;
     opacity: 0;
 }
 
+
+.iconMediaHidden{
+    display: none;
+  }
