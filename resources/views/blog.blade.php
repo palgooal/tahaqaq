@@ -35,9 +35,9 @@
 						</a>
 					</div>
 					<div class="blog-item-content">
-						<div class="blog-item-text"> <span class="time"> <img src="img/calendar-date.png" style="margin-left: 12px;">{{$blog->created_at}}</span>
+						<div class="blog-item-text"> <span class="time"> <img src="img/calendar-date.png" style="margin-left: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
 							<a href="#">{{$blog->getTitle(App::getLocale())}}</a>
-							{!! $blog->Str::getBody(App::getLocale())!!}
+							{!! Str::words($blog->getBody(App::getLocale()), 15 , '.....') !!}
 							<ul style="display: inline-flex; float: left">
 								<li>
 									<h6>22</h6>
