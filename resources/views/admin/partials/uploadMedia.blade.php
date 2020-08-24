@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="form-actions">
-              <button type="submit" class="btn blue">اضافة</button>
+              <button type="submit" class="btn btn-primary">اضافة</button>
               {{-- <a href="/pg-admin/submenus" class="btn default">اضافة القائمة فرعية</a> --}}
             </div>
           </form>
