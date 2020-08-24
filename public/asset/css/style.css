@@ -235,7 +235,7 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 5%;
-    padding-bottom: 22%;
+    padding-bottom: 2%;
 }
 .home-wrap .text, .home-wrap img {
     display: inline-block;
@@ -574,6 +574,9 @@ section .home-section wow fadeIn {
     margin-top: -5%;
 }
 /* end section */
+/* bulider section */
+
+/* end section */
 ol,
 ul {
     padding: 0;
@@ -751,7 +754,9 @@ input:checked + .slider:before {
 .wizard {
     margin: 20px auto;
     background: #fff;
+    color: white;
 }
+
 
 .wizard .nav-tabs {
     position: relative;
@@ -762,9 +767,16 @@ input:checked + .slider:before {
 
 .wizard > div.wizard-inner {
     position: relative;
+    background-color: #7657E5;
+    border-radius: 80px;
 }
-
-.connecting-line {
+.wizard .nav-tabs > li > h2 {
+    font-size: 13px;
+    float: right;
+    margin-right: 31%;
+    margin-top: 18%;
+}
+/* .connecting-line {
     height: 2px;
     background: #e0e0e0;
     position: absolute;
@@ -774,7 +786,7 @@ input:checked + .slider:before {
     right: 0;
     top: 50%;
     z-index: 1;
-}
+} */
 
 .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
     color: #555555;
@@ -784,38 +796,37 @@ input:checked + .slider:before {
 }
 
 span.round-tab {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     line-height: 70px;
     display: inline-block;
     border-radius: 100px;
     background: #fff;
-    border: 2px solid #e0e0e0;
     z-index: 2;
     position: absolute;
     left: 0;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
 span.round-tab i{
     color:#555555;
 }
 .wizard li.active span.round-tab {
     background: #fff;
-    border: 2px solid #5bc0de;
 
 }
 .wizard li.active span.round-tab i{
     color: #5bc0de;
 }
-
+span.round-tab h2 {
+    color: #7657E5;
+}
 span.round-tab:hover {
-    color: #333;
-    border: 2px solid #333;
+    color: #7657E5;
 }
 
 .wizard .nav-tabs > li {
-    width: 25%;
+    width: 20%;
 }
 
 .wizard li:after {
@@ -829,8 +840,34 @@ span.round-tab:hover {
     border-bottom-color: #5bc0de;
     transition: 0.1s ease-in-out;
 }
+.wizard .tab-pane .form-group {
+    width: 60%;
+}
+.wizard .tab-pane h6 {
+    color : #221950 ;
+    margin-right: 5% ;
+}
+.list-inline {
+    padding-right: 0;
+    padding-left: initial;
+    margin-right: 92px;
+    margin-bottom: 8%;
+    margin-top: 7%;
+}
+.btn-primary{
+    border-radius: 30px;
+    padding: 10px 120px;
+    background-color: #7657E5;
+}
+.btn-primary:active:hover {
 
-.wizard li.active:after {
+}
+/* margin-right: 894%;
+    border-radius: 25px;
+    background-color: #8264EE;
+    border: 0;
+    color: white */
+/* .wizard li.active:after {
     content: " ";
     position: absolute;
     left: 46%;
@@ -839,14 +876,15 @@ span.round-tab:hover {
     bottom: 0px;
     border: 10px solid transparent;
     border-bottom-color: #5bc0de;
-}
+} */
 
 .wizard .nav-tabs > li a {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin: 20px auto;
     border-radius: 100%;
     padding: 0;
+    left: 75px;
 }
 
 .wizard .nav-tabs > li a:hover {
@@ -856,6 +894,7 @@ span.round-tab:hover {
 .wizard .tab-pane {
     position: relative;
     padding-top: 50px;
+    margin-right: 30%;
 }
 
 .wizard h3 {
@@ -2998,6 +3037,7 @@ header{
     transition: all 0.3s;
     position: relative;
     z-index: 999;
+    height: 100px;
 }
 header.fixed {
     position: fixed;
