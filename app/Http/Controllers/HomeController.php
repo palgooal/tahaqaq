@@ -7,6 +7,7 @@ use Illuminate\Http \Request;
 use Illuminate\Support\Facades\Session;
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
+use App\Model\Blog;
 use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
@@ -32,6 +33,7 @@ class HomeController extends Controller
     public function index()
     {
         $menus =  Menu::get();
+        $blogs  = Blog::get();
 
         $lang = App::getLocale();
         //header vars
@@ -70,7 +72,7 @@ class HomeController extends Controller
         // $footer_services = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_Footer, SysVarTypes::Type_Footer_Key_Services,$lang);
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
-        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+
         //social media
         // $socialMedia_facbook = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Facbook,$lang);
@@ -81,14 +83,14 @@ class HomeController extends Controller
         // $socialMedia_youtube = $this->sysVarLogic
         // ->GetValueByKey(SysVarTypes::Type_SocialMedia, SysVarTypes::Type_SocialMedia_Youtube,$lang);
 
-
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $sysVarTahaqaqInfo1 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo1,$lang);
         $sysVarTahaqaqInfo2 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo2,$lang);
         $sysVarTahaqaqInfo3 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo3,$lang);
         $sysVarTahaqaqInfo4 = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_TahaqaqInfo4,$lang);
 
 
-        return view('index', compact(['menus','header_title','header_details','header_startNowUrl','header_tryNowUrl',
+        return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
        'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
