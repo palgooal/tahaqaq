@@ -24,6 +24,7 @@ class UploadController extends Controller
     public function selectMedia(){
         return view('admin.upload.selectMedia')->with('uploads', upload::get());
     }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -53,7 +54,8 @@ class UploadController extends Controller
         $upload->path = $path;
         $upload->alt = $request->alt;
         $upload->save();
-        return back()->with('success',trans('تم اضافة بنجاح'));
+        return redirect('pg-admin/selectMedia');
+        // return back()->with('success',trans('تم اضافة بنجاح'));
     }
 
     /**
