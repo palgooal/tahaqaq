@@ -67,3 +67,8 @@ Route::get('/blogs/{slug}', 'BlogController@show');
 Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->middleware('auth');
 Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth');
 
+//login
+Route::get('/login', function(){
+    return view('login');
+});
+

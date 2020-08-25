@@ -104,7 +104,10 @@ body{
 
 }
 body{
-    background-color: #F6F3FF;
+    background-color: #ffffff;
+    background-image: url("../img/Group\ 129.png");
+    background-position: right
+
 }
 .container{
     width: 1250px;
@@ -277,7 +280,8 @@ body{
 }
 /*section1*/
 .firstsection {
-    background-image: url(img/b.png);
+    background-image: url(../img/b.png);
+    background-color: #F6F3FF;
     background-size: 100%;
     width: 110%;
 }
@@ -539,7 +543,7 @@ section .home-section wow fadeIn {
 /* section 7  */
 .blogs {
     background-color: #FFFFFF;
-    padding-bottom: 12%;
+    padding-bottom: 6%;
 }
 .blogs .container {
     width: 100% !important;
@@ -762,7 +766,7 @@ input:checked + .slider:before {
     position: relative;
     margin: 40px auto;
     margin-bottom: 0;
-    border-bottom-color: #e0e0e0;
+    border: 0px;
 }
 
 .wizard > div.wizard-inner {
@@ -775,6 +779,137 @@ input:checked + .slider:before {
     float: right;
     margin-right: 31%;
     margin-top: 18%;
+}
+.wizard .tab-pane .right {
+     float: right;
+     width: 50%;
+}
+.wizard .tab-pane .left {
+    float: left;
+    border-right: 1px solid;
+    width: 50%;
+}
+.wizard .tab-pane .right h2 {
+    color: #221950;
+    margin-bottom: 30px;
+}
+.wizard .tab-pane .right ul {
+    color:#221950;
+}
+.wizard .tab-pane .right li{
+    line-height: 40px;
+}
+.wizard .tab-pane .right img {
+    margin-left: 12px;
+}
+.wizard .tab-pane .left img {
+    padding-bottom: 12%;
+}
+.wizard .tab-pane .left button{
+    display: block;
+    padding: 12px 75px;
+    color: #7657E5;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid;
+    transition: all 0.3s
+
+}
+.wizard .tab-pane .left button:hover {
+    color: white ;
+    background-color: #7657E5;
+}
+.wizard .tab-pane .left a{
+    display: inline-flex;
+    width: 100%;
+}
+.wizard .tab-pane .left a input{
+    margin-left: 3%;
+    margin-top: 0%;
+}
+.wizard .tab-pane .left a p {
+    font-size: 14px;
+    color: #221950;
+    
+}
+.wizard .tab-pane .choose {
+    color: #221950;
+}
+.wizard .tab-pane .choose h3 {
+}
+.wizard .tab-pane .choose p{
+ 
+}
+.wizard .tab-pane .choose h6 {
+ 
+}
+.wizard .tab-pane .choose select{
+    width: 80%;
+    border-radius: 18px;
+    padding: 5px 50px;
+    background-color: #F7F5FF;
+    color: #7657E5;
+}
+.wizard .tab-pane .choose option{
+    
+}
+.wizard .tab-pane .True {
+    float: right;
+    width: 50%;
+}
+.wizard .tab-pane .false {
+   float: left;
+   border-right: 1px solid;
+   width: 50%;
+}
+.wizard .tab-pane .True h2 {
+   color: #221950;
+   margin-bottom: 30px;
+}
+.wizard .tab-pane .True ul {
+   color:#221950;
+}
+.wizard .tab-pane .True li{
+   line-height: 50px;
+   width: 80%;
+}
+.wizard .tab-pane .True li:hover{
+    background-color: #F3EFFF;
+    border-radius: 5%;
+    
+
+}
+.wizard .tab-pane .True img {
+   margin-left: 12px;
+}
+.wizard .tab-pane .false img {
+   padding-bottom: 12%;
+   width: 100%;
+}
+.wizard .tab-pane .false .template {
+    display: inline-flex;
+    height: 60px;
+    width: 100%;
+    background-color: #F3EFFF;
+    padding: 3%;
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+ }
+ .wizard .tab-pane .false .template i {
+   
+}
+.wizard .tab-pane .false .template p{
+    color: #221950;
+    margin-left: 12%;
+    margin-top: 3%;
+    margin-right: 7%
+
+}
+.wizard .tab-pane .false .template img{
+    width: 40px;
+    height: 80px;
+    margin: 0% 1%;
 }
 /* .connecting-line {
     height: 2px;
@@ -808,12 +943,29 @@ span.round-tab {
     text-align: center;
     font-size: 18px;
 }
+.bulidproject h1{
+    margin-right: 24%;
+    color: #7657E5;
+    margin-top: 5%;
+}
+span.round-tab:
 span.round-tab i{
     color:#555555;
 }
 .wizard li.active span.round-tab {
     background: #fff;
-
+}
+.wizard li.active span.round-tab:hover {
+    background: #F582EA;
+    color: #fff;
+}
+span.round-tab:active {
+    background-color: #F582EA;
+    color: #fff;
+}
+.wizard li.active span.round-tab:active{
+    background-color: #F582EA;
+    color: #fff;
 }
 .wizard li.active span.round-tab i{
     color: #5bc0de;
@@ -841,17 +993,13 @@ span.round-tab:hover {
     transition: 0.1s ease-in-out;
 }
 .wizard .tab-pane .form-group {
-    width: 60%;
 }
 .wizard .tab-pane h6 {
     color : #221950 ;
     margin-right: 5% ;
 }
 .list-inline {
-    padding-right: 0;
-    padding-left: initial;
-    margin-right: 92px;
-    margin-bottom: 8%;
+    margin: 0px 9%;
     margin-top: 7%;
 }
 .btn-primary{
@@ -862,11 +1010,15 @@ span.round-tab:hover {
 .btn-primary:active:hover {
 
 }
-/* margin-right: 894%;
+form ul li .btn-default {
+    margin-right: 440%;
     border-radius: 25px;
     background-color: #8264EE;
     border: 0;
-    color: white */
+    color: white
+}
+
+
 /* .wizard li.active:after {
     content: " ";
     position: absolute;
@@ -893,8 +1045,9 @@ span.round-tab:hover {
 
 .wizard .tab-pane {
     position: relative;
+    font-family: "FF Shamel Family Sans One";
     padding-top: 50px;
-    margin-right: 30%;
+    margin: 0% 20%;
 }
 
 .wizard h3 {
@@ -1006,8 +1159,7 @@ span.round-tab:hover {
 }
 .section-title{
     font-size:45px;
-    font-weight:bold;
-    color: #002a80;
+    color: #7657E5;
     margin-bottom:60px;
     display: inline-block;
     margin-right: 20%;
@@ -1040,28 +1192,65 @@ span.round-tab:hover {
     color: white;
     padding-top: 300px;
 }
+/* howtahqq */
+.howtahqq {
+    font-family: "FF Shamel Family Sans One";
+    margin: 2% 5%;    
+
+}
+.howtahqq .howtext {
+}
+.howtahqq .howtext img{
+    float: left;
+    width: 30%;
+    margin: 0px 11%;
+}
+.howtahqq .howtext h4{
+    font-size: 18px;
+    margin-bottom: 2%;
+    
+}
+.howtahqq .howtext h2{
+    font-weight: bold;
+    color: #7657E5;
+    font-size: 24px;
+    margin-bottom: 5%;
+}
+.howtahqq .howtext h6{
+    color: #343A40;
+    font-size: 15px;
+    margin-bottom: 2%;
+    
+}
+.howtahqq .howtext p{
+    color: #74787D;
+    font-size: 8px;
+    margin-bottom: 10%;
+    
+}
+/* end howtahqq */
 /*price*/
 .table-price{
     margin-top: 10%;
     margin-right: 5%;
+    font-family: "FFShamelFamily-SansOnebook";
 }
 .bouquet{
     width: 90%;
     display: inline-flex;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 55px;
     margin-right: 5%;
     margin-left: 5%;
-    box-shadow: 0  25px 50px rgba(0,0,0,0.08);
-    padding: 1%;
-
-}
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+    padding: 4%;
 }
 .bouquet ul {
 
 }
 .bouquet ul li {
     display: inline-flex ;
+    margin-right: 2%;
 }
 .bouquet ul li img {
     margin-left: 5%;
@@ -1077,13 +1266,14 @@ span.round-tab:hover {
     margin-right: -44%;
 }
 .bouquet ul li h6 {
-    margin-top: 24%;
-    margin-right: -50%;
+    margin-top: 20%;
+    margin-right: -67%;
     background-color: #684EC5;
     border-radius: 50px;
-    border: 1px solid  #684EC5;
+    border: 1px solid #684EC5;
     color: white;
-    padding: 5%;    
+    padding: 8% 18%;
+    margin-bottom: 11% !important;
     display: inline-flex;
 }
 .bouquet ul li h6:hover {
@@ -1634,7 +1824,7 @@ footer .container{
 
 }
 .login{
-    padding: 10%;
+    padding: 2% 10%;
 }
 .login .login-img{
     float: right;
@@ -3038,6 +3228,7 @@ header{
     position: relative;
     z-index: 999;
     height: 100px;
+    background-color: transparent;
 }
 header.fixed {
     position: fixed;
