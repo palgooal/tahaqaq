@@ -14,7 +14,7 @@ class UploadController extends Controller
      */
     public function index()
     {
-        return view('admin.upload.upload')->with('uploads', upload::get());
+        return view('admin.upload.upload')->with('uploads', upload::orderBy('id','desc')->get());
     }
 
     public function addMedia(){
@@ -22,7 +22,7 @@ class UploadController extends Controller
     }
 
     public function selectMedia(){
-        return view('admin.upload.selectMedia')->with('uploads', upload::get());
+        return view('admin.upload.selectMedia')->with('uploads', upload::orderBy('id','desc')->get());
     }
 
     public function addMediaModal(){
