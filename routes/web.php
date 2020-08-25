@@ -57,6 +57,7 @@ Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 //sysVars
 Route::resource('/pg-admin/sysVars', 'SysVarController')->middleware('auth');
 Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards')->middleware('auth');
+Route::get('/pg-admin/sysVars_editAsCards/{type}', 'SysVarController@editPerType')->middleware('auth');
 Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->middleware('auth');
 
 // blogs

@@ -87,6 +87,21 @@ class SysVarController extends Controller
         return  view('admin.sysVars.editAsCards', compact(['data']));
     }
 
+      /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Model\SysVar  $sysVar
+     * @return \Illuminate\Http\Response
+     */
+    public function editPerType($type)
+    {
+        //
+        $sysVars = $this->sysVarLogic->GetByType($type);
+        $data = $sysVars->groupBy('type');
+
+        return  view('admin.sysVars.editAsCards', compact(['data']));
+    }
+
     /**
      * Update the specified resource in storage.
      *

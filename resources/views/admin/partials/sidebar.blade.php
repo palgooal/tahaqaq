@@ -332,6 +332,9 @@
                             </div>
                         </li>
                         {{-- end blogs --}}
+
+                        @include('admin.partials.apperanceMenuItem');
+
                     </ul>
                     <!--end::Menu Nav-->
                 </div>
