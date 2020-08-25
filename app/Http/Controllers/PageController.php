@@ -2,14 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Logic\SysVar\SysVarTypes;
+use App\Logic\SysVar\SysVarLogic;
 use App\Model\Menu;
 use App\Model\Page;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
 
 class PageController extends Controller
 {
+    private $sysVarLogic;
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->sysVarLogic = new SysVarLogic();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -60,7 +72,11 @@ class PageController extends Controller
      */
     public function show($slug)
     {
-        return view('pages')->with('page', Page::where('slug', $slug)->first())
+        $lang = App::getLocale();
+
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        return view('pages',compact(['sysVarFooter','sysVarSocialMedia']))->with('page', Page::where('slug', $slug)->first())
                             ->with('menus', Menu::get());
     }
 
