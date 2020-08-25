@@ -68,7 +68,7 @@ Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->m
 Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth');
 
 //login
-Route::get('/login', function(){
+Route::get('/logins', function(){
     return view('login');
 });
 
