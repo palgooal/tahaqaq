@@ -35,6 +35,7 @@ Route::get('/StartProject',function(){
 });
 
 Auth::routes();
+// Route::get('/logins', 'LoginController@getlog');
 Route::resource('/', 'HomeController');
 Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');

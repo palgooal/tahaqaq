@@ -14,6 +14,15 @@ class SysVarSeeder extends Seeder
      */
     public function run()
     {
+        //settings
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Setting,
+            'key'=>SysVarTypes::Type_Setting_Key_LoginActionUrl,
+            'value_en'=>"https://clientgooal.palgooal.com/dologin.php",
+            'value_ar' =>"https://clientgooal.palgooal.com/dologin.php",
+        ]);
+
+
         //HEader section
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Header,

@@ -4,8 +4,10 @@ namespace App\Logic\SysVar;
 
 class SysVarTypes {
 
-    //Section general vars
-    const Type_General = "General";
+    //Section settings vars
+    const Type_Setting = "Setting";
+    const Type_Setting_Key_LoginActionUrl = "Login Action Url";
+
 
     //Section header vars
     const Type_Header = "Header";

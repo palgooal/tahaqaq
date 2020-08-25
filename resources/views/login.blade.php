@@ -27,14 +27,14 @@
     <div class="login-text">
         <div class="form-wrap login-form-wrap wow fadeIn">
             <h1> تسجيل دخول </h1>
-            <form>
-                <div class="form-group wow fadeInDown">
-                    <h6> الأسم بالكالمل</h6>
-                    <input type="text" class="form-input" placeholder="هنا الأسم كامل " required>
-                </div>
+            <form method="post" action="https://clientgooal.palgooal.com/dologin.php">
                 <div class="form-group wow fadeInDown">
                     <h6> البريد الألكتروني </h6>
-                    <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username">
+                    <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username" name="username" >
+                </div>
+                <div class="form-group wow fadeInDown">
+                    <h6> كلمة المرور </h6>
+                    <input type="password" class="form-input" placeholder="هنا كلمة المرور" required=" " id="password" name="password">
                 </div>
                 <div class="form-links wow fadeInDown">
                     <p>
@@ -44,7 +44,7 @@
                     <a href="#" class="forget-pass">نسيت كلمة المرور؟</a>
                 </div>
                 <div class="form-group wow fadeInDown">
-                    <button type="submit" class="form-submit">دخول</button>
+                    <button type="submit" class="form-submit" value="Login">دخول</button>
                 </div>
             </form>
             <div class="form-links wow fadeInDown" style="margin-right: 30%;">
