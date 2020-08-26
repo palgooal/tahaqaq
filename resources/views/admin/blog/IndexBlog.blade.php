@@ -1,4 +1,5 @@
-@extends('layouts.admin') @section('content')
+@extends('layouts.admin')
+@section('content')
 <!--begin::Entry-->
 <div class="d-flex flex-column-fluid">
 	<!--begin::Container-->
@@ -24,23 +25,35 @@
 									<thead class="thead-light">
 										<tr>
 											<th scope="col">#</th>
-											<th scope="col">عنوان المدونة</th>
-											<th scope="col">مشاهدة التدوينة</th>
-											<th scope="col">تعديل</th>
-											<th scope="col">حذف</th>
+                                            <th scope="col">عنوان المدونة</th>
+                                            <th scope="col">عرض على لسلايدر</th>
+											<th scope="col"></th>
+											{{-- <th scope="col">تعديل</th>
+											<th scope="col">حذف</th> --}}
 										</tr>
 									</thead>
-									<tbody>@foreach ($blogs as $index=>$blog)
-										<tr>
-											<th scope="row">{{$index+1}}</th>
-											<td>{{$blog->Title_ar}}</td>
-											<td><a type="button" class="btn btn-success" href="/blogs/{{$blog->slug}}">مشاهدة</a>
-											</td>
-											<td><a type="button" class="btn btn-secondary" href="/pg-admin/blogs/{{$blog->id}}/edit">تعديل</a>
-											</td>
-											<td>
-												<button type="button" class="btn btn-danger" data-blogid="{{$blog->id}}" data-toggle="modal" data-target="#deleteblog">حذف</button>
-											</td>@endforeach</tr>
+									<tbody>
+                                        @foreach ($blogs as $index=>$blog)
+                                            <tr>
+                                                <th scope="row">{{$index+1}}</th>
+                                                <td>{{$blog->Title_ar}}</td>
+                                                <td>
+                                                    <label class="checkbox checkbox-lg">
+                                                        <input type="checkbox" data-blogid="{{$blog->id}}" name="pinOnSlider_{{$blog->id}}" id="pinOnSlider"
+                                                        {{ $blog->pin_to_slider?'checked':''}}
+                                                        onclick="pinOnSliderClick(this);"
+                                                        />
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <a type="button" class="btn btn-success" href="/blogs/{{$blog->slug}}">مشاهدة</a>
+                                                    <a type="button" class="btn btn-secondary" href="/pg-admin/blogs/{{$blog->id}}/edit">تعديل</a>
+                                                    <button type="button" class="btn btn-danger" data-blogid="{{$blog->id}}" data-toggle="modal" data-target="#deleteblog">حذف</button>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+
 										<!-- Button trigger modal -->
 										<!-- Modal -->
 										<div class="modal fade" id="deleteblog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -81,3 +94,25 @@
 <!--end::Content-->
 </div>
 <!--end::Content-->@endsection
+@section('footerLib')
+<script>
+
+function pinOnSliderClick(s) {
+    const isChecked = s.checked;
+    const blogId =  s.dataset.blogid;
+    const url = '/pg-admin/pinBlogToSlide/'+blogId;
+    console.log(url);
+    $.ajax({
+    url: url,
+    type: 'POST',
+    headers: {
+        'X-CSRF-Token': $('meta[name=_token]').attr('content')
+    },
+    data: {}
+}).done(function (response) {
+    console.log(response);
+});
+}
+</script>
+
+@endsection

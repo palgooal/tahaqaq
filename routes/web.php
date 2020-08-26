@@ -1,5 +1,6 @@
 <?php
 
+use Facade\FlareClient\Api;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -64,6 +65,8 @@ Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->
 Route::resource('/pg-admin/blogs', 'BlogController');
 Route::get('/blogs', 'BlogController@Indexshow');
 Route::get('/blogs/{slug}', 'BlogController@show');
+Route::post('/pg-admin/pinBlogToSlide/{id}', 'BlogController@pinToSlider' );
+
 
 //template
 Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->middleware('auth');
@@ -73,4 +76,7 @@ Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth')
 Route::get('/logins', function(){
     return view('login');
 });
+
+
+
 

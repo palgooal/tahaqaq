@@ -143,4 +143,16 @@ class BlogController extends Controller
         $blog->delete();
         return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
+
+
+    public function pinToSlider(Request $request ,$id){
+        // $out = new \Symfony\Component\Console\Output\ConsoleOutput();
+        // $out->writeln(json_encode('ok-'.$id));
+
+        $blog = Blog::findOrFail($id);
+        $blog->pin_to_slider = !$blog->pin_to_slider;
+        $blog->save();
+
+        return response('ok', 200)->header('Content-Type', 'text/plain');
+    }
 }
