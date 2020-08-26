@@ -21,14 +21,15 @@
         @yield('content')
         @include('partials.footer')
 
-    <!--script-->
-        <script type="text/javascript" src="asset/js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script type="text/javascript" src="asset/js/wow.min.js"></script>
-        <script type="text/javascript" src="asset/js/script.js"></script>
-        <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--end script-->
+<!--script-->
+<script type="text/javascript" src="asset/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="asset/js/wow.min.js"></script>
+<script type="text/javascript" src="asset/js/script.js"></script>
+<script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="asset/js/wizard.js"></script>
+<!--end script-->
 </body>
 </html>

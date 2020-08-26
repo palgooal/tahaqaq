@@ -40,6 +40,9 @@
         margin-bottom: 10px;
 }
 @media (max-width: 991px) {
+    .firstsection .container{
+
+    }
     .container {
         width: 100%;
     }
@@ -55,6 +58,9 @@
     }
     .def-btn-l {
         padding: 4%;
+    }
+    footer .row {
+        display: grid !important;
     }
     .footer-ul li img{
         margin-left: 0px;
@@ -91,15 +97,14 @@
         width: 100%;
     }
     .container h5 {
-        margin-right:40% ;
+        margin: 0px 39%;
         margin-bottom: 3%;
         color: #221950;
-        font-size: 18px;
+        font-size: 12px;
     }
     .container h4 {
-        margin-bottom: 5%;
-        margin-right: 15%;
-        font-size: 24px;
+        margin: 0px 14%;
+        font-size: 14px;
         color: #7657E5;
     }
     header.fixed .navbar-wrap {
@@ -111,6 +116,9 @@
     }
     }
 @media (max-width: 767px) {
+    .firstsection .container {
+        
+    }
     .container {
         width: 100%;
     }
@@ -157,7 +165,7 @@
     }
     .footer-contact-wrap {
         padding-right: 0;
-        margin-right: -7%;
+        margin-right: 0%;
         width: 200%;
     }
     .maillist {
@@ -220,7 +228,7 @@
     }
     .home-wrap .text, .home-wrap img {
         margin-top: 10px;
-        width: 100% !important;
+        width: 85% !important;
     }
     #why_check .home-wrap .text,#why_check .home-wrap > img {
         margin-top: 10px;

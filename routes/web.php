@@ -19,21 +19,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/blog',function(){
-    return view('blog');
-});
 
-Route::get('/price',function(){
-    return view('price');
-});
 
-Route::get('/singlePost',function(){
-    return view('SinglePost');
-});
 
-Route::get('/StartProject',function(){
-    return view('StartProject');
-});
+
 
 Auth::routes();
 // Route::get('/logins', 'LoginController@getlog');
@@ -76,6 +65,11 @@ Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth')
 Route::get('/logins', function(){
     return view('login');
 });
+
+// TahqqRegistration تسجيل مشترك جديد
+Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
+
+
 
 
 

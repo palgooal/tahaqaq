@@ -129,7 +129,6 @@ body{
 .navbar-wrap{
     display: flex;
     align-items:center;
-    margin-top: -10px;
     position: relative;
     font-family: "FF Shamel Family Sans One";
     transition: all 0.3s;
@@ -253,13 +252,13 @@ body{
     
 }
 .home-wrap .text span{
-    font-size:30px;
+    font-size:25px;
     color: #173771;
-    font-family: "FF Shamel Family Sans One";
+    font-family: "FFShamelFamily-SansOneMedium";
     font-weight:bold;
 }
 .home-wrap .text h2{
-    font-size:28px;
+    font-size:29px;
     color: #7657E5;
     font-weight:bold;
     margin-top:0px;
@@ -270,7 +269,7 @@ body{
 
 }
 .home-wrap .text p{
-    font-size: 12px ;
+    font-size: 11px ;
     color: #173771;
     margin-bottom: 30px;
     line-height: 25px;
@@ -1639,7 +1638,7 @@ footer .container{
     top:0;
     bottom:0;
     right:0;
-    background: rgba(242, 35, 50, 0.5);
+    background: rgb(113, 129, 229,0.5);
     opacity:0;
     z-index:8;
     transition: all 0.3s;

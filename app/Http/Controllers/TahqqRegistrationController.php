@@ -4,9 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Model\TahqqRegistration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use App\Logic\SysVar\SysVarTypes;
+use App\Logic\SysVar\SysVarLogic;
+use App\Model\Menu;
 
 class TahqqRegistrationController extends Controller
 {
+    private $sysVarLogic;
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->sysVarLogic = new SysVarLogic();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,7 +60,12 @@ class TahqqRegistrationController extends Controller
      */
     public function show(TahqqRegistration $tahqqRegistration)
     {
-        //
+        $lang = App::getLocale();
+        $menus = Menu::get();
+
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia']));
     }
 
     /**
