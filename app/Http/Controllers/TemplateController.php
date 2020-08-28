@@ -69,7 +69,7 @@ class TemplateController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        return view('getOneTemplate')->with("templateOne",Template::find($request->id)->get())
+        return view('getOneTemplate')->with("templateOne",Template::findOrFail($request->id))
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
