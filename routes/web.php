@@ -74,6 +74,7 @@ Route::get('/logins', function(){
 
 // TahqqRegistration تسجيل مشترك جديد
 Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
+Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
 
 
 
