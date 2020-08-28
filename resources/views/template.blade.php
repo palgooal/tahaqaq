@@ -9,61 +9,29 @@
                     <h5>category</h5>
                 </div>
                 <ul class="ClSc">
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
+                   @foreach ($categoris as $categoris)
+                        <li value="{{$categoris->id}}">{{$categoris->text_ar}}</li>
+                   @endforeach
                 </ul>
             </div>
         </div>
         <div class="col-lg-11">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.jpg" alt="Card image" width="100%">
-                            <div class="card-img-overlay">
-                            <h5 class="card-title">SB Admin 2 </h5>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                @foreach ($templateAll as $templateAll)
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a href="{{$templateAll->preview_url}}">
+                            <div class="card bg-dark text-white">
+                            <img class="card-img" src="images/{{$templateAll->image_url}}" alt="Card image" width="100%">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">{{$templateAll->title_ar}} </h5>
+                                    <p class="card-text">{{$templateAll->small_details_ar}}</p>
+                                    <p class="card-text">{{$templateAll->category_id}}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.jpg" alt="Card image" width="100%">
-                            <div class="card-img-overlay">
-                            <h5 class="card-title">SB Admin 2 </h5>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="#">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="https://startbootstrap.com/assets/img/screenshots/premium/sb-admin-pro-html.jpg" alt="Card image" width="100%">
-                            <div class="card-img-overlay">
-                            <h5 class="card-title">SB Admin 2 </h5>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                @endforeach
+
             </div>
         </div>
 

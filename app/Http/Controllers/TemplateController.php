@@ -48,7 +48,8 @@ class TemplateController extends Controller
                 ->with('templateAll',Template::orderBy('id','desc')->get())
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
-                ->with('sysVarSocialMedia',$sysVarSocialMedia);
+                ->with('sysVarSocialMedia',$sysVarSocialMedia)
+                ->with('categoris',TemplateCategory::get());
     }
     /**
      * Show the form for creating a new resource.
