@@ -62,6 +62,8 @@ Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->m
 Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth');
 Route::get('/template', 'TemplateController@viewTemplate');
 Route::get('/viewTemplateCatecory/{idCatecory}','TemplateController@viewTemplateCatecory');
+Route::get('/getOneTemplate/{id}','TemplateController@getOneTemplate');
+
 
 //login
 Route::get('/logins', function(){

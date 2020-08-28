@@ -15,7 +15,7 @@ function getDataTemplateCategory(idCatecory) {
                 <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="${response.data[i].preview_url}">
                     <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/${response.data[i].image_url}" alt="Card image" width="100%">
+                    <img class="card-img" src="images/${response.data[i].image_url}" alt="Card image">
                         <div class="card-img-overlay">
                             <h5 class="card-title">${response.data[i].title_ar} </h5>
                             <p class="card-text">${response.data[i].small_details_ar}</p>

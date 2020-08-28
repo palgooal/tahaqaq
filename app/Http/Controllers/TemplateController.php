@@ -62,6 +62,20 @@ class TemplateController extends Controller
 
     }
 
+    //get one template
+    public function getOneTemplate(Request $request)
+    {
+        $lang = App::getLocale();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+
+        return view('getOneTemplate')->with("templateOne",Template::find($request->id)->get())
+                ->with('menus',Menu::orderBy('sort','asc')->get())
+                ->with('sysVarFooter', $sysVarFooter)
+                ->with('sysVarSocialMedia',$sysVarSocialMedia)
+                ->with('categoris',TemplateCategory::get());
+    }
+
 
     /**
      * Show the form for creating a new resource.
