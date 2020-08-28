@@ -5,10 +5,26 @@ namespace App\Http\Controllers;
 use App\Model\Template;
 use App\Model\TemplateCategory;
 use App\Model\TemplateSpecification;
+use App\Model\Menu;
 use Illuminate\Http\Request;
+use App\Logic\SysVar\SysVarLogic;
+use App\Logic\SysVar\SysVarTypes;
+use Illuminate\Support\Facades\App;
 
 class TemplateController extends Controller
 {
+    private $sysVarLogic;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->sysVarLogic = new SysVarLogic();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,6 +38,18 @@ class TemplateController extends Controller
         return view('admin.templates.index', compact(['templates','categories']));
     }
 
+    public function viewTemplate(){
+
+        $lang = App::getLocale();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+
+        return view('template')
+                ->with('templateAll',Template::orderBy('id','desc')->get())
+                ->with('menus',Menu::orderBy('sort','asc')->get())
+                ->with('sysVarFooter', $sysVarFooter)
+                ->with('sysVarSocialMedia',$sysVarSocialMedia);
+    }
     /**
      * Show the form for creating a new resource.
      *
