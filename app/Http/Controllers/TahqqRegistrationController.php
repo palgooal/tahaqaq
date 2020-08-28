@@ -84,18 +84,14 @@ class TahqqRegistrationController extends Controller
         $addClientParam->groupid='';
         $addClientParam->clientip=request()->ip();
 
-        dump($addClientParam);
-
-        // $a = array('a'=>1,
-        //             'b'=>2);
-        // $b = array('c'=>3,
-        //             'd'=>4);
-
-        // $d = array_merge($a,$b);
-        // dump($d);
         $result = $this->whmcsAPILogic->AddClient($addClientParam);
-        dump($result);
-        return 'ok';
+        if($result->result == "success")
+        {
+            $clientid = $result->clientid;
+            return 'ok  - ' . $clientid;
+        }
+        else
+            return 'fail';
     }
 
     /**

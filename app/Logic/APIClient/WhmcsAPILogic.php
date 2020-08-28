@@ -24,19 +24,20 @@ class WhmcsAPILogic{
         // );
 
         dump($addClientParam);
-        $postfields = $this->getPostFileArray($addClientParam->GetDataAsArray());
+        $postfields = $this->getPostFileArray($addClientParam->GetDataAsArray(), true);
         dump($postfields);
         return $this->callAPI($postfields);
     }
 
-    private function getPostFileArray($CURLOPT_POSTFIELDS_ARRAY){
+    private function getPostFileArray($CURLOPT_POSTFIELDS_ARRAY, $skipvalidation){
         $connectionInfo = array(
             'username' => WhmcsAPILogic::username,
             'password' => WhmcsAPILogic::password,
             'identifier' => WhmcsAPILogic::api_identifier,
             'secret' => WhmcsAPILogic::api_secret,
             'action' => WhmcsAPILogic::API_AddClient,
-            'responsetype' => 'json'
+            'responsetype' => 'json',
+            'skipvalidation'=> $skipvalidation,
         );
 
         return array_merge($connectionInfo, $CURLOPT_POSTFIELDS_ARRAY);
