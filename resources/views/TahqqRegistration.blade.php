@@ -58,13 +58,16 @@
                       </ul>
                   </div>
 
-                  <form role="form">
+                  {{-- <form role="form"> --}}
                       <div class="tab-content">
                           <div class="tab-pane active" role="tabpanel" id="step1">
-                              <form>
+                              <form role="form" action="/TahqqRegistration" method="POST" id="frmRegClient">
+                                @method('post');
+                                @csrf;
+
                                   <div class="form-group wow fadeInDown">
                                       <h6> الأسم بالكالمل</h6>
-                                      <input type="text" class="form-input" placeholder="هنا الأسم كامل " required>
+                                      <input type="text" class="form-input"  placeholder="هنا الأسم كامل " required>
                                   </div>
                                   <div class="form-group wow fadeInDown">
                                       <h6> البريد الألكتروني </h6>
@@ -78,6 +81,7 @@
                                       <li><button type="button" class="btn btn-default prev-step" required><</button></li>
                                       <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
                                       <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                      <li><input type="submit"  class="btn btn-primary " value="create" ></li>
                                   </ul>
                               </form>
                           </div>
@@ -181,7 +185,7 @@
                           </div>
                           <div class="clearfix"></div>
                       </div>
-                  </form>
+                  {{-- </form> --}}
               </div>
           </section>
          </div>
