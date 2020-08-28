@@ -61,6 +61,7 @@ Route::post('/pg-admin/pinBlogToSlide/{id}', 'BlogController@pinToSlider' );
 Route::resource('/pg-admin/templateCategories', 'TemplateCategoryController')->middleware('auth');
 Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth');
 Route::get('/template', 'TemplateController@viewTemplate');
+Route::get('/viewTemplateCatecory/{idCatecory}','TemplateController@viewTemplateCatecory');
 
 //login
 Route::get('/logins', function(){

@@ -9,14 +9,16 @@
                     <h5>category</h5>
                 </div>
                 <ul class="ClSc">
+                    <a href="/template"><li>الجميع</li></a>
+
                    @foreach ($categoris as $categoris)
-                        <li value="{{$categoris->id}}">{{$categoris->text_ar}}</li>
+                        <li onclick="getDataTemplateCategory('{{$categoris->id}}')">{{$categoris->text_ar}}</li>
                    @endforeach
                 </ul>
             </div>
         </div>
         <div class="col-lg-11">
-            <div class="row">
+            <div class="row" id="contintTemplate">
                 @foreach ($templateAll as $templateAll)
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="{{$templateAll->preview_url}}">

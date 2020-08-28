@@ -51,6 +51,18 @@ class TemplateController extends Controller
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
                 ->with('categoris',TemplateCategory::get());
     }
+
+    public function viewTemplateCatecory(Request $request){
+        $lang = App::getLocale();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+
+        $data = Template::where('category_id',$request->idCatecory)->get();
+        return response()->json( array('success' => true, 'data'=>$data));
+
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
