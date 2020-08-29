@@ -11,6 +11,15 @@ class TemplateCategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('template_categories')->insert([
+            'text_ar'=>"تصنيف1",
+            'text_en'=>"category1",
+
+        ]);
+        DB::table('template_categories')->insert([
+            'text_ar'=>"تصنيف2",
+            'text_en'=>"category2",
+
+        ]);
     }
 }

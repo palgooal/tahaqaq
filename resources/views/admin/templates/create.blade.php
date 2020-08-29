@@ -40,11 +40,14 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md">
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label for="image_url">رابط صورة القالب<span class="text-danger">*</span></label>
                                         <input type="text" name="image_url" id="image_url" class="form-control" placeholder="http:\\">
                                         <span class="form-text text-muted"></span>
-                                    </div>
+                                    </div> --}}
+                                    {{-- start modal gallery --}}
+                                         @include('admin.partials.modalGallary')
+                                    {{-- end modal gallery --}}
                                 </div>
                                 <div class="col-md">
                                     <div class="form-group">

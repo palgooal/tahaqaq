@@ -117,7 +117,7 @@ class TemplateController extends Controller
         $t->details_ar = $request->details_ar;
         $t->details_en = $request->details_en;
         $t->category_id = $request->category_id;
-        $t->image_url = $request->image_url;
+        $t->image_url = $request->image;
         $t->preview_url = $request->preview_url;
         $t->save();
         $templateId = $t->id;
