@@ -3601,6 +3601,13 @@ span.hint {
 }
 
 /* start template */
+#templateView h5{
+    margin-right: auto !important;
+    color: #fff;
+}
+#templateView p{
+    font-size: 11px !important;
+}
 #templateView .card{
     /* background-color: #69E4F9; */
     border-radius: 10px;
