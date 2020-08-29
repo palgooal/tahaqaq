@@ -13,7 +13,7 @@ function getDataTemplateCategory(idCatecory) {
                 document.getElementById('contintTemplate').innerHTML +=
                 `
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="${response.data[i].preview_url}">
+                <a href="/getOneTemplate/${response.data[i].id}">
                     <div class="card bg-dark text-white">
                     <img class="card-img" src="images/${response.data[i].image_url}" alt="Card image">
                         <div class="card-img-overlay">
