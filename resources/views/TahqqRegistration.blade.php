@@ -11,7 +11,7 @@
                       <ul class="nav nav-tabs" role="tablist">
 
                           <li role="presentation" class="active">
-                              <h2> المعلومات الشخصيه</h2>
+                              <h2> بيانات الحساب</h2>
                               <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                   <span class="round-tab">
                                       <h2> 01 </h2>
@@ -65,24 +65,37 @@
                                 @method('post');
                                 @csrf;
 
-                                  <div class="form-group wow fadeInDown">
-                                      <h6> الأسم بالكالمل</h6>
-                                      <input type="text" class="form-input"  placeholder="هنا الأسم كامل " required>
-                                  </div>
-                                  <div class="form-group wow fadeInDown">
-                                      <h6> البريد الألكتروني </h6>
-                                      <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username">
-                                  </div>
-                                  <div class="form-group wow fadeInDown">
-                                      <h6> رقم الهاتف </h6>
-                                      <input type="tel" class="form-input" placeholder="هنا رقم الهاتف" required=" " id="username">
-                                  </div>
-                                  <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                      <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                      <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                      <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                      <li><input type="submit"  class="btn btn-primary " value="create" ></li>
-                                  </ul>
+                                <div class="form-group wow fadeInDown">
+                                    <h6>الإسم الاول</h6>
+                                    <input type="text" class="form-input" name="firstname" placeholder="هنا الإسم الأول" required>
+                                </div>
+                                <div class="form-group wow fadeInDown">
+                                    <h6>الإسم الاخير</h6>
+                                    <input type="text" class="form-input" name="lastname" placeholder="هنا الإسم الاخر" required>
+                                </div>
+                                <div class="form-group wow fadeInDown">
+                                    <h6> البريد الألكتروني </h6>
+                                    <input type="email" class="form-input" name="email" placeholder="هنا البريد الألكتروني" required=" ">
+                                </div>
+                                <div class="form-group wow fadeInDown">
+                                    <h6> رقم الهاتف </h6>
+                                    <input type="tel" class="form-input" name="phonenumber" placeholder="هنا رقم الهاتف" required=" ">
+                                </div>
+                                <div class="form-group wow fadeInDown">
+                                    <h6>كلمة المرور</h6>
+                                    <input type="tel" class="form-input" name="password" placeholder="كلمة المرور" required=" ">
+                                </div>
+                                <div class="form-group wow fadeInDown">
+                                    <h6>تأكيد كلمة المرور</h6>
+                                    <input type="tel" class="form-input" name="password" placeholder="تاكيد كلمة المرور" required=" ">
+                                </div>
+
+                                <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                    <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                    <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                    <li><input type="submit"  class="btn btn-primary " value="create" ></li>
+                                </ul>
                               </form>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step2">

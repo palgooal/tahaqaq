@@ -193,7 +193,7 @@
 						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
 					<li>
 						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-				</ul> <a href="#" class="button button2">ابدا الان</a>
+                    </ul> <a href="#" class="button button2">ابدا الان</a>
 			</div>
 			<div class="packages">
 				<h1>الباقة الذهبية</h1>

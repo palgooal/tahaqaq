@@ -27,7 +27,10 @@
     <div class="login-text">
         <div class="form-wrap login-form-wrap wow fadeIn">
             <h1> تسجيل دخول </h1>
-            <form method="post" action="https://clientgooal.palgooal.com/dologin.php">
+            {{-- {{App\Logic\APIClient\WhmcsAPILogic::WHMCS_LOGIN_URL}} --}}
+        <form method="post" action="/TahqqLogin">
+                @method('post');
+                @csrf();
                 <div class="form-group wow fadeInDown">
                     <h6> البريد الألكتروني </h6>
                     <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username" name="username" >
@@ -48,7 +51,7 @@
                 </div>
             </form>
             <div class="form-links wow fadeInDown" style="margin-right: 30%;">
-                <a href="#">هل انت مشترك جديد </a>
+                <a href="/TahqqRegistration">هل انت مشترك جديد </a>
             </div>
     </div>
 </section>

@@ -18,7 +18,7 @@ class AddClientParameter{
     public $groupid;
     public $clientip;
 
-    public function GetDataAsArray(){
+    public function GetDataAsArray($skipvalidation){
         return array(
             'firstname'=>$this->firstname,
             'lastname'=>$this->lastname,
@@ -33,7 +33,8 @@ class AddClientParameter{
             'phonenumber'=>$this->phonenumber,
             'password2'=>$this->password2,
             'groupid'=>$this->groupid,
-            'clientip'=>$this->clientip
+            'clientip'=>$this->clientip,
+            'skipvalidation'=> $skipvalidation,
         );
     }
 }

@@ -55,33 +55,22 @@ class TahqqRegistrationController extends Controller
     {
         //
         $addClientParam = new AddClientParameter();
-        // $addClientParam->firstname=$this->firstname;
-        // $addClientParam->lastname=$this->lastname;
-        // $addClientParam->companyname=$this->companyname;
-        // $addClientParam->email=$this->email;
-        // $addClientParam->address1=$this->address1;
-        // $addClientParam->address2=$this->address2;
-        // $addClientParam->city=$this->city;
-        // $addClientParam->state=$this->state;
-        // $addClientParam->postcode=$this->postcode;
-        // $addClientParam->country=$this->country;
-        // $addClientParam->phonenumber=$this->phonenumber;
-        // $addClientParam->password2=$this->password2;
-        // $addClientParam->groupid=$this->groupid;
-        // $addClientParam->clientip=$this->clientip;
-        $addClientParam->firstname='ahmed';
-        $addClientParam->lastname='yahiya';
-        $addClientParam->companyname='aky';
-        $addClientParam->email='ahmed@aky.com';
-        $addClientParam->address1='basa';
-        $addClientParam->address2='montaza';
-        $addClientParam->city='db';
-        $addClientParam->state='';
-        $addClientParam->postcode='';
-        $addClientParam->country='ps';
-        $addClientParam->phonenumber='0599036944';
-        $addClientParam->password2='102030';
-        $addClientParam->groupid='';
+
+        $addClientParam->firstname=$request->firstname;
+        $addClientParam->lastname=$request->lastname;
+        $addClientParam->email=$request->email;
+        $addClientParam->phonenumber=$request->phonenumber;
+        $addClientParam->password2=$request->password;
+
+        // $addClientParam->companyname='';
+        // $addClientParam->address1='';
+        // $addClientParam->address2='';
+        // $addClientParam->city='';
+        // $addClientParam->state='';
+        // $addClientParam->postcode='';
+        // $addClientParam->country='';
+
+        $addClientParam->groupid='1';//Test API Tahaqq
         $addClientParam->clientip=request()->ip();
 
         $result = $this->whmcsAPILogic->AddClient($addClientParam);
@@ -141,5 +130,24 @@ class TahqqRegistrationController extends Controller
     public function destroy(TahqqRegistration $tahqqRegistration)
     {
         //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function login(Request $request)
+    {
+        $username = $request->username;
+        $password = $request->password;
+
+        $result = $this->whmcsAPILogic->Login($username,$password);
+        dump($result);
+        if($result->isSuccess)
+            return redirect($result->createSsoTokenResult->redirectUrl);
+        else
+            return 'ok';
     }
 }
