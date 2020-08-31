@@ -1,7 +1,13 @@
 <!doctype html>
 <html>
 <head>
+    @env('local')
     <base href="../">
+    @endenv
+    @env('prod')
+    <base href="">
+    @endenv
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>تسجيل دخول</title>

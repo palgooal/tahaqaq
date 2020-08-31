@@ -14,7 +14,14 @@ License: You must have a valid license purchased only from themeforest(the above
 -->
 <html direction="rtl" dir="rtl" style="direction: rtl" >
     <!--begin::Head-->
-    <head><base href="">
+    <head>
+        @env('local')
+        <base href="">
+        @endenv
+        @env('prod')
+        <base href="/public/">
+        @endenv
+
                 <meta charset="utf-8"/>
         <title>Metronic | Dashboard</title>
         <meta name="description" content="Updates and statistics"/>
@@ -23,6 +30,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!--begin::Fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>        <!--end::Fonts-->
 
+        @env('local')
                     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css"/>
                         <!--end::Page Vendors Styles-->
@@ -44,7 +52,28 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
                 <!--end::Layout Themes-->
 
+                @endenv
 
+                @env('prod')
+    <link href="admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css"/>
+                <!--end::Page Vendors Styles-->
+<!--begin::Page Custom Styles(used by this page)-->
+<link href="admin/assets/css/pages/login/classic/login-3.css" rel="stylesheet" type="text/css"/>
+<!--end::Page Custom Styles-->
+
+<!--begin::Global Theme Styles(used by all pages)-->
+<link href="admin/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
+<link href="admin/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
+<link href="admin/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+        <!--end::Global Theme Styles-->
+
+<!--begin::Layout Themes(used by all pages)-->
+
+<link href="admin/assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
+<link href="admin/assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
+<link href="admin/assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
+<link href="admin/assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
+                @endenv
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
 
             </head>

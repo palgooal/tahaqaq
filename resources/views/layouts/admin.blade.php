@@ -14,7 +14,14 @@ License: You must have a valid license purchased only from themeforest(the above
 <html direction="rtl" dir="rtl" style="direction: rtl" >
     <!--begin::Head-->
     <head>
+        @env('local')
         <base href="">
+        @endenv
+        @env('prod')
+        <base href="/public/">
+        @endenv
+
+
 
         <meta charset="utf-8"/>
         <title>Metronic | Dashboard</title>
@@ -29,13 +36,12 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 
+        @env('local')
         <!--begin::Global Theme Styles(used by all pages)-->
         <link href="{{asset('admin/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('admin/assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
                 <!--end::Global Theme Styles-->
-
-
                     <!--begin::Page Vendors Styles(used by this page)-->
         <link href="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css"/>
                         <!--end::Page Vendors Styles-->
@@ -49,7 +55,27 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
                     <!--end::Layout Themes-->
         <link href="{{asset('admin/assets/css/customeCss.css')}}" rel="stylesheet" type="text/css">
+        @endenv
+        @env('prod')
+             <!--begin::Global Theme Styles(used by all pages)-->
+        <link href="admin/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
+        <link href="admin/assets/plugins/custom/prismjs/prismjs.bundle.rtl.css" rel="stylesheet" type="text/css" />
+        <link href="admin/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+                <!--end::Global Theme Styles-->
+                    <!--begin::Page Vendors Styles(used by this page)-->
+        <link href="admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css"/>
+                        <!--end::Page Vendors Styles-->
 
+
+        <!--begin::Layout Themes(used by all pages)-->
+
+        <link href="admin/assets/css/themes/layout/header/base/light.rtl.css" rel="stylesheet" type="text/css" />
+        <link href="admin/assets/css/themes/layout/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />
+        <link href="admin/assets/css/themes/layout/brand/dark.rtl.css" rel="stylesheet" type="text/css" />
+        <link href="admin/assets/css/themes/layout/aside/dark.rtl.css" rel="stylesheet" type="text/css" />
+                    <!--end::Layout Themes-->
+        <link href="admin/assets/css/customeCss.css" rel="stylesheet" type="text/css">
+        @endenv
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
 
     </head>
