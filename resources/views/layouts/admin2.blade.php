@@ -13,7 +13,8 @@ License: You must have a valid license purchased only from themeforest(the above
 -->
 <html direction="rtl" dir="rtl" style="direction: rtl" >
     <!--begin::Head-->
-    <head><base href="">
+    <head>
+        <base href="">
                 <meta charset="utf-8"/>
         <title>Metronic | Dashboard</title>
         <meta name="description" content="Updates and statistics"/>
@@ -40,18 +41,18 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{asset('admin/assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('admin/assets/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
                 <!--end::Layout Themes-->
-    <link href="{{asset('admin/assets/css/customeCss.css')}}" rel="stylesheet" type="text/css">         
+    <link href="{{asset('admin/assets/css/customeCss.css')}}" rel="stylesheet" type="text/css">
 
         <link rel="shortcut icon" href="admin/assets/media/logos/favicon.ico"/>
-    <link href="{{asset('admin/assets/css/cssCustomeAdmin2.css')}}" rel="stylesheet" type="text/css">         
+    <link href="{{asset('admin/assets/css/cssCustomeAdmin2.css')}}" rel="stylesheet" type="text/css">
 
             </head>
     <!--end::Head-->
 <!--begin::Body-->
 <body  id="kt_body"  class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"  >
 
-          
-            
+
+
             @yield('content')
             @include('admin.partials.footer')
 

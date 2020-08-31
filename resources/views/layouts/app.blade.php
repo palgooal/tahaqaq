@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        @env('local')
         <base href="../">
+        @endenv
+        @env('prod')
+            <base href="">
+        @endenv
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1">
         <title>@yield('title' , 'تحقق')</title>
@@ -16,7 +22,6 @@
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
     <body class="home" dir="rtl">
-
         @include('partials.navbar')
         @yield('content')
         @include('partials.footer')
