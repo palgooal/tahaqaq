@@ -8,6 +8,7 @@ use App\Logic\APIClient\APIResult\LoginResult;
 use App\Logic\APIClient\APIResult\ValidateLoginResult;
 use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
 use App\Logic\TahaqqSessionInfo;
+use App\Logic\APIClient\APIResult\GetContactResult;
 
 class WhmcsAPILogic{
 
