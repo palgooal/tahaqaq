@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+use League\CommonMark\Environment;
+
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -20,10 +22,8 @@ define('LARAVEL_START', microtime(true));
 | loading any of our classes later on. It feels great to relax.
 |
 */
-if(env('local'))
-    require __DIR__.'/../vendor/autoload.php';
-else
-    require __DIR__.'/vendor/autoload.php';
+
+require __DIR__.(env('local')?'/../vendor/autoload.php' :'/vendor/autoload.php') ;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +36,8 @@ else
 | the responses back to the browser and delight our users.
 |
 */
-if(env('local'))
-    $app = require_once __DIR__.'/../bootstrap/app.php';
-else
-    $app = require_once __DIR__.'/bootstrap/app.php';
+
+$app = require_once __DIR__.(env('local')?'/../bootstrap/app.php':'/bootstrap/app.php');
 
 /*
 |--------------------------------------------------------------------------
