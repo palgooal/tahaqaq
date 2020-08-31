@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tahqq/public_html/v2
     - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp public/index.php $DEPLOYPATH
+    - /bin/cp public/.htaccess $DEPLOYPATH
