@@ -13,7 +13,7 @@ use App\Logic\APIClient\APIResult\GetContactResult;
 class WhmcsAPILogic{
 
     const WHMCS_LOGIN_URL = "https://clientgooal.palgooal.com/dologin.php";
-    const Whmcs_API_URL = "http://clientgooal.palgooal.com/includes/api.php";
+    const Whmcs_API_URL = "https://clientgooal.palgooal.com/includes/api.php";
 
     const username = "ahmedk";
     const password =  "ahm1989";
@@ -103,7 +103,7 @@ class WhmcsAPILogic{
         $loginResult->message= "Login succrssfully";
 
         TahaqqSessionInfo::CompleteClientLogin($loginResult);
-        
+
         return $loginResult;
     }
 
@@ -114,7 +114,7 @@ class WhmcsAPILogic{
             "password2"=>$password
         ), WhmcsAPIActions::Auth_ValidateLogin);
         $result = $this->callAPI($postfields);
-        
+
         $validateLoginResult= new ValidateLoginResult(false);
 
         if($result != null && $result->result == "success"){
@@ -152,11 +152,11 @@ class WhmcsAPILogic{
             // "service_id"=>"1"
         ), WhmcsAPIActions::Client_GetContacts);
         $result = $this->callAPI($postfields);
-        
+
         if($result->result == "success" && $result->totalresults == 1){
             $contactObj = $result->contacts[0];
             dump($contactObj);
-            $contactResult->isSuccess = true;    
+            $contactResult->isSuccess = true;
             $contactResult->clientId =$contactObj->userid;
             $contactResult->firstname = $contactObj->firstname;
             $contactResult->lastname = $contactObj->lastname;
