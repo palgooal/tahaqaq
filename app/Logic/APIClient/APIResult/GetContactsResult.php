@@ -2,16 +2,20 @@
 
 namespace App\Logic\APIClient\APIResult;
 
-class LoginResult{
+class GetContactResult{
     public $isSuccess;
     public $clientId;
+    public $firstname;
+    public $lastname;
     public $email;
-    public $createSsoTokenResult;
-    public $message;
-    public $ClientContactInfo
+    public $fullContactInfoObj;
 
     public function __construct($isSuccess)
     {
         $this->isSuccess = $isSuccess;
+    }
+
+    public function getFullName(){
+        return $this->firstname . ' ' . $this->lastname;
     }
 }

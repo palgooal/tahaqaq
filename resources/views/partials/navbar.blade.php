@@ -17,7 +17,12 @@
 				<ul>@foreach ($menus as $menu)
 					<li class="@if($loop->first)active @endif"><a href="{{$menu->url}}">{{$menu->name_ar}}</a>
 					</li>@endforeach</ul>
-				<div class="login-btns"> <a href="/logins" class="login">تسجيل الدخول </a>
+				<div class="login-btns"> 
+					@if($isClientLogin)
+						<a href="/" class="login">{{$loggedClientName}} </a>	
+					@else
+						<a href="/logins" class="login">تسجيل الدخول </a>
+					@endif
 					<a href="#" class="register">أبدا الآن</a>
 					<a href="#" class="langu">EN</a>
 				</div>

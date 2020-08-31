@@ -8,4 +8,9 @@ class ValidateLoginResult{
     public $isSuccess;
     //int
     public $clientId;
+
+    public function __construct($isSuccess)
+    {
+        $this->isSuccess = $isSuccess;
+    }
 }

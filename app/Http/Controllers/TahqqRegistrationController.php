@@ -146,7 +146,8 @@ class TahqqRegistrationController extends Controller
         $result = $this->whmcsAPILogic->Login($username,$password);
         dump($result);
         if($result->isSuccess)
-            return redirect($result->createSsoTokenResult->redirectUrl);
+            ///return redirect($result->createSsoTokenResult->redirectUrl);
+            return redirect('/');
         else
             return 'ok';
     }

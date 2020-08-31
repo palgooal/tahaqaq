@@ -6,12 +6,13 @@ use App\Logic\APIClient\APIParameter\AddClientParameter;
 use App\Logic\APIClient\WhmcsAPIActions;
 use App\Logic\APIClient\APIResult\LoginResult;
 use App\Logic\APIClient\APIResult\ValidateLoginResult;
-
+use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
+use App\Logic\TahaqqSessionInfo;
 
 class WhmcsAPILogic{
 
     const WHMCS_LOGIN_URL = "https://clientgooal.palgooal.com/dologin.php";
-    const Whmcs_API_URL = "https://clientgooal.palgooal.com/includes/api.php";
+    const Whmcs_API_URL = "http://clientgooal.palgooal.com/includes/api.php";
 
     const username = "ahmedk";
     const password =  "ahm1989";
@@ -62,7 +63,7 @@ class WhmcsAPILogic{
                 }
                 curl_close($ch);
                 // Decode response
-                $jsonData = json_decode($response, true);
+                $jsonData = json_decode($response, false);
                 // Dump array structure for inspection
                 dump($jsonData);
 
@@ -85,13 +86,26 @@ class WhmcsAPILogic{
             $loginResult->message = "Invalid username or password";
             return $loginResult;
         }
-    
+
+        $contactResult = $this->GetContact($validateLoginResult->clientId);
+        if(!$ssoResult->isSuccess){
+            $loginResult->isSuccess = false;
+            $loginResult->message = "Not found user contact";
+            return $loginResult;
+        }
+
         $loginResult->isSuccess = true;
         $loginResult->clientId = $ssoResult->clientId;
         $loginResult->email = $email;
         $loginResult->createSsoTokenResult = $ssoResult;
+        $loginResult->ClientContactInfo = $contactResult;
         $loginResult->message= "Login succrssfully";
+
+        TahaqqSessionInfo::CompleteClientLogin($loginResult);
+        
+        return $loginResult;
     }
+
 
     public function ValidateLogin($email, $password){
         $postfields = $this->getPostFileArray(array(
@@ -99,32 +113,58 @@ class WhmcsAPILogic{
             "password2"=>$password
         ), WhmcsAPIActions::Auth_ValidateLogin);
         $result = $this->callAPI($postfields);
-        $validateLoginResult= new ValidateLoginResult();
+        
+        $validateLoginResult= new ValidateLoginResult(false);
 
-        $validateLoginResult->isSuccess = $result->result == "success";
-        $validateLoginResult->clientId = $result->clientid;
+        if($result != null && $result->result == "success"){
+            $validateLoginResult->isSuccess =  true;
+            $validateLoginResult->clientId = $result->userid;
+        }
         return $validateLoginResult;
     }
 
 
     public function CreateSsoToken($clientId){
-        $createSsoTokenResult = new CreateSsoTokenResult();
+        $createSsoTokenResult = new CreateSsoTokenResult(false);
         $postfields = $this->getPostFileArray(array(
-            "client_id"=>"",
+            "client_id"=>$clientId,
             // "destination"=>"clientarea:product_details clientarea:profile",
             // "service_id"=>"1"
         ), WhmcsAPIActions::Auth_CreateSsoToken);
         $result = $this->callAPI($postfields);
         $createSsoTokenResult->isSuccess = $result->result == "success";
-        $createSsoTokenResult->clientId = $clientId;
-        $createSsoTokenResult->accessToken = $result->access_token;
-        $createSsoTokenResult->redirectUrl = $result->redirect_url;
-
+        if($createSsoTokenResult->isSuccess){
+            $createSsoTokenResult->clientId = $clientId;
+            $createSsoTokenResult->accessToken = $result->access_token;
+            $createSsoTokenResult->redirectUrl = $result->redirect_url;
+        }
         return $createSsoTokenResult;
     }
 
-    public function GetContacts($userId){
+    public function GetContact($userId){
         //GetContacts
-        //userid
+        // userid
+        $contactResult = new GetContactResult(false);
+        $postfields = $this->getPostFileArray(array(
+            "userid"=>$userId,
+            // "destination"=>"clientarea:product_details clientarea:profile",
+            // "service_id"=>"1"
+        ), WhmcsAPIActions::Client_GetContacts);
+        $result = $this->callAPI($postfields);
+        
+        if($result->result == "success" && $result->totalresults == 1){
+            $contactObj = $result->contacts[0];
+            dump($contactObj);
+            $contactResult->isSuccess = true;    
+            $contactResult->clientId =$contactObj->userid;
+            $contactResult->firstname = $contactObj->firstname;
+            $contactResult->lastname = $contactObj->lastname;
+            $contactResult->email = $contactObj->email;
+            $contactResult->fullContactInfoObj = $contactObj;
+        }
+        return $contactResult;
     }
+
+    //GetClientsDetails
+
 }
