@@ -17,6 +17,9 @@
         <link rel="stylesheet" href="asset/css/jquery.mCustomScrollbar.css">
         <link href="asset/css/style.css" rel="stylesheet" type="text/css">
         <link href="asset/css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="asset/css/product/Pretty-Product-List.css" rel="stylesheet" type="text/css">
+        <link href="asset/css/product/Sidebar.css" rel="stylesheet" type="text/css">
+        {{-- <link href="asset/css/product/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> --}}
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
