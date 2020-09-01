@@ -231,8 +231,8 @@ The project",
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_Contact,
-            'value_en'=>"http:\\",
-            'value_ar' =>"http:\\",
+            'value_en'=>"/Contactus",
+            'value_ar' =>"/Contactus",
         ]);
 
         DB::table('sys_vars')->insert([
