@@ -20,7 +20,11 @@
 				<div class="login-btns">
 					@if($isClientLogin)
                         <a href="/" class="">{{$loggedClientName}} </a>
-                        <a href="/TahqqLogout" class="logout">logout</a>
+                        <form action="/TahqqLogout" method="POST">
+                            @method('post');
+                            @csrf;
+                            <input type="submit" class="logout" value="Logout"/>
+                        </form>
 					@else
 						<a href="/logins" class="login">تسجيل الدخول </a>
 					@endif
