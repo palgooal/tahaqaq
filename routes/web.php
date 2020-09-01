@@ -77,6 +77,8 @@ Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
 Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
 Route::post('/TahqqLogin', 'TahqqRegistrationController@login');
 
+// Contact us
+Route::resource('/Contactus', 'ContactusController');
 
 
 
