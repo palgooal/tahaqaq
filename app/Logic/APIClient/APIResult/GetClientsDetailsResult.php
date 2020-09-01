@@ -2,7 +2,7 @@
 
 namespace App\Logic\APIClient\APIResult;
 
-class GetClientsDetails
+class GetClientsDetailsResult
 {
     private $isSuccess;
     private $clientsDetailsObj;

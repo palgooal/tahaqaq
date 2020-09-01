@@ -7,7 +7,7 @@ use App\Logic\APIClient\WhmcsAPIActions;
 use App\Logic\APIClient\APIResult\LoginResult;
 use App\Logic\APIClient\APIResult\ValidateLoginResult;
 use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
-use App\Logic\APIClient\APIResult\GetClientsDetails;
+use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\TahaqqSessionInfo;
 use App\Logic\APIClient\APIResult\GetContactResult;
 
@@ -174,7 +174,7 @@ class WhmcsAPILogic{
     public function GetClientsDetails($clientId){
         //GetContacts
         // userid
-        $clientDetailsResult = new GetClientsDetails(false);
+        $clientDetailsResult = new GetClientsDetailsResult(false);
         $postfields = $this->getPostFileArray(array(
             "clientid"=>$clientId,
             "stats"=>false
