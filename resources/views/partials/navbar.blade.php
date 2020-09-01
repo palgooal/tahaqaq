@@ -28,7 +28,7 @@
 					@else
 						<a href="/logins" class="login">تسجيل الدخول </a>
 					@endif
-					<a href="#" class="register">أبدا الآن</a>
+					<a href="/TahqqRegistration" class="register">أبدا الآن</a>
 					<a href="#" class="langu">EN</a>
 				</div>
 			</div>

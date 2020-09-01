@@ -78,10 +78,10 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return 'ok  - ' . $clientid;
+            return redirect('/logins');
         }
         else
-            return 'fail';
+            return back()->with('error',$result);
     }
 
     /**
@@ -150,7 +150,7 @@ class TahqqRegistrationController extends Controller
             ///return redirect($result->createSsoTokenResult->redirectUrl);
             return redirect('/');
         else
-            return 'ok';
+            return back()->with('error',$result->message);
     }
      /**
      * Remove the specified resource from storage.
