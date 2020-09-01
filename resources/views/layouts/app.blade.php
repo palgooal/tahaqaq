@@ -5,7 +5,7 @@
         <base href="../">
         @endenv
         @env('prod')
-            <base href="">
+            <base href="/public/">
         @endenv
 
         <meta charset="utf-8">
