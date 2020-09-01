@@ -9,6 +9,7 @@ use App\Model\Page;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use App\Logic\TahaqqSessionInfo;
 
 class PageController extends Controller
 {
@@ -76,7 +77,8 @@ class PageController extends Controller
 
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        return view('pages',compact(['sysVarFooter','sysVarSocialMedia']))->with('page', Page::where('slug', $slug)->first())
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        return view('pages',compact(['sysVarFooter','sysVarSocialMedia', 'isClientLogin']))->with('page', Page::where('slug', $slug)->first())
                             ->with('menus', Menu::get());
     }
 
