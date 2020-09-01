@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\App;
 use App\Logic\SysVar\SysVarTypes;
 use App\Logic\SysVar\SysVarLogic;
 use App\Model\Menu;
+use App\Logic\TahaqqSessionInfo;
 
 class TahqqRegistrationController extends Controller
 {
@@ -95,7 +96,8 @@ class TahqqRegistrationController extends Controller
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia']));
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','isClientLogin']));
     }
 
     /**
