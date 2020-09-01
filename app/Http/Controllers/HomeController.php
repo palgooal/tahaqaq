@@ -66,6 +66,7 @@ class HomeController extends Controller
 
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
+        dump($loggedClientName);
         return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',

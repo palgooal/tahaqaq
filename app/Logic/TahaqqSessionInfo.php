@@ -3,7 +3,7 @@
 
 namespace App\Logic;
 use App\Logic\APIClient\APIResult\LoginResult;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class  TahaqqSessionInfo{
 
@@ -13,11 +13,14 @@ class  TahaqqSessionInfo{
             Session::put('loginResultJson',json_encode($loginResult));
             Session::put('clientId',$loginResult->clientId);
             Session::put('email',$loginResult->email);
-            Session::put('fullName',$loginResult->ClientContactInfo->getFullName());
-            
+            Session::put('fullName',$loginResult->clientDetailsResult->getFullName());
+
             Session::put('accessToken',$loginResult->createSsoTokenResult->accessToken);
             Session::put('redirectUrl',$loginResult->createSsoTokenResult->redirectUrl);
         }
+    }
+    public static function ClientLogout(){
+        Session::flush();
     }
 
     public static function IsClientLogin(){
@@ -31,7 +34,7 @@ class  TahaqqSessionInfo{
     public  static function GetLoggedClientEmail(){
         return  Session::get('email');
     }
-    
+
     public  static function GetLoggedClientAccessToken(){
         return  Session::get('accessToken');
     }

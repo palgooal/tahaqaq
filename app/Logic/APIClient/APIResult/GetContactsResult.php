@@ -10,9 +10,9 @@ class GetContactResult{
     public $email;
     public $fullContactInfoObj;
 
-    public function __construct($isSuccess)
+    public function __construct($issuccess)
     {
-        $this->isSuccess = $isSuccess;
+        $this->isSuccess = $issuccess;
     }
 
     public function getFullName(){

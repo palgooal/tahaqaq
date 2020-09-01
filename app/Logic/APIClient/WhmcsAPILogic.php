@@ -7,6 +7,7 @@ use App\Logic\APIClient\WhmcsAPIActions;
 use App\Logic\APIClient\APIResult\LoginResult;
 use App\Logic\APIClient\APIResult\ValidateLoginResult;
 use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
+use App\Logic\APIClient\APIResult\GetClientsDetails;
 use App\Logic\TahaqqSessionInfo;
 use App\Logic\APIClient\APIResult\GetContactResult;
 
@@ -88,8 +89,8 @@ class WhmcsAPILogic{
             return $loginResult;
         }
 
-        $contactResult = $this->GetContact($validateLoginResult->clientId);
-        if(!$ssoResult->isSuccess){
+        $clientDetailResult = $this->GetClientsDetails($validateLoginResult->clientId);
+        if(!$clientDetailResult->isSuccess){
             $loginResult->isSuccess = false;
             $loginResult->message = "Not found user contact";
             return $loginResult;
@@ -99,7 +100,7 @@ class WhmcsAPILogic{
         $loginResult->clientId = $ssoResult->clientId;
         $loginResult->email = $email;
         $loginResult->createSsoTokenResult = $ssoResult;
-        $loginResult->ClientContactInfo = $contactResult;
+        $loginResult->clientDetailsResult = $clientDetailResult;
         $loginResult->message= "Login succrssfully";
 
         TahaqqSessionInfo::CompleteClientLogin($loginResult);
@@ -107,6 +108,9 @@ class WhmcsAPILogic{
         return $loginResult;
     }
 
+    public function Logout(){
+        TahaqqSessionInfo::ClientLogout();
+    }
 
     public function ValidateLogin($email, $password){
         $postfields = $this->getPostFileArray(array(
@@ -151,6 +155,7 @@ class WhmcsAPILogic{
             // "destination"=>"clientarea:product_details clientarea:profile",
             // "service_id"=>"1"
         ), WhmcsAPIActions::Client_GetContacts);
+
         $result = $this->callAPI($postfields);
 
         if($result->result == "success" && $result->totalresults == 1){
@@ -164,6 +169,28 @@ class WhmcsAPILogic{
             $contactResult->fullContactInfoObj = $contactObj;
         }
         return $contactResult;
+    }
+
+    public function GetClientsDetails($clientId){
+        //GetContacts
+        // userid
+        $clientDetailsResult = new GetClientsDetails(false);
+        $postfields = $this->getPostFileArray(array(
+            "clientid"=>$clientId,
+            "stats"=>false
+            // "destination"=>"clientarea:product_details clientarea:profile",
+            // "service_id"=>"1"
+        ), WhmcsAPIActions::Client_GetClientsDetails);
+
+        $result = $this->callAPI($postfields);
+
+        if($result->result == "success" ){
+            $clientObj = $result->client;
+            dump($clientObj);
+            $clientDetailsResult->SetIsSuccess(true);
+            $clientDetailsResult->SetClientsDetailsObj($clientObj);
+        }
+        return $clientDetailsResult;
     }
 
     //GetClientsDetails

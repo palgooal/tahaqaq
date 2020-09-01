@@ -8,7 +8,7 @@ class LoginResult{
     public $email;
     public $createSsoTokenResult;
     public $message;
-    public $ClientContactInfo;
+    public $clientDetailsResult;
 
     public function __construct($isSuccess)
     {

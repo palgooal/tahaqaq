@@ -151,4 +151,16 @@ class TahqqRegistrationController extends Controller
         else
             return 'ok';
     }
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+
+        $this->whmcsAPILogic->Logout();
+        return redirect('/');
+    }
 }
