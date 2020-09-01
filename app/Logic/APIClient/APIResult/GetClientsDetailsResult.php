@@ -16,26 +16,30 @@ class GetClientsDetailsResult
         $this->isSuccess = $isSuccess;
     }
 
+    public function GetIsSuccess(){
+       return $this->isSuccess;
+    }
+
     public function SetClientsDetailsObj($clientsDetailsObj){
         $this->clientsDetailsObj = $clientsDetailsObj;
     }
 
-    public function getClientId(){
+    public function GetClientId(){
         return $this->clientsDetailsObj->client_id;
     }
-    public function getFullName(){
+    public function GetFullName(){
         return $this->clientsDetailsObj->fullname;
     }
 
-    public function getEmail(){
+    public function GetEmail(){
         return $this->clientsDetailsObj->email;
     }
 
-    public function getFirstname(){
+    public function GetFirstname(){
         return $this->clientsDetailsObj->firstname;
     }
 
-    public function getLastname(){
+    public function GetLastname(){
         return $this->clientsDetailsObj->lastname;
     }
 }

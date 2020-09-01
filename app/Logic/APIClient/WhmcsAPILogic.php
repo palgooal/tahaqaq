@@ -90,7 +90,7 @@ class WhmcsAPILogic{
         }
 
         $clientDetailResult = $this->GetClientsDetails($validateLoginResult->clientId);
-        if(!$clientDetailResult->isSuccess){
+        if(!$clientDetailResult->GetIsSuccess()){
             $loginResult->isSuccess = false;
             $loginResult->message = "Not found user contact";
             return $loginResult;

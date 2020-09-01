@@ -13,7 +13,7 @@ class  TahaqqSessionInfo{
             Session::put('loginResultJson',json_encode($loginResult));
             Session::put('clientId',$loginResult->clientId);
             Session::put('email',$loginResult->email);
-            Session::put('fullName',$loginResult->clientDetailsResult->getFullName());
+            Session::put('fullName',$loginResult->clientDetailsResult->GetFullName());
 
             Session::put('accessToken',$loginResult->createSsoTokenResult->accessToken);
             Session::put('redirectUrl',$loginResult->createSsoTokenResult->redirectUrl);
