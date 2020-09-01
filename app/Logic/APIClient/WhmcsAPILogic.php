@@ -13,13 +13,13 @@ use App\Logic\APIClient\APIResult\GetContactResult;
 
 class WhmcsAPILogic{
 
-    const WHMCS_LOGIN_URL = "https://clientgooal.palgooal.com/dologin.php";
-    const Whmcs_API_URL = "https://clientgooal.palgooal.com/includes/api.php";
+    const WHMCS_LOGIN_URL = "https://client.tahqq.com/dologin.php";
+    const Whmcs_API_URL = "https://client.tahqq.com/includes/api.php";
 
     const username = "ahmedk";
-    const password =  "ahm1989";
-    const api_identifier = "YYQJND7dngu3C4hdnV6W6ynCpWYtjnlA";
-    const api_secret = "uWgy1FPS6CnxFX77vZiuSFbBAimr3Ssy";
+    const password =  "Ahm1989";
+    const api_identifier = "f4AuN2YuNa3BW44SSu85i1r4N54SWAJ7";//"YYQJND7dngu3C4hdnV6W6ynCpWYtjnlA";
+    const api_secret ="h8ul4RKbnf37XEBHszUHlGSAJHR6NW5U";// "uWgy1FPS6CnxFX77vZiuSFbBAimr3Ssy";
 
     public function AddClient(AddClientParameter $addClientParam){
         // Set post values
@@ -67,8 +67,6 @@ class WhmcsAPILogic{
                 // Decode response
                 $jsonData = json_decode($response, false);
                 // Dump array structure for inspection
-                dump($jsonData);
-
                 return $jsonData;
     }
 
@@ -160,7 +158,6 @@ class WhmcsAPILogic{
 
         if($result->result == "success" && $result->totalresults == 1){
             $contactObj = $result->contacts[0];
-            dump($contactObj);
             $contactResult->isSuccess = true;
             $contactResult->clientId =$contactObj->userid;
             $contactResult->firstname = $contactObj->firstname;
@@ -186,7 +183,6 @@ class WhmcsAPILogic{
 
         if($result->result == "success" ){
             $clientObj = $result->client;
-            dump($clientObj);
             $clientDetailsResult->SetIsSuccess(true);
             $clientDetailsResult->SetClientsDetailsObj($clientObj);
         }
