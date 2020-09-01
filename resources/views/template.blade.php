@@ -42,43 +42,49 @@
 
     </div>
 </section> --}}
+<!--section one -->
+
+
 <div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4"><div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
-                <div class="sidebar-category sidebar-default">
-                <div class="category-title">
-                    <span>جميع التصنيفات</span>
-                </div>
-                <div class="category-content">
-                    <ul id="fruits-nav" class="nav flex-column">
-                        @foreach ($categoris as $categoris)
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">{{$categoris->text_ar}}</a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            </div></div>
+            <div class="col-md-4 text-right"><div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
+<div class="sidebar-category sidebar-default">
+    <div class="category-title">
+        <span>جميع التصنيفات</span>
+    </div>
+    <div class="category-content">
+        <ul id="fruits-nav" class="nav flex-column">
+            @foreach ($categoris as $categoris)
+            <li class="nav-item">
+                <a href="{{$categoris->id}}" class="nav-link">{{$categoris->text_ar}}</a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+</div>
+</div></div>
             <div class="col-md-8">
                 <div class="row product-list">
                     @foreach ($templateAll as $templateAll)
                     <div class="col-sm-6 col-md-4 product-item">
                         <div class="product-container">
                             <div class="row">
-                                <div class="col-md-12"><img class="img-fluid d-lg-flex" src="images/{{$templateAll->image_url}}" loading="lazy"></div>
+                                <div class="col-md-12"><a class="product-image" href="#"><img src="images/{{$templateAll->image_url}}"></a></div>
                             </div>
                             <div class="row">
-                                <div class="col-12 text-center">
-                                    <h2><a href="#">{{$templateAll->title_ar}}</a></h2>
+                                <div class="col-12">
+                                    <h2 class="text-center"><a href="#">{{$templateAll->title_ar}} </a></h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-@endforeach
+                    @endforeach
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
+
 @endsection
