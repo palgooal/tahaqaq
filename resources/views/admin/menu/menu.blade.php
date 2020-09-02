@@ -38,7 +38,7 @@
             </div>
 
            {{-- start toggel url --}}
-           
+
 
 <button class="btn" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
     <label class="switch">
@@ -49,8 +49,8 @@
       </label>
  </button>
 
- 
- 
+
+
            <div class="collapse multi-collapse" id="multiCollapseExample1">
                <div class="card card-body">
                    <div class="form-group">
@@ -70,7 +70,7 @@
                            @foreach ($pages as $page)
                                <option value="/pages/{{$page->slug}}">{{$page->title_ar}}</option>
                            @endforeach
-       
+
                        </select>
                    </div>
                </div>
@@ -78,13 +78,13 @@
 
            {{-- end toggle url --}}
 
-            
-           
+
+
             <div class="form-group">
                 <label for="exampleInputPassword1">ترتيب القائمة<span class="text-danger">*</span></label>
                 <input type="number" class="form-control" placeholder="ترتيب القائمة" name="sort">
             </div>
-            
+
         </div>
         <div class="card-footer">
             <button type="submit" class="btn btn-primary mr-2">اضافة</button>
@@ -191,4 +191,3 @@
 </div>
 </div>
 
-@endsection

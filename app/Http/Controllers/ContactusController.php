@@ -37,6 +37,17 @@ class ContactusController extends Controller
         return view('Contactus',compact(['menus','sysVarFooter','sysVarSocialMedia','isClientLogin']));
     }
 
+    public function viewAll()
+    {
+        $lang = App::getLocale();
+        $menus = Menu::get();
+        $contact = Contactus::get();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        return view('admin.contact.contact',compact(['menus','contact','sysVarFooter','sysVarSocialMedia','isClientLogin']));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -84,9 +95,9 @@ class ContactusController extends Controller
      * @param  \App\Model\Contactus  $contactus
      * @return \Illuminate\Http\Response
      */
-    public function show(Contactus $contactus)
+    public function show($id)
     {
-        //
+        return view('admin.contact.showContact')->with('contact',Contactus::find($id));
     }
 
     /**
