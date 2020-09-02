@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
 use Illuminate\Support\Facades\App;
+use App\Logic\TahaqqSessionInfo;
 
 class TemplateController extends Controller
 {
@@ -43,13 +44,14 @@ class TemplateController extends Controller
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         return view('template')
                 ->with('templateAll',Template::orderBy('id','desc')->get())
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
-                ->with('categoris',TemplateCategory::get());
+                ->with('categoris',TemplateCategory::get())
+                ->with('isClientLogin',$isClientLogin);
     }
 
     public function viewTemplateCatecory(Request $request){
@@ -68,12 +70,14 @@ class TemplateController extends Controller
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
 
         return view('getOneTemplate')->with("templateOne",Template::findOrFail($request->id))
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
-                ->with('categoris',TemplateCategory::get());
+                ->with('categoris',TemplateCategory::get())
+                ->with('isClientLogin',$isClientLogin);
     }
 
 

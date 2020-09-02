@@ -23,7 +23,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/getOneTemplate/{{$templateAll->id}}">
                             <div class="card bg-dark text-white">
-                            <img class="card-img" src="images/{{$templateAll->image_url}}" alt="Card image">
+                            <img class="card-img" src="images/{{$templateAll->image_url}}" alt="Card image" height="200px" width="100%">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">{{$templateAll->title_ar}} </h5>
                                     <p class="card-text">{{$templateAll->small_details_ar}}</p>

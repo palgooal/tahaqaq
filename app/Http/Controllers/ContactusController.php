@@ -45,7 +45,7 @@ class ContactusController extends Controller
      */
     public function create()
     {
-        //
+        return view('Contactus');
     }
 
     /**
@@ -56,7 +56,26 @@ class ContactusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Contactus();
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->message = $request->message;
+        $data->save();
+        if($data->save()){
+            return response()->json(
+                 array(
+                     'success' => true,
+                      'message'=>'تم ارسال الرسالة بنجاح'
+                    ));
+        }else{
+            return response()->json(
+                array(
+                    'success' => false,
+                    'message' => "يوجد خطأ في ارسال الرسالة الرجاء ارسال الطلب مرة اخرى",
+                    )
+                );
+        }
+
     }
 
     /**

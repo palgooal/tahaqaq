@@ -1,0 +1,54 @@
+.spanAlertInb{
+    color: red;
+    margin-bottom: 18px;
+    font-size: 10px;
+  }
+
+
+
+#getOnetemplate .header_section{
+    background-color: rgba(84,84,84,.39);
+      height: 280px;
+      padding-top: 80px;
+  }
+
+  #getOnetemplate .header_section button{
+    min-width: 172px;
+    margin: 5px;
+  }
+
+
+  +#Our_advantages_section .title_ourAd{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+#Our_advantages_section  .cardAd{
+    padding: 20px;
+
+}
+#Our_advantages_section .cardAd img{
+    width: 19%;
+}
+#Our_advantages_section .cardAd .header{
+    margin-bottom: 16px;
+}
+  @media only screen and (max-width: 600px) {
+    #getOnetemplate .card-body{
+        padding-right: 20px;
+    }
+    #getOnetemplate .cardTemplate #btnDownLivePreviw{
+        display: block;
+        margin: 25px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+    #getOnetemplate .card-body{
+        padding-right: 123px;
+        padding-left: 110px;
+    }
+    #getOnetemplate .cardTemplate #btnDownLivePreviw{
+        display: none;
+    }
+  }

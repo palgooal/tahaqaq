@@ -169,14 +169,14 @@ body{
 }
 .login-btns {
     margin-right: 19px;
-    
+
 }
 .login-btns a{
     margin-left: 19px;
-    
+
 }
 .login-btns .login{
-    color: #7657E5; 
+    color: #7657E5;
     border: 2px solid;
     border-radius: 12px;
 
@@ -197,7 +197,7 @@ body{
     font-size:12px;
     transition: all 0.3s;
     line-height:20px;
-    
+
 
 }
 .section-1-r {
@@ -245,14 +245,14 @@ body{
 }
 .home-wrap .text{
     width:50%;
-    
+
 }
 .home-wrap .text-t{
     width:65%;
 }
 .home-wrap img{
     width:calc(40% - 5px);
-    
+
 }
 .home-wrap .text span{
     font-size:25px;
@@ -299,7 +299,7 @@ body{
     width: 110%;
 }
 .firstsection .text{
-    width: calc(40% - 5px); 
+    width: calc(40% - 5px);
     margin-top: 5%;
 
 }
@@ -565,7 +565,7 @@ section .home-section wow fadeIn {
 }
 .blogs .container .bloglist-img-head .time {
     background-color: #F582EA;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding: 5px 24px;
 }
 .blogs .container .bloglist-img-head a {
@@ -841,7 +841,7 @@ input:checked + .slider:before {
 .wizard .tab-pane .left a p {
     font-size: 14px;
     color: #221950;
-    
+
 }
 .wizard .tab-pane .choose {
     color: #221950;
@@ -849,10 +849,10 @@ input:checked + .slider:before {
 .wizard .tab-pane .choose h3 {
 }
 .wizard .tab-pane .choose p{
- 
+
 }
 .wizard .tab-pane .choose h6 {
- 
+
 }
 .wizard .tab-pane .choose select{
     width: 80%;
@@ -862,7 +862,7 @@ input:checked + .slider:before {
     color: #7657E5;
 }
 .wizard .tab-pane .choose option{
-    
+
 }
 .wizard .tab-pane .True {
     float: right;
@@ -887,7 +887,7 @@ input:checked + .slider:before {
 .wizard .tab-pane .True li:hover{
     background-color: #F3EFFF;
     border-radius: 5%;
-    
+
 
 }
 .wizard .tab-pane .True img {
@@ -908,7 +908,7 @@ input:checked + .slider:before {
     font-weight: bold;
  }
  .wizard .tab-pane .false .template i {
-   
+
 }
 .wizard .tab-pane .false .template p{
     color: #221950;
@@ -1044,7 +1044,7 @@ form ul li .btn-default {
     background-image: url("../img/Mask\ Group\ 1.png");
     background-position: top;
     height: 335px;
-    
+
 }
 .cellme {
     margin: 10%;
@@ -1296,7 +1296,7 @@ form ul li .btn-default {
     height: 50px;
     padding: 16px;
     font-family: "FFShamelFamily-SansOnebook";
-    float: left;    
+    float: left;
 }
 .bloglist-img-head {
     background-image: url(../img/12.png);
@@ -1317,7 +1317,7 @@ form ul li .btn-default {
     float: right;
     width: 60%;
     font-family: "FF Shamel Family Sans One";
-    
+
 }
 .single-post .left{
     float: left;
@@ -1326,7 +1326,7 @@ form ul li .btn-default {
 .single-post .right h6{
     font-size: 18px;
     margin-top: 5%;
-    
+
 }
 .single-post .right p{
     font-size: 12px;
@@ -1334,7 +1334,7 @@ form ul li .btn-default {
 .single-post .right ul{
     font-size: 12px;
     margin-top: 5%;
-    
+
 }
 .single-post .right ul li{
     margin-bottom: 2%;
@@ -1344,10 +1344,10 @@ form ul li .btn-default {
     border: 0px;
 }
 .single-post .left .blog-item .blog-item-img {
-    
+
 }
 .single-post .left .blog-item .blog-item-img a {
-    
+
 }
 .single-post .left .blog-item .blog-item-img a img{
     width: 50px;
@@ -1359,26 +1359,26 @@ form ul li .btn-default {
     padding: 16px 14px;
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text span{
-    
+
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text span img {
-    
+
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text a {
-    
+
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text ul {
     display: inline-flex;
     float: left;
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text ul li {
-    
+
 }
 /* end */
 /* howtahqq */
 .howtahqq {
     font-family: "FF Shamel Family Sans One";
-    margin: 2% 5%;    
+    margin: 2% 5%;
 
 }
 .howtahqq .howtext {
@@ -1391,7 +1391,7 @@ form ul li .btn-default {
 .howtahqq .howtext h4{
     font-size: 18px;
     margin-bottom: 2%;
-    
+
 }
 .howtahqq .howtext h2{
     font-weight: bold;
@@ -1403,13 +1403,13 @@ form ul li .btn-default {
     color: #343A40;
     font-size: 15px;
     margin-bottom: 2%;
-    
+
 }
 .howtahqq .howtext p{
     color: #74787D;
     font-size: 8px;
     margin-bottom: 10%;
-    
+
 }
 /* end howtahqq */
 /*price*/
@@ -1445,7 +1445,7 @@ form ul li .btn-default {
     margin-top: 3%;
 }
 .bouquet ul li h2 {
-    
+
 }
 .bouquet ul li p {
     display: inline;
@@ -1469,7 +1469,7 @@ form ul li .btn-default {
 }
 .bouquet ul li h6 p {
     display: contents;
-    
+
 }
 #customers {
     border-collapse: collapse;
@@ -1480,7 +1480,7 @@ form ul li .btn-default {
 #customers td, #customers th {
     padding: 1%;
     text-align: right;
-    
+
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -1494,7 +1494,7 @@ form ul li .btn-default {
 }
 #customers img {
     width: 10%;
-} 
+}
 /*end price*/
 .courses{
     padding:40px 0 50px;
@@ -1768,7 +1768,7 @@ footer .container{
     width: 50%;
 }
 .footer-contact-wrap{
-    
+
 }
 .footer-contact-item{
     margin-bottom:15px;
@@ -2101,7 +2101,7 @@ footer .container{
     max-width:100%;
     width:500px;
     padding:40px;
-   
+
 }
 .form-input::-webkit-input-placeholder { /* Chrome */
     color: #bbc0c9;
@@ -3413,7 +3413,7 @@ a.lang:hover{
     font-size:14px;
     color: #666;
     line-height:10px;
-    
+
 }
 header{
     transition: all 0.3s;
@@ -3791,3 +3791,53 @@ span.hint {
     margin: 0 auto;
     display: inherit;
 }
+
+
+
+#getOnetemplate .img{
+    width: 100%;
+    height: 100%;
+    width: 78%;
+    height: 109%;
+    background-size: 100% 100%;
+    display: table;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  #getOnetemplate .img:hover .previoLive{
+    background-color:#7657e5ab;
+    background-size:100% 100%;
+    height: 437px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #getOnetemplate .img:hover .btnPreviw{
+      display: block;
+  }
+
+  #getOnetemplate  .btnPreviw{
+    display: none;
+
+  }
+
+  .cardTemplate .header{
+      margin-bottom: 100px;
+  }
+
+  #templateView h5{
+    margin-right: auto !important;
+    color: #fff;
+}
+#templateView p{
+    font-size: 11px !important;
+}
+#templateView .card{
+    /* background-color: #69E4F9; */
+    border-radius: 10px;
+}
+
+
+
+
+/* --------------------- */
