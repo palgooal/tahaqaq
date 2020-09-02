@@ -64,13 +64,12 @@ class HomeController extends Controller
         //social media
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
-        $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
+        // $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        // $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
         return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
-       'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4',
-       'isClientLogin','loggedClientName']));
+       'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
     }
 
 

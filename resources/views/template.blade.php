@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
+@include('partials.InternalNavpar')
+<a href="/" class="re-index"> <img src="img/arrow-right.png">الرجوع الى الرئيسية</a>
+<div class="section-title wow fadeInDown">قوالب Wordpress</div>
 <div class="container">
-<section id="templateView">
+{{-- <section id="templateView">
     <div class="row text-center">
         <div class="col-lg-1 colCategory">
             <div class="category">
@@ -38,6 +41,50 @@
         </div>
 
     </div>
-</section>
+</section> --}}
+<!--section one -->
+
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-right"><div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
+<div class="sidebar-category sidebar-default">
+    <div class="category-title">
+        <span>جميع التصنيفات</span>
+    </div>
+    <div class="category-content">
+        <ul id="fruits-nav" class="nav flex-column">
+            @foreach ($categoris as $categoris)
+            <li class="nav-item">
+                <a href="{{$categoris->id}}" class="nav-link">{{$categoris->text_ar}}</a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
 </div>
+</div></div>
+            <div class="col-md-8">
+                <div class="row product-list">
+                    @foreach ($templateAll as $templateAll)
+                    <div class="col-sm-6 col-md-4 product-item">
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-12"><a class="product-image" href="#"><img src="images/{{$templateAll->image_url}}"></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="text-center"><a href="#">{{$templateAll->title_ar}} </a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

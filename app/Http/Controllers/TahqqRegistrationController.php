@@ -78,10 +78,10 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return 'ok  - ' . $clientid;
+            return redirect('/logins');
         }
         else
-            return 'fail';
+            return back()->with('error',$result);
     }
 
     /**
@@ -146,11 +146,22 @@ class TahqqRegistrationController extends Controller
         $password = $request->password;
 
         $result = $this->whmcsAPILogic->Login($username,$password);
-        dump($result);
         if($result->isSuccess)
             ///return redirect($result->createSsoTokenResult->redirectUrl);
             return redirect('/');
         else
-            return 'ok';
+            return back()->with('error',$result->message);
+    }
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+
+        $this->whmcsAPILogic->Logout();
+        return redirect('/');
     }
 }

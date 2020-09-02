@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Logic\SysVar\SysVarLogic;
+use App\Logic\TahaqqSessionInfo;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -33,6 +34,13 @@ class AppServiceProvider extends ServiceProvider
             $sysVarLogic = new SysVarLogic();
             $types = $sysVarLogic->GetTypes();
             $view->with('apperanceMenuItems', $types);
+        });
+
+        View::composer('*', function ($view) {
+            $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+            $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
+            $view->with('isClientLogin', $isClientLogin)
+                 ->with('loggedClientName',$loggedClientName);
         });
     }
 }

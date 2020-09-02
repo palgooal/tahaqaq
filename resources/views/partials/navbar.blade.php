@@ -17,13 +17,18 @@
 				<ul>@foreach ($menus as $menu)
 					<li class="@if($loop->first)active @endif"><a href="{{$menu->url}}">{{$menu->name_ar}}</a>
 					</li>@endforeach</ul>
-				<div class="login-btns"> 
+				<div class="login-btns">
 					@if($isClientLogin)
-						<a href="/" class="login">{{$loggedClientName}} </a>	
+                        <form action="/TahqqLogout" method="POST">
+                            @method('post')
+                            @csrf
+                            <a href="/" class="">{{$loggedClientName}} </a>
+                            <input type="submit" class="logout" value="Logout"/>
+                        </form>
 					@else
 						<a href="/logins" class="login">تسجيل الدخول </a>
 					@endif
-					<a href="#" class="register">أبدا الآن</a>
+					<a href="/TahqqRegistration" class="register">أبدا الآن</a>
 					<a href="#" class="langu">EN</a>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 @extends('layouts.app') @section('content')
+@include('partials.navbar')
 <!--section one -->
 <section class="firstsection">
 	<div class="container">
