@@ -16,7 +16,7 @@
             </div>
             <h5>اتصل بنا </h5>
             <h2> نحن نساعدك بالوصول السريع لاعمالك </h2>
-            <form action="/Contactus" method="POST" enctype="multipart/form-data" id="idContact">
+            <form action="/pg-admin/Contactus" method="POST" enctype="multipart/form-data" id="idContact">
                 @csrf
                 <div class="form-group">
                     <h6> الاسم بالكامل</h6>
@@ -33,7 +33,7 @@
                     <input type="text" class="form-input" name="message" id="message" placeholder="هنا يكتب وصف المشروع " required>
                     <span id="alertMessage" class="spanAlertInb"></span>
                 </div>
-                    <button type="submit" id="btnSubmit">ارسال </button>
+                    <button type="submit" id="btnSubmit">ارسال</button>
             </form>
         </div>
         <div class="cellme-l">

@@ -1,26 +1,23 @@
 <!--begin::Main-->
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
-    <!--begin::Logo-->
-    <a href="/pg-admin">
-        <img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
-    </a>
-    <!--end::Logo-->
-    <!--begin::Toolbar-->
-    <div class="d-flex align-items-center">
-        <!--begin::Aside Mobile Toggle-->
-        <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
-            <span></span>
-        </button>
-        <!--end::Aside Mobile Toggle-->
-        <!--begin::Header Menu Mobile Toggle-->
-        <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
-            <span></span>
-        </button>
-        <!--end::Header Menu Mobile Toggle-->
-        <!--begin::Topbar Mobile Toggle-->
-        <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
-            <span class="svg-icon svg-icon-xl">
+	<!--begin::Logo-->
+	<a href="/pg-admin">
+		<img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
+	</a>
+	<!--end::Logo-->
+	<!--begin::Toolbar-->
+	<div class="d-flex align-items-center">
+		<!--begin::Aside Mobile Toggle-->
+		<button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle"> <span></span>
+		</button>
+		<!--end::Aside Mobile Toggle-->
+		<!--begin::Header Menu Mobile Toggle-->
+		<button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle"> <span></span>
+		</button>
+		<!--end::Header Menu Mobile Toggle-->
+		<!--begin::Topbar Mobile Toggle-->
+		<button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle"> <span class="svg-icon svg-icon-xl">
                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                     height="24px" viewBox="0 0 24 24" version="1.1">
@@ -36,27 +33,26 @@
                 </svg>
                 <!--end::Svg Icon-->
             </span>
-        </button>
-        <!--end::Topbar Mobile Toggle-->
-    </div>
-    <!--end::Toolbar-->
+		</button>
+		<!--end::Topbar Mobile Toggle-->
+	</div>
+	<!--end::Toolbar-->
 </div>
 <!--end::Header Mobile-->
 <div class="d-flex flex-column flex-root">
-    <!--begin::Page-->
-    <div class="d-flex flex-row flex-column-fluid page">
-        <!--begin::Aside-->
-        <div class="aside aside-left  aside-fixed  d-flex flex-column flex-row-auto" id="kt_aside">
-            <!--begin::Brand-->
-            <div class="brand flex-column-auto " id="kt_brand">
-                <!--begin::Logo-->
-                <a href="index.html" class="brand-logo">
-                    <img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
-                </a>
-                <!--end::Logo-->
-                <!--begin::Toggle-->
-                <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
-                    <span class="svg-icon svg-icon svg-icon-xl">
+	<!--begin::Page-->
+	<div class="d-flex flex-row flex-column-fluid page">
+		<!--begin::Aside-->
+		<div class="aside aside-left  aside-fixed  d-flex flex-column flex-row-auto" id="kt_aside">
+			<!--begin::Brand-->
+			<div class="brand flex-column-auto " id="kt_brand">
+				<!--begin::Logo-->
+				<a href="index.html" class="brand-logo">
+					<img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
+				</a>
+				<!--end::Logo-->
+				<!--begin::Toggle-->
+				<button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle"> <span class="svg-icon svg-icon svg-icon-xl">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                             height="24px" viewBox="0 0 24 24" version="1.1">
@@ -74,20 +70,18 @@
                         </svg>
                         <!--end::Svg Icon-->
                     </span>
-                </button>
-                <!--end::Toolbar-->
-            </div>
-            <!--end::Brand-->
-            <!--begin::Aside Menu-->
-            <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-                <!--begin::Menu Container-->
-                <div id="kt_aside_menu" class="aside-menu my-4 " data-menu-vertical="1" data-menu-scroll="1"
-                    data-menu-dropdown-timeout="500">
-                    <!--begin::Menu Nav-->
-                    <ul class="menu-nav ">
-                        <li class="menu-item  menu-item-active" aria-haspopup="true">
-                            <a href="/" class="menu-link ">
-                                <span class="svg-icon menu-icon">
+				</button>
+				<!--end::Toolbar-->
+			</div>
+			<!--end::Brand-->
+			<!--begin::Aside Menu-->
+			<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+				<!--begin::Menu Container-->
+				<div id="kt_aside_menu" class="aside-menu my-4 " data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+					<!--begin::Menu Nav-->
+					<ul class="menu-nav ">
+						<li class="menu-item  menu-item-active" aria-haspopup="true">
+							<a href="/" class="menu-link "> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -103,13 +97,11 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-text">Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-item  menu-item-active" aria-haspopup="true">
-                            <a href="/pg-admin/menus" class="menu-link ">
-                                <span class="symbol-label">
+								<span class="menu-text">Dashboard</span>
+							</a>
+						</li>
+						<li class="menu-item  menu-item-active" aria-haspopup="true">
+							<a href="/pg-admin/menus" class="menu-link "> <span class="symbol-label">
                                     <span class="svg-icon svg-icon-lg svg-icon-danger">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -127,16 +119,11 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                </span>
-                                <span class="menu-text">القوائم</span>
-                            </a>
-                        </li>
-                        {{-- start upload --}}
-
-
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="svg-icon menu-icon">
+								</span> <span class="menu-text">القوائم</span>
+							</a>
+						</li>{{-- start upload --}}
+						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+							<a href="javascript:;" class="menu-link menu-toggle"> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -154,44 +141,30 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-text">الوسائط</span><i class="menu-arrow"></i>
-                            </a>
-                            <div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120">
-                                <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/upload" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+								<span class="menu-text">الوسائط</span><i class="menu-arrow"></i>
+							</a>
+							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
+								<ul class="menu-subnav">
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/upload" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
-                                            <span class="menu-text">المعرض</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/addMedia" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+											<span class="menu-text">المعرض</span>
+										</a>
+									</li>
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/addMedia" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
-                                            <span class="menu-text">رقع الصور</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-
-                        {{-- end upload --}}
-
-
-
-                        {{-- start pages --}}
-
-
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="svg-icon menu-icon">
+											<span class="menu-text">رقع الصور</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>{{-- end upload --}} {{-- start pages --}}
+						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+							<a href="javascript:;" class="menu-link menu-toggle"> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -205,45 +178,38 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-text">الصفحات</span><i class="menu-arrow"></i>
-                            </a>
-                            <div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120">
-                                <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/pages" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+								<span class="menu-text">الصفحات</span><i class="menu-arrow"></i>
+							</a>
+							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
+								<ul class="menu-subnav">
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/pages" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
-                                            <span class="menu-text">الصفحات</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/pages/create" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+											<span class="menu-text">الصفحات</span>
+										</a>
+									</li>
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/pages/create" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
-                                            <span class="menu-text">اضافة صفحة</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/sysVars_editAsCards" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+											<span class="menu-text">اضافة صفحة</span>
+										</a>
+									</li>
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/sysVars_editAsCards" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
-                                            <span class="menu-text">sys vars</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="svg-icon menu-icon">
+											<span class="menu-text">sys vars</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+							<a href="javascript:;" class="menu-link menu-toggle"> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -257,39 +223,30 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-text">Templates</span><i class="menu-arrow"></i>
-                            </a>
-                            <div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120">
-                                <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/templates" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+								<span class="menu-text">Templates</span><i class="menu-arrow"></i>
+							</a>
+							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
+								<ul class="menu-subnav">
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/templates" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
-                                            <span class="menu-text">Templates Definition</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/templateCategories" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+											<span class="menu-text">Templates Definition</span>
+										</a>
+									</li>
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/templateCategories" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
-                                            <span class="menu-text">Categories</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li>
-                        {{-- end pages --}}
-
-                        {{-- start Blogs --}}
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="svg-icon menu-icon">
+											<span class="menu-text">Categories</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>{{-- end pages --}} {{-- start Blogs --}}
+						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+							<a href="javascript:;" class="menu-link menu-toggle"> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -303,45 +260,56 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-text">المدونة</span><i class="menu-arrow"></i>
-                            </a>
-                            <div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120">
-                                <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/blogs" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+								<span class="menu-text">المدونة</span><i class="menu-arrow"></i>
+							</a>
+							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
+								<ul class="menu-subnav">
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/blogs" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
-                                            <span class="menu-text">كل التدوينات</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="menu-item " aria-haspopup="true">
-                                        <a href="/pg-admin/blogs/create" class="menu-link ">
-                                            <i class="menu-bullet menu-bullet-dot">
+											<span class="menu-text">كل التدوينات</span>
+										</a>
+									</li>
+									<li class="menu-item " aria-haspopup="true">
+										<a href="/pg-admin/blogs/create" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
-                                            <span class="menu-text">اضافة تدوينة جديدة</span>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </li>
-                        {{-- end blogs --}}
-
-                        @include('admin.partials.apperanceMenuItem');
-
-                    </ul>
-                    <!--end::Menu Nav-->
-                </div>
-                <!--end::Menu Container-->
-            </div>
-            <!--end::Aside Menu-->
-        </div>
-        <!--end::Aside-->
-    </div>
+											<span class="menu-text">اضافة تدوينة جديدة</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>{{-- end blogs --}} @include('admin.partials.apperanceMenuItem'); {{-- start Contact us --}}
+						<li class="menu-item  menu-item-active" aria-haspopup="true">
+							<a href="/pg-admin/Contactus" class="menu-link "> <span class="symbol-label">
+                                    <span class="svg-icon svg-icon-lg svg-icon-danger">
+                                        <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                            viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path
+                                                    d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
+                                                    fill="#000000"></path>
+                                                <rect fill="#000000" opacity="0.3"
+                                                    transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519) "
+                                                    x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
+                                            </g>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                    </span>
+								</span> <span class="menu-text">اتصل بنا</span>
+							</a>
+						</li>{{-- end Contact us --}}</ul>
+					<!--end::Menu Nav-->
+				</div>
+				<!--end::Menu Container-->
+			</div>
+			<!--end::Aside Menu-->
+		</div>
+		<!--end::Aside-->
+	</div>
 </div>

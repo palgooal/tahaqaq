@@ -29,11 +29,11 @@ $('#deleteblog').on('show.bs.modal', function (event) {
     })
 
     // Contact us delete
-$('#deleteContactus').on('show.bs.modal', function (event) {
+$('#deletecontact').on('show.bs.modal', function (event) {
 
     var button = $(event.relatedTarget)
-    var Contactus_id = button.data('Contactusid')
+    var contact_id = button.data('contactid')
     var modal = $(this)
 
-    modal.find('.modal-body #Contactus_id').val(Contactus_id)
+    modal.find('.modal-body #contact_id').val(contact_id)
     })

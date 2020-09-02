@@ -30,17 +30,18 @@ class ContactusController extends Controller
      */
     public function index()
     {
+        return view('admin.contact.contact')->with('contacts', Contactus::get());
+    }
+
+    public function viewAll()
+    {
         $lang = App::getLocale();
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         return view('Contactus',compact(['menus','sysVarFooter','sysVarSocialMedia','isClientLogin']));
-    }
 
-    public function viewAll()
-    {
-          return view('admin.contact.contact')->with('contact', Contactus::get());
     }
 
 
@@ -126,8 +127,8 @@ class ContactusController extends Controller
      */
     public function destroy(Request $request)
     {
-        $contactus = Contactus::findOrFail($request->Contactus_id);
-        $contactus->delete();
+        $data = Contactus::findOrFail($request->contact_id);
+        $data->delete();
         return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }

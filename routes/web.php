@@ -79,8 +79,8 @@ Route::post('/TahqqLogin', 'TahqqRegistrationController@login');
 Route::post('/TahqqLogout', 'TahqqRegistrationController@logout');
 
 // Contact us
-Route::resource('/Contactus', 'ContactusController');
-Route::get('/pg-admin/Contactus','ContactusController@viewAll');
+Route::resource('/pg-admin/Contactus', 'ContactusController');
+Route::get('Contactus','ContactusController@viewAll');
 Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
 
 
