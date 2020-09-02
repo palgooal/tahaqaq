@@ -18,7 +18,7 @@
   }
 
 
-  +#Our_advantages_section .title_ourAd{
+  #Our_advantages_section .title_ourAd{
     margin-top: 30px;
     margin-bottom: 60px;
 }
@@ -32,6 +32,56 @@
 #Our_advantages_section .cardAd .header{
     margin-bottom: 16px;
 }
+
+
+
+#getOnetemplate .img{
+    width: 100%;
+    height: 100%;
+    width: 78%;
+    height: 109%;
+    background-size: 100% 100%;
+    display: table;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  #getOnetemplate .img:hover .previoLive{
+    background-color:#7657e5ab;
+    background-size:100% 100%;
+    height: 437px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #getOnetemplate .img:hover .btnPreviw{
+      display: block;
+  }
+
+  #getOnetemplate  .btnPreviw{
+    display: none;
+
+  }
+
+  .cardTemplate .header{
+      margin-bottom: 100px;
+  }
+
+  #templateView h5{
+    margin-right: auto !important;
+    color: #fff;
+}
+#templateView p{
+    font-size: 11px !important;
+}
+#templateView .card{
+    /* background-color: #69E4F9; */
+    border-radius: 10px;
+}
+
+
+
+
+/* --------------------- */
   @media only screen and (max-width: 600px) {
     #getOnetemplate .card-body{
         padding-right: 20px;
@@ -52,3 +102,7 @@
         display: none;
     }
   }
+
+
+
+
