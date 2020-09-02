@@ -23,6 +23,10 @@ class  TahaqqSessionInfo{
         Session::flush();
     }
 
+    public static function GetLoggedClientId(){
+        return Session::get('clientId');
+    }
+
     public static function IsClientLogin(){
         return Session::get('isClientLogin') == 'true';
     }

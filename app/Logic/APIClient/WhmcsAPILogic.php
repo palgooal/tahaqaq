@@ -36,6 +36,26 @@ class WhmcsAPILogic{
         return $this->callAPI($postfields);
     }
 
+    public function SaveClientProjectInfo($clientId,$projectName,$projectCategory,$projectDetails){
+
+        $customfieldsArray = array(
+            'ProjectName' => $projectName,
+            'ProjectCategory' => $projectCategory,
+            'ProjectDetails' => $projectDetails,
+        );
+
+        $customfields = base64_encode(serialize($customfieldsArray));
+        $postfields = $this->getPostFileArray(array(
+            "clientid"=>$clientId,
+            "customfields"=>$customfields
+        ), WhmcsAPIActions::Client_UpdateClient);
+        $result = $this->callAPI($postfields);
+        if($result->result == "success")
+            return true;
+
+        return false;
+    }
+
     private function getPostFileArray($CURLOPT_POSTFIELDS_ARRAY, $action){
         $connectionInfo = array(
             'username' => WhmcsAPILogic::username,
@@ -72,6 +92,35 @@ class WhmcsAPILogic{
 
     public function Login($email, $password){
         $loginResult = new LoginResult(false);
+        if(env('APP_ENV') == 'local')
+        {
+            $ssoResult = new CreateSsoTokenResult(true);
+            $ssoResult->clientId= 1;
+            $ssoResult->accessToken = "token";
+            $ssoResult->redirectUrl = "http://client.tahqq.com/admin";
+
+            $clientDetailResult = new GetClientsDetailsResult(true);
+            $client =json_decode('{
+                "client_id":1,
+                "fullname":"user user",
+                "email":"'.$email.'",
+                "firstname":"user",
+                "lastname":"user"
+            }', false);
+            $clientDetailResult->SetClientsDetailsObj($client);
+
+            $loginResult->isSuccess = true;
+            $loginResult->clientId = 1;
+            $loginResult->email = $email;
+            $loginResult->createSsoTokenResult = $ssoResult;
+            $loginResult->clientDetailsResult = $clientDetailResult;
+            $loginResult->message= "Login succrssfully";
+
+            TahaqqSessionInfo::CompleteClientLogin($loginResult);
+
+            return $loginResult;
+        }
+
 
         $validateLoginResult = $this->ValidateLogin($email, $password);
         if(!$validateLoginResult->isSuccess){

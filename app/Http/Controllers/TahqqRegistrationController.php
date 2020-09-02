@@ -12,6 +12,8 @@ use App\Logic\SysVar\SysVarLogic;
 use App\Model\Menu;
 use App\Logic\TahaqqSessionInfo;
 
+use function Symfony\Component\String\b;
+
 class TahqqRegistrationController extends Controller
 {
     private $sysVarLogic;
@@ -96,8 +98,8 @@ class TahqqRegistrationController extends Controller
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
-        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','isClientLogin']));
+
+        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia']));
     }
 
     /**
@@ -124,6 +126,30 @@ class TahqqRegistrationController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function SaveClientProjectInfo(Request $request)
+    {
+        $data = request()->validate([
+            'projectName' => 'required',
+            'projectCategory' => 'required',
+            'projectDetails'=>'required'
+        ]);
+
+        $clientId = TahaqqSessionInfo::GetLoggedClientId();
+        $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo($clientId,$request->projectName,$request->projectCategory,$request->projectDetails);
+        if($isSuccess)
+            return back()->with('success','saved successfully');
+        else
+            return back()->with('error','faild save project info');
+    }
+
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Model\TahqqRegistration  $tahqqRegistration
@@ -142,6 +168,11 @@ class TahqqRegistrationController extends Controller
      */
     public function login(Request $request)
     {
+        $data = request()->validate([
+            'username' => 'required',
+            'password' => 'required'
+
+        ]);
         $username = $request->username;
         $password = $request->password;
 

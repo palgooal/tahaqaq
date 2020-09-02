@@ -11,7 +11,7 @@
                       <div class="connecting-line"></div>
                       <ul class="nav nav-tabs" role="tablist">
 
-                          <li role="presentation" class="active">
+                      <li role="presentation" class="{{$isClientLogin?"":"active"}}">
                               <h2> بيانات الحساب</h2>
                               <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                   <span class="round-tab">
@@ -20,7 +20,7 @@
                               </a>
                           </li>
 
-                          <li role="presentation" class="disabled">
+                          <li role="presentation" class="{{$isClientLogin?"active":"disabled"}}">
                               <h2> تفاصيل عن المشروع</h2>
                               <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                   <span class="round-tab">
@@ -31,7 +31,7 @@
                           <li role="presentation" class="disabled">
                               <h2>  تفاصيل الباقة المختارة  </h2>
 
-                              <a href="#step3" data-toggle="tab" aria-controls="step2" role="tab" title="Step 3">
+                              <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                                   <span class="round-tab">
                                       <h2> 03 </h2>
                                   </span>
@@ -40,7 +40,7 @@
                           <li role="presentation" class="disabled">
                               <h2>  نوع المشروع  </h2>
 
-                              <a href="#step4" data-toggle="tab" aria-controls="step3" role="tab" title="Step 4">
+                              <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
                                   <span class="round-tab">
                                       <h2> 04 </h2>
                                   </span>
@@ -61,7 +61,20 @@
 
                   {{-- <form role="form"> --}}
                       <div class="tab-content">
-                          <div class="tab-pane active" role="tabpanel" id="step1">
+                          <div class="tab-pane {{$isClientLogin?"":"active"}}" role="tabpanel" id="step1">
+                            @if ($isClientLogin)
+                            <form role="form" id="frmRegClient">
+
+                                <div class="form-group wow fadeInDown">
+                                    <h6>profile</h6>
+                                </div>
+                                <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                        <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                </ul>
+                            </form>
+                            @else
                               <form role="form" action="/TahqqRegistration" method="POST" id="frmRegClient">
                                 @method('post');
                                 @csrf;
@@ -92,28 +105,45 @@
                                 </div>
 
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                    <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                    <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                    <li><input type="submit"  class="btn btn-primary " value="create" ></li>
+                                    {{-- @if ($isClientLogin)
+                                        <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                    @else --}}
+                                        <li><input type="submit"  class="btn btn-primary " value="انشاء حساب" ></li>
+                                    {{-- @endif --}}
                                 </ul>
                               </form>
+                              @endif
                           </div>
-                          <div class="tab-pane" role="tabpanel" id="step2">
-                              <form>
+                          <div class="tab-pane {{$isClientLogin?"active":""}}" role="tabpanel" id="step2">
+                              <form  role="form" action="/SaveClientProjectInfo" method="POST" id="frmSaveClientProj">
+                                @method('post')
+                                @csrf
                                   <div class="form-group wow fadeInDown">
                                       <h6>أسم المشروع</h6>
-                                      <input type="text" class="form-input" placeholder="هنا الأسم بالكامل " required>
+                                      <input name="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required>
                                   </div>
+                                  <div class="form-group wow fadeInDown choose">
+                                    <h6> أختر نوع المشروع </h6>
+                                    <select name="projectCategory" aria-placeholder="موقع تجارة الكترونية" class="form-input">
+                                        <option value="قالب موقع متجر الكتروني">قالب موقع متجر الكتروني</option>
+                                        <option value="قالب موقع استشارات">قالب موقع استشارات</option>
+                                        <option value="قالب موقع دورات تدريبية">قالب موقع دورات تدريبية</option>
+                                        <option value="قالب موقع تعريفي">قالب موقع تعريفي</option>
+                                        <option value="قالب موقع يربط بين طرفين">قالب موقع يربط بين طرفين</option>
+                                    </select>
+                                 </div>
                                   <div class="form-group wow fadeInDown">
                                       <h6>  وصف مختصر عن المشروع  </h6>
-                                      <input type="text" class="form-input" style="height: 150px;" placeholder="  هنا يكتب الوصف  " required>
+                                      <input name="projectDetails" type="text" class="form-input" style="height: 150px;" placeholder="  هنا يكتب الوصف  " required>
                                   </div>
-                                      <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                  <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                  <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                  <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                              </ul>
+                                    <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                        <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                        <li><input type="submit" value="submit"></li>
+                                    </ul>
                               </form>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step3">
@@ -150,19 +180,19 @@
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step4">
                               <div class="choose">
-                              <h3> أختر نوع المشروع </h3>
-                              <p> ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة  </p>
-                             ,<br>
-                              <h6> أختر نوع المشروع </h6>
-                              <select aria-placeholder="موقع تجارة الكترونية">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
+                                <h3> أختر نوع المشروع </h3>
+                                <p> ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة  </p>
+                                ,<br>
+                                <h6> أختر نوع المشروع </h6>
+                                <select aria-placeholder="موقع تجارة الكترونية">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
 
-                              </select>
-                          </div>
+                                </select>
+                             </div>
                           <ul class="list-inline pull-right" style="padding-right: 0px;">
                               <li><button type="button" class="btn btn-default prev-step" required><</button></li>
                               <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>

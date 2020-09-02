@@ -855,7 +855,7 @@ input:checked + .slider:before {
 
 }
 .wizard .tab-pane .choose select{
-    width: 80%;
+    /* width: 80%; removed by AKY */
     border-radius: 18px;
     padding: 5px 50px;
     background-color: #F7F5FF;

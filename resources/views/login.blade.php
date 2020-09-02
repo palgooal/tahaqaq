@@ -22,6 +22,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body class="home" dir="rtl" style="background-color: white;">
+
 <section class="login">
     <div class="login-img">
         <img src="img/Scene 9.png">
@@ -35,15 +36,21 @@
             <h1> تسجيل دخول </h1>
             {{-- {{App\Logic\APIClient\WhmcsAPILogic::WHMCS_LOGIN_URL}} --}}
         <form method="post" action="/TahqqLogin">
-                @method('post');
-                @csrf();
+                @method('post')
+                @csrf()
                 <div class="form-group wow fadeInDown">
                     <h6> البريد الألكتروني </h6>
                     <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username" name="username" >
+                    @error('username')
+                        <p>{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="form-group wow fadeInDown">
                     <h6> كلمة المرور </h6>
                     <input type="password" class="form-input" placeholder="هنا كلمة المرور" required=" " id="password" name="password">
+                    @error('password')
+                         <p>{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="form-links wow fadeInDown">
                     <p>
@@ -56,6 +63,7 @@
                     <button type="submit" class="form-submit" value="Login">دخول</button>
                 </div>
             </form>
+            <p style="color: red; ">{{$error??''}}</p>
             <div class="form-links wow fadeInDown" style="margin-right: 30%;">
                 <a href="/TahqqRegistration">هل انت مشترك جديد </a>
             </div>
