@@ -1,20 +1,20 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container">
+<div class="container" style="height: 100%">
     <div class="row">
         <div class="col-sm-12">
-            <div class="portlet light bordered">
-
-
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="icon-social-dribbble font-green"></i>
-                        <span class="caption-subject font-green bold uppercase">مشاهدة الرسالة</span>
-                    </div>
-
+            <div class="card card-custom card-stretch gutter-b">
+                <!--begin::Header-->
+                <div class="card-header border-0 py-5">
+                   <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label font-weight-bolder text-dark">القوائم</span>
+                   </h3>
                 </div>
-                <div class="portlet-body">
-                    <div class="table-scrollable">
+                <!--end::Header-->
+                <!--begin::Body-->
+                <div class="card-body pt-0 pb-3">
+                   <div class="tab-content">
+
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -40,7 +40,5 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
 @endsection
