@@ -25,15 +25,15 @@
                             <tbody>
                                 <tr>
                                     <td>الاسم</td>
-                                    <td>{{$contacts->name}}</td>
+                                    <td>{{$contact->name}}</td>
                                 </tr>
                                 <tr>
                                     <td>البريد الالكتروني</td>
-                                    <td>{{$contacts->email}}</td>
+                                    <td>{{$contact->email}}</td>
                                 </tr>
                                 <tr>
                                     <td>الرسالة</td>
-                                    <td><h4> {{$contacts->message}}</h4></td>
+                                    <td><h4> {{$contact->message}}</h4></td>
                                 </tr>
                             </tbody>
                         </table>

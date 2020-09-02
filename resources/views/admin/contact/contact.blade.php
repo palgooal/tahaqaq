@@ -41,10 +41,10 @@
                         <td>{{$contact->email}}</td>
                         <?php $counter++?>
                         <td>
-                            <a href="/pg-admin/contact/{{$contact->id}}/edit" class="btn btn-primary">شاهد الرسالة</a>
+                            <a href="/pg-admin/readcontact/{{$contact->id}}" class="btn btn-primary">شاهد الرسالة</a>
                         </td>
                          <td>
-                            <button type="button" class="btn btn-danger" data-menuid="{{$contact->id}}" data-toggle="modal" data-target="#deletemenu">
+                            <button type="button" class="btn btn-danger" data-Contactusid="{{$contact->id}}" data-toggle="modal" data-target="#deleteContactus">
                             حذف
                             </button>
                          </td>
@@ -52,25 +52,25 @@
                       </tr>
                       <!-- Button trigger modal -->
                       <!-- Modal -->
-                      <div class="modal fade" id="deletemenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal fade" id="deleteContactus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                          <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                <div class="modal-header">
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                   <h4 class="modal-title" id="myModalLabel">تحذير من حذف الصفحة</h4>
                                </div>
-                               {{-- <form action="{{route('contact.destroy', 'test')}}" method="post">
+                               <form action="{{route('Contactus.destroy', 'test')}}" method="post">
                                   @method('delete')
                                   @csrf
                                   <div class="modal-body">
                                      هل انت متأكد انك تريد الحذف
-                                     <input type="hidden" name="contact_id" id="contact_id" value="">
+                                     <input type="hidden" name="Contactus_id" id="Contactus_id" value="">
                                   </div>
                                   <div class="modal-footer">
                                      <button type="button" class="btn btn-default" data-dismiss="modal">لا ارجع للقائمة</button>
                                      <button type="submit" class="btn btn-primary">نعم احذف</button>
                                   </div>
-                               </form> --}}
+                               </form>
                             </div>
                          </div>
                       </div>

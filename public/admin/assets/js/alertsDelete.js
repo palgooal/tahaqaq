@@ -27,3 +27,13 @@ $('#deleteblog').on('show.bs.modal', function (event) {
 
     modal.find('.modal-body #blog_id').val(blog_id)
     })
+
+    // Contact us delete
+$('#deleteContactus').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+    var Contactus_id = button.data('Contactusid')
+    var modal = $(this)
+
+    modal.find('.modal-body #Contactus_id').val(Contactus_id)
+    })

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
 
+
 class ContactusController extends Controller
 {
     private $sysVarLogic;
@@ -39,13 +40,7 @@ class ContactusController extends Controller
 
     public function viewAll()
     {
-        $lang = App::getLocale();
-        $menus = Menu::get();
-        $contact = Contactus::get();
-        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
-        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
-        return view('admin.contact.contact',compact(['menus','contact','sysVarFooter','sysVarSocialMedia','isClientLogin']));
+          return view('admin.contact.contact')->with('contact', Contactus::get());
     }
 
 
@@ -129,8 +124,10 @@ class ContactusController extends Controller
      * @param  \App\Model\Contactus  $contactus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contactus $contactus)
+    public function destroy(Request $request)
     {
-        //
+        $contactus = Contactus::findOrFail($request->Contactus_id);
+        $contactus->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }
