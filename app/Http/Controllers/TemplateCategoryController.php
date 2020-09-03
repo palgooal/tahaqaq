@@ -100,7 +100,6 @@ class TemplateCategoryController extends Controller
      */
     public function destroy(Request $request)
     {
-        //
         $categroy = TemplateCategory::findOrFail($request->category_id);
         $categroy->delete();
         return back()->with('delete',trans('تم الحذف  بنجاح'));

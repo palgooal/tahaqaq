@@ -51,7 +51,7 @@
                                     <td>{{$template->name}}</td>
                                     <td>{{$template->title_ar}}</td>
                                     <td>{{$template->title_en}}</td>
-                                    <td><a type="button" class="btn btn-success" target="_blank" href="{{$template->preview_url}}">مشاهدة</a>
+                                    <td><a type="button" class="btn btn-success" target="_blank" href="/template/{{$template->id}}">مشاهدة</a>
                                         <a type="button" class="btn btn-secondary" href="/pg-admin/templates/{{$template->id}}/edit">تعديل</a>
                                         <button type="button" class="btn btn-danger" data-templateid="{{$template->id}}" data-toggle="modal" data-target="#deletetemplate">حذف</button>
                                     </td>

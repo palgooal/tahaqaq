@@ -70,14 +70,16 @@ class TemplateController extends Controller
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        $specif = TemplateSpecification::where('template_id', $request->id)->get();
 
-        return view('getOneTemplate')->with("templateOne",Template::findOrFail($request->id))
+        return view('template.singletemplate')->with("templateOne",Template::findOrFail($request->id))
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
                 ->with('categoris',TemplateCategory::get())
-                ->with('isClientLogin',$isClientLogin);
+                ->with('specifications', $specif);
+
+
     }
 
 
@@ -160,7 +162,7 @@ class TemplateController extends Controller
      */
     public function show(Template $template)
     {
-        //
+        return view('template.singletemplate');
     }
 
     /**
@@ -251,8 +253,10 @@ class TemplateController extends Controller
      * @param  \App\Model\Template  $template
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Template $template)
+    public function destroy(Request $request)
     {
-        //
+        $template = Template::findOrFail($request->template_id);
+        $template->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }
