@@ -45,7 +45,7 @@ class TemplateController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
-        return view('template')
+        return view('template.template')
                 ->with('templateAll',Template::orderBy('id','desc')->get())
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
