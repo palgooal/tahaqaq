@@ -105,9 +105,11 @@ body{
 }
 body{
     background-color: #ffffff;
-    /* background-image: url("../img/Group\ 129.png"); */
-    background-position: right
-
+    background-image: url(../img/Group\ 129.png);
+    background-position: right;
+    background-position-x: 100%;
+    BACKGROUND-REPEAT: repeat-y;
+    background-position-y: 3%;
 }
 .container{
     width: 1250px;
@@ -169,14 +171,14 @@ body{
 }
 .login-btns {
     margin-right: 19px;
-
+    
 }
 .login-btns a{
     margin-left: 19px;
-
+    
 }
 .login-btns .login{
-    color: #7657E5;
+    color: #7657E5; 
     border: 2px solid;
     border-radius: 12px;
 
@@ -197,7 +199,7 @@ body{
     font-size:12px;
     transition: all 0.3s;
     line-height:20px;
-
+    
 
 }
 .section-1-r {
@@ -244,7 +246,7 @@ body{
     vertical-align: middle;
 }
 .home-wrap .text{
-    width:50%;
+    width:55%;
 
 }
 .home-wrap .text-t{
@@ -252,7 +254,7 @@ body{
 }
 .home-wrap img{
     width:calc(40% - 5px);
-
+    
 }
 .home-wrap .text span{
     font-size:25px;
@@ -271,8 +273,14 @@ body{
     line-height: 180%;
 
 }
+.courses .home-wrap .text h2 {
+    font-size: 28px;
+}
+.courses .home-wrap .text p{
+    margin-bottom: 3%;
+}
 .home-wrap .text p{
-    font-size: 11px ;
+    font-size: 13px !important;
     color: #173771;
     margin-bottom: 30px;
     line-height: 25px;
@@ -299,7 +307,7 @@ body{
     width: 110%;
 }
 .firstsection .text{
-    width: calc(40% - 5px);
+    width: calc(40% - 5px); 
     margin-top: 5%;
 
 }
@@ -391,6 +399,12 @@ section .home-section wow fadeIn {
     padding: 2%;
 
 }
+/* .coomerce i {
+    display: none;
+}
+.coomerce i:hover {
+    display: grid;
+} */
 .commerce-e{
     background-color: #FFFFFF;
     font-family: "FFShamelFamily-SansOnebook";
@@ -425,7 +439,7 @@ section .home-section wow fadeIn {
 }
 .home-wrap .imge {
     margin-top: -5%;
-     width: calc(50% - 5px);
+     width: calc(45% - 5px);
 }
 /*end*/
 /*section 5 */
@@ -433,7 +447,8 @@ section .home-section wow fadeIn {
     /* background-image: url("../img/18.png"); */
     text-align: center;
     width: 100%;
-    margin-bottom: 8%;
+    margin-bottom: 12%;
+    margin-top: 12%;
 }
 .how-do h2 {
     color: #221950;
@@ -508,6 +523,9 @@ section .home-section wow fadeIn {
     flex-wrap: wrap;
     color: #7657E5;
 }
+.packages h1 {
+    margin-top: 18%;
+}
 .packages img{
     margin-left: -100%;
     margin-bottom: -33%;
@@ -522,12 +540,14 @@ section .home-section wow fadeIn {
     color: #221950;
     font-family: "FF Shamel Family Sans One";
     font-weight: normal;
+    margin-top: 12%;
 
 }
 .top h2{
     font-size: 36px;
     color: #7657E5;
     font-family: "FFShamelFamily-SansOneBold";
+    margin-bottom: 3%;
 
 
 }
@@ -538,7 +558,7 @@ section .home-section wow fadeIn {
 
 }
 .container h4 {
-   margin: 5% 28%;
+    margin: 1% 28% 5% 28%;
     font-size: 32px;
     color: #7657E5;
 }
@@ -565,7 +585,7 @@ section .home-section wow fadeIn {
 }
 .blogs .container .bloglist-img-head .time {
     background-color: #F582EA;
-    border-radius: 20px;
+    border-radius: 20px; 
     padding: 5px 24px;
 }
 .blogs .container .bloglist-img-head a {
@@ -603,6 +623,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: -4%;
 }
 
 input,
@@ -713,7 +734,7 @@ input:checked + .slider:before {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 65px;
+    padding-bottom: 15%;
     font-family: "FFShamelFamily-SansOneMedium";
 
 }
@@ -768,7 +789,7 @@ input:checked + .slider:before {
 /*start project*/
 .wizard {
     margin: 20px auto;
-    background: #fff;
+    background: transparent;
     color: white;
 }
 
@@ -841,7 +862,7 @@ input:checked + .slider:before {
 .wizard .tab-pane .left a p {
     font-size: 14px;
     color: #221950;
-
+    
 }
 .wizard .tab-pane .choose {
     color: #221950;
@@ -849,20 +870,20 @@ input:checked + .slider:before {
 .wizard .tab-pane .choose h3 {
 }
 .wizard .tab-pane .choose p{
-
+ 
 }
 .wizard .tab-pane .choose h6 {
-
+ 
 }
 .wizard .tab-pane .choose select{
-    /* width: 80%; removed by AKY */
+    width: 80%;
     border-radius: 18px;
     padding: 5px 50px;
     background-color: #F7F5FF;
     color: #7657E5;
 }
 .wizard .tab-pane .choose option{
-
+    
 }
 .wizard .tab-pane .True {
     float: right;
@@ -887,7 +908,7 @@ input:checked + .slider:before {
 .wizard .tab-pane .True li:hover{
     background-color: #F3EFFF;
     border-radius: 5%;
-
+    
 
 }
 .wizard .tab-pane .True img {
@@ -908,7 +929,7 @@ input:checked + .slider:before {
     font-weight: bold;
  }
  .wizard .tab-pane .false .template i {
-
+   
 }
 .wizard .tab-pane .false .template p{
     color: #221950;
@@ -1023,7 +1044,7 @@ span.round-tab:hover {
 form ul li .btn-default {
     margin-right: 440%;
     border-radius: 25px;
-    background-color: #8264EE;
+    background-color: transparent;
     border: 0;
     color: white
 }
@@ -1044,7 +1065,7 @@ form ul li .btn-default {
     background-image: url("../img/Mask\ Group\ 1.png");
     background-position: top;
     height: 335px;
-
+    
 }
 .cellme {
     margin: 10%;
@@ -1296,7 +1317,7 @@ form ul li .btn-default {
     height: 50px;
     padding: 16px;
     font-family: "FFShamelFamily-SansOnebook";
-    float: left;
+    float: left;    
 }
 .bloglist-img-head {
     background-image: url(../img/12.png);
@@ -1317,7 +1338,7 @@ form ul li .btn-default {
     float: right;
     width: 60%;
     font-family: "FF Shamel Family Sans One";
-
+    
 }
 .single-post .left{
     float: left;
@@ -1326,7 +1347,7 @@ form ul li .btn-default {
 .single-post .right h6{
     font-size: 18px;
     margin-top: 5%;
-
+    
 }
 .single-post .right p{
     font-size: 12px;
@@ -1334,7 +1355,7 @@ form ul li .btn-default {
 .single-post .right ul{
     font-size: 12px;
     margin-top: 5%;
-
+    
 }
 .single-post .right ul li{
     margin-bottom: 2%;
@@ -1344,10 +1365,10 @@ form ul li .btn-default {
     border: 0px;
 }
 .single-post .left .blog-item .blog-item-img {
-
+    
 }
 .single-post .left .blog-item .blog-item-img a {
-
+    
 }
 .single-post .left .blog-item .blog-item-img a img{
     width: 50px;
@@ -1359,26 +1380,26 @@ form ul li .btn-default {
     padding: 16px 14px;
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text span{
-
+    
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text span img {
-
+    
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text a {
-
+    
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text ul {
     display: inline-flex;
     float: left;
 }
 .single-post .left .blog-item .blog-item-content .blog-item-text ul li {
-
+    
 }
 /* end */
 /* howtahqq */
 .howtahqq {
     font-family: "FF Shamel Family Sans One";
-    margin: 2% 5%;
+    margin: 2% 5%;    
 
 }
 .howtahqq .howtext {
@@ -1391,7 +1412,7 @@ form ul li .btn-default {
 .howtahqq .howtext h4{
     font-size: 18px;
     margin-bottom: 2%;
-
+    
 }
 .howtahqq .howtext h2{
     font-weight: bold;
@@ -1403,13 +1424,13 @@ form ul li .btn-default {
     color: #343A40;
     font-size: 15px;
     margin-bottom: 2%;
-
+    
 }
 .howtahqq .howtext p{
     color: #74787D;
     font-size: 8px;
     margin-bottom: 10%;
-
+    
 }
 /* end howtahqq */
 /*price*/
@@ -1445,7 +1466,7 @@ form ul li .btn-default {
     margin-top: 3%;
 }
 .bouquet ul li h2 {
-
+    
 }
 .bouquet ul li p {
     display: inline;
@@ -1469,7 +1490,7 @@ form ul li .btn-default {
 }
 .bouquet ul li h6 p {
     display: contents;
-
+    
 }
 #customers {
     border-collapse: collapse;
@@ -1480,7 +1501,7 @@ form ul li .btn-default {
 #customers td, #customers th {
     padding: 1%;
     text-align: right;
-
+    
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -1494,10 +1515,10 @@ form ul li .btn-default {
 }
 #customers img {
     width: 10%;
-}
+} 
 /*end price*/
 .courses{
-    padding:40px 0 50px;
+    padding:40px 0 0px;
 }
 .custom-tabs{
     width:70%;
@@ -1639,6 +1660,7 @@ footer{
     width: 105%;
     font-family: "FFShamelFamily-SansOneBold";
     display: inline-flex;
+    margin-right: 2%;
 }
 footer .container{
     width: 100%;
@@ -1768,7 +1790,7 @@ footer .container{
     width: 50%;
 }
 .footer-contact-wrap{
-
+    
 }
 .footer-contact-item{
     margin-bottom:15px;
@@ -1880,7 +1902,7 @@ footer .container{
     margin-left: 10px;
 }
 .blog-item-text p{
-    font-size:6px;
+    font-size: 14px;
     color: #221950;
     height:70px;
     line-height:30px;
@@ -2101,7 +2123,7 @@ footer .container{
     max-width:100%;
     width:500px;
     padding:40px;
-
+   
 }
 .form-input::-webkit-input-placeholder { /* Chrome */
     color: #bbc0c9;
@@ -3413,7 +3435,7 @@ a.lang:hover{
     font-size:14px;
     color: #666;
     line-height:10px;
-
+    
 }
 header{
     transition: all 0.3s;
@@ -3791,6 +3813,329 @@ span.hint {
     margin: 0 auto;
     display: inherit;
 }
+.template-header {
+    margin: 5% 5%;
+    margin-bottom: -6%;
+}
+.template-header ul {
+    display: inline-flex;
+    width: 100%;
 
+}
+.template-header ul button{
+    
+    background-color: #7657E5;
+    border: 0px solid;
+    color: white;
+    padding: 0% 10%;
+    
+}
+.template-header ul button:hover {
+    background-color: transparent;
+    color: #7657E5 ;
+}
+.template-header ul button li {
 
+}
 
+.template {
+    margin: 5% 5%;
+}
+  
+  .product-item {
+    padding: 10px;
+  }
+  
+  .product-item .product-container {
+    text-align: left;
+    font: normal 14px sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #dbe3e7;
+    border-radius: 3px;
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+  }
+  
+  .product-item a.product-image {
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 20px 8px #f3f3f3 inset;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  
+  .product-item a.product-image img {
+    height: 130px;
+  }
+  
+  .product-item h2 {
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    font-weight: 800;
+  }
+  
+  .product-item h2 a {
+    text-decoration: none;
+    color: #2b2b2b;
+  }
+  
+  .product-item a.small-text {
+    color: #808080;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: right;
+    font-size: 12px;
+  }
+  
+  .product-item .product-rating {
+    color: #f09911;
+    font-size: 14px;
+  }
+  
+  .product-item .product-rating a.small-text {
+    text-align: left;
+    margin: 0 0 0 10px;
+    display: inline-block;
+  }
+  
+  .product-item p.product-description {
+    margin-top: 20px;
+    color: #5d5d5d;
+    line-height: 1.45;
+    white-space: normal;
+    margin-bottom: 20px;
+  }
+  
+  .product-item button {
+    border-radius: 2px;
+    background: #87bae1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+  
+  .product-item button:active {
+    background: #87bae1;
+    color: #fff;
+    border: 0;
+  }
+  
+  .product-item button:focus {
+    background: #87bae1;
+    outline: none;
+    color: #fff;
+  }
+  
+  .product-item button:hover {
+    background: #66ABE0;
+    color: #fff;
+  }
+  
+  .product-item button:focus:active {
+    background: #87bae1;
+    outline: none;
+    color: #fff;
+  }
+  
+  .product-item .product-price {
+    color: #4e4e4e;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: right;
+  }
+  
+  .wrapper{
+    position: relative;
+    margin: 50px auto;
+    width: 350px;
+    height: 250px;
+    border: 2px solid rgba(158, 158, 158, .5);
+    overflow: hidden;
+    display: inline-flex;
+    margin-right: 4%;
+
+  }
+  .wrapper img{
+    width:100%;
+    height:100%;
+  }
+  .shadow{
+    position:absolute;
+    top:-570px;
+    left:-480px;
+    width:500px;
+    height:614px;
+    transition: all .3s ease;
+    transform:rotate(45deg);  
+    background:rgba(158, 158, 158, .5);
+  }
+  
+  .wrapper:hover .shadow{
+    top: -94px;
+    left: -81px;
+    width: 500px;
+    height: 550px;
+  }
+  .wrapper h2{
+    position:absolute;
+    animation-duration:1.3s;
+   
+    background:#3E2723;
+    padding:5px 10px;
+    color:#fff;
+  }
+  .wrapper:hover h2{
+      display:block;
+  }
+  .wrapper h3{
+    position:absolute;
+    top:47px;
+    animation-duration:1.6s;
+    display:none;
+    background:#3E2723;
+    padding:5px 10px;
+    color:#fff;
+  }
+  .wrapper:hover h3{
+      display:block;
+  }
+  .wrapper p{
+    position:absolute;
+    top:90px;
+    animation-duration:2s;
+    display:none;
+    background:#3E2723;
+    padding:5px 10px;
+    color:#fff;
+  }
+  .wrapper:hover p{
+      display:block;
+  }
+  .clearfix:before, .clearfix:after {
+    content:" ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.pagina {
+    width: 80%;
+    margin:auto;
+    background-color: #eee;
+}
+.barra-menu {
+    width: 100%;
+    overflow: hidden;
+    background-color: #2e6da4;
+    border-radius: 20px;
+}
+.menu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #2e6da4;
+}
+.lista-menu li {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.lista-menu li:last-child {
+    border-right: none;
+}
+.lista-menu a, .btn-menu {
+    display: block;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    padding: 1%;
+}
+.btn-menu {
+    display: none;
+}
+}
+/*  ------ tipografías----------------- */
+
+/*........ Alineamiento........*/
+ .aln-izquierda {
+    text-align: left;
+}
+.aln-centro {
+    text-align: center;
+}
+.aln-derecha {
+    text-align: right;
+}
+/*......... Colores y Fuentes .......*/
+.lista-menu a, .btn-menu {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2e6da4;
+}
+.lista-menu a:hover {
+    background-color: #7657E5;
+}
+/*  ------------- media queries ----------*/
+ @media screen and (max-width:480px) {
+    #pagina {
+        width: 100%;
+    }
+    .btn-menu {
+        display: block;
+        background-color: #333;
+    }
+    #submenu {
+        display: none;
+    }
+    .lista-menu li {
+        display: block;
+        float: none;
+        width: 100%;
+        border-bottom: 1px solid #7E7E7E;
+    }
+}
+.button-single  {
+    margin: 4% 36%;
+}
+.button-single button {
+    background-color: #3b5998;
+    color: white;
+    border: 1px solid;
+    border-color: #3b5998 ;
+}
+.button-single button:hover{
+    background-color: white;
+    color: #3b5998 ;
+}
+.Features-single {
+    display: inline-flex;
+    position: relative;
+}
+.Features-single .Features {
+    margin: 1% 20%;
+}
+.Features-single .Features img{
+
+}
+.Features-single .Features h6{
+
+}
