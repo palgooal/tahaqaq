@@ -37,3 +37,23 @@ $('#deletecontact').on('show.bs.modal', function (event) {
 
     modal.find('.modal-body #contact_id').val(contact_id)
     })
+
+   // Contact category template
+$('#deletecategory').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+    var category_id = button.data('categoryid')
+    var modal = $(this)
+
+    modal.find('.modal-body #category_id').val(category_id)
+    })
+
+// Contact category template
+$('#deletetemplate').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+    var template_id = button.data('templateid')
+    var modal = $(this)
+
+    modal.find('.modal-body #template_id').val(template_id)
+    })

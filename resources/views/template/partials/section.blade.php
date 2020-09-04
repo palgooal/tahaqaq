@@ -1,6 +1,6 @@
 <section class="template">@foreach ($templateAll as $templateAll)
 	<div class="wrapper">
-		<a href="#">
+    <a href="/template/{{$templateAll->id}}">
 			<div class="shadow"></div>
 			<h2 class="animated bounceInLeft">{{$templateAll->title_ar}}</h2>
 			<p class="animated bounceInLeft">{{$templateAll->small_details_ar}}</p>
