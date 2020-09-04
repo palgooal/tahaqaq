@@ -109,7 +109,8 @@ body{
     background-position: right;
     background-position-x: 100%;
     BACKGROUND-REPEAT: repeat-y;
-    background-position-y: 3%;
+    background-position-y: -7%;
+    background-repeat: no-repeat;
 }
 .container{
     width: 1250px;
@@ -275,9 +276,11 @@ body{
 }
 .courses .home-wrap .text h2 {
     font-size: 28px;
+    width: 85%;
 }
 .courses .home-wrap .text p{
     margin-bottom: 3%;
+    width: 85%;
 }
 .home-wrap .text p{
     font-size: 13px !important;
@@ -2050,19 +2053,24 @@ footer .container{
     font-family: "FF Shamel Family Sans One";
 }
 .login .login-img img{
-    width: 85%;
+    width: 100%;
     padding: 2%;
+    margin-top: 8%;
 }
 .login .login-img span {
     display: block;
     color: #000000;
+    margin: 2% 0%;
+    font-size: 21px;
 }
 .login .login-img h2 {
     color: #7657E5;
+    font-size: 30px;
 }
 .login .login-img p {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 24px;
+    width: 120%;
 }
 .form-input{
     width:100%;
@@ -2083,19 +2091,18 @@ footer .container{
     margin-right: 6%;
 }
 .form-submit{
-    width:100%;
-    height:50px;
-    line-height:45px;
-    outline:none;
-    border:none;
-    border-radius: 50px;
-    padding:0;
+    width: 100%;
+    height: 40px;
+    line-height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
     text-align: center;
-    background: #2e6da4;
+    background: #7657E5;
     transition: all 0.3s;
     color: #ffffff;
-    font-size:16px;
-    font-weight:bold;
+    font-size: 10px;
 }
 .form-submit:hover{
     background: #173771;
@@ -4114,7 +4121,9 @@ span.hint {
     }
 }
 .button-single  {
-    margin: 4% 36%;
+    padding: 4% 24%;
+    background-color: #f4f0ff;
+    margin: 4% 0%;
 }
 .button-single button {
     background-color: #3b5998;
@@ -4122,20 +4131,45 @@ span.hint {
     border: 1px solid;
     border-color: #3b5998 ;
 }
+.button-single-1 {
+    margin: 4% 36%;
+    background-color: transparent;
+}
+.button-single-1 button {
+    background-color: #3b5998;
+    color: white;
+    border: 1px solid;
+    border-color: #3b5998 ;
+}
+.button-single-1 button:hover{
+    background-color: white;
+    color: #3b5998 ;
+}
 .button-single button:hover{
     background-color: white;
     color: #3b5998 ;
 }
 .Features-single {
-    display: inline-flex;
+    display: flex;
     position: relative;
 }
 .Features-single .Features {
-    margin: 1% 20%;
+    margin:1% 12%;;
 }
 .Features-single .Features img{
 
 }
 .Features-single .Features h6{
-
+    font-size: 20px;
+    margin: 10% -22%;
+    width: 149%;
+    text-align: center;
+    line-height: 30px;
+}
+.title-features {
+    margin: 4% 39%;
+}
+.title-features h2 {
+    color:#3b5998 ;
+    font-size: 28px;
 }
