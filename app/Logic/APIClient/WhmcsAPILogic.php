@@ -50,6 +50,7 @@ class WhmcsAPILogic{
             "customfields"=>$customfields
         ), WhmcsAPIActions::Client_UpdateClient);
         $result = $this->callAPI($postfields);
+
         if($result->result == "success")
             return true;
 

@@ -125,21 +125,30 @@
                                 @csrf
                                   <div class="form-group wow fadeInDown">
                                       <h6>أسم المشروع</h6>
-                                      <input name="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()}}">
+                                      <input name="projectName" id="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()}}">
+                                      @error('projectName')
+                                        <h5>Error : {{$message}}</h5>
+                                      @enderror
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
-                                    <select name="projectCategory" aria-placeholder="موقع تجارة الكترونية" class="form-input">
+                                    <select name="projectCategory" id="projectCategory" aria-placeholder="موقع تجارة الكترونية" class="form-input">
                                         @foreach ($templateCategories as $category)
                                             <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'select':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
                                     </select>
+                                    @error('projectCategory')
+                                        <h5>Error : {{$message}}</h5>
+                                      @enderror
                                  </div>
                                   <div class="form-group wow fadeInDown">
                                       <h6>  وصف مختصر عن المشروع  </h6>
-                                      <textarea name="projectDetails"  style="height: 150px;color: black" required>
+                                      <textarea name="projectDetails" id="projectDetails"  style="height: 150px;color: black" required>
                                         {{$clientDetailsInfo->GetProjectDetails()}}
                                       </textarea>
+                                      @error('projectDetails')
+                                        <h5>Error : {{$message}}</h5>
+                                      @enderror
                                   </div>
                                     <ul class="list-inline pull-right" style="padding-right: 0px;">
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>
