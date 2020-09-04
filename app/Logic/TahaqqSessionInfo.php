@@ -27,11 +27,15 @@ class  TahaqqSessionInfo{
     }
 
     public static function GetLoggedClientDetailsObj(){
+     try {
         $loginResult = TahaqqSessionInfo::GetLoginResultObj();
         $clientDetailsJson = $loginResult->clientDetailsResult;
         $clientDetailsResult = new GetClientsDetailsResult($clientDetailsJson->isSuccess);
         $clientDetailsResult->SetClientsDetailsObj($clientDetailsJson->clientsDetailsObj);
         return $clientDetailsResult;
+     } catch (\Throwable $th) {
+        return new GetClientsDetailsResult(false);
+     }
     }
 
     public static function ClientLogout(){

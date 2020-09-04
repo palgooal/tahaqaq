@@ -25,25 +25,25 @@ class GetClientsDetailsResult
     }
 
     public function GetClientId(){
-        return $this->clientsDetailsObj->client_id;
+        return $this->clientsDetailsObj->client_id ?? '';
     }
     public function GetFullName(){
-        return $this->clientsDetailsObj->fullname;
+        return $this->clientsDetailsObj->fullname ?? '';
     }
 
     public function GetEmail(){
-        return $this->clientsDetailsObj->email;
+        return $this->clientsDetailsObj->email ??'';
     }
 
     public function GetFirstname(){
-        return $this->clientsDetailsObj->firstname;
+        return $this->clientsDetailsObj->firstname ??'';
     }
 
     public function GetLastname(){
-        return $this->clientsDetailsObj->lastname;
+        return $this->clientsDetailsObj->lastname??'';
     }
     public function GetPhoneNumber(){
-        return $this->clientsDetailsObj->phonenumber;
+        return $this->clientsDetailsObj->phonenumber??'';
     }
 
 }
