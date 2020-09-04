@@ -72,9 +72,9 @@
 
                                 <div class="form-group wow fadeInDown">
                                     <h4>Profile</h4>
-                                    <h5>{{$clientDetailsInfo->GetFullName()}}</h5>
-                                    <h5>{{$clientDetailsInfo->GetEmail()}}</h5>
-                                    <h5>{{$clientDetailsInfo->GetPhoneNumber()}}</h5>
+                                    <h5>{{$clientDetailsInfo->GetFullName()??''}}</h5>
+                                    <h5>{{$clientDetailsInfo->GetEmail()??''}}</h5>
+                                    <h5>{{$clientDetailsInfo->GetPhoneNumber()??''}}</h5>
                                 </div>
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>
@@ -125,12 +125,13 @@
                               @endif
                           </div>
                           <div class="tab-pane {{$isClientLogin?"active":""}}" role="tabpanel" id="step2">
+                            @if ($isClientLogin)
                               <form  role="form" action="/SaveClientProjectInfo" method="POST" id="frmSaveClientProj">
                                 @method('post')
                                 @csrf
                                   <div class="form-group wow fadeInDown">
                                       <h6>أسم المشروع</h6>
-                                      <input name="projectName" id="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()}}">
+                                      <input name="projectName" id="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()??''}}">
                                       @error('projectName')
                                         <h5>Error : {{$message}}</h5>
                                       @enderror
@@ -140,7 +141,7 @@
 
                                     <select name="projectCategory" id="projectCategory" class="form-input" required>
                                         @foreach ($templateCategories as $category)
-                                            <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
+                                            <option {{$clientDetailsInfo->GetProjectCategory()??'' == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
                                     </select>
                                     @error('projectCategory')
@@ -150,7 +151,7 @@
                                   <div class="form-group wow fadeInDown">
                                       <h6>  وصف مختصر عن المشروع  </h6>
                                       <textarea name="projectDetails" id="projectDetails"  style="height: 150px;color: black" required>
-                                        {{$clientDetailsInfo->GetProjectDetails()}}
+                                        {{$clientDetailsInfo->GetProjectDetails()??''}}
                                       </textarea>
                                       @error('projectDetails')
                                         <h5>Error : {{$message}}</h5>
@@ -168,6 +169,7 @@
                                         <li><input type="submit" value="submit"></li>
                                     </ul>
                               </form>
+                              @endif
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step3">
                              <div class="right">

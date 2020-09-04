@@ -25,38 +25,58 @@ class GetClientsDetailsResult
     }
 
     public function GetClientId(){
-        return $this->clientsDetailsObj->client_id ?? '';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->client_id ?? '';
+        return '' ;
     }
     public function GetFullName(){
-        return $this->clientsDetailsObj->fullname ?? '';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->fullname ?? '';
+            return '';
     }
 
     public function GetEmail(){
-        return $this->clientsDetailsObj->email ??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->email ??'';
+        return '';
     }
 
     public function GetFirstname(){
-        return $this->clientsDetailsObj->firstname ??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->firstname ??'';
+        return '';
     }
 
     public function GetLastname(){
-        return $this->clientsDetailsObj->lastname??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->lastname??'';
+            return '';
     }
     public function GetPhoneNumber(){
-        return $this->clientsDetailsObj->phonenumber??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->phonenumber??'';
+        return '';
     }
 
     public function GetProductName(){
-        return $this->clientsDetailsObj->customfields1??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->customfields1??'';
+        return '';
     }
     public function GetProjectCategory(){
-        return $this->clientsDetailsObj->customfields2??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->customfields2??'';
+        return '';
     }
     public function GetProjectDetails(){
-        return $this->clientsDetailsObj->customfields3??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->customfields3??'';
+        return '';
     }
     public function GetClientRegisterProgress(){
-        return $this->clientsDetailsObj->customfields4??'';
+        if($this->clientsDetailsObj != null)
+            return $this->clientsDetailsObj->customfields4??'';
+        return '';
     }
 
 }

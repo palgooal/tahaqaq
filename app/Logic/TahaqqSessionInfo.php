@@ -39,12 +39,15 @@ class  TahaqqSessionInfo{
 
     public static function GetLoggedClientDetailsObj(){
      try {
-            // $loginResult = TahaqqSessionInfo::GetLoginResultObj();
-            $clientDetailsJson=Session::get('clientDetails');
-            // $clientDetailsJson = $loginResult->clientDetailsResult;
-            $clientDetailsResult = new GetClientsDetailsResult($clientDetailsJson->isSuccess);
-            $clientDetailsResult->SetClientsDetailsObj($clientDetailsJson->clientsDetailsObj);
-            return $clientDetailsResult;
+            if(Session::has('clientDetails')){
+                // $loginResult = TahaqqSessionInfo::GetLoginResultObj();
+                $clientDetailsJson=Session::get('clientDetails');
+                // $clientDetailsJson = $loginResult->clientDetailsResult;
+                $clientDetailsResult = new GetClientsDetailsResult($clientDetailsJson->isSuccess);
+                $clientDetailsResult->SetClientsDetailsObj($clientDetailsJson->clientsDetailsObj);
+                return $clientDetailsResult;
+            }
+            return new GetClientsDetailsResult(false);
         } catch (\Throwable $th) {
             dump($th);
             return new GetClientsDetailsResult(false);
