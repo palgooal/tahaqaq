@@ -36,13 +36,16 @@ class WhmcsAPILogic{
         return $this->callAPI($postfields);
     }
 
-    public function SaveClientProjectInfo($clientId,$projectName,$projectCategory,$projectDetails){
+    public function SaveClientProjectInfo(int $clientId,string $projectName,string $projectCategory,string $projectDetails,bool $SetClientRegisterProgress){
 
         $customfieldsArray = array(
             'ProjectName' => $projectName,
             'ProjectCategory' => $projectCategory,
             'ProjectDetails' => $projectDetails,
         );
+        if($SetClientRegisterProgress == true){
+                array_push($customfields,['ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo]);
+        }
 
         $customfields = base64_encode(serialize($customfieldsArray));
         $postfields = $this->getPostFileArray(array(
@@ -52,8 +55,15 @@ class WhmcsAPILogic{
         $result = $this->callAPI($postfields);
 
         if($result->result == "success")
+        {
             return true;
 
+            $clientDetailResult = $this->GetClientsDetails($clientId);
+            if(!$clientDetailResult->GetIsSuccess()){
+                return false;
+            }
+            TahaqqSessionInfo::SetClientDetailsResult($clientDetailResult);
+        }
         return false;
     }
 
@@ -118,7 +128,7 @@ class WhmcsAPILogic{
             $loginResult->clientDetailsResult = $clientDetailResult;
             $loginResult->message= "Login succrssfully";
 
-            TahaqqSessionInfo::CompleteClientLogin($loginResult);
+            TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
 
             return $loginResult;
         }
@@ -152,7 +162,7 @@ class WhmcsAPILogic{
         $loginResult->clientDetailsResult = $clientDetailResult;
         $loginResult->message= "Login succrssfully";
 
-        TahaqqSessionInfo::CompleteClientLogin($loginResult);
+        TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
 
         return $loginResult;
     }

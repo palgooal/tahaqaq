@@ -3,23 +3,34 @@
 
 namespace App\Logic;
 
+use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
 use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\APIClient\APIResult\LoginResult;
 use Illuminate\Support\Facades\Session;
 
 class  TahaqqSessionInfo{
 
-    public static function CompleteClientLogin(LoginResult $loginResult){
+    public static function CompleteClientLogin(LoginResult $loginResult, CreateSsoTokenResult $ssoResult, GetClientsDetailsResult $clientDetails){
         if($loginResult->isSuccess){
             Session::put('isClientLogin','true');
             Session::put('loginResultJson',json_encode($loginResult));
             Session::put('clientId',$loginResult->clientId);
             Session::put('email',$loginResult->email);
-            Session::put('fullName',$loginResult->clientDetailsResult->GetFullName());
 
-            Session::put('accessToken',$loginResult->createSsoTokenResult->accessToken);
-            Session::put('redirectUrl',$loginResult->createSsoTokenResult->redirectUrl);
+            // Session::put('fullName',$clientDetails->GetFullName());
+            // Session::put('clientDetails',$clientDetails);
+            self::SetClientDetailsResult($clientDetails);
+
+            Session::put('ssoResult',$ssoResult);
+
+            Session::put('accessToken',$ssoResult->accessToken);
+            Session::put('redirectUrl',$ssoResult->redirectUrl);
         }
+    }
+
+    public static function SetClientDetailsResult(GetClientsDetailsResult $clientDetails){
+        Session::put('clientDetails',$clientDetails);
+        Session::put('fullName',$clientDetails->GetFullName());
     }
 
     public static function GetLoginResultObj(){
@@ -28,12 +39,14 @@ class  TahaqqSessionInfo{
 
     public static function GetLoggedClientDetailsObj(){
      try {
-            $loginResult = TahaqqSessionInfo::GetLoginResultObj();
-            $clientDetailsJson = $loginResult->clientDetailsResult;
+            // $loginResult = TahaqqSessionInfo::GetLoginResultObj();
+            $clientDetailsJson=Session::get('clientDetails');
+            // $clientDetailsJson = $loginResult->clientDetailsResult;
             $clientDetailsResult = new GetClientsDetailsResult($clientDetailsJson->isSuccess);
             $clientDetailsResult->SetClientsDetailsObj($clientDetailsJson->clientsDetailsObj);
             return $clientDetailsResult;
         } catch (\Throwable $th) {
+            dump($th);
             return new GetClientsDetailsResult(false);
         }
     }
@@ -64,4 +77,5 @@ class  TahaqqSessionInfo{
     public  static function GetLoggedClientRedirectUrl(){
         return  Session::get('redirectUrl');
     }
+
 }

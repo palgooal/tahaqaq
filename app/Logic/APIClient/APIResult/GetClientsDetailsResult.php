@@ -55,6 +55,9 @@ class GetClientsDetailsResult
     public function GetProjectDetails(){
         return $this->clientsDetailsObj->customfields3??'';
     }
+    public function GetClientRegisterProgress(){
+        return $this->clientsDetailsObj->customfields4??'';
+    }
 
 }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Logic\APIClient\APIParameter\AddClientParameter;
 use App\Logic\APIClient\WhmcsAPILogic;
+use App\Logic\APIClient\WhmcsClientRegisterProgress;
 use App\Model\TahqqRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -143,11 +144,13 @@ class TahqqRegistrationController extends Controller
         ]);
 
         $clientId = TahaqqSessionInfo::GetLoggedClientId();
-        $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo($clientId,$request->projectName,$request->projectCategory,$request->projectDetails);
+        $setClientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() == WhmcsClientRegisterProgress::CompletePersonInfo;
+        $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo($clientId,$request->projectName,$request->projectCategory,$request->projectDetails,$setClientRegisterProgress);
+
         if($isSuccess)
-            return back()->with('success','saved successfully');
+            return back()->with('message','saved successfully');
         else
-            return back()->with('error','faild save project info');
+            return back()->with('message','faild save project info');
     }
 
 

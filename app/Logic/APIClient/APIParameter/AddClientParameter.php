@@ -2,6 +2,8 @@
 
 namespace App\Logic\APIClient\APIParameter;
 
+use App\Logic\APIClient\WhmcsClientRegisterProgress;
+
 class AddClientParameter{
     public $firstname;
     public $lastname;
@@ -19,6 +21,11 @@ class AddClientParameter{
     public $clientip;
 
     public function GetDataAsArray($skipvalidation){
+        $customfieldsArray = array(
+            'ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo
+        );
+        $customfields = base64_encode(serialize($customfieldsArray));
+
         return array(
             'firstname'=>$this->firstname,
             'lastname'=>$this->lastname,
@@ -35,6 +42,7 @@ class AddClientParameter{
             'groupid'=>$this->groupid,
             'clientip'=>$this->clientip,
             'skipvalidation'=> $skipvalidation,
+            'customfields'=>$customfields
         );
     }
 }

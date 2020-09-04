@@ -59,6 +59,11 @@
                       </ul>
                   </div>
 
+                  @isset($message)
+                    <div class="alert alert-info" role="alert">
+                        {{ $message??'' }}
+                    </div>
+                  @endisset
                   {{-- <form role="form"> --}}
                       <div class="tab-content">
                           <div class="tab-pane {{$isClientLogin?"":"active"}}" role="tabpanel" id="step1">
@@ -132,9 +137,10 @@
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
+
                                     <select name="projectCategory" id="projectCategory" class="form-input" required>
                                         @foreach ($templateCategories as $category)
-                                            <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'select':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
+                                            <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
                                     </select>
                                     @error('projectCategory')
@@ -151,6 +157,11 @@
                                       @enderror
                                   </div>
                                     <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                        @if ($isClientLogin)
+
+                                        @else
+
+                                        @endif
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
