@@ -11,6 +11,7 @@ use App\Logic\SysVar\SysVarTypes;
 use App\Logic\SysVar\SysVarLogic;
 use App\Model\Menu;
 use App\Logic\TahaqqSessionInfo;
+use App\Model\TemplateCategory;
 
 use function Symfony\Component\String\b;
 
@@ -98,8 +99,9 @@ class TahqqRegistrationController extends Controller
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        $templateCategories = TemplateCategory::all();
 
-        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia']));
+        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','templateCategories']));
     }
 
     /**

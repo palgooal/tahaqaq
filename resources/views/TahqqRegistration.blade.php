@@ -125,21 +125,21 @@
                                 @csrf
                                   <div class="form-group wow fadeInDown">
                                       <h6>أسم المشروع</h6>
-                                      <input name="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required>
+                                      <input name="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()}}">
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
                                     <select name="projectCategory" aria-placeholder="موقع تجارة الكترونية" class="form-input">
-                                        <option value="قالب موقع متجر الكتروني">قالب موقع متجر الكتروني</option>
-                                        <option value="قالب موقع استشارات">قالب موقع استشارات</option>
-                                        <option value="قالب موقع دورات تدريبية">قالب موقع دورات تدريبية</option>
-                                        <option value="قالب موقع تعريفي">قالب موقع تعريفي</option>
-                                        <option value="قالب موقع يربط بين طرفين">قالب موقع يربط بين طرفين</option>
+                                        @foreach ($templateCategories as $category)
+                                            <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'select':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
+                                        @endforeach
                                     </select>
                                  </div>
                                   <div class="form-group wow fadeInDown">
                                       <h6>  وصف مختصر عن المشروع  </h6>
-                                      <input name="projectDetails" type="text" class="form-input" style="height: 150px;" placeholder="  هنا يكتب الوصف  " required>
+                                      <textarea name="projectDetails"  style="height: 150px;color: black" required>
+                                        {{$clientDetailsInfo->GetProjectDetails()}}
+                                      </textarea>
                                   </div>
                                     <ul class="list-inline pull-right" style="padding-right: 0px;">
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>

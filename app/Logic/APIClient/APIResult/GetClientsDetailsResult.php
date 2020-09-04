@@ -46,5 +46,15 @@ class GetClientsDetailsResult
         return $this->clientsDetailsObj->phonenumber??'';
     }
 
+    public function GetProductName(){
+        return $this->clientsDetailsObj->customfields1??'';
+    }
+    public function GetProjectCategory(){
+        return $this->clientsDetailsObj->customfields2??'';
+    }
+    public function GetProjectDetails(){
+        return $this->clientsDetailsObj->customfields3??'';
+    }
+
 }
 
