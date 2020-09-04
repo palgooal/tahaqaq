@@ -12,18 +12,14 @@ function getDataTemplateCategory(idCatecory) {
                 console.log(element);
                 document.getElementById('contintTemplate').innerHTML +=
                 `
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                <a href="/getOneTemplate/${response.data[i].id}">
-                    <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/${response.data[i].image_url}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">${response.data[i].title_ar} </h5>
-                            <p class="card-text">${response.data[i].small_details_ar}</p>
-                            <p class="card-text">${response.data[i].category_id}</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                <a href="/template/${response.data[i].id}">
+                <div class="wrapper">
+                    <div class="shadow"></div>
+                    <h2 class="animated bounceInLeft">${response.data[i].title_ar}</h2>
+                    <p class="animated bounceInLeft">${response.data[i].small_details_ar}</p>
+                    <img alt="" src="images/${response.data[i].image_url}">
+                </div>
+            </a>
                 `
             }
         },
@@ -35,21 +31,15 @@ function getDataTemplateCategory(idCatecory) {
 
 //start set contact
 $(document).ready(function () {
-
     $("#btnSubmit").click(function (event) {
-
         //stop submit the form, we will post it manually.
         event.preventDefault();
-
         // Get form
         var form = $('#idContact')[0];
-
 		// Create an FormData object
         var data = new FormData(form);
-
 		// If you want to add an extra field for the FormData
         data.append("CustomField", "This is some extra data, testing");
-
 		// disabled the submit button
         $("#btnSubmit").prop("disabled", false);
         $("#alertName").text("")
@@ -62,17 +52,14 @@ $(document).ready(function () {
             if(name.trim() == ""){
               $("#alertName").text("الرجاء ملئ هذه الخانة")
               console.log("name");
-
             }
             if(email.trim() == ""){
               $("#alertEmail").text("الرجاء ملئ هذه الخانة")
               console.log("email");
-
             }
            if(message.trim() == ""){
               $("#alertMessage").text("الرجاء ملئ هذه الخانة")
               console.log("message");
-
            }
         }else{
         $.ajax({
@@ -85,7 +72,6 @@ $(document).ready(function () {
             cache: false,
             timeout: 600000,
             success: function (response) {
-
                 document.getElementById('alertContact').innerHTML = `
                 <div class="alert alert-success" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -94,7 +80,6 @@ $(document).ready(function () {
               </div>`
             },
             error: function (e) {
-
                 document.getElementById('alertContact').innerHTML = `
                 <div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>

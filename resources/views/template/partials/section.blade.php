@@ -1,4 +1,4 @@
-<section class="template">@foreach ($templateAll as $templateAll)
+<section class="template" id="contintTemplate">@foreach ($templateAll as $templateAll)
 	<a href="/template/{{$templateAll->id}}">
 		<div class="wrapper">
 			<div class="shadow"></div>

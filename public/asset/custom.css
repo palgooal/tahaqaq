@@ -105,4 +105,9 @@
 
 
 
+  /* template page */
+  #submenu li:hover{
+    cursor: pointer;
+  }
+
 
