@@ -28,8 +28,8 @@
                                   </span>
                               </a>
                           </li>
-                          <li role="presentation" class="disabled">
-                              <h2>  تفاصيل الباقة المختارة  </h2>
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}">
+                              <h2>  إختار قالب  </h2>
 
                               <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                                   <span class="round-tab">
@@ -125,7 +125,7 @@
                               </form>
                               @endif
                           </div>
-                          <div class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1 ?"active":""}}" role="tabpanel" id="step2">
+                          <div class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 1 ?"active":""}}" role="tabpanel" id="step2">
                             @if ($isClientLogin)
                               <form  role="form" action="/SaveClientProjectInfo" method="POST" id="frmSaveClientProj">
                                 @method('post')
@@ -170,37 +170,25 @@
                               </form>
                               @endif
                           </div>
-                          <div class="tab-pane" role="tabpanel" id="step3">
-                             <div class="right">
-                                  <h2>
-                                          الباقة المجانية
-                                  </h2>
-                                  <ul>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
-                                      <li> <img src="img/shape-star.png"> الدفع بواسطة كي نت </li>
+                        <div class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 2 ?"active":""}}" role="tabpanel" id="step3">
+                            <form action="/TemplateSelected" role="form" method="post">
+                                @method('post')
+                                @csrf
 
-                                  </ul>
+                                @include('template.partials.section')
 
-                             </div>
-                             <div class="left">
-                                  <img src="img/Group 153.png">
-                                  <button>
-                                      أستعراض النسخة التجريبية
-                                  </button>
-                                  <a>
-                                     <input type="checkbox"> <p> أوافق على شروط التحكم وسياسة الخصوصية</p>
-                                  </a>
-                                  </div>
-                                  <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                      <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                      <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                      <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                  </ul>
+
+                                <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                    @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
+                                    @else
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                    @endif
+                                </ul>
+                            </form>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="step4">
                               <div class="choose">
@@ -259,4 +247,15 @@
          </div>
       </div>
   </section>
+
+  @section('footerJs')
+  @if (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2)
+    <script>
+            $(document).ready(function () {
+                const categoryId = {!! $categoryId !!};
+                getDataTemplateCategory(categoryId);
+            });
+    </script>
+    @endif
+  @endsection
 @endsection
