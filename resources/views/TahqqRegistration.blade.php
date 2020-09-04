@@ -132,7 +132,7 @@
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
-                                    <select name="projectCategory" id="projectCategory" aria-placeholder="موقع تجارة الكترونية" class="form-input">
+                                    <select name="projectCategory" id="projectCategory" class="form-input" required>
                                         @foreach ($templateCategories as $category)
                                             <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'select':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
