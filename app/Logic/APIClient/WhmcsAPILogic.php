@@ -44,7 +44,9 @@ class WhmcsAPILogic{
             'ProjectDetails' => $projectDetails,
         );
         if($SetClientRegisterProgress == true){
-                array_push($customfields,['ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo]);
+            // $crp = array('ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo);
+            // $customfieldsArray = array_merge($customfieldsArray, $crp);
+            array_push($customfieldsArray,['ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo]);
         }
 
         $customfields = base64_encode(serialize($customfieldsArray));
@@ -53,16 +55,14 @@ class WhmcsAPILogic{
             "customfields"=>$customfields
         ), WhmcsAPIActions::Client_UpdateClient);
         $result = $this->callAPI($postfields);
-
         if($result->result == "success")
         {
-            return true;
-
             $clientDetailResult = $this->GetClientsDetails($clientId);
             if(!$clientDetailResult->GetIsSuccess()){
                 return false;
             }
             TahaqqSessionInfo::SetClientDetailsResult($clientDetailResult);
+            return true;
         }
         return false;
     }
@@ -117,7 +117,12 @@ class WhmcsAPILogic{
                 "email":"'.$email.'",
                 "firstname":"user",
                 "lastname":"user",
-                "phonenumber":"055646"
+                "phonenumber":"055646",
+                "customfields1":"Ecommerce",
+                "customfields2":"Ecommerce Templates",
+                "customfields3":"ecommerseecommerseecommerseecommerse ecommerse",
+                "customfields4":"CompleteProjectInfo"
+
             }', false);
             $clientDetailResult->SetClientsDetailsObj($client);
 
@@ -127,7 +132,6 @@ class WhmcsAPILogic{
             $loginResult->createSsoTokenResult = $ssoResult;
             $loginResult->clientDetailsResult = $clientDetailResult;
             $loginResult->message= "Login succrssfully";
-
             TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
 
             return $loginResult;

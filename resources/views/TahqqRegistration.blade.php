@@ -20,7 +20,7 @@
                               </a>
                           </li>
 
-                          <li role="presentation" class="{{$clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo?"active":"disabled"}}">
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"active":"disabled"}}">
                               <h2> تفاصيل عن المشروع</h2>
                               <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                   <span class="round-tab">
@@ -65,6 +65,7 @@
                     </div>
                   @endisset
                   {{-- <form role="form"> --}}
+                      @dump($clientRegisterProgress)
                       <div class="tab-content">
                           <div class="tab-pane {{$clientRegisterProgress != '' ?"":"active"}}" role="tabpanel" id="step1">
                             @if ($isClientLogin)
@@ -77,7 +78,7 @@
                                     <h5>{{$clientDetailsInfo->GetPhoneNumber()??''}}</h5>
                                 </div>
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                        <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                        <li><button type="button" disabled class="btn btn-default prev-step" required><</button></li>
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
                                 </ul>
@@ -124,7 +125,7 @@
                               </form>
                               @endif
                           </div>
-                          <div class="tab-pane {{$clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo?"active":""}}" role="tabpanel" id="step2">
+                          <div class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1 ?"active":""}}" role="tabpanel" id="step2">
                             @if ($isClientLogin)
                               <form  role="form" action="/SaveClientProjectInfo" method="POST" id="frmSaveClientProj">
                                 @method('post')
@@ -138,10 +139,9 @@
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
-
                                     <select name="projectCategory" id="projectCategory" class="form-input" required>
                                         @foreach ($templateCategories as $category)
-                                            <option {{$clientDetailsInfo->GetProjectCategory()??'' == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
+                                            <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
                                     </select>
                                     @error('projectCategory')
@@ -158,15 +158,14 @@
                                       @enderror
                                   </div>
                                     <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                        @if ($isClientLogin)
-
-                                        @else
-
-                                        @endif
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                        <li><input type="submit" value="submit"></li>
+                                        @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo)
+                                            <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
+                                            <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
+                                        @else
+                                            <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                            <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                        @endif
                                     </ul>
                               </form>
                               @endif
