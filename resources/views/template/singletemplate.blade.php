@@ -15,18 +15,23 @@
 	</div>
 </section>
 <section class="button-single">
-    <div class="container">
-<a> <button class="button"> مشاهدة الموقع </button> </a>
-<a> <button class="button"> اختار هذا الموقع </button> </a>
+	<div class="container">
+		<a href="{{$templateOne->preview_url}}">
+			<button class="button">مشاهدة الموقع</button>
+		</a>
+		<a href="#">
+			<button class="button">اختار هذا الموقع</button>
+		</a>
 </section>
 <div class="title-features">
 	<h2> مميزات المواقع لدينا </h2>
 </div>
 <div class="Features-single">@foreach ($specifications as $specification)
-	<div class="Features">
-		<img src="img/free-delivery.png">
-		<h6>{{$specification->getText(App::getLocale())}}</h6>
-	</div>@endforeach</div>
+    <div class="col-xs-4">
+        <img src="img/free-delivery.png">
+        <h6>{{$specification->getText(App::getLocale())}}</h6>
+    </div>
+	@endforeach</div>
 <section class="toggle">
 	<div class="container">
 		<div class="top">
