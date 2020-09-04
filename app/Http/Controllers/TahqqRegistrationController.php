@@ -79,6 +79,7 @@ class TahqqRegistrationController extends Controller
         $addClientParam->clientip=request()->ip();
 
         $result = $this->whmcsAPILogic->AddClient($addClientParam);
+
         if($result->result == "success")
         {
             $clientid = $result->clientid;
@@ -101,8 +102,9 @@ class TahqqRegistrationController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $templateCategories = TemplateCategory::all();
+        $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
 
-        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','templateCategories']));
+        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress']));
     }
 
     /**
@@ -146,11 +148,13 @@ class TahqqRegistrationController extends Controller
         $clientId = TahaqqSessionInfo::GetLoggedClientId();
         $setClientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() == WhmcsClientRegisterProgress::CompletePersonInfo;
         $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo($clientId,$request->projectName,$request->projectCategory,$request->projectDetails,$setClientRegisterProgress);
-
+        $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
         if($isSuccess)
-            return back()->with('message','saved successfully');
+            return back()->with('message','saved successfully')
+            ->with('clientRegisterProgress', $clientRegisterProgress);
         else
-            return back()->with('message','faild save project info');
+            return back()->with('message','faild save project info')
+            ->with('clientRegisterProgress', $clientRegisterProgress);
     }
 
 

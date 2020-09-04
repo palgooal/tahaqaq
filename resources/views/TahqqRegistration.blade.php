@@ -11,7 +11,7 @@
                       <div class="connecting-line"></div>
                       <ul class="nav nav-tabs" role="tablist">
 
-                      <li role="presentation" class="{{$isClientLogin?"":"active"}}">
+                      <li role="presentation" class="{{$clientRegisterProgress != '' ?"":"active"}}">
                               <h2> بيانات الحساب</h2>
                               <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                   <span class="round-tab">
@@ -20,7 +20,7 @@
                               </a>
                           </li>
 
-                          <li role="presentation" class="{{$isClientLogin?"active":"disabled"}}">
+                          <li role="presentation" class="{{$clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo?"active":"disabled"}}">
                               <h2> تفاصيل عن المشروع</h2>
                               <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                   <span class="round-tab">
@@ -66,7 +66,7 @@
                   @endisset
                   {{-- <form role="form"> --}}
                       <div class="tab-content">
-                          <div class="tab-pane {{$isClientLogin?"":"active"}}" role="tabpanel" id="step1">
+                          <div class="tab-pane {{$clientRegisterProgress != '' ?"":"active"}}" role="tabpanel" id="step1">
                             @if ($isClientLogin)
                             <form role="form" id="frmRegClient">
 
@@ -124,7 +124,7 @@
                               </form>
                               @endif
                           </div>
-                          <div class="tab-pane {{$isClientLogin?"active":""}}" role="tabpanel" id="step2">
+                          <div class="tab-pane {{$clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo?"active":""}}" role="tabpanel" id="step2">
                             @if ($isClientLogin)
                               <form  role="form" action="/SaveClientProjectInfo" method="POST" id="frmSaveClientProj">
                                 @method('post')
