@@ -2,6 +2,8 @@
 
 
 namespace App\Logic;
+
+use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\APIClient\APIResult\LoginResult;
 use Illuminate\Support\Facades\Session;
 
@@ -19,6 +21,19 @@ class  TahaqqSessionInfo{
             Session::put('redirectUrl',$loginResult->createSsoTokenResult->redirectUrl);
         }
     }
+
+    public static function GetLoginResultObj(){
+        return json_decode(Session::get('loginResultJson'),false);
+    }
+
+    public static function GetLoggedClientDetailsObj(){
+        $loginResult = TahaqqSessionInfo::GetLoginResultObj();
+        $clientDetailsJson = $loginResult->clientDetailsResult;
+        $clientDetailsResult = new GetClientsDetailsResult($clientDetailsJson->isSuccess);
+        $clientDetailsResult->SetClientsDetailsObj($clientDetailsJson->clientsDetailsObj);
+        return $clientDetailsResult;
+    }
+
     public static function ClientLogout(){
         Session::flush();
     }

@@ -39,8 +39,12 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
             $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
+            if(TahaqqSessionInfo::IsClientLogin()){
+                $view->with("clientDetailsInfo",TahaqqSessionInfo::GetLoggedClientDetailsObj());
+            }
             $view->with('isClientLogin', $isClientLogin)
                  ->with('loggedClientName',$loggedClientName);
         });
+
     }
 }

@@ -66,7 +66,10 @@
                             <form role="form" id="frmRegClient">
 
                                 <div class="form-group wow fadeInDown">
-                                    <h6>profile</h6>
+                                    <h4>Profile</h4>
+                                    <h5>{{$clientDetailsInfo->GetFullName()}}</h5>
+                                    <h5>{{$clientDetailsInfo->GetEmail()}}</h5>
+                                    <h5>{{$clientDetailsInfo->GetPhoneNumber()}}</h5>
                                 </div>
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
                                         <li><button type="button" class="btn btn-default prev-step" required><</button></li>

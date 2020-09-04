@@ -105,7 +105,8 @@ class WhmcsAPILogic{
                 "fullname":"user user",
                 "email":"'.$email.'",
                 "firstname":"user",
-                "lastname":"user"
+                "lastname":"user",
+                "phonenumber":"055646"
             }', false);
             $clientDetailResult->SetClientsDetailsObj($client);
 

@@ -15,6 +15,7 @@ class CreateTemplateCategoriesTable extends Migration
     {
         Schema::create('template_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
             $table->string('text_ar');
             $table->string('text_en');
             $table->timestamps();

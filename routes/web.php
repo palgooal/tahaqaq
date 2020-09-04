@@ -1,5 +1,6 @@
 <?php
 
+use App\Logic\TahaqqSessionInfo;
 use Facade\FlareClient\Api;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -69,8 +70,6 @@ Route::get('/getOneTemplate/{id}','TemplateController@getOneTemplate');
 Route::get('/logins', function(){
     return view('login');
 });
-
-
 
 // TahqqRegistration تسجيل مشترك جديد
 Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');

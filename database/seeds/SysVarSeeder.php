@@ -49,8 +49,8 @@ class SysVarSeeder extends Seeder
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Header,
             'key'=>SysVarTypes::Type_Header_Key_StartNowUrl,
-            'value_en'=>"/",
-            'value_ar' =>"/",
+            'value_en'=>"/TahqqRegistration",
+            'value_ar' =>"/TahqqRegistration",
         ]);
 
         DB::table('sys_vars')->insert([

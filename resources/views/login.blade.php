@@ -65,7 +65,7 @@
             </form>
             <p style="color: red; ">{{$error??''}}</p>
             <div class="form-links wow fadeInDown" style="margin-right: 30%;">
-                <a href="/TahqqRegistration">هل انت مشترك جديد </a>
+                <a href="/TahqqRegistration">هل انت مشترك جديد</a>
             </div>
     </div>
 </section>

@@ -4,8 +4,8 @@ namespace App\Logic\APIClient\APIResult;
 
 class GetClientsDetailsResult
 {
-    private $isSuccess;
-    private $clientsDetailsObj;
+    public $isSuccess;
+    public $clientsDetailsObj;
 
     public function __construct($issuccess)
     {
@@ -42,5 +42,9 @@ class GetClientsDetailsResult
     public function GetLastname(){
         return $this->clientsDetailsObj->lastname;
     }
+    public function GetPhoneNumber(){
+        return $this->clientsDetailsObj->phonenumber;
+    }
+
 }
 
