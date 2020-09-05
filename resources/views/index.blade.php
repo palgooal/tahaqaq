@@ -232,38 +232,32 @@
     </h4>
 	</div>
 	<div class="row wow fadeIn">
-        @foreach ($blogs->take(4) as $blog)
+		@foreach ($blogs->take(4) as $blog)
+        <div class="col-xs-12 col-sm-6">
+            <div class="blog-item">
+                <div class="blog-item-img">
+                    <a href="/blogs/{{$blog->slug}}"><img src="images/{{$blog->image}}"></a>
+                    </div>
+                    <div class="blog-item-content">
+                    <div class="blog-item-text">
+                        <span class="time"> <img src="img/calendar-date.png">{{$blog->created_at->format('Y-m-d')}}</span>
+                        <a href="/blogs/{{$blog->slug}}">{{$blog->getTitle(App::getLocale())}}</a>
+                       <p>{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
 
+                        <ul>
+                            <li>    <h6> 22</h6></li>
+                            <li>     <i class='far fa-heart'></i> </li>
+                            <li>    <h6> 22</h6> </li>
+                            <li>  <i class='far fa-comment-alt'></i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-		<div class="col-xs-12 col-sm-6">
-			<div class="blog-item">
-				<div class="blog-item-img">
-					<a href="/blogs/{{$blog->slug}}">
-                    <img src="images/{{$blog->image}}">
-					</a>
-				</div>
-				<div class="blog-item-content">
-					<div class="blog-item-text"> <span class="time"> <img src="img/calendar-date.png">{{$blog->created_at->format('Y-m-d')}}</span>
-						<a href="/blogs/{{$blog->slug}}">{{$blog->getTitle(App::getLocale())}}</a>
-                        {!! Str::words($blog->getBody(App::getLocale()), 15 , '.....') !!}
-						<ul>
-							<li>
-                            <h6>22</h6>
-							</li>
-							<li> <i class='far fa-heart'></i>
-							</li>
-							<li>
-								<h6> 22</h6>
-							</li>
-							<li> <i class='far fa-comment-alt'></i>
-						</ul>
-					</div>
-				</div>
-			</div>
-        </div>
-        @endforeach
-
+		</div>
+		@endforeach
 	</div>
+
 	</div>
 </section>
 <!--end section-->@endsection
