@@ -5,6 +5,7 @@ class WhmcsClientRegisterProgress
 {
 
     public const WhmcsClientRegisterProgressSorted = array(
+        ''=>0,
         self::CompletePersonInfo=>1,
         self::CompleteProjectInfo=>2,
         self::CompleteChoiceTemplate=>3,

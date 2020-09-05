@@ -196,6 +196,7 @@ class WhmcsAPILogic{
         $createSsoTokenResult = new CreateSsoTokenResult(false);
         $postfields = $this->getPostFileArray(array(
             "client_id"=>$clientId,
+            "sso_redirect_path"=>"cart.php?a=checkout"
             // "destination"=>"clientarea:product_details clientarea:profile",
             // "service_id"=>"1"
         ), WhmcsAPIActions::Auth_CreateSsoToken);
