@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             SysVarSeeder::class,
             TemplateSeeder::class,
             TemplateCategorySeeder::class,
-            // BlogSeeder::class,
+            BlogSeeder::class,
+
         ]);
     }
 }
