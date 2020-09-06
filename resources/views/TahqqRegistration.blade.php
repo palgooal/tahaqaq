@@ -170,12 +170,12 @@
                               </form>
                               @endif
                           </div>
-                        <div class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 2 ?"active":""}}" role="tabpanel" id="step3">
+                        <div style="width: 100%; margin:0% 0%" class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 2 ?"active":""}}" role="tabpanel" id="step3">
                             <form action="/TemplateSelected" role="form" method="post">
                                 @method('post')
                                 @csrf
 
-                                @include('template.partials.section')
+                                @include('template.partials.templateSelector')
 
 
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
@@ -246,6 +246,7 @@
           </section>
          </div>
       </div>
+
   </section>
 
   @section('footerJs')
@@ -257,5 +258,10 @@
             });
     </script>
     @endif
+
   @endsection
+
 @endsection
+
+
+

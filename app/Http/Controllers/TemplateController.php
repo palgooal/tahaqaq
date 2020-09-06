@@ -63,6 +63,21 @@ class TemplateController extends Controller
         return response()->json( array('success' => true, 'data'=>$data));
 
     }
+    public function testTemplateSelector(Request $request){
+        $lang = App::getLocale();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+
+        $data = Template::where('category_id',$request->idCatecory)->get();
+        return view('template.testTemplateSellector')->with('templateAll',Template::orderBy('id','desc')->get())
+        ->with('menus',Menu::orderBy('sort','asc')->get())
+        ->with('sysVarFooter', $sysVarFooter)
+        ->with('sysVarSocialMedia',$sysVarSocialMedia)
+        ->with('categoris',TemplateCategory::get())
+        ->with('isClientLogin',$isClientLogin);
+
+    }
 
     //get one template
     public function getOneTemplate(Request $request)
@@ -81,6 +96,19 @@ class TemplateController extends Controller
 
 
     }
+
+        //get one template ajax
+         public function getOneTemplateAjax(Request $request)
+        {
+            $lang = App::getLocale();
+            $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+            $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+            $specif = TemplateSpecification::where('template_id', $request->id)->get();
+            $data = Template::findOrFail($request->id);
+            return response()->json( array('success' => true, 'data'=>$data));
+
+
+        }
 
 
     /**

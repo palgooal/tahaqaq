@@ -12,6 +12,7 @@ use App\Logic\SysVar\SysVarTypes;
 use App\Logic\SysVar\SysVarLogic;
 use App\Model\Menu;
 use App\Logic\TahaqqSessionInfo;
+use App\Model\Template;
 use App\Model\TemplateCategory;
 
 use function Symfony\Component\String\b;
@@ -109,7 +110,8 @@ class TahqqRegistrationController extends Controller
             $categoryId = TemplateCategory::where('code',$templateCode)->get()[0]->id??null;
         }
 
-        return view('TahqqRegistration',compact(['menus','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
+        $templateAll =Template::orderBy('id','desc')->get();
+        return view('TahqqRegistration',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
     }
 
     /**

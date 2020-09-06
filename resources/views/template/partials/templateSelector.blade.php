@@ -1,8 +1,8 @@
 <section class="template">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="row scrolDiv"  id="contintTemplate">
-                @isset($templateAll)
+            <div class="row scrolDiv" id="contintTemplate">
+                 {{-- @isset($templateAll)
                     @foreach ($templateAll as $templateAll)
                         <div class="col-sm-12">
                             <a href="/template/{{$templateAll->id}}">
@@ -15,11 +15,11 @@
                             </a>
                         </div>
                     @endforeach
-                @endisset
+                @endisset --}}
             </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-12 detailsTemplateSelector">
-            <div class="imgTemplate" width='200px' height='100px'>
+        <div class="col-lg-8 col-md-8 col-sm-12 detailsTemplateSelector" id="idTemplateSelector">
+            {{-- <div class="imgTemplate">
                 <img src="images/images/sb-admin-pro-html.jpg" width="100%" height="100%">
             </div>
             <input type="button" class="btn btn-primary" value="تفاصيل اضافية">
@@ -35,8 +35,10 @@
                     تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف
 
                     تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف
-            </p>
+            </p> --}}
         </div>
     </div>
 
 </section>
+
+

@@ -64,6 +64,8 @@ Route::resource('/pg-admin/templates', 'TemplateController')->middleware('auth')
 Route::get('/template', 'TemplateController@viewTemplate');
 Route::get('/viewTemplateCatecory/{idCatecory}','TemplateController@viewTemplateCatecory');
 Route::get('/template/{id}','TemplateController@getOneTemplate');
+Route::get('/getOneTemplateAjax/{id}','TemplateController@getOneTemplateAjax');
+Route::get('/testTemplateSelecotr','TemplateController@testTemplateSelector');
 // Route::get('/getOneTemplate/{id}','TemplateController@show');
 
 

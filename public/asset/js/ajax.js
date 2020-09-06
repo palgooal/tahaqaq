@@ -29,6 +29,64 @@ function getDataTemplateCategory(idCatecory) {
     });
 }
 
+//template selector
+function getDataTemplateSelectorCategory(idCatecory) {
+    $.ajax({
+        type: "GET",
+        url: "/viewTemplateCatecory/"+idCatecory,
+        data: "data",
+        dataType: "json",
+        success: function (response) {
+            document.getElementById('contintTemplate').innerHTML = ' ';
+            for (let i = 0; i < response.data.length; i++) {
+                let element = response.data[i].name;
+                console.log(element);
+                document.getElementById('contintTemplate').innerHTML +=`
+                <div class="col-sm-12">
+                <a onclick="getoneTamplateAjax('${response.data[i].id}')">
+                    <div class="wrapper">
+                        <div class="shadow"></div>
+                        <h2 class="animated bounceInLeft">${response.data[i].title_ar}</h2>
+                        <p class="animated bounceInLeft">${response.data[i].small_details_ar}</p>
+                        <img alt="" src="images/${response.data[i].image_url}">
+                    </div>
+                </a>
+            </div>`
+            }
+        },
+        fail: function(e){
+            alert(e);
+        }
+    });
+}
+
+
+function getoneTamplateAjax(id) {
+    document.getElementById('idTemplateSelector').innerHTML = ' ';
+    $.ajax({
+        type: "GET",
+        url: "getOneTemplateAjax/"+id,
+        data: "data",
+        dataType: "json ",
+        success: function (response) {
+            console.log('sss');
+            console.log(response.data.name);
+            document.getElementById('idTemplateSelector').innerHTML = `
+                    <div class="imgTemplate">
+                    <img src="images/${response.data.image_url}" width="100%" height="100%">
+                </div>
+                <a href='/template/${response.data.id}'><input type="button" class="btn btn-primary" value="تفاصيل اضافية"></a>
+                <a href='${response.data.preview_url}'><input type="button" class="btn btn-primary" value="تصفح النموذج"></a>
+                <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">${response.data.title_ar}</h2>
+                <p style="text-align: justify">
+                ${response.data.small_details_ar}
+                </p>
+            `
+        }
+    });
+}
+
+
 //start set contact
 $(document).ready(function () {
     $("#btnSubmit").click(function (event) {

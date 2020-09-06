@@ -20,4 +20,9 @@
             </ul>
 		</div>
 	</div>
-</section>@include('template.partials.section') @endsection
+</section>
+@include('template.partials.section')
+@section('jsCustome')
+<script src="asset/js/ajax.js"></script>
+@endsection
+@endsection
