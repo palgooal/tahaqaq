@@ -114,11 +114,6 @@
       overflow-x: hidden;
 
   }
-  #contintTemplate .scrolDiv{
-
-  }
-
-
   .template{
       margin-top: 110px;
   }
@@ -126,12 +121,14 @@
   #contintTemplate .wrapper{
       margin: auto;
   }
-  #contintTemplate .detailsTemplateSelector{
 
-  }
   #contintTemplate .imgTemplate{
     width: 100%;
     height: 400px;
     margin-bottom: 30px;
+  }
+
+  #contintTemplate .imgTemplate a,a{
+      padding: 0 !important;
   }
 

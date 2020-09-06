@@ -70,6 +70,7 @@ class TemplateController extends Controller
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
 
         $data = Template::where('category_id',$request->idCatecory)->get();
+
         return view('template.testTemplateSellector')->with('templateAll',Template::orderBy('id','desc')->get())
         ->with('menus',Menu::orderBy('sort','asc')->get())
         ->with('sysVarFooter', $sysVarFooter)
@@ -105,8 +106,27 @@ class TemplateController extends Controller
             $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
             $specif = TemplateSpecification::where('template_id', $request->id)->get();
             $data = Template::findOrFail($request->id);
-            return response()->json( array('success' => true, 'data'=>$data));
-
+            $dataSpasefcation = TemplateSpecification::where('template_id',$request->id)->get();
+            return response()->json(
+                 array(
+                    'success'=>true,
+                    'id'=>$data->id,
+                    'getTitle'=>$data->getTitle($lang),
+                    'getSmall_details'=>$data->getSmall_details($lang),
+                    'image_url'=>$data->image_url,
+                    'preview_url'=>$data->preview_url,
+                    'getDetails'=>$data->getDetails($lang),
+                    // 'getTextSpasefcation'=>$dataSpasefcation->getText($lang)
+                    ));
+            // return response()->json([
+            //     'success'=>true,
+            //     'id'=>$data->id,
+            //     'getTitle'=>$data->getTitle($lang),
+            //     'getSmall_details'=>$data->getSmall_details($lang),
+            //     'getDetails'=>$data->getDetails($lang),
+            //     'getTextSpasefcation'=>$dataSpasefcation->getText($lang)
+            // ]);
+            // return Response::json('data', $request);
 
         }
 

@@ -70,18 +70,18 @@ function getoneTamplateAjax(id) {
         dataType: "json ",
         success: function (response) {
             console.log('sss');
-            console.log(response.data.name);
+            console.log(response.name);
             document.getElementById('idTemplateSelector').innerHTML = `
                     <div class="imgTemplate">
-                    <img src="images/${response.data.image_url}" width="100%" height="100%">
-                </div>
-                <a href='/template/${response.data.id}'><input type="button" class="btn btn-primary" value="تفاصيل اضافية"></a>
-                <a href='${response.data.preview_url}'><input type="button" class="btn btn-primary" value="تصفح النموذج"></a>
-                <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">${response.data.title_ar}</h2>
-                <p style="text-align: justify">
-                ${response.data.small_details_ar}
-                </p>
-            `
+                    <img src="images/${response.image_url}" width="100%" height="300px">
+                    </div>
+                    <a href='/template/${response.id}'><input type="button" class="btn btn-primary" value="تفاصيل اضافية"></a>
+                    <a href='${response.preview_url}'><input type="button" class="btn btn-primary" value="تصفح النموذج"></a>
+                    <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">${response.getTitle}</h2>
+                    <p style="text-align: justify">
+                    ${response.getSmall_details}
+                    </p>
+            `;
         }
     });
 }
