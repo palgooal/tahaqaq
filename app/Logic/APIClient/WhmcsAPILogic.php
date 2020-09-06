@@ -45,9 +45,9 @@ class WhmcsAPILogic{
             'ProjectDetails' => $projectDetails,
         );
         if($SetClientRegisterProgress == true){
-            // $crp = array('ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo);
-            // $customfieldsArray = array_merge($customfieldsArray, $crp);
-            array_push($customfieldsArray,['ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompletePersonInfo]);
+            $crp = array('ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompleteProjectInfo);
+            $customfieldsArray = array_merge($customfieldsArray, $crp);
+            // array_push($customfieldsArray,['ClientRegisterProgress'=>WhmcsClientRegisterProgress::CompleteProjectInfo]);
         }
 
         $customfields = base64_encode(serialize($customfieldsArray));
@@ -283,7 +283,7 @@ class WhmcsAPILogic{
 
         $ssoResult = $this->CreateSsoToken($clientId);
         dump($ssoResult);
-        if(!$ssoResult->isSuccess){
+        if(!$ssoResult->isSuccess == true){
            $resp = Http::get($ssoResult->redirectUrl);
            dump($resp);
            if($resp->successful()){
