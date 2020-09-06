@@ -38,7 +38,7 @@
                               </a>
                           </li>
                           <li role="presentation" class="disabled">
-                              <h2>  نوع المشروع  </h2>
+                              <h2>  باقات الاشتراك  </h2>
 
                               <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
                                   <span class="round-tab">
@@ -179,36 +179,35 @@
 
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
                                     <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                                    @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
+                                    {{-- @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
-                                    @else
+                                    @else --}}
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                    @endif
+                                    {{-- @endif --}}
                                 </ul>
                             </form>
                           </div>
-                          <div class="tab-pane" role="tabpanel" id="step4">
-                              <div class="choose">
-                                <h3> أختر نوع المشروع </h3>
-                                <p> ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة  </p>
-                                ,<br>
-                                <h6> أختر نوع المشروع </h6>
-                                <select aria-placeholder="موقع تجارة الكترونية">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                          <div style="width: 100%; margin:0% 0%" class="tab-pane" role="tabpanel" id="step4">
+                            <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
+                                @method('post')
+                                @csrf
+                                @include('template.partials.planSelector')
+                                <input type="hidden" name="selectedTemplateId" id="selectedTemplateId">
+                                <input type="hidden" name="selectedPlanName" id="selectedPlanName">
 
-                                </select>
-                             </div>
-                          <ul class="list-inline pull-right" style="padding-right: 0px;">
-                              <li><button type="button" class="btn btn-default prev-step" required><</button></li>
-                              <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                              <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                          </ul>
+                                <ul class="list-inline pull-right" style="padding-right: 0px;">
+                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                    {{-- @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
+                                    @else --}}
+                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                    {{-- @endif --}}
+                                </ul>
+                            </form>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="complete">
                               <div class="True">
@@ -258,6 +257,11 @@
                 getDataTemplateSelectorCategory(categoryId)
 
             });
+
+            function planStartNow_Click($plan){
+                document.planSelectFrm.selectedPlanName.value = $plan;
+                document.planSelectFrm.submit();
+            }
     </script>
     @endif
 

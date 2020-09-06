@@ -112,7 +112,6 @@ class TahqqRegistrationController extends Controller
         }
 
         $templateAll =Template::orderBy('id','desc')->get();
-        $prods= $this->whmcsAPILogic->GetProducts('','');
         return view('TahqqRegistration',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
     }
 
@@ -166,6 +165,42 @@ class TahqqRegistrationController extends Controller
             return back()->with('message','faild save project info')
             ->with('clientRegisterProgress', $clientRegisterProgress);
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function StartNowToWhmcs(Request $request)
+    {
+        $data = request()->validate([
+            'selectedTemplateId' => 'required',
+            'selectedPlanName' => 'required'
+        ]);
+
+        $selectedTemplateId = $request->selectedTemplateId;
+        $selectedPlanName = $request->selectedPlanName;
+
+        $template = Template::findOrFail($selectedTemplateId);
+        $pid = 0;
+        $gid= $template->whmcs_gid;
+        switch ($selectedPlanName) {
+            case 'gould':
+                $pid = $template->whmcs_gould_pid;
+                break;
+            case 'silver':
+                    $pid = $template->whmcs_silver_pid;
+                break;
+            case 'bronze':
+                    $pid = $template->whmcs_bronze_pid;
+                break;
+        }
+
+         $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
+    }
+
 
 
     /**

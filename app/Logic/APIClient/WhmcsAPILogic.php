@@ -10,6 +10,7 @@ use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
 use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\TahaqqSessionInfo;
 use App\Logic\APIClient\APIResult\GetContactResult;
+use Illuminate\Support\Facades\Http;
 
 class WhmcsAPILogic{
 
@@ -269,6 +270,26 @@ class WhmcsAPILogic{
         }
         return $result;
     }
-    //GetClientsDetails
+
+
+    public function WhmcsDirectShoppingCartLink($pid){
+        $url = 'https://client.tahqq.com/cart.php?a=add&pid='.$pid;
+
+        $clientId = TahaqqSessionInfo::GetLoggedClientId();
+        if($clientId == null || empty($clientId) || !isset($clientId ))
+        {
+            return 'invalid process, client is not signin';
+        }
+
+        $ssoResult = $this->CreateSsoToken($clientId);
+        dump($ssoResult);
+        if(!$ssoResult->isSuccess){
+           $resp = Http::get($ssoResult->redirectUrl);
+           dump($resp);
+           if($resp->successful()){
+                redirect($url);
+           }
+        }
+    }
 
 }

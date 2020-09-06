@@ -81,7 +81,14 @@ function getoneTamplateAjax(id) {
                 <p style="text-align: justify">
                 ${response.data.small_details_ar}
                 </p>
-            `
+            `;
+            //document.getElementById('selectedTemplateId').setValue(id);
+            try {
+                document.planSelectFrm.selectedTemplateId.value = id;
+            } catch (error) {
+                console.log(error);
+            }
+
         }
     });
 }

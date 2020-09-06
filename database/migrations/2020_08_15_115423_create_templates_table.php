@@ -25,6 +25,10 @@ class CreateTemplatesTable extends Migration
             $table->integer('category_id')->unsigned()->index('category');
             $table->string('image_url');
             $table->string('preview_url');
+            $table->integer('whmcs_gid')->default(0);
+            $table->integer('whmcs_gould_pid')->default(0);
+            $table->integer('whmcs_silver_pid')->default(0);
+            $table->integer('whmcs_bronze_pid')->default(0);
 
             $table->timestamps();
         });
