@@ -145,94 +145,94 @@ function fixed_header() {
             $('body').removeClass('fixed');
         }
     }
-
 }
-Vue.component("step-navigation-step", {
-    template: "#step-navigation-step-template",
 
-    props: ["step", "currentstep"],
+// Vue.component("step-navigation-step", {
+//     template: "#step-navigation-step-template",
 
-    computed: {
-        indicatorclass() {
-            return {
-                active: this.step.id == this.currentstep,
-                complete: this.currentstep > this.step.id
-            };
-        }
-    }
-});
+//     props: ["step", "currentstep"],
 
-Vue.component("step-navigation", {
-    template: "#step-navigation-template",
+//     computed: {
+//         indicatorclass() {
+//             return {
+//                 active: this.step.id == this.currentstep,
+//                 complete: this.currentstep > this.step.id
+//             };
+//         }
+//     }
+// });
 
-    props: ["steps", "currentstep"]
-});
+// Vue.component("step-navigation", {
+//     template: "#step-navigation-template",
 
-Vue.component("step", {
-    template: "#step-template",
+//     props: ["steps", "currentstep"]
+// });
 
-    props: ["step", "stepcount", "currentstep"],
+// Vue.component("step", {
+//     template: "#step-template",
 
-    computed: {
-        active() {
-            return this.step.id == this.currentstep;
-        },
+//     props: ["step", "stepcount", "currentstep"],
 
-        firststep() {
-            return this.currentstep == 1;
-        },
+//     computed: {
+//         active() {
+//             return this.step.id == this.currentstep;
+//         },
 
-        laststep() {
-            return this.currentstep == this.stepcount;
-        },
+//         firststep() {
+//             return this.currentstep == 1;
+//         },
 
-        stepWrapperClass() {
-            return {
-                active: this.active
-            };
-        }
-    },
+//         laststep() {
+//             return this.currentstep == this.stepcount;
+//         },
 
-    methods: {
-        nextStep() {
-            this.$emit("step-change", this.currentstep + 1);
-        },
+//         stepWrapperClass() {
+//             return {
+//                 active: this.active
+//             };
+//         }
+//     },
 
-        lastStep() {
-            this.$emit("step-change", this.currentstep - 1);
-        }
-    }
-});
+//     methods: {
+//         nextStep() {
+//             this.$emit("step-change", this.currentstep + 1);
+//         },
 
-new Vue({
-    el: "#app",
+//         lastStep() {
+//             this.$emit("step-change", this.currentstep - 1);
+//         }
+//     }
+// });
 
-    data: {
-        currentstep: 1,
+// new Vue({
+//     el: "#app",
 
-        steps: [
-            {
-                id: 1,
-                title: "Personal",
-                icon_class: "fa fa-user-circle-o"
-            },
-            {
-                id: 2,
-                title: "Details",
-                icon_class: "fa fa-th-list"
-            },
-            {
-                id: 3,
-                title: "Send",
-                icon_class: "fa fa-paper-plane"
-            }
-        ]
-    },
+//     data: {
+//         currentstep: 1,
 
-    methods: {
-        stepChanged(step) {
-            this.currentstep = step;
-        }
-    }
-});
+//         steps: [
+//             {
+//                 id: 1,
+//                 title: "Personal",
+//                 icon_class: "fa fa-user-circle-o"
+//             },
+//             {
+//                 id: 2,
+//                 title: "Details",
+//                 icon_class: "fa fa-th-list"
+//             },
+//             {
+//                 id: 3,
+//                 title: "Send",
+//                 icon_class: "fa fa-paper-plane"
+//             }
+//         ]
+//     },
+
+//     methods: {
+//         stepChanged(step) {
+//             this.currentstep = step;
+//         }
+//     }
+// });
 

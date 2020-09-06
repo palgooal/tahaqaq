@@ -249,11 +249,14 @@
   </section>
 
   @section('footerJs')
+  <script src="asset/js/ajax.js"></script>
   @if (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2)
     <script>
             $(document).ready(function () {
                 const categoryId = {!! $categoryId !!};
-                getDataTemplateCategory(categoryId);
+                // getDataTemplateCategory(categoryId);
+                getDataTemplateSelectorCategory(categoryId)
+
             });
     </script>
     @endif
