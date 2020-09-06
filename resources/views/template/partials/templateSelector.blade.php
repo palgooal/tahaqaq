@@ -18,24 +18,10 @@
                 @endisset --}}
             </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-12 detailsTemplateSelector" id="idTemplateSelector">
-            {{-- <div class="imgTemplate">
-                <img src="images/images/sb-admin-pro-html.jpg" width="100%" height="100%">
+        <div class="col-lg-8 col-md-8 col-sm-12 detailsTemplateSelector" >
+            <div class="row" id="idTemplateSelector">
+
             </div>
-            <input type="button" class="btn btn-primary" value="تفاصيل اضافية">
-            <input type="button" class="btn btn-primary" value="تصفح النموذج">
-            <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">تصميم معاصر ولطيف وخفيف</h2>
-            <p style="text-align: justify">
-                    تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف
-
-                    تصميم معاصر ولطيف وخفيف
-
-                    تصميم معاصر ولطيف وخفيف
-
-                    تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف
-
-                    تصميم معاصر ولطيف وخفيف تصميم معاصر ولطيف وخفيف
-            </p> --}}
         </div>
     </div>
 
