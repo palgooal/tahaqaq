@@ -255,6 +255,20 @@ class WhmcsAPILogic{
         return $clientDetailsResult;
     }
 
+    public function GetProducts($productId, $groupId){
+
+        $postfields = $this->getPostFileArray(array(
+            // "pid"=>1,
+            // "gid"=>1
+        ), WhmcsAPIActions::Prod_GetProducts);
+
+        $result = $this->callAPI($postfields);
+        dump($result);
+        if($result->result == "success" ){
+
+        }
+        return $result;
+    }
     //GetClientsDetails
 
 }

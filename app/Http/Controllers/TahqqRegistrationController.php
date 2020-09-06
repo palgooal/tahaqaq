@@ -112,6 +112,7 @@ class TahqqRegistrationController extends Controller
         }
 
         $templateAll =Template::orderBy('id','desc')->get();
+        $prods= $this->whmcsAPILogic->GetProducts('','');
         return view('TahqqRegistration',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
     }
 

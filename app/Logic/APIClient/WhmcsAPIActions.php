@@ -10,4 +10,6 @@ class WhmcsAPIActions{
 
     const Auth_ValidateLogin = "ValidateLogin";
     const Auth_CreateSsoToken = "CreateSsoToken";
+
+    const Prod_GetProducts = "GetProducts";
 }
