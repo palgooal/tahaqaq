@@ -65,7 +65,6 @@
                     </div>
                   @endisset
                   {{-- <form role="form"> --}}
-                      @dump($clientRegisterProgress)
                       <div class="tab-content">
                           <div class="tab-pane {{$clientRegisterProgress != '' ?"":"active"}}" role="tabpanel" id="step1">
                             @if ($isClientLogin)

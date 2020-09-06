@@ -104,6 +104,7 @@ class TahqqRegistrationController extends Controller
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $templateCategories = TemplateCategory::all();
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
+        dump($clientRegisterProgress);
         $templateCode = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetProjectCategory()??'';
         $categoryId = null;
         if(isset($templateCode) && !empty($templateCode)){
@@ -156,6 +157,7 @@ class TahqqRegistrationController extends Controller
         $setClientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() == WhmcsClientRegisterProgress::CompletePersonInfo;
         $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo($clientId,$request->projectName,$request->projectCategory,$request->projectDetails,$setClientRegisterProgress);
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
+
         if($isSuccess)
             return back()->with('message','saved successfully')
             ->with('clientRegisterProgress', $clientRegisterProgress);
