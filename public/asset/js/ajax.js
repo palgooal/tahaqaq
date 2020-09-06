@@ -69,8 +69,7 @@ function getoneTamplateAjax(id) {
         data: "data",
         dataType: "json ",
         success: function (response) {
-            console.log('sss');
-            console.log(response.name);
+
             document.getElementById('idTemplateSelector').innerHTML = `
                     <div class="imgTemplate">
                     <img src="images/${response.image_url}" width="100%" height="300px">
