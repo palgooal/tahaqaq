@@ -6,12 +6,12 @@
 				<img src="img/logo.png" width="120">
 			</a>
 			<a href="#" class="nav-toggle visible-xs">
-				<img width="28" src="images/font-icons/menu.svg" />
+				<img width="28" src="img/menu.svg" />
 			</a>
 			<div class="main-nav">
 				<div class="mobile-menu visible-xs"> <span>القائمة الرئيسية</span>
 					<a href="#" class="nav-toggle">
-						<img width="20" src="images/font-icons/close.svg" />
+						<img width="20" src="img/close.svg" />
 					</a>
 				</div>
 				<ul>@foreach ($menus as $menu)

@@ -1,10 +1,9 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app') @section('content') @include('partials.InternalNavpar')
 <!--section one -->
 <section class="blogs wow fadeIn">
 	<div class="container">
-		<br>
-		<br>
-		<br> <a href="/">الرجوع الى الرئيسية</a>
+		<a href="#" class="re-index">
+			<img src="img/arrow-right.png">الرجوع الى الرئيسية</a>
 		<div class="section-title wow fadeInDown">المدونة</div>
 		<div class="search">
 			<input type="text" class="searchTerm" placeholder="ابحث عن ما تريد">
@@ -30,42 +29,27 @@
 		<div class="row wow fadeIn">@foreach ($blogs as $blog)
 			<div class="col-xs-12 col-sm-6">
 				<div class="blog-item">
-					<div class="blog-item-img"> <a href="/blogs/{{$blog->slug}}">
-                    <img src="images/{{$blog->image}}">
-						</a>
+					<div class="blog-item-img"> <a href="/blogs/{{$blog->slug}}"><img src="images/{{$blog->image}}"></a>
 					</div>
 					<div class="blog-item-content">
 						<div class="blog-item-text"> <span class="time"> <img src="img/calendar-date.png" style="margin-left: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
-							<a href="#">{{$blog->getTitle(App::getLocale())}}</a>
-							{!! Str::words($blog->getBody(App::getLocale()), 15 , '.....') !!}
+							<a href="/blogs/{{$blog->slug}}">{{$blog->getTitle(App::getLocale())}}</a>
+							<p>{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
 							<ul style="display: inline-flex; float: left">
 								<li>
-									<h6>22</h6>
+									<h6> 22</h6>
 								</li>
 								<li> <i class='far fa-heart'></i>
 								</li>
 								<li>
-									<h6>22</h6>
+									<h6> 22</h6>
 								</li>
-								<li><i class='far fa-comment-alt'></i>
+								<li> <i class='far fa-comment-alt'></i>
 							</ul>
 						</div>
 					</div>
 				</div>
-			</div>@endforeach
-			<!-- <div class="text-center custom-pagination wow fadeInDown">
-                <a href="#" class="first-page">الأولى</a>
-                <ul class="pagination-ul">
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">..</a></li>
-                    <li><a href="#">11</a></li>
-                </ul>
-                <a href="#" class="last-page">الأخيرة</a>
-            </div> --></div>
+			</div>@endforeach</div>
 	</div>
 </section>
 <!--</section>-->
