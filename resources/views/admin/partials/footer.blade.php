@@ -1536,35 +1536,63 @@
                 };
                         </script>
                         <!--end::Global Config-->
-
+                        @env('prod')
                         <!--begin::Global Theme Bundle(used by all pages)-->
-                    <script src="{{asset('admin/assets/plugins/global/plugins.bundle.js')}}"></script>
-                    <script src="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
-                    <script src="{{asset('admin/assets/js/scripts.bundle.js')}}"></script>
+                    <script src="admin/assets/plugins/global/plugins.bundle.js"></script>
+                    <script src="admin/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+                    <script src="admin/assets/js/scripts.bundle.js"></script>
                                 <!--end::Global Theme Bundle-->
 
                                     <!--begin::Page Vendors(used by this page)-->
-                    <script src="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+                    <script src="admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
                                         <!--end::Page Vendors-->
 
                                     <!--begin::Page Scripts(used by this page)-->
-                    <script src="{{asset('admin/assets/js/pages/widgets.js')}}"></script>
+                    <script src="admin/assets/js/pages/widgets.js"></script>
                                         <!--end::Page Scripts-->
-                    <script src="{{asset('admin/assets/js/adminCsspublic.js')}}"></script>
-                    <script src="{{asset('admin/assets/js/public.js')}}"></script>
+                    <script src="admin/assets/js/adminCsspublic.js"></script>
+                    <script src="admin/assets/js/public.js"></script>
 
 
                     <!--begin::Page Scripts(used by this page)-->
-                    <script src="{{asset('admin/assets/js/pages/crud/forms/editors/summernote.js')}}"></script>
+                    <script src="admin/assets/js/pages/crud/forms/editors/summernote.js"></script>
                     <!--end::Page Scripts-->
                     <!--begin::Page Scripts(used by this page)-->
-                    <script src="{{asset('admin/assets/js/pages/crud/forms/widgets/tagify.js')}}"></script>
+                    <script src="admin/assets/js/pages/crud/forms/widgets/tagify.js"></script>
                     <!--end::Page Scripts-->
                      <!--begin::Page Scripts(used by this page)-->
-                    <script src="{{asset('admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js')}}"></script>
+                    <script src="admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js"></script>
                      <!--end::Page Scripts-->
+                     <script src="admin\assets\js\alertsDelete.js"></script>
+                     @endenv
+
+                     @env('local')
+                     <!--begin::Global Theme Bundle(used by all pages)-->
+                 <script src="{{asset('admin/assets/plugins/global/plugins.bundle.js')}}"></script>
+                 <script src="{{asset('admin/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
+                 <script src="{{asset('admin/assets/js/scripts.bundle.js')}}"></script>
+                             <!--end::Global Theme Bundle-->
+
+                                 <!--begin::Page Vendors(used by this page)-->
+                 <script src="{{asset('admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+                                     <!--end::Page Vendors-->
+
+                                 <!--begin::Page Scripts(used by this page)-->
+                 <script src="{{asset('admin/assets/js/pages/widgets.js')}}"></script>
+                                     <!--end::Page Scripts-->
+                 <script src="{{asset('admin/assets/js/adminCsspublic.js')}}"></script>
+                 <script src="{{asset('admin/assets/js/public.js')}}"></script>
 
 
-                     <script src="{{asset('admin\assets\js\alertsDelete.js')}}"></script>
-
+                 <!--begin::Page Scripts(used by this page)-->
+                 <script src="{{asset('admin/assets/js/pages/crud/forms/editors/summernote.js')}}"></script>
+                 <!--end::Page Scripts-->
+                 <!--begin::Page Scripts(used by this page)-->
+                 <script src="{{asset('admin/assets/js/pages/crud/forms/widgets/tagify.js')}}"></script>
+                 <!--end::Page Scripts-->
+                  <!--begin::Page Scripts(used by this page)-->
+                 <script src="{{asset('admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js')}}"></script>
+                  <!--end::Page Scripts-->
+                  <script src="{{asset('admin\assets\js\alertsDelete.js')}}"></script>
+                  @endenv
 @yield('footerLib')
