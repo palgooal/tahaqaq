@@ -1,5 +1,5 @@
 <!--header-->
-<header style="background-color:#f4f0ff;">
+<header style="background-color:#f6f3ff;">
 	<div class="container">
 		<div class="navbar-wrap wow fadeInDown">
 			<a href="#" class="logo">

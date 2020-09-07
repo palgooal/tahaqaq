@@ -64,7 +64,7 @@ class HomeController extends Controller
         //social media
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        dump(TahaqqSessionInfo::GetLoggedClientRedirectUrl());
+
         // $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         // $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
         return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',

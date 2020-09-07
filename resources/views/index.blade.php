@@ -3,7 +3,7 @@
 <!--section one -->
 <section class="firstsection">
 	<div class="container">
-		<div class="home-wrap" style="padding-bottom: 22%;">
+		<div class="home-wrap" >
 			<div class="text">
 				<h2 class=" wow fadeInDown">{{$header_title}}</h2>
 				<p class=" wow fadeInDown">{{$header_details}}</p>
@@ -17,7 +17,7 @@
 <!--end section-->
 
 <!--section two-->
-<section class="boxes">
+{{-- <section class="boxes">
 	<div class="row">
 		<div class="img-box">
 			<!-- <div class="right">
@@ -75,7 +75,7 @@
 			</a>
 		</div>
 	</div>
-</section>
+</section> --}}
 <!--end section-->
 <!--section three-->
 <section class="courses wow fadeIn">
