@@ -72,15 +72,26 @@ function getoneTamplateAjax(id) {
 
             document.getElementById('idTemplateSelector').innerHTML = `
                     <div class="imgTemplate">
-                    <img src="images/${response.image_url}" width="100%" height="300px">
+                        <img src="images/${response.image_url}" width="100%" height="300px">
                     </div>
                     <a href='/template/${response.id}'><input type="button" class="btn btn-primary" value="تفاصيل اضافية"></a>
                     <a href='${response.preview_url}'><input type="button" class="btn btn-primary" value="تصفح النموذج"></a>
                     <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">${response.getTitle}</h2>
                     <p style="text-align: justify">
-                    ${response.getSmall_details}
+                        ${response.getSmall_details}
                     </p>
-            `;
+
+                    `;
+                    if (response.getTextSpasefcation.length >1) {
+                        document.getElementById('idTemplateSelector').innerHTML += ' <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">خصائص القالب</h2><ul>'
+                        for (let i = 0; i < response.getTextSpasefcation.length; i++) {
+                            document.getElementById('idTemplateSelector').innerHTML += `<li>${response.getTextSpasefcation[i]}</li>`;
+
+                        }
+
+                        document.getElementById('idTemplateSelector').innerHTML +=`</ul>`;
+                    }
+
 
             try {
                 document.planSelectFrm.selectedTemplateId.value = id;

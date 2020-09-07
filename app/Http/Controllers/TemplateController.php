@@ -107,6 +107,13 @@ class TemplateController extends Controller
             $specif = TemplateSpecification::where('template_id', $request->id)->get();
             $data = Template::findOrFail($request->id);
             $dataSpasefcation = TemplateSpecification::where('template_id',$request->id)->get();
+            $getTextSpasefcation = array();
+            $counter = 0;
+            foreach ($dataSpasefcation as $dataSpasefcation) {
+                $getTextSpasefcation[$counter] = $dataSpasefcation->getText($lang);
+                $counter++;
+            }
+            // $dataSpasefcationLenght = count($dataSpasefcation);
             return response()->json(
                  array(
                     'success'=>true,
@@ -116,19 +123,11 @@ class TemplateController extends Controller
                     'image_url'=>$data->image_url,
                     'preview_url'=>$data->preview_url,
                     'getDetails'=>$data->getDetails($lang),
-                    // 'getTextSpasefcation'=>$dataSpasefcation->getText($lang)
+                    'getTextSpasefcation'=>$getTextSpasefcation,
+                    // 'dataSpasefcationLenght'=>$dataSpasefcationLenght
                     ));
-            // return response()->json([
-            //     'success'=>true,
-            //     'id'=>$data->id,
-            //     'getTitle'=>$data->getTitle($lang),
-            //     'getSmall_details'=>$data->getSmall_details($lang),
-            //     'getDetails'=>$data->getDetails($lang),
-            //     'getTextSpasefcation'=>$dataSpasefcation->getText($lang)
-            // ]);
-            // return Response::json('data', $request);
-
         }
+
 
 
     /**
