@@ -82,7 +82,6 @@ function getoneTamplateAjax(id) {
                     </p>
 
                     `;
-                    if (response.getTextSpasefcation.length >1) {
                         document.getElementById('idTemplateSelector').innerHTML += ' <h2 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">خصائص القالب</h2><ul>'
                         for (let i = 0; i < response.getTextSpasefcation.length; i++) {
                             document.getElementById('idTemplateSelector').innerHTML += `<li>${response.getTextSpasefcation[i]}</li>`;
@@ -90,7 +89,7 @@ function getoneTamplateAjax(id) {
                         }
 
                         document.getElementById('idTemplateSelector').innerHTML +=`</ul>`;
-                    }
+
 
 
             try {
