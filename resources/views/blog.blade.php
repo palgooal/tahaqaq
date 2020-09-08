@@ -5,7 +5,7 @@
 
         <!-- Carousel container -->
 
-<div id="my-pics" class="carousel slide" data-ride="carousel" style="min-height:100px;margin:auto;">
+<div id="my-pics" class="carousel slide" data-ride="carousel" style="height: 433px">
 
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -27,11 +27,11 @@
     <?php $counterBlogerSlider = 0;?>
     @foreach ($blogs as $blogsSliderimg)
         @if ($blogsSliderimg->pin_to_slider == 1)
-            <div class="item {{$counterBlogerSlider == 0?'active':''}}">
-                <img src="images/{{$blogsSliderimg->image}}" alt="Sunset over beach">
+            <div class="item {{$counterBlogerSlider == 0?'active':''}} bloglist-img-head"  style="images/{{$blogsSliderimg->image}}">
+                {{-- <img src="images/{{$blogsSliderimg->image}}" alt="Sunset over beach"> --}}
                 <div class="carousel-caption">
-                    <h3>Boracay</h3>
-                    <p>White Sand Beach.</p>
+                    <h3>{{$blogsSliderimg->getTitle(App::getLocale())}}</h3>
+                    {{-- <p>White Sand Beach.</p> --}}
                 </div>
             </div>
             <?php $counterBlogerSlider++ ?>
@@ -62,7 +62,7 @@
 		<div class="search">
 			<input type="text" class="searchTerm" placeholder="ابحث عن ما تريد">
 		</div>
-		<div class="bloglist-img-head">
+		{{-- <div class="bloglist-img-head">
 			<div class="blog-item-text"> <span class="time">
                 <img src="img/calendar.png">20.08.2019</span>
 				<a href="#">نموذج نص</a>
@@ -79,7 +79,7 @@
 					<li> <i class='far fa-comment-alt'></i>
 				</ul>
 			</div>
-		</div>
+		</div> --}}
 		<div class="row wow fadeIn">@foreach ($blogs as $blog)
 			<div class="col-xs-12 col-sm-6">
 				<div class="blog-item">
