@@ -151,7 +151,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
                             <div class="col-md-6">
                             <div class="form-group">
                                 <label>whmcs_gid<span class="text-danger"></span></label>
@@ -159,7 +159,7 @@
                                 <span class="form-text text-muted"></span>
                             </div>
                             </div>
-                            <div class="row">
+
                             <div class="col-md-6">
                             <div class="form-group">
                                 <label>الباقة الذهبية<span class="text-danger"></span></label>
