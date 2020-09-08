@@ -103,7 +103,15 @@
 						</div>
 					</div>
 				</div>
-			</div>@endforeach</div>
+            </div>@endforeach</div>
+            <div class="text-center custom-pagination wow fadeInDown">
+
+                <ul class="pagination-ul">
+                    {{ $blogs->fragment('foo')->links() }}
+                </ul>
+
+            </div>
+
 	</div>
 </section>
 <!--</section>-->
