@@ -152,7 +152,36 @@
                                 </div>
                             </div>
 
-
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label>whmcs_gid<span class="text-danger"></span></label>
+                            <input type="number" name="whmcs_gid" class="form-control" value="{{$template->whmcs_gid}}">
+                                <span class="form-text text-muted"></span>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label>الباقة الذهبية<span class="text-danger"></span></label>
+                                <input type="number" name="whmcs_gould_pid" class="form-control" value="{{$template->whmcs_gould_pid}}">
+                                <span class="form-text text-muted"></span>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label>الباقة الفضية<span class="text-danger"></span></label>
+                                <input type="number" name="whmcs_silver_pid" class="form-control" value="{{$template->whmcs_silver_pid}}">
+                                <span class="form-text text-muted"></span>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label>الباقة البرونزية<span class="text-danger"></span></label>
+                                <input type="number" name="whmcs_bronze_pid" class="form-control" value="{{$template->whmcs_bronze_pid}}">
+                                <span class="form-text text-muted"></span>
+                            </div>
+                            </div>
+                        </div>
 
                         </div>
                         <div class="card-footer">

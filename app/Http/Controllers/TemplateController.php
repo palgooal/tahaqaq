@@ -172,6 +172,10 @@ class TemplateController extends Controller
         $t->category_id = $request->category_id;
         $t->image_url = $request->image;
         $t->preview_url = $request->preview_url;
+        $t->whmcs_gid = $request->whmcs_gid;
+        $t->whmcs_gould_pid = $request->whmcs_gould_pid;
+        $t->whmcs_silver_pid = $request->whmcs_silver_pid;
+        $t->whmcs_bronze_pid = $request->whmcs_bronze_pid;
         $t->save();
         $templateId = $t->id;
 
@@ -264,6 +268,10 @@ class TemplateController extends Controller
         $t->category_id = $request->category_id;
         $t->image_url = $request->image_url;
         $t->preview_url = $request->preview_url;
+        $t->whmcs_gid = $request->whmcs_gid;
+        $t->whmcs_gould_pid = $request->whmcs_gould_pid;
+        $t->whmcs_silver_pid = $request->whmcs_silver_pid;
+        $t->whmcs_bronze_pid = $request->whmcs_bronze_pid;
         $t->save();
         $templateId = $t->id;
 
