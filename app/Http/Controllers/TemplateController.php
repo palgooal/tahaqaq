@@ -298,7 +298,7 @@ class TemplateController extends Controller
                 $ts->save();
             }
         }
-        return back()->with('success','save succes');
+        return redirect('/pg-admin/templates')->with('success','save succes');
 
     }
 
