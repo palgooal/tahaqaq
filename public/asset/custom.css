@@ -132,3 +132,10 @@
       padding: 0 !important;
   } */
 
+
+  /* blog  */
+  #blogId .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img{
+    height: 500px !important;
+    width: 100%;
+  }
+
