@@ -155,6 +155,11 @@
     padding-top: 300px;
     height: 700px;
   }
+
+  .blog-item-text2{
+    background-color: #00000045;
+    border-radius: 5px;
+}
   .carousel-inner{
       height: 600px;
   }

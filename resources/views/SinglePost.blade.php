@@ -7,11 +7,11 @@
 </div>
 <section class="blogs wow fadeIn">
     <div class="container">
-        <div class="bloglist-img-head" style="margin-bottom: -5%;">
-            <div class="blog-item-text" >
+        <div class="bloglist-img-head" style="margin-bottom: -5%; background-image: url('images/{{$blogs->image}}')" >
+            <div class="blog-item-text blog-item-text2" >
                 <span class="time">
-                <img src="img/calendar.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
+                <img src="img/calendar.png">{{$blogs->created_at}}</span>
+                <a>{{$blogs->getTitle(App::getLocale())}}</a>
                 <p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
 
                 <ul >

@@ -86,31 +86,38 @@
                               <form role="form" action="/TahqqRegistration" method="POST" id="frmRegClient">
                                 @method('post');
                                 @csrf;
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group wow fadeInDown">
+                                            <h6>الإسم الاول</h6>
+                                            <input type="text" class="form-input" name="firstname" placeholder="هنا الإسم الأول" required>
+                                        </div>
+                                        <div class="form-group wow fadeInDown">
+                                            <h6>الإسم الاخير</h6>
+                                            <input type="text" class="form-input" name="lastname" placeholder="هنا الإسم الاخر" required>
+                                        </div>
+                                        <div class="form-group wow fadeInDown">
+                                            <h6> البريد الألكتروني </h6>
+                                            <input type="email" class="form-input" name="email" placeholder="هنا البريد الألكتروني" required=" ">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group wow fadeInDown">
+                                            <h6> رقم الهاتف </h6>
+                                            <input type="tel" class="form-input" name="phonenumber" placeholder="هنا رقم الهاتف" required=" ">
+                                        </div>
+                                        <div class="form-group wow fadeInDown">
+                                            <h6>كلمة المرور</h6>
+                                            <input type="tel" class="form-input" name="password" placeholder="كلمة المرور" required=" ">
+                                        </div>
+                                        <div class="form-group wow fadeInDown">
+                                            <h6>تأكيد كلمة المرور</h6>
+                                            <input type="tel" class="form-input" name="password" placeholder="تاكيد كلمة المرور" required=" ">
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <div class="form-group wow fadeInDown">
-                                    <h6>الإسم الاول</h6>
-                                    <input type="text" class="form-input" name="firstname" placeholder="هنا الإسم الأول" required>
-                                </div>
-                                <div class="form-group wow fadeInDown">
-                                    <h6>الإسم الاخير</h6>
-                                    <input type="text" class="form-input" name="lastname" placeholder="هنا الإسم الاخر" required>
-                                </div>
-                                <div class="form-group wow fadeInDown">
-                                    <h6> البريد الألكتروني </h6>
-                                    <input type="email" class="form-input" name="email" placeholder="هنا البريد الألكتروني" required=" ">
-                                </div>
-                                <div class="form-group wow fadeInDown">
-                                    <h6> رقم الهاتف </h6>
-                                    <input type="tel" class="form-input" name="phonenumber" placeholder="هنا رقم الهاتف" required=" ">
-                                </div>
-                                <div class="form-group wow fadeInDown">
-                                    <h6>كلمة المرور</h6>
-                                    <input type="tel" class="form-input" name="password" placeholder="كلمة المرور" required=" ">
-                                </div>
-                                <div class="form-group wow fadeInDown">
-                                    <h6>تأكيد كلمة المرور</h6>
-                                    <input type="tel" class="form-input" name="password" placeholder="تاكيد كلمة المرور" required=" ">
-                                </div>
+
 
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
                                     {{-- @if ($isClientLogin)
