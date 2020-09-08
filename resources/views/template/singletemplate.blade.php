@@ -28,7 +28,7 @@
 </div>
 <div class="Features-single">@foreach ($specifications as $specification)
     <div class="col-xs-4">
-        <img src="img/free-delivery.png">
+        <img src="{{$specification->image}}">
         <h6>{{$specification->getText(App::getLocale())}}</h6>
     </div>
 	@endforeach</div>

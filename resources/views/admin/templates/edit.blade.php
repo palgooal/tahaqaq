@@ -129,16 +129,57 @@
                                                 <input name="ts_text_en" type="text" class="form-control" placeholder="English"/>
                                                 <div class="d-md-none mb-2"></div>
                                             </div>
-                                            <div class="col-md-2">
-                                                {{-- <label>Number:</label> --}}
-                                                <input name="ts_img" type="text" class="form-control" placeholder="image url"/>
-                                                <div class="d-md-none mb-2"></div>
-                                            </div>
                                             <div class="col-md-4">
                                                 <a href="javascript:;" data-repeater-delete="" class="btn btn-sm font-weight-bolder btn-light-danger">
                                                     <i class="la la-trash-o"></i>Delete
                                                 </a>
                                             </div>
+                                            <div class="form-group row">
+                                                <label class="col-4 col-form-label">اختر الايقونة المناسبة</label>
+                                                <div class="col-9 col-form-label">
+                                                    <div class="radio-inline">
+
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/analysis.png"/> <span></span>
+                                                            <img src="/img/icon/analysis.png" alt="" width="50px" height="50px"  id="exampleRadios2">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/browser.png"/> <span></span>
+                                                            <img src="/img/icon/browser.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/customer-service.png" /> <span></span>
+                                                            <img src="/img/icon/customer-service.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/free-delivery.png"  /> <span></span>
+                                                            <img src="/img/icon/free-delivery.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/medal.png"  /> <span></span>
+                                                            <img src="/img/icon/medal.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/responsive-1.png" /> <span></span>
+                                                            <img src="/img/icon/responsive-1.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/security.png" /> <span></span>
+                                                            <img src="/img/icon/security.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/settings.png" /> <span></span>
+                                                            <img src="/img/icon/settings.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/translation.png" /> <span></span>
+                                                            <img src="/img/icon/translation.png" alt="" width="50px" height="50px">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -150,6 +191,7 @@
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="row">
                             <div class="col-md-6">

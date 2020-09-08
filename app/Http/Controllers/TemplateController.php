@@ -139,7 +139,9 @@ class TemplateController extends Controller
     {
         //
         $categories = TemplateCategory::all();
-        return view('admin.templates.create', compact(['categories']));
+        $templateSpecifications = new TemplateSpecification();
+
+        return view('admin.templates.create', compact(['categories', 'templateSpecifications']));
     }
 
     /**
@@ -202,6 +204,7 @@ class TemplateController extends Controller
                 $ts->save();
             }
         }
+
         return redirect('/pg-admin/templates')->with('success','save succes');
     }
 
