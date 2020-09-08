@@ -5,10 +5,10 @@
 <div class="search">
     <input type="text" class="searchTerm" placeholder="ابحث عن ما تريد ">
 </div>
-<section class="blogs wow fadeIn">
-    <div class="container">
-        <div class="bloglist-img-head" style="margin-bottom: -5%; background-image: url('images/{{$blogs->image}}')" >
-            <div class="blog-item-text blog-item-text2" >
+<section class="blogs wow fadeIn" style="height: 550px">
+    <div class="container" >
+        <div class="bloglist-img-head" style="margin-bottom: -5%;height: 550px; background-image: url('images/{{$blogs->image}}')" >
+            <div class="blog-item-text blog-item-text2" style="margin-top: -60px;">
                 <span class="time">
                 <img src="img/calendar.png">{{$blogs->created_at}}</span>
                 <a>{{$blogs->getTitle(App::getLocale())}}</a>
