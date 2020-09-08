@@ -23,7 +23,7 @@
                             @method('post')
                             @csrf
                             <a href="/" class="">{{$loggedClientName}} </a>
-                            <input type="submit" class="logout" value="Logout"/>
+                            <input type="submit" class="logout btn btn-danger" value="Logout"/>
                         </form>
 					@else
 						<a href="/logins" class="login">تسجيل الدخول </a>

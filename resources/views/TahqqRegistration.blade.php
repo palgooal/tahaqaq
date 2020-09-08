@@ -65,17 +65,22 @@
                     </div>
                   @endisset
                   {{-- <form role="form"> --}}
-                      <div class="tab-content">
+                      <div class="tab-content" style="background-color: #fff">
                           <div class="tab-pane {{$clientRegisterProgress != '' ?"":"active"}}" role="tabpanel" id="step1">
                             @if ($isClientLogin)
                             <form role="form" id="frmRegClient">
-
-                                <div class="form-group wow fadeInDown">
+                                {{--  --}}
+                                <div class="cardProfile">
                                     <h4>Profile</h4>
-                                    <h5>{{$clientDetailsInfo->GetFullName()??''}}</h5>
-                                    <h5>{{$clientDetailsInfo->GetEmail()??''}}</h5>
-                                    <h5>{{$clientDetailsInfo->GetPhoneNumber()??''}}</h5>
-                                </div>
+                                    <img src="/img/kindpng_786207.png" alt="John" style="width:100%">
+                                    <h1>{{$clientDetailsInfo->GetFullName()??''}}</h1>
+                                    <p class="title">{{$clientDetailsInfo->GetEmail()??''}}</p>
+                                    <p class="title">{{$clientDetailsInfo->GetPhoneNumber()??''}}</p>
+
+                                    {{-- <p><button>Contact</button></p> --}}
+                                  </div>
+                                {{--  --}}
+
                                 <ul class="list-inline pull-right" style="padding-right: 0px;">
                                         <li><button type="button" disabled class="btn btn-default prev-step" required><</button></li>
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
@@ -145,7 +150,7 @@
                                   </div>
                                   <div class="form-group wow fadeInDown choose">
                                     <h6> أختر نوع المشروع </h6>
-                                    <select name="projectCategory" id="projectCategory" class="form-input" required>
+                                    <select name="projectCategory" id="projectCategory" style="width: 100%" class="form-input" required>
                                         @foreach ($templateCategories as $category)
                                             <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
                                         @endforeach
@@ -156,7 +161,7 @@
                                  </div>
                                   <div class="form-group wow fadeInDown">
                                       <h6>  وصف مختصر عن المشروع  </h6>
-                                      <textarea name="projectDetails" id="projectDetails"  style="height: 150px;color: black" required>
+                                      <textarea name="projectDetails" id="projectDetails" class="form-control"  style="height: 150px;color: black" required>
                                         {{$clientDetailsInfo->GetProjectDetails()??''}}
                                       </textarea>
                                       @error('projectDetails')
