@@ -2,7 +2,12 @@
 <!--section one -->
 <section class="blogs wow fadeIn" id="blogId">
 	<div class="container">
-
+        <a href="#" class="re-index">
+			<img src="img/arrow-right.png">الرجوع الى الرئيسية</a>
+		<div class="section-title wow fadeInDown">المدونة</div>
+		<div class="search">
+			<input type="text" class="searchTerm" placeholder="ابحث عن ما تريد">
+		</div>
         <!-- Carousel container -->
 
 <div id="my-pics" class="carousel slide" data-ride="carousel" style="height: 433px">
@@ -56,12 +61,7 @@
     </div>
 
 
-		<a href="#" class="re-index">
-			<img src="img/arrow-right.png">الرجوع الى الرئيسية</a>
-		<div class="section-title wow fadeInDown">المدونة</div>
-		<div class="search">
-			<input type="text" class="searchTerm" placeholder="ابحث عن ما تريد">
-		</div>
+
 		{{-- <div class="bloglist-img-head">
 			<div class="blog-item-text"> <span class="time">
                 <img src="img/calendar.png">20.08.2019</span>
