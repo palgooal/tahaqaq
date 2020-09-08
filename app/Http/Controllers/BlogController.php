@@ -83,7 +83,8 @@ class BlogController extends Controller
 
        return view('SinglePost',compact(['sysVarFooter','sysVarSocialMedia']))
        ->with('blogs', Blog::where('slug', $slug)->first())
-                                ->with('menus', Menu::get())    ;
+                                ->with('menus', Menu::get())
+                                ->with('blogers',Blog::get())    ;
     }
 
     public function Indexshow()

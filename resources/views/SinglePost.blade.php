@@ -31,96 +31,30 @@
     </div>
     <div class="left">
         <h1>  تدوينات ذات صلة </h1>
-        <div class="blog-item">
-            <div class="blog-item-img">
-                <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
-            </div>
-            <div class="blog-item-content">
-            <div class="blog-item-text">
-                <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
+        @foreach ($blogers as $blogersSidepar)
+            <div class="blog-item">
+                <div class="blog-item-img">
+                <a href="/blogs/{{$blogersSidepar->slug}}"><img src="images/{{$blogersSidepar->image}}"></a>
+                </div>
+                <div class="blog-item-content">
+                <div class="blog-item-text">
+                <span class="time"> <img src="img/calendar-date.png">{{$blogersSidepar->created_at}}</span>
+                    <a href="/blogs/{{$blogersSidepar->slug}}">{{$blogersSidepar->getTitle(App::getLocale())}}</a>
 
-                <ul>
-                    <li>    <h6> 22</h6></li>
-                    <li>     <i class='far fa-heart'></i> </li>
-                    <li>    <h6> 22</h6> </li>
-                    <li>  <i class='far fa-comment-alt'></i>
-                </ul>
+                    <ul>
+                        <li>    <h6> 22</h6></li>
+                        <li>     <i class='far fa-heart'></i> </li>
+                        <li>    <h6> 22</h6> </li>
+                        <li>  <i class='far fa-comment-alt'></i>
+                    </ul>
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="blog-item">
-            <div class="blog-item-img">
-                <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
-            </div>
-            <div class="blog-item-content">
-            <div class="blog-item-text">
-                <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
+        @endforeach
 
-                <ul>
-                    <li>    <h6> 22</h6></li>
-                    <li>     <i class='far fa-heart'></i> </li>
-                    <li>    <h6> 22</h6> </li>
-                    <li>  <i class='far fa-comment-alt'></i>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="blog-item">
-            <div class="blog-item-img">
-                <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
-            </div>
-            <div class="blog-item-content">
-            <div class="blog-item-text">
-                <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
 
-                <ul>
-                    <li>    <h6> 22</h6></li>
-                    <li>     <i class='far fa-heart'></i> </li>
-                    <li>    <h6> 22</h6> </li>
-                    <li>  <i class='far fa-comment-alt'></i>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="blog-item">
-            <div class="blog-item-img">
-                <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
-            </div>
-            <div class="blog-item-content">
-            <div class="blog-item-text">
-                <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
 
-                <ul>
-                    <li>    <h6> 22</h6></li>
-                    <li>     <i class='far fa-heart'></i> </li>
-                    <li>    <h6> 22</h6> </li>
-                    <li>  <i class='far fa-comment-alt'></i>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="blog-item">
-            <div class="blog-item-img">
-                <a href="#"><img src="img/shutterstock_1109232059%20(1).png"></a>
-            </div>
-            <div class="blog-item-content">
-            <div class="blog-item-text">
-                <span class="time"> <img src="img/calendar-date.png">20.08.2019</span>
-                <a href="#">نموذج نص</a>
 
-                <ul>
-                    <li>    <h6> 22</h6></li>
-                    <li>     <i class='far fa-heart'></i> </li>
-                    <li>    <h6> 22</h6> </li>
-                    <li>  <i class='far fa-comment-alt'></i>
-                </ul>
-            </div>
-            </div>
-        </div>
     </div>
 
 

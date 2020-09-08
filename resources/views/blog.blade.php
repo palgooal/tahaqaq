@@ -10,7 +10,7 @@
 		</div>
         <!-- Carousel container -->
 
-<div id="my-pics" class="carousel slide" data-ride="carousel" style="height: 433px;margin-bottom: 70px">
+<div id="my-pics" class="carousel slide" data-ride="carousel" style="margin-bottom: 70px; margin-top:100px">
 
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -32,10 +32,10 @@
     <?php $counterBlogerSlider = 0;?>
     @foreach ($blogs as $blogsSliderimg)
         @if ($blogsSliderimg->pin_to_slider == 1)
-            <div class="item {{$counterBlogerSlider == 0?'active':''}} bloglist-img-head"  style="images/{{$blogsSliderimg->image}}">
+            <div   style="background-image: url('images/{{$blogsSliderimg->image}}');" class="item {{$counterBlogerSlider == 0?'active':''}} bloglist-img-head2">
                 {{-- <img src="images/{{$blogsSliderimg->image}}" alt="Sunset over beach"> --}}
                 <div class="carousel-caption">
-                    <h3>{{$blogsSliderimg->getTitle(App::getLocale())}}</h3>
+                    <h3 style="margin-top: -150px">{{$blogsSliderimg->getTitle(App::getLocale())}}</h3>
                     {{-- <p>White Sand Beach.</p> --}}
                 </div>
             </div>
