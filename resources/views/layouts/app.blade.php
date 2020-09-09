@@ -10,6 +10,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1">
+        @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         <link href="asset/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="asset/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css">

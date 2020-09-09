@@ -1,6 +1,10 @@
 @extends('layouts.app')
-<meta name="keywords" content="{{$page->tags}}">
-<title>{{$page->getTitle(App::getLocale())}}</title>
+@section('meta')
+<meta name="keywords" content="{{$page->tags}} ">
+@endsection
+@section('title')
+تحقق | {{$page->getTitle(App::getLocale())}}
+@endsection
 @section('content')
 @include('partials.InternalNavpar')
 <section class="howtahqq">
