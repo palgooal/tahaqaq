@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MenuSeeder extends Seeder
 {
@@ -33,7 +34,7 @@ class MenuSeeder extends Seeder
         DB::table('menus')->insert([
             'name_ar'=>"كيف نعمل",
             'name_en'=>"how do we work",
-            'url'=>"#",
+            'url'=>"/pages/kyf-naaml",
             'sort' =>"3",
         ]);
         DB::table('menus')->insert([

@@ -77,9 +77,10 @@ class PageController extends Controller
 
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
-        return view('pages',compact(['sysVarFooter','sysVarSocialMedia', 'isClientLogin']))->with('page', Page::where('slug', $slug)->first())
+
+        return view('pages',compact(['sysVarFooter','sysVarSocialMedia']))->with('page', Page::where('slug', $slug)->first())
                             ->with('menus', Menu::get());
+
     }
 
     /**

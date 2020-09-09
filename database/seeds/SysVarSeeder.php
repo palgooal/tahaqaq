@@ -211,21 +211,21 @@ The project",
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_About,
-            'value_en'=>"http:\\",
-            'value_ar' =>"http:\\",
+            'value_en'=>"/pages/mn-nhn",
+            'value_ar' =>"/pages/mn-nhn",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_PrivacyPolicy,
-            'value_en'=>"http:\\",
-            'value_ar' =>"http:\\",
+            'value_en'=>"/pages/syas-alkhsosy",
+            'value_ar' =>"/pages/syas-alkhsosy",
         ]);
 
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_Footer,
             'key'=>SysVarTypes::Type_Footer_Key_HowDoWeWork,
-            'value_en'=>"http:\\",
-            'value_ar' =>"كيف نعمل",
+            'value_en'=>"/pages/kyf-naaml",
+            'value_ar' =>"/pages/kyf-naaml",
         ]);
 
         DB::table('sys_vars')->insert([
