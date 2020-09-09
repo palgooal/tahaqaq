@@ -198,13 +198,20 @@ class TahqqRegistrationController extends Controller
         }
 
          $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
-         if(!$ssoResult->isSuccess == true){
+         if($ssoResult->isSuccess == true){
+            $lang = App::getLocale();
+            $menus = Menu::get();
+            $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+            $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
             return view ('redirectToWhmcsCart')
             -> with('redirectUrl', $ssoResult->redirectUrl)
-            ->with('pid', $pid);
+            ->with('pid', $pid)
+            ->with('menus', $menus)
+            ->with('sysVarFooter',$sysVarFooter)
+            ->with('sysVarSocialMedia',$sysVarSocialMedia);
 
         }
-        return back()->with('message', 'invalid');
+        return back()->with('message', json_encode($ssoResult));
     }
 
 
