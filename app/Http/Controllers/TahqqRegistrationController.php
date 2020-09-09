@@ -104,7 +104,6 @@ class TahqqRegistrationController extends Controller
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $templateCategories = TemplateCategory::all();
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
-        dump($clientRegisterProgress);
         $templateCode = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetProjectCategory()??'';
         $categoryId = null;
         if(isset($templateCode) && !empty($templateCode)){
@@ -198,7 +197,14 @@ class TahqqRegistrationController extends Controller
                 break;
         }
 
-         $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
+         $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
+         if(!$ssoResult->isSuccess == true){
+            return view ('redirectToWhmcsCart')
+            -> with('redirectUrl', $ssoResult->redirectUrl)
+            ->with('pid', $pid);
+
+        }
+        return back()->with('message', 'invalid');
     }
 
 
