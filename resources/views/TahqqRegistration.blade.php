@@ -81,11 +81,11 @@
                                   </div>
                                 {{--  --}}
 
-                                <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                        <li><button type="button" disabled class="btn btn-default prev-step" required><</button></li>
-                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
-                                </ul>
+
+                                        <button type="button" disabled class="btn btn-default prev-step" required><</button>
+                                        <button type="button" style="margin-left: 34px;" class="btn btn-default back-step" required>  ></button><</button></li>
+                                        <button type="button" class="btn btn-primary next-step">متابعة</button>
+
                             </form>
                             @else
                               <form role="form" action="/TahqqRegistration" method="POST" id="frmRegClient">
@@ -168,14 +168,14 @@
                                         <h5>Error : {{$message}}</h5>
                                       @enderror
                                   </div>
-                                    <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                        <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+
+                                        <button type="button" class="btn btn-default prev-step" required><</button>
                                         @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompletePersonInfo)
-                                            <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
-                                            <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
+                                            <button type="button" style="margin-left: 34px; " disabled class="btn btn-default back-step" required>  ></button><</button>
+                                            <input type="submit" class="btn btn-primary" value="متابعة">
                                         @else
-                                            <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                            <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                            <button type="button" style="margin-left: 34px; " class="btn btn-default back-step" required>  ></button><</button>
+                                            <button type="button" class="btn btn-primary next-step">متابعة</button>
                                         @endif
                                     </ul>
                               </form>
@@ -189,16 +189,16 @@
                                 @include('template.partials.templateSelector')
 
 
-                                <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+
+                                    <button type="button" class="btn btn-default prev-step" required><</button>
                                     {{-- @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
                                     @else --}}
-                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                        <button type="button" style="margin-left: 34px;" class="btn btn-default back-step" required>  ></button><</button>
+                                        <button type="button" class="btn btn-primary next-step">متابعة</button>
                                     {{-- @endif --}}
-                                </ul>
+
                             </form>
                           </div>
                           <div style="width: 100%; margin:0% 0%" class="tab-pane" role="tabpanel" id="step4">
@@ -209,16 +209,16 @@
                                 <input type="hidden" name="selectedTemplateId" id="selectedTemplateId">
                                 <input type="hidden" name="selectedPlanName" id="selectedPlanName">
 
-                                <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                    <li><button type="button" class="btn btn-default prev-step" required><</button></li>
+                                {{-- <ul class="list-inline pull-right" style="padding-right: 0px;"> --}}
+                                    <button type="button" class="btn btn-default prev-step" required><</button>
                                     {{-- @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
                                         <li><input type="submit" class="btn btn-primary" value="متابعة"></li>
                                     @else --}}
-                                        <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" class="btn btn-default back-step" required>  ></button><</button></li>
-                                        <li><button type="button" class="btn btn-primary next-step">متابعة</button></li>
+                                        <button type="button" style="margin-left: 34px;" class="btn btn-default back-step" required>  ></button><</button>
+                                        <button type="button" class="btn btn-primary next-step">متابعة</button>
                                     {{-- @endif --}}
-                                </ul>
+                                {{-- </ul> --}}
                             </form>
                           </div>
                           <div class="tab-pane" role="tabpanel" id="complete">
@@ -244,10 +244,10 @@
                                       <img src="img/a2.png">
                                   </div>
                                   </div>
-                                  <ul class="list-inline pull-right" style="padding-right: 0px;">
-                                      <li> <a href="finishstartproject.html" style="margin-right: 20%;">
-                                          <button type="button" class="btn btn-primary next-step">تاكيد ومتابعه</button> </a></li>
-                                  </ul>
+
+                                     <a href="finishstartproject.html" style="margin-right: 20%;">
+                                          <button type="button" class="btn btn-primary next-step">تاكيد ومتابعه</button> </a>
+
                           </div>
                           <div class="clearfix"></div>
                       </div>
