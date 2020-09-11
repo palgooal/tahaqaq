@@ -19,6 +19,7 @@
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body class="home" dir="rtl" style="background-image: none">
@@ -35,9 +36,10 @@
         <div class="form-wrap login-form-wrap wow fadeIn">
             <h1> تسجيل دخول </h1>
             {{-- {{App\Logic\APIClient\WhmcsAPILogic::WHMCS_LOGIN_URL}} --}}
-        <form method="post" action="/TahqqLogin">
-                @method('post')
-                @csrf()
+        <form method="POST" action="/TahqqLogin">
+                @csrf
+                @method('POST')
+                <input type="hidden" name="returnUrl" value="{{$returnUrl}}">
                 <div class="form-group wow fadeInDown">
                     <h6> البريد الألكتروني </h6>
                     <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username" name="username" >
@@ -65,7 +67,7 @@
             </form>
             <p style="color: red; ">{{$error??''}}</p>
             <div class="form-links wow fadeInDown" style="margin-right: 30%;">
-                <a href="/TahqqRegistration">هل انت مشترك جديد</a>
+                <a href="/TahqqRegistration?a=new">هل انت مشترك جديد</a>
             </div>
     </div>
 </section>

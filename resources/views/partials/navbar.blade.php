@@ -19,14 +19,16 @@
 					</li>@endforeach</ul>
 				<div class="login-btns">
 					@if($isClientLogin)
-                        <form action="/TahqqLogout" method="POST">
+                        {{-- <form action="/TahqqLogout" method="POST">
                             @method('post')
                             @csrf
                             <a href="/" class="">{{$loggedClientName}} </a>
                             <input type="submit" class="logout btn btn-danger" value="Logout"/>
-                        </form>
+                        </form> --}}
+                        <a href="/" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">{{$loggedClientName}}</a>
+                        <a href="/TahqqLogout" class="logout btn btn-danger">Logout</a>
 					@else
-						<a href="/logins" class="login">تسجيل الدخول </a>
+						<a href="/TahqqLogin" class="login">تسجيل الدخول </a>
 					@endif
 					<a href="/TahqqRegistration" class="register">أبدا الآن</a>
 					<a href="#" class="langu">EN</a>

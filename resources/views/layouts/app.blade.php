@@ -22,6 +22,7 @@
 
         <link href="asset/custom.css" rel="stylesheet" type="text/css">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
     <body class="home" dir="rtl">

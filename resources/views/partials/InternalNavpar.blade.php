@@ -21,13 +21,14 @@
                 </ul>
                 <div class="login-btns">
                     @if($isClientLogin)
-                    <a href="/" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">{{$loggedClientName}}
-                    </a>
+                    <a href="/" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">{{$loggedClientName}}</a>
+                        <a href="/TahqqLogout" class="logout btn btn-danger">Logout</a>
                     @else
-                    <a href="/logins" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">تسجيل الدخول
+                    <a href="/TahqqLogin?returnUrl=/TahqqRegistration" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">تسجيل الدخول
                     </a>
-                    @endif
                     <a href="#" class="register">مشترك جديد</a>
+                    @endif
+
                     <a href="#" class="langu">EN</a>
 
                 </div>

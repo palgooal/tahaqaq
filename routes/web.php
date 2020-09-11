@@ -2,6 +2,7 @@
 
 use App\Logic\TahaqqSessionInfo;
 use Facade\FlareClient\Api;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -70,9 +71,11 @@ Route::get('/testTemplateSelecotr','TemplateController@testTemplateSelector');
 
 
 //login
-Route::get('/logins', function(){
-    return view('login');
-});
+// Route::get('/TahqqLogin', function(){
+//     return view('login');
+// });
+
+
 
 // TahqqRegistration تسجيل مشترك جديد
 Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
@@ -80,8 +83,9 @@ Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
 Route::post('/SaveClientProjectInfo', 'TahqqRegistrationController@SaveClientProjectInfo');
 Route::post('/PlanSelected', 'TahqqRegistrationController@StartNowToWhmcs');
 
+Route::get('/TahqqLogin', 'TahqqRegistrationController@loginView');
 Route::post('/TahqqLogin', 'TahqqRegistrationController@login');
-Route::post('/TahqqLogout', 'TahqqRegistrationController@logout');
+Route::get('/TahqqLogout', 'TahqqRegistrationController@logout');
 
 
 // Contact us

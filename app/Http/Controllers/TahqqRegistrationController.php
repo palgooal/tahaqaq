@@ -84,7 +84,7 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return redirect('/logins');
+            return redirect('/TahqqLogin');
         }
         else
             return back()->with('error',$result);
@@ -96,8 +96,13 @@ class TahqqRegistrationController extends Controller
      * @param  \App\Model\TahqqRegistration  $tahqqRegistration
      * @return \Illuminate\Http\Response
      */
-    public function show(TahqqRegistration $tahqqRegistration)
+    public function show(Request $request)
     {
+        $isNew = isset($request->a) && $request->a == "new";
+
+        if(!TahaqqSessionInfo::IsClientLogin() && !$isNew){
+            return redirect('TahqqLogin?returnUrl='.$request->getRequestUri());
+        }
         $lang = App::getLocale();
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
@@ -227,6 +232,27 @@ class TahqqRegistrationController extends Controller
         //
     }
 
+
+
+
+       /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function loginView(Request $request)
+    {
+        $this->whmcsAPILogic->Logout();
+
+        $returnUrl = '/';
+        if(isset($request->returnUrl) && !empty($request->returnUrl))
+            $returnUrl = $request->returnUrl;
+
+        return view('login')
+        ->with('returnUrl', $returnUrl);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -244,11 +270,16 @@ class TahqqRegistrationController extends Controller
         $password = $request->password;
 
         $result = $this->whmcsAPILogic->Login($username,$password);
-        if($result->isSuccess)
-            ///return redirect($result->createSsoTokenResult->redirectUrl);
+        if($result->isSuccess){
+            // url()->previous()
+            if(isset($request->returnUrl))
+                return redirect($request->returnUrl);
             return redirect('/');
-        else
+        }
+        else{
             return back()->with('error',$result->message);
+        }
+            //
     }
      /**
      * Remove the specified resource from storage.
