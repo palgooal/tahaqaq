@@ -123,26 +123,48 @@
                    <div class="left-side mt-0 ">
                     <h3 class="tdween-h">تدوينات ذات صلة</h3>
                     <!-- Card -->
-                    @foreach ($blogers as $blogersSidepar)
-                    <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
-                        <div class="row res-row">
-                            <div class="col-md-4 col-sm-6 ">
-                                <a href="/blogs/{{$blogersSidepar->slug}}"><img src="images/{{$blogersSidepar->image}}" class="img-fluid " alt="{{$blogersSidepar->getTitle(App::getLocale())}}"></a>
-                            </div>
-                            <div class="col-md-8 col-sm-6 ">
-                                <div class="card-body">
-                                    <div class="gray-color ">
-                                        <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3 date">{{$blogersSidepar->created_at->format('Y-m-d')}}</small>
+                    <div class="col">
+                        @foreach ($blogers as $blogersSidepar)
+                        <div class="col mb-4 text-right">
+                            <div class="card p-0" style="max-width: 500px;">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-5">
+                                        <a href="/blogs/{{$blogersSidepar->slug}}" class="card-img-hover">
+                                            <img src="images/{{$blogersSidepar->image}}" class="card-img-top h-100"
+                                                alt="{{$blogersSidepar->getTitle(App::getLocale())}}">
+                                        </a>
                                     </div>
-                                    <h6 class="card-title black-color mt-4 m-0">{{$blogersSidepar->getTitle(App::getLocale())}}</h6>
+                                    <div class="col-sm-7">
+                                        <div class="card-body">
+                                            <div class="gray-color text-right my-3">
+                                                <i class="far fa-calendar-alt" style="font-size: 15px;"
+                                                    aria-hidden="true"></i>
+                                                <span class="gray-color mr-3" style="font-size: 12px;">{{$blogersSidepar->created_at->format('Y-m-d')}}</span>
+                                            </div>
+                                            <h5 class="card-title h5 my-3 card-h">
+                                                <a href="/blogs/{{$blogersSidepar->slug}}">
+                                                    {{$blogersSidepar->getTitle(App::getLocale())}}
+                                                </a>
+                                            </h5>
 
+                                            <div class="d-flex mb-2 float-left ">
+                                                <div class="ml-3  gray-color">
+                                                    <i class="far fa-comment" aria-hidden="true"></i>
+                                                    25
+                                                </div>
+                                                <div class="mr-3 gray-color">
+                                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                                    19
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
-                    @endforeach
-                    <!-- End of card-->
+
 
 
                 </div>

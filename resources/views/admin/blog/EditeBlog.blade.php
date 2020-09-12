@@ -33,7 +33,7 @@
 					<div class="card cardImageTeam" style="" id="">
 						<div class="card-body">
 						<img src="/images/{{$blogs->image}}" alt="">
-						  
+
 						</div>
 					  </div>
 				 </span>
@@ -73,7 +73,7 @@
 				{{-- end modal gallery --}}
 						<div class="form-group row">
 							<div class="col-lg-12 col-md-12 col-sm-12">
-								<textarea class="summernote" id="kt_summernote_1" name="Body_ar">{{$blogs->Body_ar}}</textarea>
+								<textarea class="summernote" id="summernote" name="Body_ar">{{$blogs->Body_ar}}</textarea>
 							</div>
 						</div>
 					</div>
@@ -95,4 +95,6 @@
 <!--end::Container-->
 </div>
 <!--end::Entry-->
+
+
 </div>@endsection
