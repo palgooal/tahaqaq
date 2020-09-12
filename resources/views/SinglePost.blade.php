@@ -123,101 +123,28 @@
                    <div class="left-side mt-0 ">
                     <h3 class="tdween-h">تدوينات ذات صلة</h3>
                     <!-- Card -->
+                    @foreach ($blogers as $blogersSidepar)
                     <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
                         <div class="row res-row">
                             <div class="col-md-4 col-sm-6 ">
-                                <img src="./img/shutterstock_1109232059 (1).png" class="img-fluid " alt="">
+                                <a href="/blogs/{{$blogersSidepar->slug}}"><img src="images/{{$blogersSidepar->image}}" class="img-fluid " alt="{{$blogersSidepar->getTitle(App::getLocale())}}"></a>
                             </div>
                             <div class="col-md-8 col-sm-6 ">
                                 <div class="card-body">
                                     <div class="gray-color ">
                                         <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3">01/15/2019</small>
+                                        <small class="text-muted mr-3 date">{{$blogersSidepar->created_at->format('Y-m-d')}}</small>
                                     </div>
-                                    <h6 class="card-title black-color mt-4 m-0">دورة تصميم واجهات المستخدم</h6>
+                                    <h6 class="card-title black-color mt-4 m-0">{{$blogersSidepar->getTitle(App::getLocale())}}</h6>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!-- End of card-->
-                    <!-- Card -->
-                    <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
-                        <div class="row res-row">
-                            <div class="col-md-4 col-sm-6 ">
-                                <img src="./img/shutterstock_1109232059 (1).png" class="img-fluid " alt="">
-                            </div>
-                            <div class="col-md-8 col-sm-6 ">
-                                <div class="card-body">
-                                    <div class="gray-color ">
-                                        <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3">01/15/2019</small>
-                                    </div>
-                                    <h6 class="card-title black-color mt-4 m-0">دورة تصميم واجهات المستخدم</h6>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of card-->
-                    <!-- Card -->
-                    <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
-                        <div class="row res-row">
-                            <div class="col-md-4 col-sm-6 ">
-                                <img src="./img/shutterstock_1109232059 (1).png" class="img-fluid " alt="">
-                            </div>
-                            <div class="col-md-8 col-sm-6 ">
-                                <div class="card-body">
-                                    <div class="gray-color ">
-                                        <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3">01/15/2019</small>
-                                    </div>
-                                    <h6 class="card-title black-color mt-4 m-0">دورة تصميم واجهات المستخدم</h6>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of card-->
-                    <!-- Card -->
-                    <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
-                        <div class="row res-row">
-                            <div class="col-md-4 col-sm-6 ">
-                                <img src="./img/shutterstock_1109232059 (1).png" class="img-fluid " alt="">
-                            </div>
-                            <div class="col-md-8 col-sm-6 ">
-                                <div class="card-body">
-                                    <div class="gray-color ">
-                                        <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3">01/15/2019</small>
-                                    </div>
-                                    <h6 class="card-title black-color mt-4 m-0">دورة تصميم واجهات المستخدم</h6>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of card-->
-                    <!-- Card -->
-                    <div class="tdween mt-5 p-0 text-right" style="max-width: 540px;">
-                        <div class="row res-row">
-                            <div class="col-md-4 col-sm-6 ">
-                                <img src="./img/shutterstock_1109232059 (1).png" class="img-fluid " alt="">
-                            </div>
-                            <div class="col-md-8 col-sm-6 ">
-                                <div class="card-body">
-                                    <div class="gray-color ">
-                                        <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-                                        <small class="text-muted mr-3">01/15/2019</small>
-                                    </div>
-                                    <h6 class="card-title black-color mt-4 m-0">دورة تصميم واجهات المستخدم</h6>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of card-->
                 </div>
                 <!-- End of left side  -->
 
