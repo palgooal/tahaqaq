@@ -36,7 +36,7 @@
                     {{$blogsSliderimg->created_at->format('Y-m-d')}}
                 </div>
                 <h5 class="mt-5 text-right">{{$blogsSliderimg->getTitle(App::getLocale())}}</h5>
-                <p class="mt-5 text-right carousel-p ">{!! Str::words($blogsSliderimg->getBody(App::getLocale()), 20 , '.....') !!}</p>
+                <p class="mt-5 text-right carousel-p ">{!! Str::words($blogsSliderimg->getBody(App::getLocale()), 70 , '.....') !!}</p>
                 <div class="d-flex">
                     <div class="ml-3">
                         <i class="far fa-comment"></i>
