@@ -34,7 +34,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger11',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'0',
@@ -64,7 +64,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'1',
@@ -94,7 +94,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger2221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'1',
@@ -124,7 +124,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger22221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'0',
