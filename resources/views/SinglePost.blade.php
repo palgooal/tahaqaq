@@ -125,7 +125,7 @@
                     <!-- Card -->
                     <div class="col">
                         @foreach ($blogers as $blogersSidepar)
-                        <div class="col mb-4 text-right">
+                        <div class="col mb-5 text-right">
                             <div class="card p-0" style="max-width: 500px;">
                                 <div class="row no-gutters">
                                     <div class="col-sm-5">
@@ -134,14 +134,14 @@
                                                 alt="{{$blogersSidepar->getTitle(App::getLocale())}}">
                                         </a>
                                     </div>
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-7 py-4 pr-2">
                                         <div class="card-body">
                                             <div class="gray-color text-right my-3">
                                                 <i class="far fa-calendar-alt" style="font-size: 15px;"
                                                     aria-hidden="true"></i>
                                                 <span class="gray-color mr-3" style="font-size: 12px;">{{$blogersSidepar->created_at->format('Y-m-d')}}</span>
                                             </div>
-                                            <h5 class="card-title h5 my-3 card-h">
+                                            <h5 class="card-title h5 my-5 card-h">
                                                 <a href="/blogs/{{$blogersSidepar->slug}}">
                                                     {{$blogersSidepar->getTitle(App::getLocale())}}
                                                 </a>
