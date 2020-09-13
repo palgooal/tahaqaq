@@ -122,23 +122,31 @@
 
 <!-- pagination -->
 <nav class="d-flex align-items-center justify-content-center my-5 " aria-label="...">
+    @if ($blogs->lastPage() > 1)
     <ul class="pagination">
-        <li class="page-item disabled ">
+        {{-- {{ $blogs->links() }} --}}
+        <li class="page-item  {{ ($blogs->currentPage() == 1) ? ' disabled' : '' }} ">
             <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-left: -8px; z-index: 10;"
-                href="#" tabindex="-1" aria-disabled="true"> <i
-                    class="fas fa-chevron-right ml-3 chev"></i>Previous</a>
+                href="{{ $blogs->url(1) }}" tabindex="-1" aria-disabled="true"> <i
+                    class="fas fa-chevron-right ml-3 chev"></i>السابق</a>
         </li>
+        {{-- <li class="page-item {{ ($blogs->currentPage() == 1) ? ' disabled' : '' }}">
+            <a href="{{ $blogs->url(1) }}">Previous</a>
+        </li> --}}
+        @for ($i = 1; $i <= $blogs->lastPage(); $i++)
         <li class="page-item " aria-current="page">
-            <a class="page-link bg-primery px-5" style="background:#1f0b64!important;" href=" #">1 <span
+            <a class="page-link bg-primery px-5" style="background:#1f0b64!important;" href="{{ $blogs->url($i) }}">{{ $i }}<span
                     class="sr-only">(current)</span></a>
         </li>
-        <li class="page-item "><a class="page-link bg-primery px-5" href="#">2</a></li>
-        <li class="page-item"><a class="page-link bg-primery px-5" href="#">3</a></li>
-        <li class="page-item">
+        @endfor
+        {{-- <li class="page-item "><a class="page-link bg-primery px-5" href="#">2</a></li>
+        <li class="page-item"><a class="page-link bg-primery px-5" href="#">3</a></li> --}}
+        <li class="page-item {{ ($blogs->currentPage() == $blogs->lastPage()) ? ' disabled' : '' }}">
             <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-right: -8px; z-index: 10;"
-                href="#">Next<i class="fas fa-chevron-left mr-3 chev"></i></a>
+                href="{{ $blogs->url($blogs->currentPage()+1) }}">التالي<i class="fas fa-chevron-left mr-3 chev"></i></a>
         </li>
     </ul>
+    @endif
 </nav>
 
 @endsection
