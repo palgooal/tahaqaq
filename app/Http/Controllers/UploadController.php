@@ -28,7 +28,7 @@ class UploadController extends Controller
     public function addMediaModal(){
         return view('admin.upload.formAddMediaModal');
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -50,7 +50,7 @@ class UploadController extends Controller
         $data = request()->validate([
             'path' => 'required',
             'alt'=> 'required',
-            
+
 
         ]);
         $path= $request->path->store('images');
@@ -58,7 +58,7 @@ class UploadController extends Controller
         $upload->path = $path;
         $upload->alt = $request->alt;
         $upload->save();
-        return redirect('pg-admin/selectMedia');
+        return redirect('pg-admin/upload');
         // return back()->with('success',trans('تم اضافة بنجاح'));
     }
 

@@ -1,6 +1,6 @@
 {{-- start form upload media --}}
 <div class="uploadMedia">
-    <div class="col-md-4 col-sm-12">
+    {{-- <div class="col-md-4 col-sm-12"> --}}
       <div class="portlet light bordered">
           <div class="card card-custom">
               <div class="card-header">
@@ -26,7 +26,7 @@
                     </span>
                   </a>
               </div>
-  
+
           </div>
         <div class="" id="">
           <div class="card card-body">
@@ -53,12 +53,12 @@
         </div>
       </div>
     </div>
-  
-  
-    
-  
-  
+
+
+
+
+
       </div>
-    </div>
+    {{-- </div> --}}
   </div>
   {{-- end form aupload media --}}

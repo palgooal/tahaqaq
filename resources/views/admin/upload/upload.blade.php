@@ -16,9 +16,31 @@
 					<div class="card-header">
 						<div class="card-title">
 							<h3 class="card-label">كل الوسائط</h3>
-						</div>
-						<div class="text-left"> <a type="button" class="btn btn-primary" href="/pg-admin/pages/create">اضافة صورة جديدة</a>
-						</div>
+                        </div>
+                        {{-- modal upload media --}}
+						<div class="text-left">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">تحميل صورة</button>
+                        </div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    @include('admin.partials.uploadMedia')
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        {{-- end modal upload --}}
 					</div>
 					<div class="card-body">
                         @include('admin.partials.gallary')
