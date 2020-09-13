@@ -40,7 +40,6 @@ Route::resource('/pg-admin/upload', 'UploadController')->middleware('auth');
 Route::get('/pg-admin/addMedia', 'UploadController@addMedia')->middleware('auth');
 Route::get('/pg-admin/selectMedia', 'UploadController@selectMedia')->middleware('auth');
 Route::get('/pg-admin/addMediaModal', 'UploadController@addMediaModal')->middleware('auth');
-
 // pages
 Route::resource('/pg-admin/pages', 'PageController')->middleware('auth');
 Route::get('/pages/{slug}', 'PageController@show');
