@@ -21,12 +21,21 @@
 
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <?php $counterBlogerSlider = 0;?>
+        @foreach ($blogs as $blogsSliderPics)
+            @if ($blogsSliderPics->pin_to_slider == 1)
+                <li data-target="#carouselExampleCaptions" data-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'active':''}}"></li>
+                <?php $counterBlogerSlider++ ?>
+            @endif
+        @endforeach
+        {{-- {{$counterBlogerSlider}} --}}
+
+
     </ol>
     <div class="carousel-inner">
-        @foreach ($blogs->take(3) as $blogsSliderimg)
+        <?php $counterBlogerSlider = 0;?>
+        @foreach ($blogs as $blogsSliderimg)
+            @if ($blogsSliderimg->pin_to_slider == 1)
         <div class="carousel-item @if($loop->first) active @endif">
             <img src="images/{{$blogsSliderimg->image}}" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-format  text-center d-md-block">
@@ -49,6 +58,8 @@
                 </div>
             </div>
         </div>
+        <?php $counterBlogerSlider++ ?>
+        @endif
         @endforeach
 
     </div>
