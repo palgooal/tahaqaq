@@ -146,17 +146,25 @@ class WhmcsAPILogic{
             return $loginResult;
         }
 
+        $clientDetailResult = $this->GetClientsDetails($validateLoginResult->clientId);
+        // if($clientDetailResult->status == "Active"){
+
+        // }
+        // if($clientDetailResult->email_verified == true){
+
+        // }
+        if(!$clientDetailResult->GetIsSuccess()){
+            $loginResult->isSuccess = false;
+            $loginResult->message = "Not found user contact";
+            return $loginResult;
+        }
+
+
+
         $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId);
         if(!$ssoResult->isSuccess){
             $loginResult->isSuccess = false;
             $loginResult->message = "Invalid username or password";
-            return $loginResult;
-        }
-
-        $clientDetailResult = $this->GetClientsDetails($validateLoginResult->clientId);
-        if(!$clientDetailResult->GetIsSuccess()){
-            $loginResult->isSuccess = false;
-            $loginResult->message = "Not found user contact";
             return $loginResult;
         }
 

@@ -84,7 +84,7 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return redirect('/TahqqLogin');
+            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
         }
         else
             return back()->with('error',$result);

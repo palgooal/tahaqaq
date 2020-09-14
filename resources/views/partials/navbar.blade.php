@@ -30,7 +30,7 @@
 					@else
 						<a href="/TahqqLogin" class="login">تسجيل الدخول </a>
 					@endif
-					<a href="/TahqqRegistration" class="register">أبدا الآن</a>
+					<a href="/TahqqRegistration?a=new" class="register">أبدا الآن</a>
 					<a href="#" class="langu">EN</a>
 				</div>
 			</div>
