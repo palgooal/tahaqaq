@@ -577,7 +577,7 @@ section .home-section wow fadeIn {
 /* section 7  */
 .blogs {
     /* background-color: #FFFFFF; */
-    padding-bottom: 6%;
+    margin-top: 113px;
 }
 .blogs .container {
     width: 100% !important;

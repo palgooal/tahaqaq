@@ -48,6 +48,7 @@ class TemplateCategoryController extends Controller
         $menus = new TemplateCategory();
         $menus->text_ar = $request->text_ar;
         $menus->text_en = $request->text_en;
+        $menus->code = $request->code;
         $menus->save();
         return back()->with('success',trans('تم اضافة التصنيف بنجاح'));
     }
@@ -84,12 +85,13 @@ class TemplateCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
         $category = TemplateCategory::find($id);
         $category->text_ar = $request->text_ar;
         $category->text_en = $request->text_en;
+        $category->code = $request->code;
         $category->save();
-        return redirect('pg-admin/templateCategories');
+        return back()->with('success',trans('تم التعديل بنجاح'));
     }
 
     /**

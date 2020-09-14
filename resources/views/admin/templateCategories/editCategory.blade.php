@@ -13,6 +13,11 @@
                 <input type="hidden" name="_method" value="put">
                 @csrf
                 <div class="form-body">
+                    <div class="form-group">
+                        <label>معرف التصنيف<span class="text-danger">*</span></label>
+                        <input type="text" name="code" class="form-control" placeholder="معرف التصنيف" value="{{$category->code}}">
+                        <span class="form-text text-muted">يجب ان يكون معرف التصنيف باللغة الانجليزية</span>
+                    </div>
                    <div class="form-group">
                       <label>التصنيف</label>
                       <input class="form-control spinner" type="text" placeholder="التصنيف" value="{{$category->text_ar}}" name="text_ar" required/>

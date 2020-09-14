@@ -1,129 +1,152 @@
-@extends('layouts.app') @section('content') @include('partials.InternalNavpar')
-<!--section one -->
-<section class="blogs wow fadeIn" id="blogId">
-	<div class="container">
-        <a href="#" class="re-index">
-			<img src="img/arrow-right.png">الرجوع الى الرئيسية</a>
-		<div class="section-title wow fadeInDown">المدونة</div>
-		<div class="search">
-			<input type="text" class="searchTerm" placeholder="ابحث عن ما تريد">
-		</div>
-        <!-- Carousel container -->
+@extends('layouts.newapp') @section('content') @include('partials.InternalNavpar')
+ <!-- Top of the slider -->
+ <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider">
+    <div class="back">
+        <a href="/" class="d-flex align-items-center justify-content-center text-center text-truncate"
+            style="color: #000;" id="">
+            <i class="fas fa-arrow-right ml-2"></i>
+            الرجوع الى الرئيسية
+        </a>
+    </div>
+    <div class="mx-5 wow fadeInDown ">
+        <h1 class="h1 primery-color font-weight-bold ">المدونة</h1>
+    </div>
+    <form action="">
+        <input class="form-control search-top p-4 " type="search" placeholder="ابحث عن ما تريد" id="">
+    </form>
 
-<div id="my-pics" class="carousel slide" data-ride="carousel" style="margin-bottom: 70px; margin-top:100px">
+</section>
 
-    <!-- Indicators -->
+<!-- Images slider-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <?php $counterBlogerSlider = 0;?>
         @foreach ($blogs as $blogsSliderPics)
             @if ($blogsSliderPics->pin_to_slider == 1)
-                <li data-target="#my-pics" data-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'active':''}}"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'active':''}}"></li>
                 <?php $counterBlogerSlider++ ?>
             @endif
         @endforeach
         {{-- {{$counterBlogerSlider}} --}}
 
+
     </ol>
-
-    <!-- Content -->
-    <div class="carousel-inner" role="listbox">
-
-    <!-- Slide 1 -->
-    <?php $counterBlogerSlider = 0;?>
-    @foreach ($blogs as $blogsSliderimg)
-        @if ($blogsSliderimg->pin_to_slider == 1)
-            <div   style="background-image: url('images/{{$blogsSliderimg->image}}');" class="item {{$counterBlogerSlider == 0?'active':''}} bloglist-img-head2">
-                {{-- <img src="images/{{$blogsSliderimg->image}}" alt="Sunset over beach"> --}}
-                <div class="carousel-caption">
-                    <h3 style="margin-top: -150px">{{$blogsSliderimg->getTitle(App::getLocale())}}</h3>
-                    {{-- <p>White Sand Beach.</p> --}}
+    <div class="carousel-inner">
+        <?php $counterBlogerSlider = 0;?>
+        @foreach ($blogs as $blogsSliderimg)
+            @if ($blogsSliderimg->pin_to_slider == 1)
+        <div class="carousel-item @if($loop->first) active @endif">
+            <img src="images/{{$blogsSliderimg->image}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption carousel-caption-format  text-center d-md-block">
+                <div class=" w-25 p-0 pt-2 date " style="background: #F582EA 0% 0% no-repeat padding-box;
+                border-radius: 19px; width: 18%!important; font-size: 14px;">
+                    <i class="far fa-calendar-alt ml-3"></i>
+                    {{$blogsSliderimg->created_at->format('Y-m-d')}}
+                </div>
+                <h5 class="mt-5 text-right">{{$blogsSliderimg->getTitle(App::getLocale())}}</h5>
+                <p class="mt-5 text-right carousel-p ">{!! Str::words($blogsSliderimg->getBody(App::getLocale()), 70 , '.....') !!}</p>
+                <div class="d-flex">
+                    <div class="ml-3">
+                        <i class="far fa-comment"></i>
+                        25
+                    </div>
+                    <div class="mr-3">
+                        <i class="far fa-heart"></i>
+                        19
+                    </div>
                 </div>
             </div>
-            <?php $counterBlogerSlider++ ?>
+        </div>
+        <?php $counterBlogerSlider++ ?>
         @endif
-    @endforeach
-
+        @endforeach
 
     </div>
-
-    <!-- Previous/Next controls -->
-    <a class="left carousel-control" href="#my-pics" role="button" data-slide="prev">
-    <span class="icon-prev" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#my-pics" role="button" data-slide="next">
-    <span class="icon-next" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
     </a>
-
 </div>
 
-    </div>
 
-
-
-		{{-- <div class="bloglist-img-head">
-			<div class="blog-item-text"> <span class="time">
-                <img src="img/calendar.png">20.08.2019</span>
-				<a href="#">نموذج نص</a>
-				<p>نموذج نص من المفترض أن يكون هنا نموذج نص من المفترض أن يكون هنا</p>
-				<ul>
-					<li>
-						<h6> 22</h6>
-					</li>
-					<li> <i class='far fa-heart'></i>
-					</li>
-					<li>
-						<h6> 22</h6>
-					</li>
-					<li> <i class='far fa-comment-alt'></i>
-				</ul>
-			</div>
-		</div> --}}
-		<div class="row wow fadeIn">@foreach ($blogs as $blog)
-			<div class="col-xs-12 col-sm-6">
-				<div class="blog-item">
-					<div class="blog-item-img"> <a href="/blogs/{{$blog->slug}}"><img src="images/{{$blog->image}}"></a>
-					</div>
-					<div class="blog-item-content">
-						<div class="blog-item-text"> <span class="time"> <img src="img/calendar-date.png" style="margin-left: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
-							<a href="/blogs/{{$blog->slug}}">{{$blog->getTitle(App::getLocale())}}</a>
-							<p>{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
-							<ul style="display: inline-flex; float: left">
-								<li>
-									<h6> 22</h6>
-								</li>
-								<li> <i class='far fa-heart'></i>
-								</li>
-								<li>
-									<h6> 22</h6>
-								</li>
-								<li> <i class='far fa-comment-alt'></i>
-							</ul>
-						</div>
-					</div>
-				</div>
-            </div>@endforeach</div>
-            <div class="text-center custom-pagination wow fadeInDown">
-
-                <ul class="pagination-ul">
-                    {{ $blogs->fragment('foo')->links() }}
-                </ul>
-
+<!-- cards -->
+<div class="container cards-container p-0 pt-5  mt-5 d-grid">
+    <div class="row row-cols-1 row-cols-md-2 ">
+        <!-- Card -->
+        @foreach ($blogs as $blog)
+        <div class="col mb-4 text-right">
+            <div class="card p-0" style="max-width: 500px;">
+                <div class="row no-gutters">
+                    <div class="col-sm-5" >
+                        <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
+                            <img src="images/{{$blog->image}}" class="card-img-top h-100"
+                                alt="{{$blog->getTitle(App::getLocale())}}">
+                        </a>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="card-body">
+                            <div class="gray-color text-right text-right my-3">
+                                <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
+                                <span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
+                            </div>
+                            <h5 class="card-title h5 my-3 card-h">
+                                <a href="/blogs/{{$blog->slug}}">
+                                    {{$blog->getTitle(App::getLocale())}}
+                                </a>
+                            </h5>
+                            <p class="card-text mb-5 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
+                            <div class="d-flex mb-2 float-left ">
+                                <div class="ml-3  gray-color ">
+                                    <i class="far fa-comment"></i>
+                                    25
+                                </div>
+                                <div class="mr-3 gray-color">
+                                    <i class="far fa-heart"></i>
+                                    19
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        @endforeach
 
-	</div>
-</section>
-<!--</section>-->
-<script>
-    // Initialize tooltip component
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
+    </div>
+</div>
 
-    // Initialize popover component
-    $(function () {
-      $('[data-toggle="popover"]').popover()
-    })
-    </script>
-<!--end section-->@endsection
+<!-- pagination -->
+<nav class="d-flex align-items-center justify-content-center my-5 " aria-label="...">
+    @if ($blogs->lastPage() > 1)
+    <ul class="pagination">
+        {{-- {{ $blogs->links() }} --}}
+        <li class="page-item  {{ ($blogs->currentPage() == 1) ? ' disabled' : '' }} ">
+            <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-left: -8px; z-index: 10;"
+                href="{{ $blogs->url(1) }}" tabindex="-1" aria-disabled="true"> <i
+                    class="fas fa-chevron-right ml-3 chev"></i>السابق</a>
+        </li>
+        {{-- <li class="page-item {{ ($blogs->currentPage() == 1) ? ' disabled' : '' }}">
+            <a href="{{ $blogs->url(1) }}">Previous</a>
+        </li> --}}
+        @for ($i = 1; $i <= $blogs->lastPage(); $i++)
+        <li class="page-item " aria-current="page">
+            <a class="page-link bg-primery px-5" style="background:#1f0b64!important;" href="{{ $blogs->url($i) }}">{{ $i }}<span
+                    class="sr-only">(current)</span></a>
+        </li>
+        @endfor
+        {{-- <li class="page-item "><a class="page-link bg-primery px-5" href="#">2</a></li>
+        <li class="page-item"><a class="page-link bg-primery px-5" href="#">3</a></li> --}}
+        <li class="page-item {{ ($blogs->currentPage() == $blogs->lastPage()) ? ' disabled' : '' }}">
+            <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-right: -8px; z-index: 10;"
+                href="{{ $blogs->url($blogs->currentPage()+1) }}">التالي<i class="fas fa-chevron-left mr-3 chev"></i></a>
+        </li>
+    </ul>
+    @endif
+</nav>
+
+@endsection

@@ -34,16 +34,16 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger11',
                'Tags'=>'{1},{2},{3}',
-               'pin_to_slider'=>'0',
+               'pin_to_slider'=>'1',
                'created_at' => '2020-09-06 00:00:00.000000'
 
 
         ]);
         DB::table('blogs')->insert([
-            'Title_ar'=>'بلوق 12',
+            'Title_ar'=>'بلوق 2',
             'Title_en'=>'blog 12',
             'Body_ar'=>'لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص،
              لتكوّن كتيّب بمثابة دليل أو مرجع شكلي
@@ -64,7 +64,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'1',
@@ -73,7 +73,7 @@ class BlogSeeder extends Seeder
 
         ]);
         DB::table('blogs')->insert([
-            'Title_ar'=>'بلوق 12',
+            'Title_ar'=>'بلوق 3',
             'Title_en'=>'blog 12',
             'Body_ar'=>'لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص،
              لتكوّن كتيّب بمثابة دليل أو مرجع شكلي
@@ -94,7 +94,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger2221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'1',
@@ -103,7 +103,7 @@ class BlogSeeder extends Seeder
 
         ]);
         DB::table('blogs')->insert([
-            'Title_ar'=>'بلوق 12',
+            'Title_ar'=>'بلوق 4',
             'Title_en'=>'blog 12',
             'Body_ar'=>'لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص،
              لتكوّن كتيّب بمثابة دليل أو مرجع شكلي
@@ -124,7 +124,7 @@ class BlogSeeder extends Seeder
                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.',
-               'image'=>'images/shutterstock_1109232059%20(1).png',
+               'image'=>'images/12.png',
                'slug'=>'bloger22221',
                'Tags'=>'{1},{2},{3}',
                'pin_to_slider'=>'0',

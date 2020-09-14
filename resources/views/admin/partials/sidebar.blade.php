@@ -223,7 +223,7 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-								<span class="menu-text">Templates</span><i class="menu-arrow"></i>
+								<span class="menu-text">القوالب</span><i class="menu-arrow"></i>
 							</a>
 							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
 								<ul class="menu-subnav">
@@ -231,7 +231,7 @@
 										<a href="/pg-admin/templates" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
-											<span class="menu-text">Templates Definition</span>
+											<span class="menu-text">كل القوالب</span>
 										</a>
 									</li>
 									<li class="menu-item " aria-haspopup="true">
@@ -239,7 +239,7 @@
                                                 <span>
                                                 </span>
                                             </i>
-											<span class="menu-text">Categories</span>
+											<span class="menu-text">التصنيفات</span>
 										</a>
 									</li>
 								</ul>
@@ -264,14 +264,14 @@
 							</a>
 							<div class="menu-submenu " style="display: none; overflow: hidden;" kt-hidden-height="120"> <i class="menu-arrow"></i>
 								<ul class="menu-subnav">
-									<li class="menu-item " aria-haspopup="true">
+									<li class="menu-item" aria-haspopup="true">
 										<a href="/pg-admin/blogs" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
                                             </i>
 											<span class="menu-text">كل التدوينات</span>
 										</a>
 									</li>
-									<li class="menu-item " aria-haspopup="true">
+									<li class="menu-item" aria-haspopup="true">
 										<a href="/pg-admin/blogs/create" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>

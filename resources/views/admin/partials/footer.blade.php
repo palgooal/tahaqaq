@@ -1594,5 +1594,19 @@
                  <script src="{{asset('admin/assets/js/pages/crud/ktdatatable/advanced/record-selection.js')}}"></script>
                   <!--end::Page Scripts-->
                   <script src="{{asset('admin\assets\js\alertsDelete.js')}}"></script>
+                  <script>
+                    $('#summernote').summernote({
+                  toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear', 'hr']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize', 'height', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['table', ['table']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                  ]
+                });
+                </script>
                   @endenv
 @yield('footerLib')

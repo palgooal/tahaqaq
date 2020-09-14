@@ -1,0 +1,509 @@
+@charset "utf-8";
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "FFShamelFamily-SansOneMedium";
+    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "FFShamelFamily-SansOneBold";
+    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneBold.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "FFShamelFamily-SansOneBook";
+    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+/*  Generals  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "FFShamelFamily-SansOneMedium" !important;
+}
+
+.black-color {
+    color: #000;
+    fill: #000;
+}
+
+.gray-color {
+    color: #51555A;
+    fill: #51555A;
+}
+
+.primery-color {
+    color: #7657E5;
+    fill: #7657E5;
+}
+.inverted{
+    background: #fff !important;
+    color: #7657E5 !important;
+}
+.inverted-button{
+    border-radius: 40px !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    background: #fff !important;
+    color: #7657E5 !important;
+}
+
+.bg-primery {
+    background: #7657E5 !important;
+    color: #fff !important;
+}
+.primery-button{
+    background: #7657E5 !important;
+    border-radius: 40px !important;
+    color: #fff !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+
+}
+/*
+opacity: 0.7;
+color: #2e6da4;
+*/
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: "FFShamelFamily-SansOneBold" !important;
+
+}
+a {
+    text-decoration: none !important;
+    outline: none ;
+    color: #000 ;
+    /* color: #221950 !important; */
+
+}
+a:hover {
+    color: #7657E5!important;
+}
+
+/* Blog style*/
+.search-top {
+    background: #F7F5FF !important;
+    border: 1px solid #DFD6FF !important;
+    border-radius: 40px !important;
+    outline: none !important;
+}
+
+.carousel-caption-format {
+    position: absolute;
+    right: 10%;
+    bottom: 50px;
+    left: 50%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-p {
+    line-height: 1.7;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    font-size: 13px;
+    
+    
+}
+.card-p{
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    text-align: right;
+    color: #221950;
+    margin: 20px 0 10px 0 !important;
+}
+.card-h {
+    color: #221950 !important;
+    font-size: 16px !important;
+    text-align: right;
+    margin: 20px 0 10px 0 !important;
+}
+.card-h a{
+    color: #221950 !important;
+}
+.card-h a:hover{
+    color: #2e6da4 !important;
+}
+.card-img-hover {
+    padding: 0 !important;
+}
+.card-img-hover:hover{
+    opacity: 0.7;
+    transition: all 0.4s;
+}
+.card:hover {
+    background-color: #fff;
+    transform: none;
+    cursor: pointer;
+}
+
+
+/* Single post style*/
+.content h3{
+    text-align: right;
+    color: #343A40;
+    font:   23px/53px "FFShamelFamily-SansOneBook" !important;
+    font-size: 23px !important;
+
+}
+.content p{
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    font-size: 11px;
+    font-weight: 500; 
+    color:#74787D;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+}
+.right-side{
+    display: flex;
+    text-align: right;
+}
+
+
+/* Sign-Up style */
+.fields-label{
+    font-size: 14px !important;
+    color: #221950 !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+
+}
+form label{
+    color: #221950 !important;
+    margin-right: 37px;
+}
+form input ,textarea  {
+    background: #F7F5FF!important;
+    color:#000 !important;
+    padding:30px 30px!important;
+    font-size: 14px !important;
+    border: 1px solid #DFD6FF !important;
+    border-radius: 40px !important;
+    outline: none !important;
+    margin-top: 1rem !important;
+}
+form input::placeholder , textarea::placeholder{
+    color: #B9AAF1!important;
+    font-weight: lighter;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    
+}
+.select-t{
+    background: #F7F5FF!important;
+    color:#000 !important;
+    font-size: 14px !important;
+    border-radius: 50px !important;
+    height: 60px !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+}
+.select-t option{
+    font-size: 13px !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+}
+.responsive {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+.list-set li {
+    border: none !important;
+}
+.list-set li:hover{
+    background-color: #F3EFFF;
+    border-radius: 5%;
+}
+
+
+
+/* Latest compiled and minified CSS included as External Resource*/
+
+/* Optional theme */
+
+/*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
+
+.stepwizard-step p {
+    margin-top: 0px;
+    color:#fff;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+    background:  #7657E5;
+    padding: 5px ;
+    padding-top: 15px;
+    border-radius: 45px;
+}
+.stepwizard-step button[disabled] {
+    /*opacity: 1 !important;
+    filter: alpha(opacity=100) !important;*/
+}
+.stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
+    opacity:1 !important;
+    color: #7657E5;
+
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 20px !important;
+}
+.active-btn {
+    background: #F582EA !important;
+    color: #fff !important;
+    outline: none !important;
+}
+
+/*step 3 style */
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .hover-state:hover .a .image {
+    opacity: 0.8 !important;
+    cursor: pointer;
+
+  }
+  .hover-state:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+      
+  
+  
+  .hover-state:hover .middle {
+    opacity: 1;
+  }
+  
+
+
+/*Media queries -responsive */
+@media (max-width:768px){
+    .carousel-caption-format div{
+        background: none !important;
+
+    }
+    .left-side{
+        display:none !important;
+    }
+    .right-side{
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .content{
+        margin-right:50px;
+        padding-right: 50px;
+    }
+    .content h3{
+        font:   25px/53px "FFShamelFamily-SansOneBook" !important;
+        font-size: 17px !important;
+        text-align: center !important;
+    
+    }
+    .content p{
+        font-family: "FFShamelFamily-SansOneBook" !important;
+        font-size: 10px !important;
+        font-weight: 500; 
+        text-align: center !important;
+
+        color:#74787D;
+        
+    }
+ 
+    .form-wrapper{
+        margin-right: 0px !important;
+    }
+    .res-row{
+        flex-direction: column !important;
+    }
+    .res-row img {
+        width: 100% !important;
+    }
+    .tdween{
+        margin-right: 30%;
+        text-align: center;
+    }
+    .tdween-h{
+        text-align:center
+    }
+}
+@media (max-width:570px){
+    .top-slider{
+        flex-direction: column !important;
+    }
+    .top-slider .back{
+        display: none !important;
+    }
+    .carousel-caption-format .date{
+        display: none !important;
+        
+    }
+  
+    .cards-container .row  .card{
+        margin: 20px!important;
+        padding: 0!important;
+    }
+    .left-side{
+        display:none !important;
+    }
+    .content h3{
+        font:   25px/53px "FFShamelFamily-SansOneBook" !important;
+        font-size: 10px !important;
+        width: 70%;
+        margin-bottom: 15px !important;
+        margin-right: 40px!important;
+        line-height: 1.2 !important;
+    
+    }
+    .content p{
+        font-family: "FFShamelFamily-SansOneBook" !important;
+        font-size: 10px !important;
+        width: 70%;
+        margin-bottom: 15px !important;
+        margin-right: 40px!important;
+        font-weight: 500; 
+        color:#74787D;
+        
+    }
+    .search{
+        flex-direction: column;
+    }
+    .res-col{
+        flex-direction: column !important;
+    }
+
+}
+@media (max-width:333px){
+    .chev{
+        display: none !important;
+    }
+}
+@media (max-width:992px){
+    .carousel-caption-format{
+        margin: auto;
+        text-align: center !important;
+        right: 15% !important;
+        left: 0%;
+        padding-top: 20px;
+        padding-bottom: 20px !important;
+    }
+    .carousel-caption-format p{
+        display: none;
+    }
+    .left-side{
+        display:none !important;
+    }
+   
+
+    .cards-container .card{
+        margin-right: 0!important;
+        margin-left: 0!important;
+    }
+    /***/
+    .left-side{
+        display:none !important;
+    }
+    /***/
+    .res-hide{
+        display: none !important;
+    }
+   
+
+}

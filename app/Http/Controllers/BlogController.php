@@ -95,7 +95,7 @@ class BlogController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))->with('blogs', Blog::paginate(8))
+        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))->with('blogs', Blog::paginate(10))
         ->with('menus', Menu::get());
     }
 
@@ -107,7 +107,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.blog.Editeblog')->with('blogs', Blog::find($id));
+        return view('admin.blog.EditeBlog')->with('blogs', Blog::find($id));
     }
 
     /**
