@@ -15,7 +15,7 @@
                     <!--begin::Form-->
                     <form id="frmCreate" action="/pg-admin/templates/{{$template->id}}" method="POST">
                         @csrf
-                        @method('PUT');
+                        @method('PUT')
                         <input type="hidden" name="templateSpecification" id="templateSpecification">
                         <div class="card-body">
                             <div class="form-group row">
