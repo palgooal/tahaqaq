@@ -79,10 +79,10 @@
     <div class="row row-cols-1 row-cols-md-2 ">
         <!-- Card -->
         @foreach ($blogs as $blog)
-        <div class="col mb-4 text-right">
-            <div class="card p-0" style="max-width: 500px;">
+        <div class="col mb-5 text-right">
+            <div class="card custom-card p-0" style="max-width: 500px;">
                 <div class="row no-gutters">
-                    <div class="col-sm-5" >
+                    <div class="col-sm-4" >
                         <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
                             <img src="images/{{$blog->image}}" class="card-img-top h-100"
                                 alt="{{$blog->getTitle(App::getLocale())}}">
