@@ -293,4 +293,11 @@ class TahqqRegistrationController extends Controller
         $this->whmcsAPILogic->Logout();
         return redirect('/');
     }
+
+    public function newregister(){
+        $lang = App::getLocale();
+    $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia']))->with('menus', Menu::get());
+    }
 }

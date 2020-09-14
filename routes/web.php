@@ -1,10 +1,14 @@
 <?php
 
 use App\Logic\TahaqqSessionInfo;
+use App\Model\Menu;
 use Facade\FlareClient\Api;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Logic\SysVar\SysVarTypes;
+use App\Logic\SysVar\SysVarLogic;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,12 +90,14 @@ Route::get('/TahqqLogin', 'TahqqRegistrationController@loginView');
 Route::post('/TahqqLogin', 'TahqqRegistrationController@login');
 Route::get('/TahqqLogout', 'TahqqRegistrationController@logout');
 
+// رابط مؤقت لتسجيل
+Route::get('/tahqqnew', 'TahqqRegistrationController@newregister');
+
 
 // Contact us
 Route::resource('/pg-admin/Contactus', 'ContactusController');
 Route::get('Contactus','ContactusController@viewAll');
 Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
-
 
 
 

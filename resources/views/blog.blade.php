@@ -2,7 +2,7 @@
  <!-- Top of the slider -->
  <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider">
     <div class="back">
-        <a href="#" class="d-flex align-items-center justify-content-center text-center text-truncate"
+        <a href="/" class="d-flex align-items-center justify-content-center text-center text-truncate"
             style="color: #000;" id="">
             <i class="fas fa-arrow-right ml-2"></i>
             الرجوع الى الرئيسية
