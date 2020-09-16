@@ -61,33 +61,6 @@ $('.carousel .vertical .item').each(function () {
 });
 
 
-
-$('.center').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    arrows: false,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-        }
-    ]
-});
 // optional
 $('#blogCarousel').carousel({
     interval: 5000000
@@ -122,7 +95,7 @@ $('#navbar a, .btn ,#footer a').on('click', function (e) {
 */
 //Change pos/background/padding/add shadow on nav when scroll event happens 
 $(function () {
-    var navbar = $('#navbar');
+    var navbar = $('.navbar');
 
     $(window).scroll(function () {
         if ($(window).scrollTop() <= 40) {
@@ -132,4 +105,6 @@ $(function () {
         }
     });
 });
+
+
 

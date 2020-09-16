@@ -32,28 +32,24 @@
     @include('partials.footernew')
 
     @env('local')
-    <script src="newasset/js/jquery.js"></script>
-    <script src="newasset/js/bootstrap.min.js"></script>
-    <script src="newasset/js/slick.js"></script>
-    <script src="newasset/js/custom.js"></script>
-    <script src="newasset/js/signup.js"></script>
+<script src="{{asset('newasset/js/jquery.js')}}"></script>
+<script src="{{asset('newasset/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('newasset/js/signup.js')}}"></script>
     @endenv
-    <script> $(function () {
-        var navbar = $('.navbar');
-        $(window).scroll(function () {
-            if ($(window).scrollTop() <= 40) {
-                navbar.removeClass('navbar-scroll');
-            } else {
-                navbar.addClass('navbar-scroll');
-            }
+    <script>
+        $(function () {
+            var navbar = $('.navbar');
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() <= 40) {
+                    navbar.removeClass('navbar-scroll');
+                } else {
+                    navbar.addClass('navbar-scroll');
+                }
+            });
         });
-    }); </script>
-       <script>
-         function myFunction(x) {
-             x.classList.toggle("change");
-         }
-     </script>
-      <script>
+    </script>
+    <script>
         const
             par1 = document.getElementById("welcome"),
             par2 = document.getElementById("welcome1"),
