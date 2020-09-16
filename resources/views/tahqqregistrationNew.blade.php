@@ -1,7 +1,5 @@
-@extends('layouts.newapp')
-@section('content')
-@include('partials.InternalNavpar')
-<div class="" style="background: transparent!important;">
+@extends('layouts.newapp') @section('content') @include('partials.InternalNavparnew')
+<div class=" pt-5" style="background: transparent!important;margin-top: 120px;">
     <div class=" mb-5 primery-color">
 
         <h2 class="h2 text-center" style="font-family: 'FFShamelFamily-SansOneBold' !important;">
@@ -10,7 +8,7 @@
 
     </div>
 
-    <div class="">
+    <div class="container">
         <div class="" style="background: #fff!important;">
 
 
@@ -18,32 +16,38 @@
             <!--  FORM  -->
             <form>
                 <div class="container">
-                    <div class="stepwizard ">
-                        <div class="stepwizard-row setup-panel">
+                    <!--step wizard -->
+                    <div class="stepwizard mb-5">
+                        <div class="stepwizard-row setup-panel ">
                             <div class="stepwizard-step col-xs-1 ">
                             </div>
-                            <div class="stepwizard-step col-xs-2 ">
+                            <div
+                                class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a href="#step-1" type="button"
-                                    class="btn btn-success primery-color btn-circle">1</a>
+                                    class="btn btn-success primery-color btn-circle mb-3">1</a>
                                 <p><small>المعلومات الشخصية</small></p>
                             </div>
-                            <div class="stepwizard-step col-xs-2">
-                                <a href="#step-2" type="button" class="btn btn-default btn-circle"
+                            <div
+                                class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
+                                <a href="#step-2" type="button" class="btn btn-default btn-circle mb-3"
                                     disabled="disabled">2</a>
                                 <p><small>تفاصيل عن المشروع</small></p>
                             </div>
-                            <div class="stepwizard-step col-xs-2">
-                                <a href="#step-3" type="button" class="btn btn-default btn-circle"
+                            <div
+                                class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
+                                <a href="#step-3" type="button" class="btn btn-default btn-circle mb-3"
                                     disabled="disabled">3</a>
                                 <p><small>تفاصيل الباقة المختارة</small></p>
                             </div>
-                            <div class="stepwizard-step col-xs-2">
-                                <a href="#step-4" type="button" class="btn btn-default btn-circle"
+                            <div
+                                class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
+                                <a href="#step-4" type="button" class="btn btn-default btn-circle mb-3"
                                     disabled="disabled">4</a>
                                 <p><small>نوع المشروع</small></p>
                             </div>
-                            <div class="stepwizard-step col-xs-2 ">
-                                <a href="#step-5" type="button" class="btn btn-default btn-circle"
+                            <div
+                                class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
+                                <a href="#step-5" type="button" class="btn btn-default btn-circle mb-3"
                                     disabled="disabled">5</a>
                                 <p><small>اختر التيمبليت</small></p>
                             </div>
@@ -62,53 +66,55 @@
                             <div class="panel-body d-grid">
                                 <!-- form row -->
                                 <div class="form-row">
-
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="offset-md-1"></div>
+                                    <div class="form-group col-md-5  mb-3 my-4">
                                         <label class="control-label fields-label">الاسم بالكامل</label>
-                                        <input type="text" class="form-control  overrideheight"
+                                        <input type="text" class="form-control p-4  overrideheight"
                                             aria-label="Sizing example input"
                                             aria-describedby="inputGroup-sizing-sm" placeholder="الاسم بالكامل">
-
-                                        <!-- <input maxlength="100" type="text" required="required" class="form-control"
-                                placeholder="الاسم بالكامل" style="height: 100px !important;" /> -->
                                     </div>
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">الإسم الاخير</label>
-                                        <input maxlength="100" type="text" required="required" class="form-control "
-                                            placeholder="الإسم الاخير" />
+                                        <input maxlength="100" type="text" required="required"
+                                            class="form-control p-4" placeholder="الإسم الاخير" />
                                     </div>
+                                    <div class="offset-md-1"></div>
                                 </div>
                                 <!--form row-->
                                 <div class="form-row">
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="offset-md-1"></div>
+                                    <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">البريد الإلكتروني</label>
-                                        <input maxlength="100" type="email" required="required" class="form-control"
-                                            placeholder="البريد الإلكتروني" />
+                                        <input maxlength="100" type="email" required="required"
+                                            class="form-control p-4" placeholder="البريد الإلكتروني" />
                                     </div>
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="form-group col-md-5  mb-3 my-4">
                                         <label class="control-label fields-label">رقم الهاتف</label>
                                         <input maxlength="100" type="phone" required="required"
-                                            class="form-control " placeholder="رقم الهاتف" />
+                                            class="form-control p-4" placeholder="رقم الهاتف" />
                                     </div>
+                                    <div class="offset-md-1"></div>
                                 </div>
                                 <!-- form row -->
                                 <div class="form-row">
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="offset-md-1"></div>
+                                    <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">كلمة المرور</label>
                                         <input maxlength="100" type="password" required="required"
-                                            class="form-control " placeholder="كلمة المرور" />
+                                            class="form-control p-4 px-5" placeholder="كلمة المرور" />
                                     </div>
-                                    <div class="form-group col-md-6 mb-3 my-4">
+                                    <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label"> تأكيد كلمة المرور </label>
                                         <input maxlength="100" type="password" required="required"
-                                            class="form-control " placeholder="تأكيد كلمة المرور" />
+                                            class="form-control p-4 px-5" placeholder="تأكيد كلمة المرور" />
                                     </div>
+                                    <div class="offset-md-1"></div>
+
                                 </div>
                                 <!-- <div class="form-row d-flex justify-content-center align-items-center mt-5 p-5"> -->
 
                                 <button
-                                    class="btn primery-button d-flex align-items-center  res-button  mt-5 nextBtn  pull-right py-3"
-                                    style="float: left !important; margin-left: 42%; padding-right: 56px;"
+                                    class="btn primery-button d-flex align-items-center  res-button  mt-5 nextBtn step-button pull-right py-3"
                                     type="button">
                                     انشاء حساب
                                     <div style="border-radius: 10px; margin-right: 37px;"> <i
@@ -124,21 +130,20 @@
                         </div>
                         <!-- Step 2-->
 
-                        <div class="panel panel-primary setup-content" id="step-2"
-                            style="border: none;background: none !important;">
+                        <div class=" container panel panel-primary setup-content border-0" id="step-2"
+                            style="background: none !important">
 
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <label class="control-label">اسم المشروع</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control"
+                            <div class="container panel-body">
+                                <div class=" form-group px-5">
+                                    <label class="control-label fields-label">اسم المشروع</label>
+                                    <input maxlength="200" type="text" required="required"
+                                        class="form-control py-4  mx-3" style="width: 90%;"
                                         placeholder=" هنا الاسم بالكامل" />
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label">اختر نوع المشروع</label>
-                                    <!-- <input maxlength="200" type="" required="required" class="form-control"
-                            placeholder=" هنا الاسم بالكامل" />
-                         -->
-                                    <select class="form-control select-t" id="exampleFormControlSelect2">
+                                <div class="container form-group py-4">
+                                    <label class="control-label fields-label">اختر نوع المشروع</label>
+                                    <select class="form-control select-t mx-5 fields-label"
+                                        id="exampleFormControlSelect2">
                                         <option>موقع تعليمي</option>
                                         <option>موقع دورات تدريبية</option>
                                         <option>موثع استشارات </option>
@@ -146,9 +151,10 @@
                                         <option>قوالب شركات تعريفي </option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label"> وصف مختصر عن المشروع </label>
-                                    <textarea maxlength="200" type="text" required="required" class="form-control"
+                                <div class="container form-group">
+                                    <label class="control-label fields-label mt-5"> وصف مختصر عن المشروع </label>
+                                    <textarea maxlength="100" type="text" required="required"
+                                        class="form-control mx-4" style="width:86%"
                                         placeholder=" وصف مختصر عن المشروع "></textarea>
                                 </div>
                                 <button
@@ -165,7 +171,7 @@
 
 
                         <!-- Step 3-->
-                        <div class="panel panel-primary setup-content h-100" id="step-3" style="border: none ;background: none !important; margin-top: 74px;
+                        <div class="panel panel-primary setup-content h-100" id="step-3" style="border: none ; margin-top: 74px;
                             margin-bottom: 74px !important;">
 
                             <div class="panel-body h-100" style="height:100vh">
@@ -192,7 +198,7 @@
                                                 <!-- Carousel items -->
                                                 <div class="carousel-inner">
 
-                                                    <div class="carousel-item active">
+                                                    <div class="carousel-item c-i active">
                                                         <div class="row">
                                                             <div class="col-md-3">
                                                                 <div class=" hover-state">
@@ -203,14 +209,15 @@
                                                                     <div class="middle">
                                                                         <p class="mb-5"> 1قالب تجريبي </p>
                                                                         <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-1">تفاصيل
+                                                                            id="okButton">التفاصيل
+
                                                                         </button>
                                                                     </div>
 
                                                                 </div>
 
                                                             </div>
+
                                                             <div class="col-md-3">
                                                                 <div class=" hover-state">
                                                                     <a href="#">
@@ -220,10 +227,11 @@
                                                                     <div class="middle">
                                                                         <p class="mb-5"> 2قالب تجريبي </p>
                                                                         <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-2">تفاصيل
+                                                                            id="okButton1">التفاصيل
+
                                                                         </button>
                                                                     </div>
+
                                                                 </div>
 
                                                             </div>
@@ -236,208 +244,206 @@
                                                                     <div class="middle">
                                                                         <p class="mb-5"> 3قالب تجريبي </p>
                                                                         <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-3">تفاصيل
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
+                                                                            id="okButton2">التفاصيل
 
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p class="mb-5"> 4قالب تجريبي </p>
-                                                                        <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-4">تفاصيل
                                                                         </button>
                                                                     </div>
+
                                                                 </div>
 
                                                             </div>
                                                         </div>
                                                         <!--.row-->
                                                     </div>
-                                                    <!--.item-->
-                                                    <div class="carousel-item ">
-                                                        <div class="row">
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p class="mb-5"> 5قالب تجريبي </p>
-                                                                        <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-5">تفاصيل
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
 
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p class="mb-5"> 1قالب تجريبي </p>
-                                                                        <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-1">تفاصيل
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p class="mb-5"> 1قالب تجريبي </p>
-                                                                        <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-1">تفاصيل
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p class="mb-5"> 1قالب تجريبي </p>
-                                                                        <button class="btn primery-button"
-                                                                            data-toggle="modal"
-                                                                            data-target="#pop-1">تفاصيل
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <!--.row-->
-                                                    </div>
-                                                    <!--.item-->
-                                                    <!--.item-->
-                                                    <div class="carousel-item ">
-                                                        <div class="row">
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p>Lorem, ipsum dolor sit amet consectetur
-                                                                            adipisicing
-                                                                            elit. Reiciendis quod vel accusamus
-                                                                            harum
-                                                                            consequuntur sunt?</p>
-                                                                        <button class="btn primery-button">show more
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p>Lorem, ipsum dolor sit amet consectetur
-                                                                            adipisicing
-                                                                            elit. Reiciendis quod vel accusamus
-                                                                            harum
-                                                                            consequuntur sunt?</p>
-                                                                        <button class="btn primery-button">show more
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p>Lorem, ipsum dolor sit amet consectetur
-                                                                            adipisicing
-                                                                            elit. Reiciendis quod vel accusamus
-                                                                            harum
-                                                                            consequuntur sunt?</p>
-                                                                        <button class="btn primery-button">show more
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <div class=" hover-state">
-                                                                    <a href="#">
-                                                                        <img src="./img/sb-admin-pro-html.jpg"
-                                                                            alt="Image" style="max-width:100%;">
-                                                                    </a>
-                                                                    <div class="middle">
-                                                                        <p>Lorem, ipsum dolor sit amet consectetur
-                                                                            adipisicing
-                                                                            elit.
-                                                                            consequuntur sunt?</p>
-                                                                        <a class="btn primery-button"
-                                                                            onclick="getoneTamplateAjax('1')"
-                                                                            href="#details" id="details-but">show
-                                                                            more
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <!--.row-->
-                                                    </div>
-                                                    <!--.item-->
 
                                                 </div>
-                                                <!--.carousel-inner-->
+
                                             </div>
                                             <!--.Carousel-->
+                                            <!--  here to put the templates content -->
+                                            <!--   -->
+                                            <div class="container card justify-content-center align-items-center mt-5 pt-5 border-0 d-none"
+                                                id="welcome">
+                                                <h4 class="my-3 primery-color text-center">القالب التجريبي 1 </h4>
+                                                <img src="./img/12.png" class="img-fluid p-5 pb-0" alt="">
+                                                <p class="template-p mt-1 p-5">
+                                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.
+                                                </p>
+                                                <p class="template-p mt-1 px-5">هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.</p>
+                                                <p class="mt-1 px-5"></p>
+
+                                                <button class="btn primery-button text-center my-5 w-25"
+                                                    style="margin-left: 38%;">
+                                                    مشاهدة الموقع
+                                                </button>
+
+                                            </div>
+                                            <!--   -->
+                                            <div class="container card justify-content-center align-items-center mt-5 pt-5 border-0 d-none"
+                                                id="welcome1">
+                                                <h4 class="my-3 primery-color text-center">القالب التجريبي 2 </h4>
+                                                <img src="./img/12.png" class="img-fluid p-5 pb-0" alt="">
+                                                <p class="template-p mt-1 p-5">
+                                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.
+                                                </p>
+                                                <p class="template-p mt-1 px-5">هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.</p>
+                                                <p class="mt-1 px-5"></p>
+
+                                                <button class="btn primery-button text-center my-5 w-25"
+                                                    style="margin-left: 38%;">
+                                                    مشاهدة الموقع
+                                                </button>
+
+                                            </div>
+                                            <!--   -->
+                                            <div class="container card justify-content-center align-items-center mt-5 pt-5 border-0 d-none"
+                                                id="welcome2">
+                                                <h4 class="my-3 primery-color text-center">القالب التجريبي 3 </h4>
+                                                <img src="./img/12.png" class="img-fluid p-5 pb-0" alt="">
+                                                <p class="template-p mt-1 p-5">
+                                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.
+                                                </p>
+                                                <p class="template-p mt-1 px-5">هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                                                    المحتوى
+                                                    المقروء لصفحة ما
+                                                    سيلهي
+                                                    القارئ عن
+                                                    التركيز على
+                                                    الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                                    ولذلك يتم استخدام طريقة لوريم
+                                                    إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                                                    استخدام "هنا يوجد محتوى نصي،
+                                                    هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.
+                                                    العديد من برامح النشر المكتبي
+                                                    وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                                                    عن النص، وإذا قمت بإدخال
+                                                    "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة
+                                                    العهد في نتائج البحث. على مدى
+                                                    السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن
+                                                    طريق الصدفة، وأحياناً عن عمد
+                                                    كإدخال بعض العبارات الفكاهية إليها.</p>
+                                                <p class="mt-1 px-5"></p>
+
+                                                <button class="btn primery-button text-center my-5 w-25"
+                                                    style="margin-left: 38%;">
+                                                    مشاهدة الموقع
+                                                </button>
+
+                                            </div>
+                                            <button
+                                                class="btn primery-button d-flex align-items-center  res-button  nextBtn  pull-right py-3"
+                                                style="float: left !important; margin-left: 40%; margin-top: 100px; padding-right: 70px;"
+                                                type="button">
+                                                متابعة
+                                                <div style="border-radius: 10px; margin-right: 58px;"> <i
+                                                        class="fas fa-chevron-left mr-4"></i>
+                                                </div>
+                                            </button>
+
+
                                         </div>
-                                        <!-- end-->
-
-
                                     </div>
-
                                 </div>
 
-
-                                <button
-                                    class="btn primery-button d-flex align-items-center res-button  nextBtn  pull-right py-3"
-                                    style="float: left !important; margin-left: 42%; padding-right: 80px; margin-top: 140px;"
-                                    type="button">
-                                    متابعة
-                                    <div style="border-radius: 10px; margin-right: 58px;"> <i
-                                            class="fas fa-chevron-left mr-4"></i></div>
-                                </button>
                             </div>
+
+
+
                         </div>
+                        <!-- end-->
+
+
 
 
 
@@ -681,72 +687,95 @@
                     </form>
                 </div>
         </div>
-
-
-
-
-
     </div>
 
     <!-- pop ups -->
     <!--  البوب اب للقالب التجريبي الاول-->
     <!---->
-    <div class="modal fade" id="pop-1" tabindex="-1" aria-labelledby="login" aria-hidden="true"
-        style="overflow: hidden !important;">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header d-flex align-items-center justify-content-between">
-                    <h5 class="modal-title primery-color" id="login">القالب التجريبي الاول</h5>
-                    <div class="">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+    <!--   -->
+    <div class="container hide" id="foo">
+        <div class="modal fade" id="pop-1" style="overflow: hidden !important;">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center justify-content-between">
+                        <h5 class="modal-title primery-color" id="login">القالب
+                            التجريبي
+                            الاول</h5>
+                        <div class="">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-body" style="overflow-y: scroll !important;">
+                        <div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Quis atque voluptatibus
+                                sapiente? Vitae, voluptas fugiat! Unde mollitia
+                                sequi
+                                eaque eligendi dolorem a similique
+                                quaerat modi adipisci nobis, numquam sit aperiam
+                                omnis
+                                voluptates, libero doloribus odit
+                                itaque? Eligendi nisi cumque neque?</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+                            <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Cum impedit quod
+                                aliquid
+                                minima, quas rerum quidem eos, corrupti ipsum,
+                                reprehenderit numquam dicta dolor rem
+                                accusamus? Recusandae, repellat consectetur! Sunt,
+                                numquam!</p>
+
+
+                        </div>
+
+                    </div>
+                    <div class="modal-header d-flex align-items-center justify-content-center pop-up">
+                        <button class="btn primery-button">
+                            اختيار
                         </button>
                     </div>
 
                 </div>
-
-
-                <div class="modal-body" style="overflow-y: scroll !important;">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis atque voluptatibus
-                            sapiente? Vitae, voluptas fugiat! Unde mollitia sequi eaque eligendi dolorem a similique
-                            quaerat modi adipisci nobis, numquam sit aperiam omnis voluptates, libero doloribus odit
-                            itaque? Eligendi nisi cumque neque?</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-                        <p class="mt-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum impedit quod
-                            aliquid
-                            minima, quas rerum quidem eos, corrupti ipsum, reprehenderit numquam dicta dolor rem
-                            accusamus? Recusandae, repellat consectetur! Sunt, numquam!</p>
-
-
-                    </div>
-
-                </div>
-                <div class="modal-header d-flex align-items-center justify-content-center pop-up">
-                    <button class="btn primery-button">
-                        اختيار
-                    </button>
-                </div>
-
             </div>
         </div>
     </div>
@@ -990,9 +1019,7 @@
             </div>
         </div>
     </div>
-
-
-
+</div>
 
 
 
