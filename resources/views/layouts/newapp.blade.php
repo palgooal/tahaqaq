@@ -19,14 +19,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     @endenv
     @env('prod')
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوست </title>
-    <link href="newasset/css/animate.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
-    <link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
-    <link rel="stylesheet" href="newasset/css/new-style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
     @endenv
 
@@ -38,55 +31,80 @@
     @yield('content')
     @include('partials.footernew')
 
+    @env('local')
+    <script src="newasset/js/jquery.js"></script>
+    <script src="newasset/js/bootstrap.min.js"></script>
+    <script src="newasset/js/slick.js"></script>
+    <script src="newasset/js/custom.js"></script>
+    <script src="newasset/js/signup.js"></script>
+    @endenv
+    <script> $(function () {
+        var navbar = $('.navbar');
+        $(window).scroll(function () {
+            if ($(window).scrollTop() <= 40) {
+                navbar.removeClass('navbar-scroll');
+            } else {
+                navbar.addClass('navbar-scroll');
+            }
+        });
+    }); </script>
+       <script>
+         function myFunction(x) {
+             x.classList.toggle("change");
+         }
+     </script>
+      <script>
+        const
+            par1 = document.getElementById("welcome"),
+            par2 = document.getElementById("welcome1"),
+            par3 = document.getElementById("welcome2")
+            ;
 
-    @env('prod')
+        document.getElementById("okButton")
+            .addEventListener("click", function () {
+                par1.classList.add('d-block');
+                par1.classList.remove('d-none');
 
-    <script type="text/javascript" src="newasset/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="newasset/js/wow.min.js"></script>
+                if (par2.classList || par3.classList === 'd-block') {
+                    par3.classList.add('d-none');
+                    par3.classList.remove('d-block');
+                    par2.classList.add('d-none');
+                    par2.classList.remove('d-block');
 
-@endenv
+                }
+            }, true);
 
+        document.getElementById("okButton1")
+            .addEventListener("click", function () {
+                par2.classList.add('d-block');
+                par2.classList.remove('d-none');
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"></script>
+                if (par1.classList || par3.classList === 'd-block') {
+                    par1.classList.add('d-none');
+                    par1.classList.remove('d-block');
+                    par3.classList.add('d-none');
+                    par3.classList.remove('d-block');
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-crossorigin="anonymous"></script>
-<!--    -->
-@env('local')
-<script type="text/javascript" src="newasset/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="newasset/js/wow.min.js"></script>
-@endenv
-<script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script>
-$(function () {
-    var navbar = $('.navbar');
+                }
+            }, true);
+        document.getElementById("okButton2")
+            .addEventListener("click", function () {
+                par3.classList.add('d-block');
+                par3.classList.remove('d-none');
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() <= 40) {
-            navbar.removeClass('navbar-scroll');
-        } else {
-            navbar.addClass('navbar-scroll');
+                if (par2.classList || par1.classList === 'd-block') {
+                    par1.classList.add('d-none');
+                    par1.classList.remove('d-block');
+                    par2.classList.remove('d-block');
+                    par2.classList.add('d-none');
+                }
+            }, true);
+    </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
         }
-    });
-});
-</script>
-
+    </script>
 </body>
 
 </html>
