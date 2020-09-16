@@ -84,7 +84,7 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
+            return redirect('/TahqqLogin?newUserCreated=true&returnUrl='.$request->getRequestUri());
         }
         else
             return back()->with('error',$result);
@@ -170,6 +170,94 @@ class TahqqRegistrationController extends Controller
             ->with('clientRegisterProgress', $clientRegisterProgress);
     }
 
+
+
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(TahqqRegistration $tahqqRegistration)
+    {
+        //
+    }
+
+
+
+
+       /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function loginView(Request $request)
+    {
+        $this->whmcsAPILogic->Logout();
+
+        $returnUrl = '/';
+        if(isset($request->returnUrl) && !empty($request->returnUrl))
+            $returnUrl = $request->returnUrl;
+
+        return view('login')
+        ->with('returnUrl', $returnUrl)
+        ->with('newUserCreated', $request->newUserCreated);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function login(Request $request)
+    {
+        $data = request()->validate([
+            'username' => 'required',
+            'password' => 'required'
+
+        ]);
+        $username = $request->username;
+        $password = $request->password;
+
+        $result = $this->whmcsAPILogic->Login($username,$password);
+        if($result->isSuccess){
+            // url()->previous()
+            if($request->returnUrl != '/')
+                return  redirect($request->returnUrl);
+
+            if(TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() != WhmcsClientRegisterProgress::Completed)
+                return redirect('/TahqqRegistration');
+            return redirect('/');
+        }
+        else{
+            return back()->with('error',$result->message);
+        }
+            //
+    }
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+
+        $this->whmcsAPILogic->Logout();
+        return redirect('/');
+    }
+
+    public function newregister(){
+        $lang = App::getLocale();
+    $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia']))->with('menus', Menu::get());
+    }
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -219,85 +307,14 @@ class TahqqRegistrationController extends Controller
         return back()->with('message', json_encode($ssoResult));
     }
 
+    public function GotoClientArea(){
+        if(!TahaqqSessionInfo::IsClientLogin())
+            return back();
 
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(TahqqRegistration $tahqqRegistration)
-    {
-        //
-    }
-
-
-
-
-       /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
-     * @return \Illuminate\Http\Response
-     */
-    public function loginView(Request $request)
-    {
-        $this->whmcsAPILogic->Logout();
-
-        $returnUrl = '/';
-        if(isset($request->returnUrl) && !empty($request->returnUrl))
-            $returnUrl = $request->returnUrl;
-
-        return view('login')
-        ->with('returnUrl', $returnUrl);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
-     * @return \Illuminate\Http\Response
-     */
-    public function login(Request $request)
-    {
-        $data = request()->validate([
-            'username' => 'required',
-            'password' => 'required'
-
-        ]);
-        $username = $request->username;
-        $password = $request->password;
-
-        $result = $this->whmcsAPILogic->Login($username,$password);
-        if($result->isSuccess){
-            // url()->previous()
-            if(isset($request->returnUrl))
-                return redirect($request->returnUrl);
-            return redirect('/');
+        $ssoResult = $this->whmcsAPILogic->CreateSsoToken(TahaqqSessionInfo::GetLoggedClientId(), "clientarea:profile", null, null, null);
+        if($ssoResult->isSuccess == true){
+            return redirect($ssoResult->redirectUrl);
         }
-        else{
-            return back()->with('error',$result->message);
-        }
-            //
-    }
-     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\TahqqRegistration  $tahqqRegistration
-     * @return \Illuminate\Http\Response
-     */
-    public function logout(Request $request)
-    {
-
-        $this->whmcsAPILogic->Logout();
-        return redirect('/');
-    }
-
-    public function newregister(){
-        $lang = App::getLocale();
-    $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
-        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia']))->with('menus', Menu::get());
+        return back()->with('message', json_encode($ssoResult));
     }
 }

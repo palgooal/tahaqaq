@@ -33,6 +33,10 @@
         </p>
     </div>
     <div class="login-text">
+     @if($newUserCreated == 'true')
+        @include('alerts.newUserCreated')
+    @endif
+
         <div class="form-wrap login-form-wrap wow fadeIn">
             <h1> تسجيل دخول </h1>
             {{-- {{App\Logic\APIClient\WhmcsAPILogic::WHMCS_LOGIN_URL}} --}}
@@ -66,9 +70,11 @@
                 </div>
             </form>
             <p style="color: red; ">{{$error??''}}</p>
-            <div class="form-links wow fadeInDown" style="margin-right: 30%;">
-                <a href="/TahqqRegistration?a=new">هل انت مشترك جديد</a>
-            </div>
+            @if($newUserCreated != 'true')
+                <div class="form-links wow fadeInDown" style="margin-right: 30%;">
+                    <a href="/TahqqRegistration?a=new">هل انت مشترك جديد</a>
+                </div>
+            @endif
     </div>
 </section>
 <!--script-->

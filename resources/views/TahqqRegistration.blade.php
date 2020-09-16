@@ -37,7 +37,7 @@
                                   </span>
                               </a>
                           </li>
-                          <li role="presentation" class="disabled">
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 3?"active":"disabled"}}">
                               <h2>  باقات الاشتراك  </h2>
 
                               <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
@@ -58,7 +58,6 @@
                           </li>
                       </ul>
                   </div>
-
                   @isset($message)
                     <div class="alert alert-info" role="alert">
                         {{ $message??'' }}
@@ -201,7 +200,7 @@
 
                             </form>
                           </div>
-                          <div style="width: 100%; margin:0% 0%" class="tab-pane" role="tabpanel" id="step4">
+                          <div style="width: 100%; margin:0% 0%" class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 3 ?"active":""}}" role="tabpanel" id="step4">
                             <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
                                 @method('post')
                                 @csrf

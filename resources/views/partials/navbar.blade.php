@@ -14,9 +14,12 @@
 						<img width="20" src="img/close.svg" />
 					</a>
 				</div>
-				<ul>@foreach ($menus as $menu)
+				<ul>
+                    @foreach ($menus as $menu)
 					<li class="@if($loop->first)active @endif"><a href="{{$menu->url}}">{{$menu->name_ar}}</a>
-					</li>@endforeach</ul>
+                    </li>
+                    @endforeach
+                </ul>
 				<div class="login-btns">
 					@if($isClientLogin)
                         {{-- <form action="/TahqqLogout" method="POST">
@@ -27,6 +30,7 @@
                         </form> --}}
                         <a href="/" class="login" style="color: #7657E5; border: 2px solid; border-radius: 12px;">{{$loggedClientName}}</a>
                         <a href="/TahqqLogout" class="logout btn btn-danger">Logout</a>
+                        <a href="/GotoClientArea" class="logout btn btn-danger">Goto Client Area</a>
 					@else
 						<a href="/TahqqLogin" class="login">تسجيل الدخول </a>
 					@endif

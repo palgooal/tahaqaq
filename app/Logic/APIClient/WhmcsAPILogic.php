@@ -33,6 +33,11 @@ class WhmcsAPILogic{
         //     'responsetype' => 'json',
         // );
 
+        if(env('APP_ENV') == 'local')
+        {
+            return json_decode('{"result":"success","clientid":1}');
+        }
+
         $postfields = $this->getPostFileArray($addClientParam->GetDataAsArray(true),WhmcsAPIActions::Client_AddClient);
         return $this->callAPI($postfields);
     }
@@ -161,7 +166,7 @@ class WhmcsAPILogic{
 
 
 
-        $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId);
+        $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId, null, null, null, null);
         if(!$ssoResult->isSuccess){
             $loginResult->isSuccess = false;
             $loginResult->message = "Invalid username or password";
@@ -200,16 +205,34 @@ class WhmcsAPILogic{
         return $validateLoginResult;
     }
 
-
-    public function CreateSsoToken($clientId){
+    //more details about destination parameter go to https://docs.whmcs.com/WHMCS_Single_Sign-On_Developer_Guide#Supported_Destinations
+    public function CreateSsoToken($clientId,$destination,$sso_redirect_path,$service_id,$domain_id){
         $createSsoTokenResult = new CreateSsoTokenResult(false);
-        $postfields = $this->getPostFileArray(array(
+        $arry = array(
             "client_id"=>$clientId,
-            "destination"=>"sso:custom_redirect",
-            "sso_redirect_path"=>"cart.php?a=checkout",
+            // "destination"=>"sso:custom_redirect",
+            // "sso_redirect_path"=>"cart.php?a=checkout",
             // "destination"=>"clientarea:product_details clientarea:profile",
             // "service_id"=>"1"
-        ), WhmcsAPIActions::Auth_CreateSsoToken);
+        );
+        if(isset($destination)){
+            $newItem = array('destination'=>$destination);
+            $arry = array_merge($arry, $newItem );
+        }
+        if(isset($sso_redirect_path)){
+            $newItem = array('sso_redirect_path'=>$sso_redirect_path);
+            $arry = array_merge($arry, $newItem );
+        }
+        if(isset($service_id)){
+            $newItem = array('service_id'=>$service_id);
+            $arry = array_merge($arry, $newItem );
+        }
+        if(isset($domain_id)){
+            $newItem = array('domain_id'=>$domain_id);
+            $arry = array_merge($arry, $newItem );
+        }
+
+        $postfields = $this->getPostFileArray($arry, WhmcsAPIActions::Auth_CreateSsoToken);
         $result = $this->callAPI($postfields);
         $createSsoTokenResult->isSuccess = $result->result == "success";
         if($createSsoTokenResult->isSuccess){
@@ -289,7 +312,7 @@ class WhmcsAPILogic{
             return 'invalid process, client is not signin';
         }
 
-        $ssoResult = $this->CreateSsoToken($clientId);
+        $ssoResult = $this->CreateSsoToken($clientId, null, null, null, null);
         return $ssoResult;
     }
 
