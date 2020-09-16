@@ -19,7 +19,10 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     @endenv
     @env('prod')
-
+    <link href="newasset/css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="newasset/css/new-style.css">
 
     @endenv
 
@@ -30,6 +33,13 @@
 
     @yield('content')
     @include('partials.footernew')
+
+
+    @env('prod')
+    <script src="newasset/js/jquery.js"></script>
+    <script src="newasset/js/bootstrap.min.js"></script>
+    <script src="newasset/js/signup.js"></script>
+        @endenv
 
     @env('local')
 <script src="{{asset('newasset/js/jquery.js')}}"></script>
