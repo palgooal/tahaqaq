@@ -230,6 +230,10 @@ footer .col {
     text-align: right !important;
     
 }
+.start-now{
+    float: left !important; 
+    margin-left: 38%;
+}
 
 
 
@@ -343,6 +347,7 @@ footer .col {
     font-family: "FFShamelFamily-SansOneBook" !important;
     text-align: right !important;
     float: right !important;
+    margin-bottom : 20px !important;
 
 }
 form label{
@@ -377,7 +382,7 @@ form input::placeholder , textarea::placeholder{
     border-radius: 50px !important;
     height: 50px !important;
     font-family: "FFShamelFamily-SansOneBook" !important;
-    width: 84%;
+    
 }
 .select-t option{
     font-size: 13px !important;
@@ -666,7 +671,16 @@ background: #707070;
     .res-footer-col-l{
         padding-left: 0 !important;
     }
-
+    .package-item{
+        padding-right: 24px !important;
+    }
+    .top-heading {
+        font-size: 18px !important;
+    }
+    .start-now{
+        font-size: 10px;
+        padding-right: 10px !important;
+    }
 
 }
 
@@ -770,4 +784,6 @@ background: #707070;
     .carousel-caption-format{
         padding: 0 !important;
     }
+
+  
 }

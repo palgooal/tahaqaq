@@ -252,9 +252,10 @@ class TahqqRegistrationController extends Controller
 
     public function newregister(){
         $lang = App::getLocale();
-    $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia']))->with('menus', Menu::get());
+        $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
+    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia', 'clientRegisterProgress']))->with('menus', Menu::get());
     }
 
 
