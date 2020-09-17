@@ -106,5 +106,70 @@ $(function () {
     });
 });
 
+/******* scripts ****************/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const
+par1 = document.getElementById("welcome"),
+par2 = document.getElementById("welcome1"),
+par3 = document.getElementById("welcome2")
+;
+
+document.getElementById("okButton")
+.addEventListener("click", function () {
+    par1.classList.add('d-block');
+    par1.classList.remove('d-none');
+
+    if (par2.classList || par3.classList === 'd-block') {
+        par3.classList.add('d-none');
+        par3.classList.remove('d-block');
+        par2.classList.add('d-none');
+        par2.classList.remove('d-block');
+
+    }
+}, true);
+
+document.getElementById("okButton1")
+.addEventListener("click", function () {
+    par2.classList.add('d-block');
+    par2.classList.remove('d-none');
+
+    if (par1.classList || par3.classList === 'd-block') {
+        par1.classList.add('d-none');
+        par1.classList.remove('d-block');
+        par3.classList.add('d-none');
+        par3.classList.remove('d-block');
+
+    }
+}, true);
+document.getElementById("okButton2")
+.addEventListener("click", function () {
+    par3.classList.add('d-block');
+    par3.classList.remove('d-none');
+
+    if (par2.classList || par1.classList === 'd-block') {
+        par1.classList.add('d-none');
+        par1.classList.remove('d-block');
+        par2.classList.remove('d-block');
+        par2.classList.add('d-none');
+    }
+}, true);    
+
+/**/
+function myFunction(x) {
+    x.classList.toggle("change");
+}
 
