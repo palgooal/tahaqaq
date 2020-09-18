@@ -224,10 +224,7 @@
 
                         <div class="panel-body ">
                             <h3 class="primery-color text-center mb-5"> اختر القالب المناسب </h3>
-
-
                             <!--start -->
-
                                 {{-- include selectTemplate new --}}
                                 @include('template.partials.templateSelectorNew')
 
@@ -352,7 +349,7 @@
         $(function () {
             const categoryId = {!! $categoryId !!};
                 // getDataTemplateCategory(categoryId);
-                getDataTemplateSelectorCategory(categoryId)
+                getDataTemplateCategoryNew(categoryId)
         });
 
         function planStartNow_Click($plan){
