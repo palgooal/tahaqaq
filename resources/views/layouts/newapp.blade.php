@@ -113,6 +113,8 @@
             x.classList.toggle("change");
         }
     </script>
+
+    @yield('footerJs')
 </body>
 
 </html>

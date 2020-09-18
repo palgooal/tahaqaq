@@ -11,7 +11,7 @@
                       <div class="connecting-line"></div>
                       <ul class="nav nav-tabs" role="tablist">
 
-                      <li role="presentation" class="{{$clientRegisterProgress != '' ?"":"active"}}">
+                      <li role="presentation" class="i,">
                               <h2> بيانات الحساب</h2>
                               <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                   <span class="round-tab">
@@ -20,7 +20,7 @@
                               </a>
                           </li>
 
-                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"active":"disabled"}}">
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"":"disabled"}}">
                               <h2> تفاصيل عن المشروع</h2>
                               <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                   <span class="round-tab">
@@ -28,7 +28,7 @@
                                   </span>
                               </a>
                           </li>
-                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}">
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"":"disabled"}}">
                               <h2>  إختار قالب  </h2>
 
                               <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
@@ -37,7 +37,7 @@
                                   </span>
                               </a>
                           </li>
-                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 3?"active":"disabled"}}">
+                          <li role="presentation" class="{{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 3?"":"disabled"}}">
                               <h2>  باقات الاشتراك  </h2>
 
                               <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
@@ -142,7 +142,8 @@
                                 @csrf
                                   <div class="form-group wow fadeInDown">
                                       <h6>أسم المشروع</h6>
-                                      <input name="projectName" id="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل " required value="{{$clientDetailsInfo->GetProductName()??''}}">
+                                      <input name="projectName" id="projectName" type="text" class="form-input" placeholder="هنا الأسم بالكامل "
+                                      required value="{{$clientDetailsInfo->GetProductName()??''}}">
                                       @error('projectName')
                                         <h5>Error : {{$message}}</h5>
                                       @enderror

@@ -59,6 +59,18 @@ class TahqqRegistrationController extends Controller
      */
     public function store(Request $request)
     {
+        $data = request()->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email'=>'required',
+            'phonenumber'=>'required',
+            'password'=>'required',
+            'confirmPassword'=>'required'
+        ]);
+        if($request->password != $request->confirmPassword){
+            return back()->with('message','كلمة المرور غير متطابقة');
+        }
+        //confirmPassword
         //
         $addClientParam = new AddClientParameter();
 
@@ -67,6 +79,7 @@ class TahqqRegistrationController extends Controller
         $addClientParam->email=$request->email;
         $addClientParam->phonenumber=$request->phonenumber;
         $addClientParam->password2=$request->password;
+
 
         // $addClientParam->companyname='';
         // $addClientParam->address1='';
@@ -229,7 +242,7 @@ class TahqqRegistrationController extends Controller
                 return  redirect($request->returnUrl);
 
             if(TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() != WhmcsClientRegisterProgress::Completed)
-                return redirect('/TahqqRegistration');
+                return redirect('/TahqqRegistrationNew');
             return redirect('/');
         }
         else{

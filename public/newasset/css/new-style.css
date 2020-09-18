@@ -129,14 +129,14 @@ a:hover {
     margin: 3px 0;
     transition: 0.4s;
   }
-  
+
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-8px, 8px);
     transform: rotate(-45deg) translate(-4px, 7px) ;
   }
-  
+
   .change .bar2 {opacity: 0 !important;}
-  
+
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-6px, -8px) ;
@@ -155,7 +155,7 @@ a:hover {
 	background: #e7eaea;
 	box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
 }
-.nav-primery-button ,.nav-inverted-button ,.nav-lang-changer 
+.nav-primery-button ,.nav-inverted-button ,.nav-lang-changer
 {
     font-size: 10px !important ;
     border-radius: 6px !important;
@@ -197,7 +197,7 @@ a:hover {
         background: transparent !important;
         display: flex;
         flex-direction: row;
-        
+
     }
 }
 .back {
@@ -228,10 +228,10 @@ footer .col {
     font-size: 13px !important;
     font-family: "FFShamelFamily-SansOneBook" !important;
     text-align: right !important;
-    
+
 }
 .start-now{
-    float: left !important; 
+    float: left !important;
     margin-left: 38%;
 }
 
@@ -276,8 +276,8 @@ footer .col {
     font-family: "FFShamelFamily-SansOneBook" !important;
     font-size: 12px;
     width: 120%;
-    
-    
+
+
 }
 .card-p{
     font-family: "FFShamelFamily-SansOneBook" !important;
@@ -323,7 +323,7 @@ footer .col {
 .content p{
     font-family: "FFShamelFamily-SansOneBook" !important;
     font-size: 11px;
-    font-weight: 500; 
+    font-weight: 500;
     color:#74787D;
 }
 
@@ -368,11 +368,11 @@ form input::placeholder , textarea::placeholder{
     color: #B9AAF1!important;
     font-weight: lighter;
     font-family: "FFShamelFamily-SansOneBook" !important;
-    
+
 }
 .step-button{
     float: left !important;
-    margin-left: 42%; 
+    margin-left: 42%;
     padding-right: 56px;
 }
 .select-t{
@@ -382,7 +382,7 @@ form input::placeholder , textarea::placeholder{
     border-radius: 50px !important;
     height: 50px !important;
     font-family: "FFShamelFamily-SansOneBook" !important;
-    
+
 }
 .select-t option{
     font-size: 13px !important;
@@ -470,7 +470,7 @@ form input::placeholder , textarea::placeholder{
 	left: 0;
 	top: auto;
     bottom: -40px;
-    
+
 }
 .custom-card {
     border: 1px solid #F2F2F2 !important;
@@ -521,7 +521,7 @@ background: #707070;
   .c-i::before {
     background: transparent !important;
 }
-  
+
   .hover-state:hover .a .image {
     opacity: 0.8 !important;
     cursor: pointer;
@@ -538,9 +538,9 @@ background: #707070;
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-      
-  
-  
+
+
+
   .hover-state:hover .middle {
     opacity: 1;
   }
@@ -548,7 +548,7 @@ background: #707070;
       height: 10px !important;
   }
   .stepwizard-step a {
-    background-color: #fff !important;
+    background-color: #fff; /*!important*/
     border-color: #ccc !important;
     color:  #7657E5 !important;
   }
@@ -580,18 +580,18 @@ background: #707070;
         font:   25px/53px "FFShamelFamily-SansOneBook" !important;
         font-size: 17px !important;
         text-align: center !important;
-    
+
     }
     .content p{
         font-family: "FFShamelFamily-SansOneBook" !important;
         font-size: 10px !important;
-        font-weight: 500; 
+        font-weight: 500;
         text-align: center !important;
 
         color:#74787D;
-        
+
     }
- 
+
     .form-wrapper{
         margin-right: 0px !important;
     }
@@ -612,7 +612,7 @@ background: #707070;
         display: none !important;
 
     }
-    
+
 }
 @media (max-width:570px){
     .top-slider{
@@ -623,9 +623,9 @@ background: #707070;
     }
     .carousel-caption-format .date{
         display: none !important;
-        
+
     }
-  
+
     .cards-container .row  .card{
         margin: 20px!important;
         padding: 0!important;
@@ -644,7 +644,7 @@ background: #707070;
         margin-bottom: 15px !important;
         margin-right: 0px!important;
         line-height: 1.2 !important;
-    
+
     }
     .content p{
         font-family: "FFShamelFamily-SansOneBook" !important;
@@ -652,9 +652,9 @@ background: #707070;
         width: 70%;
         margin-bottom: 15px !important;
         margin-right: 0px!important;
-        font-weight: 500; 
+        font-weight: 500;
         color:#74787D;
-        
+
     }
     .search{
         flex-direction: column;
@@ -687,7 +687,7 @@ background: #707070;
 
     @media (max-width:1220px){
         .res-button{
-    
+
             justify-content: center;
             align-items: center;
         }
@@ -711,7 +711,7 @@ background: #707070;
         }
 
 
-   
+
 
 }
 @media (max-width:992px){
@@ -735,7 +735,7 @@ background: #707070;
     .res-nav-group ul {
         margin:auto !important;
     }
-   
+
 
     .cards-container .card{
         margin-right: 0!important;
@@ -754,18 +754,18 @@ background: #707070;
     .res-container{
         padding-left: 0 !important;
         padding-right: 0 !important;
-        
+
     }
     .res-hide{
         display: none !important;
     }
     .navbar-collapse{
-        text-align: center !important; 
+        text-align: center !important;
     }
     .nav-links-group{
         margin: auto !important ;
     }
-
+}
 @media (max-width:333px){
     .chev{
         display: none !important;
@@ -779,11 +779,11 @@ background: #707070;
     }
     .carousel-caption-format h5{
         font-size: 12px !important;
-      
+
     }
     .carousel-caption-format{
         padding: 0 !important;
     }
 
-  
+
 }

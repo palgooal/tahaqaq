@@ -68,7 +68,7 @@ $('#blogCarousel').carousel({
 
 
 
-// /***/ 
+// /***/
 // const button-show-more,
 //       content = document.querySelector('#details');
 
@@ -76,7 +76,7 @@ $('#blogCarousel').carousel({
 //         content.addClass('d-block').removeClass('d-none');
 //     }),
 
-$('#navbar a, .btn ,#footer a').on('click', function (e) {
+$('#navbar a ,#footer a').on('click', function (e) {//removed , .btn
     if (this.hash !== '') {
         e.preventDefault();
 
@@ -93,7 +93,7 @@ $('#navbar a, .btn ,#footer a').on('click', function (e) {
 /*
 
 */
-//Change pos/background/padding/add shadow on nav when scroll event happens 
+//Change pos/background/padding/add shadow on nav when scroll event happens
 $(function () {
     var navbar = $('.navbar');
 

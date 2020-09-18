@@ -29,6 +29,9 @@
                 <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogout" target="">
                     تسجيل خروج
                 </a>
+                <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
+                    Goto Client Area
+                </a>
                 @else
                 <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl=/TahqqRegistration" target="">
                     تسجيل دخول
