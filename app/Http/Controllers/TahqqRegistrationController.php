@@ -273,7 +273,7 @@ class TahqqRegistrationController extends Controller
         if(isset($templateCode) && !empty($templateCode)){
             $categoryId = TemplateCategory::where('code',$templateCode)->get()[0]->id??null;
         }
-    return view('tahqqregistrationNew', compact(['sysVarFooter','sysVarSocialMedia', 'clientRegisterProgress', 'templateCategories','categoryId']))->with('menus', Menu::get());
+    return view('TahqqRegistrationNew', compact(['sysVarFooter','sysVarSocialMedia', 'clientRegisterProgress', 'templateCategories','categoryId']))->with('menus', Menu::get());
     }
 
 
