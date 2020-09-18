@@ -29,6 +29,84 @@ function getDataTemplateCategory(idCatecory) {
     });
 }
 
+
+//start get template new -> category
+function getDataTemplateCategoryNew(idCatecory) {
+    $.ajax({
+        type: "GET",
+        url: "/viewTemplateCatecory/"+idCatecory,
+        data: "data",
+        dataType: "json",
+        success: function (response) {
+            document.getElementById('contintTemplate').innerHTML = ' ';
+            for (let i = 0; i < response.data.length; i++) {
+                let element = response.data[i].name;
+                console.log(element);
+                document.getElementById('contintTemplate').innerHTML +=
+                `
+                <div class="col-md-3 m-4">
+                    <div class=" hover-state">
+                    <a href="#">
+                    <img src="images/${response.data[i].image_url}"
+                        alt="Image" style="max-width:100%;">
+                    </a>
+                    <div class="middle">
+                        <p class="mb-5"> ${response.data[i].title_ar}</p>
+                        <button class="btn primery-button"
+                        onclick="getoneTamplateNewAjax('${response.data[i].id}')">اختيار
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                `
+            }
+        },
+        fail: function(e){
+            alert(e);
+         }
+    });
+}
+getDataTemplateCategoryNew('1')
+
+//start get one template new ->id
+function getoneTamplateNewAjax(id) {
+    document.getElementById('idTemplateSelector').innerHTML = ' ';
+    $.ajax({
+        type: "GET",
+        url: "getOneTemplateAjax/"+id,
+        data: "data",
+        dataType: "json ",
+        success: function (response) {
+
+            document.getElementById('idTemplateSelector').innerHTML = `
+            <h4 class="my-3 primery-color text-center">القالب التجريبي 1 </h4>
+            <img src="images/${response.image_url}" class="img-fluid p-5 pb-0" alt="">
+            <p class="template-p mt-1 p-5">
+            ${response.getDetails}
+            </p>
+            <p class="mt-1 px-5"></p>
+            <a href='${response.preview_url}'>
+            <button class="btn primery-button text-center my-5 w-25" style="margin-left: 38%;">
+            مشاهدة الموقع
+            </button>
+        </a>
+                    `;
+
+
+
+
+
+
+            try {
+                document.planSelectFrm.selectedTemplateId.value = id;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    });
+}
+
+
 //template selector
 function getDataTemplateSelectorCategory(idCatecory) {
     $.ajax({

@@ -55,6 +55,8 @@
     @endenv
 
     @yield('footerJs')
+
+@yield('jsCustome')
 </body>
 
 </html>
