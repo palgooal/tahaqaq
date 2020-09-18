@@ -1,0 +1,41 @@
+body{
+    background: none !important;
+}
+.vector-image{
+    height: 340px;
+}
+
+.form-linkes{
+    color: #221950 !important;
+    text-decoration-line: underline !important;
+    font-size: 12px !important;
+    font-family: "FFShamelFamily-SansOneBook";
+}
+.new-customer-link{
+    color: #F582EA !important;
+}
+.login-p{
+    font-size: 10px;
+    font-family: "FFShamelFamily-SansOneBook";
+    color: #221950;
+
+}
+.hide{
+    display: block !important;
+}
+@media (max-width:996px){
+    .vector-image{
+        height: 260px;
+    }
+    .under-form-login{
+        padding: 0 1rem !important;
+    }
+}
+@media(max-width:768px){
+    .hide{
+    display: none !important;
+    }
+    .login-heading{
+        text-align: center !important;
+    }
+}
