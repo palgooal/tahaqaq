@@ -85,7 +85,7 @@ function getoneTamplateNewAjax(id) {
             ${response.getDetails}
             </p>
             <p class="mt-1 px-5"></p>
-            <a href='${response.preview_url}'>
+            <a href='${response.preview_url}' target="_blank">
             <button class="btn primery-button text-center my-5 w-25" style="margin-left: 38%;">
             مشاهدة الموقع
             </button>
