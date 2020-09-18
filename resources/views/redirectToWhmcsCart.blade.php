@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.newapp')
 @section('content')
-@include('partials.InternalNavpar')
+@include('partials.InternalNavparnew')
 <section class="bulidproject">
     <div class="container">
           <div class="row">
