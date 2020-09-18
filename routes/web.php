@@ -93,7 +93,7 @@ Route::get('/TahqqLogout', 'TahqqRegistrationController@logout');
 Route::get('/GotoClientArea', 'TahqqRegistrationController@GotoClientArea');
 
 // رابط مؤقت لتسجيل
-Route::get('/tahqqnew', 'TahqqRegistrationController@newregister');
+// Route::get('/tahqqnew', 'TahqqRegistrationController@newregister');
 
 
 // Contact us

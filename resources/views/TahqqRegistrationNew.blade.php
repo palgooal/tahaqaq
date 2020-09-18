@@ -217,6 +217,7 @@
                             @endif
                         </div>
                     </div>
+
                     <!-- Step 3-->
                     <div class="panel panel-primary setup-content h-100" id="step-3"
                         style="border: none ; ">
@@ -231,9 +232,6 @@
                                 @include('template.partials.templateSelectorNew')
 
                         </div>
-
-
-
                     </div>
                     <!-- end-->
 
@@ -242,162 +240,25 @@
                         style="border: none;background: none !important;">
 
                         <div class="panel-body">
-                            <div class="">
-                                <div class="d-flex justify-content-center align-items-center primery-color my-5">
+                            <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
+                                @method('post')
+                                @csrf
 
-                                    <h1 class="top-heading">باقات الاشتراك في تحقق</h1>
+                                <input type="hidden" name="selectedTemplateId" id="selectedTemplateId">
+                                <input type="hidden" name="selectedPlanName" id="selectedPlanName">
+
+                                <div class="">
+                                    @include('template.partials.planSelectorNew')
                                 </div>
-                                <div class="package-item  d-grid" style="padding-right: 90px ;">
-                                    <div class="container row">
-                                        <!-- Start  -->
-                                        <div class="col  offset-1 mb-5 ml-5 "
-                                            style="border: 1px solid rgb(209, 209, 209);border-radius: 20px !important;  background: #fff;">
-                                            <h1 class="primery-color mb-3 mt-3 text-center">الباقة البرونزية
-                                            </h1>
-                                            <div class="bg-primery py-2 my-5 text-center "
-                                                style="border-radius: 40px;">
-                                                <h5 class="">423 ريال سعودي</h5>
-                                            </div>
-
-                                            <ul class="list">
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-center my-5">
-                                                <a class="btn primery-button ">ابدء الان</a>
-                                            </div>
-
-                                        </div>
-                                        <!-- End -->
-                                        <!-- Start  -->
-                                        <div class="col offset-1  mb-5  " style="border: 1px solid rgb(209, 209, 209);border-radius: 20px !important; background-color: #7657E5;
-                                               color: #F6F6F6 !important;">
-                                            <div class="" style="margin-left: -42%;
-                                               margin-bottom: -9%;
-                                               margin-top: -69px;">
-                                                <img src="./img/star.png" alt="">
-                                            </div>
-
-                                            <h1 class=" mb-3 text-center" style="margin-top: -70px;">الباقة
-                                                البرونزية
-                                            </h1>
-                                            <div class=" py-2 my-5 text-center inverted "
-                                                style="border-radius: 40px;">
-                                                <h5 class="">423 ريال سعودي</h5>
-                                            </div>
-
-                                            <ul class="list">
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex  align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-center my-5">
-                                                <a class="btn  inverted-button">ابدء الان</a>
-                                            </div>
-
-                                        </div>
-                                        <!-- End -->
-                                        <!-- Start  -->
-                                        <div class="col offset-1    mb-5  "
-                                            style="border: 1px solid rgb(209, 209, 209);border-radius: 20px !important;  background: #fff;">
-                                            <h1 class="primery-color mb-3 mt-3 text-center">الباقة البرونزية
-                                            </h1>
-                                            <div class="bg-primery py-2 my-5 text-center "
-                                                style="border-radius: 40px;">
-                                                <h5 class="">423 ريال سعودي</h5>
-                                            </div>
-
-                                            <ul class="list">
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-                                                <li class="d-flex primery-color align-items-center mt-3 h6">
-                                                    <img src="img/shape-star.png" class="ml-3">
-                                                    <span> الدفع بواسطة كي نت</span>
-                                                </li>
-
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-center my-5">
-                                                <a class="btn primery-button  ">ابدء الان</a>
-                                            </div>
-
-                                        </div>
-                                        <!-- End -->
+                                {{-- <button
+                                    class="btn primery-button d-flex align-items-center res-button mt-5 nextBtn pull-right py-3"
+                                    style="float: left !important; margin-left: 46%; " type="button">
+                                    متابعة
+                                    <div style="border-radius: 10px; margin-right: 20px;"> <i
+                                            class="fas fa-chevron-left mr-4"></i>
                                     </div>
-                                </div>
-
-                            </div>
-                            <button
-                                class="btn primery-button d-flex align-items-center  res-button  mt-5 nextBtn   pull-right py-3"
-                                style="float: left !important; margin-left: 46%; " type="button">
-                                متابعة
-                                <div style="border-radius: 10px; margin-right: 20px;"> <i
-                                        class="fas fa-chevron-left mr-4"></i>
-                                </div>
-                            </button>
-
+                                </button> --}}
+                            </form>
                         </div>
                     </div>
 
@@ -483,12 +344,22 @@
       $(function () {
         var no = {!! WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] !!};
         $('#lnkStep-'+(no+1)).trigger('click');
-        // console.log('click #lnkStep-'+(no+1));
       });
     </script>
+    @if (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2)
+    <script src="asset/js/ajax.js"></script>
+    <script>
+        $(function () {
+            const categoryId = {!! $categoryId !!};
+                // getDataTemplateCategory(categoryId);
+                getDataTemplateSelectorCategory(categoryId)
+        });
 
-@endsection
-@section('jsCustome')
-<script src="asset/js/ajax.js"></script>
+        function planStartNow_Click($plan){
+            document.planSelectFrm.selectedPlanName.value = $plan;
+            document.planSelectFrm.submit();
+        }
+    </script>
+  @endif
 @endsection
 
