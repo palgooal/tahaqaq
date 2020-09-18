@@ -66,7 +66,7 @@ function getDataTemplateCategoryNew(idCatecory) {
          }
     });
 }
-getDataTemplateCategoryNew('1')
+// getDataTemplateCategoryNew('1')
 
 //start get one template new ->id
 function getoneTamplateNewAjax(id) {
@@ -91,12 +91,6 @@ function getoneTamplateNewAjax(id) {
             </button>
         </a>
                     `;
-
-
-
-
-
-
             try {
                 document.planSelectFrm.selectedTemplateId.value = id;
             } catch (error) {
