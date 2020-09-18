@@ -129,7 +129,7 @@ class TahqqRegistrationController extends Controller
         }
 
         $templateAll =Template::orderBy('id','desc')->get();
-        return view('TahqqRegistration',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
+        return view('TahqqRegistrationNew',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
     }
 
     /**
@@ -242,7 +242,7 @@ class TahqqRegistrationController extends Controller
                 return  redirect($request->returnUrl);
 
             if(TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() != WhmcsClientRegisterProgress::Completed)
-                return redirect('/TahqqRegistrationNew');
+                return redirect('/TahqqRegistration');
             return redirect('/');
         }
         else{

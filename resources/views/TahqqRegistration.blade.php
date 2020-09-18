@@ -75,12 +75,7 @@
                                     <h1>{{$clientDetailsInfo->GetFullName()??''}}</h1>
                                     <p class="title">{{$clientDetailsInfo->GetEmail()??''}}</p>
                                     <p class="title">{{$clientDetailsInfo->GetPhoneNumber()??''}}</p>
-
-                                    {{-- <p><button>Contact</button></p> --}}
                                   </div>
-                                {{--  --}}
-
-
                                         <button type="button" disabled class="btn btn-default prev-step" required><</button>
                                         <button type="button" style="margin-left: 34px;" class="btn btn-default back-step" required>  ></button><</button></li>
                                         <button type="button" class="btn btn-primary next-step">متابعة</button>
@@ -185,11 +180,7 @@
                             <form action="/TemplateSelected" role="form" method="post">
                                 @method('post')
                                 @csrf
-
                                 @include('template.partials.templateSelector')
-
-
-
                                     <button type="button" class="btn btn-default prev-step" required><</button>
                                     {{-- @if ($clientRegisterProgress == WhmcsClientRegisterProgress::CompleteChoiceTemplate)
                                         <li><button type="button" style="margin-left: 34px; margin-bottom: -42px;" disabled class="btn btn-default back-step" required>  ></button><</button></li>
@@ -198,7 +189,6 @@
                                         <button type="button" style="margin-left: 34px;" class="btn btn-default back-step" required>  ></button><</button>
                                         <button type="button" class="btn btn-primary next-step">متابعة</button>
                                     {{-- @endif --}}
-
                             </form>
                           </div>
                           <div style="width: 100%; margin:0% 0%" class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 3 ?"active":""}}" role="tabpanel" id="step4">
