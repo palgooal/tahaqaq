@@ -23,15 +23,26 @@
 			</ul>
 			<form class="form-inline my-2 my-lg-0  login-button">
                 @if($isClientLogin)
-                <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
+                <div class="dropdown show">
+                    <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{$loggedClientName}}
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+                      <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
+                      {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                    </div>
+                  </div>
+                {{-- <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
                     {{$loggedClientName}}
                 </a>
                 <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogout" target="">
                     تسجيل خروج
                 </a>
                 <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
-                    Goto Client Area
-                </a>
+                   دخول منطقة العملاء
+                </a> --}}
                 @else
                 <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl=/TahqqRegistration" target="">
                     تسجيل دخول
