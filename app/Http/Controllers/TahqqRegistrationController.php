@@ -179,7 +179,7 @@ class TahqqRegistrationController extends Controller
             return back()->with('success','تم الحفظ بنجاح')
             ->with('clientRegisterProgress', $clientRegisterProgress);
         else
-            return back()->withErrors(['faild save project info'])
+            return back()->withErrors(['حدث خطأ اثناء حفظ بيانات المشروع.'])
             ->with('clientRegisterProgress', $clientRegisterProgress);
     }
 
@@ -317,12 +317,11 @@ class TahqqRegistrationController extends Controller
             $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
             $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
             return view ('redirectToWhmcsCart')
-            -> with('redirectUrl', $ssoResult->redirectUrl)
-            ->with('pid', $pid)
-            ->with('menus', $menus)
-            ->with('sysVarFooter',$sysVarFooter)
-            ->with('sysVarSocialMedia',$sysVarSocialMedia);
-
+                    ->with('redirectUrl', $ssoResult->redirectUrl)
+                    ->with('pid', $pid)
+                    ->with('menus', $menus)
+                    ->with('sysVarFooter',$sysVarFooter)
+                    ->with('sysVarSocialMedia',$sysVarSocialMedia);
         }
         return back()->withErrors([json_encode($ssoResult)]);
     }
