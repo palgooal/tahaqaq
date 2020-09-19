@@ -9,7 +9,6 @@
         </h2>
 
     </div>
-
     <div class="container">
         <div class="" style="background: #fff!important;">
             <!--  FORM  -->
@@ -58,14 +57,19 @@
                         </div>
 
                     </div>
+                    {{-- @if($errors->any())
+                    <div class="alert alert-danger text-right" role="alert">
+                        {{$errors->first()}}
+                     </div>
+                    @endif --}}
+
+                     @include('alerts.errorsDetails')
+                     @include('alerts.success')
 
                     <!-- <form role="form" method="POST" style="margin-top: 16px !important;"> -->
                     <!-- Step 1-->
-                    @isset($message)
-                    <div class="alert alert-info" role="alert">
-                        {{ $message??'' }}
-                    </div>
-                  @endisset
+
+
                     <div class="panel panel-primary setup-content" id="step-1"
                         style="border: none; background: none !important;">
 

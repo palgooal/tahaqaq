@@ -36,6 +36,7 @@
      @if($newUserCreated == 'true')
         @include('alerts.newUserCreated')
     @endif
+    @include('alerts.errorsDetails')
 
         <div class="form-wrap login-form-wrap wow fadeIn">
             <h1> تسجيل دخول </h1>

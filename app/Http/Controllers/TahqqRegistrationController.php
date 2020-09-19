@@ -68,7 +68,7 @@ class TahqqRegistrationController extends Controller
             'confirmPassword'=>'required'
         ]);
         if($request->password != $request->confirmPassword){
-            return back()->with('message','كلمة المرور غير متطابقة');
+            return back()->withErrors(['كلمة المرور غير متطابقة']);
         }
         //confirmPassword
         //
@@ -100,7 +100,7 @@ class TahqqRegistrationController extends Controller
             return redirect('/TahqqLogin?newUserCreated=true&returnUrl='.$request->getRequestUri());
         }
         else
-            return back()->with('error',$result);
+            return back()->withErrors([$result->message]);
     }
 
     /**
@@ -176,10 +176,10 @@ class TahqqRegistrationController extends Controller
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
 
         if($isSuccess)
-            return back()->with('message','saved successfully')
+            return back()->with('success','تم الحفظ بنجاح')
             ->with('clientRegisterProgress', $clientRegisterProgress);
         else
-            return back()->with('message','faild save project info')
+            return back()->withErrors(['faild save project info'])
             ->with('clientRegisterProgress', $clientRegisterProgress);
     }
 
@@ -246,7 +246,7 @@ class TahqqRegistrationController extends Controller
             return redirect('/');
         }
         else{
-            return back()->with('error',$result->message);
+            return back()->withErrors([$result->message]);
         }
             //
     }
@@ -258,12 +258,12 @@ class TahqqRegistrationController extends Controller
      */
     public function logout(Request $request)
     {
-
         $this->whmcsAPILogic->Logout();
         return redirect('/');
     }
 
-    public function newregister(){
+    public function newregister()
+    {
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
@@ -273,7 +273,8 @@ class TahqqRegistrationController extends Controller
         if(isset($templateCode) && !empty($templateCode)){
             $categoryId = TemplateCategory::where('code',$templateCode)->get()[0]->id??null;
         }
-    return view('TahqqRegistrationNew', compact(['sysVarFooter','sysVarSocialMedia', 'clientRegisterProgress', 'templateCategories','categoryId']))->with('menus', Menu::get());
+        return view('TahqqRegistrationNew', compact(['sysVarFooter','sysVarSocialMedia', 'clientRegisterProgress', 'templateCategories','categoryId']))
+                ->with('menus', Menu::get());
     }
 
 
@@ -309,8 +310,8 @@ class TahqqRegistrationController extends Controller
                 break;
         }
 
-         $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
-         if($ssoResult->isSuccess == true){
+        $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
+        if($ssoResult->isSuccess == true){
             $lang = App::getLocale();
             $menus = Menu::get();
             $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
@@ -323,7 +324,7 @@ class TahqqRegistrationController extends Controller
             ->with('sysVarSocialMedia',$sysVarSocialMedia);
 
         }
-        return back()->with('message', json_encode($ssoResult));
+        return back()->withErrors([json_encode($ssoResult)]);
     }
 
     public function GotoClientArea(){
@@ -334,6 +335,6 @@ class TahqqRegistrationController extends Controller
         if($ssoResult->isSuccess == true){
             return redirect($ssoResult->redirectUrl);
         }
-        return back()->with('message', json_encode($ssoResult));
+        return back()->withErrors([json_encode($ssoResult)]);
     }
 }
