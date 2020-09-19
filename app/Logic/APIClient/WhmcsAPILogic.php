@@ -147,7 +147,7 @@ class WhmcsAPILogic{
         $validateLoginResult = $this->ValidateLogin($email, $password);
         if(!$validateLoginResult->isSuccess){
             $loginResult->isSuccess = false;
-            $loginResult->message = "User not found";
+            $loginResult->message = "اسم المستخدم او كلمة المرور غير صحيحة";
             return $loginResult;
         }
 
@@ -160,7 +160,7 @@ class WhmcsAPILogic{
         // }
         if(!$clientDetailResult->GetIsSuccess()){
             $loginResult->isSuccess = false;
-            $loginResult->message = "Not found user contact";
+            $loginResult->message = "لايوجد ملف تعريفي للمستخدم";
             return $loginResult;
         }
 
@@ -169,7 +169,7 @@ class WhmcsAPILogic{
         $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId, null, null, null, null);
         if(!$ssoResult->isSuccess){
             $loginResult->isSuccess = false;
-            $loginResult->message = "Invalid username or password";
+            $loginResult->message = "اسم المستخدم او كلمة المرور غير صحيحة";
             return $loginResult;
         }
 
@@ -178,7 +178,7 @@ class WhmcsAPILogic{
         $loginResult->email = $email;
         $loginResult->createSsoTokenResult = $ssoResult;
         $loginResult->clientDetailsResult = $clientDetailResult;
-        $loginResult->message= "Login succrssfully";
+        $loginResult->message= "تم تسجيل الدخول بنجاح";
 
         TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
 
@@ -309,7 +309,8 @@ class WhmcsAPILogic{
         $clientId = TahaqqSessionInfo::GetLoggedClientId();
         if($clientId == null || empty($clientId) || !isset($clientId ))
         {
-            return 'invalid process, client is not signin';
+            // return 'invalid process, client is not signin';
+            return 'حدث خطأ اثناء تنفيذ العملية، يرجى تسجيل الدخول';
         }
 
         $ssoResult = $this->CreateSsoToken($clientId, null, null, null, null);
