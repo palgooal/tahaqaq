@@ -1,5 +1,6 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     @env('local')
     <base href="../">
@@ -7,85 +8,84 @@
     @env('prod')
     <base href="/public/">
     @endenv
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <title>تسجيل دخول</title>
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/animate.css" rel="stylesheet" type="text/css">
-    <link rel="asset/stylesheet" href="css/jquery.mCustomScrollbar.css">
-    <link href="asset/css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/responsive.css" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @env('local')
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>تسجيل الدخول</title>
+	<link href="newasset/css/animate.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="newasset/css/bootstrap.min.css">
+	<link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
+	<link rel="stylesheet" href="newasset/css/new-style.css">
+	<link rel="stylesheet" href="newasset/css/login-style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    @endenv
+
+    @env('prod')
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>تسجيل الدخول</title>
+	<link href="newasset/css/animate.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="newasset/css/bootstrap.min.css">
+	<link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
+	<link rel="stylesheet" href="newasset/css/new-style.css">
+	<link rel="stylesheet" href="newasset/css/login-style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    @endenv
 </head>
-<body class="home" dir="rtl" style="background-image: none">
 
-<section class="login">
-    <div class="login-img">
-        <img src="img/Scene 9.png">
-        <span class=" wow fadeInDown">لماذا تحقق</span>
-        <h2 class=" wow fadeInDown">!كيف يمكننا مساعدتك في تحقق</h2>
-        <p class=" wow fadeInDown">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية
-        </p>
+<body>
+	<div class="container d-flex align-items-center justify-content-center mt-5 pt-5 px-5">
+		<div class="d-grid">
+			<div class="row">
+				<div class="col col-md-6 offset-md-1 hide ">
+					<img class="vector-image " src="./img/Scene 9.png" alt="">
+					<div class="text-right ">
+						<p class="heading ">لماذا تحقق</p>
+						<h1 class="sub-heading h3 primery-color mt-3 mb-3"> كيف يمكننا مساعدتك في تحقق !</h1>
+						<p class="login-p">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية</p>
+					</div>
+				</div>
+				<div class="col col-md-5 col-sm-12 col-xs-12">
+					<div class="login-heading h4  primery-color text-right">
+						<!-- Allert -->@if($newUserCreated == 'true') @include('alerts.newUserCreated') @endif @include('alerts.errorsDetails')
+						<!-- end allert -->تسجيل الدخول</div>
+					<form method="POST" action="/TahqqLogin">@csrf @method('POST')
+						<input type="hidden" name="returnUrl" value="{{$returnUrl}}">
+						<div class="form-group col col-md-12 col-sm-12 mb-3 my-4 p-0">
+							<label class="control-label fields-label">البريد الالكتروني</label>
+							<input type="email" required="required" class="form-control input-group-sm px-5 p-4" placeholder="البريد الالكتروني" id="username" name="username" />@error('username')
+							<p>{{$message}}</p>@enderror</div>
+						<div class="form-group col col-md-12 col-sm-12  mb-3 my-4 p-0">
+							<label class="control-label fields-label">كلمة المرور</label>
+							<input type="password" required="required" class="form-control p-4" placeholder="كلمة المرور" id="password" name="password" />@error('password')
+							<p>{{$message}}</p>@enderror</div>
+						<div class="under-form-login d-flex justify-content-between align-items-center col-md- px-5">
+							<div>
+								<input type="checkbox" id="defaultCheck" name="example2">
+								<label class="form-linkes mr-1 mb-3" for="defaultCheck">تذكرني</label>
+							</div>
+							<div> <a class="form-linkes" href="">هل نسيت كلمة المرور</a>
+							</div>
+						</div>
+						<div class="">
+							<button class="primery-button col col-md-12 col-sm-12 border-0 py-2 mt-4" type="submit" value="Login">الدخول</button>
+						</div>
+					</form>
+					<p style="color: red; ">{{$error??''}}</p>@if($newUserCreated != 'true')
+					<div class="d-flex justify-content-center align-items-center col col-md-12 mt-3"> <a class="form-linkes new-customer-link" href="/TahqqRegistration?a=new">هل انت مشترك جديد</a>
+					</div>@endif</div>
+			</div>
+		</div>
     </div>
-    <div class="login-text">
-     @if($newUserCreated == 'true')
-        @include('alerts.newUserCreated')
-    @endif
-    @include('alerts.errorsDetails')
+    @env('local')
+	<script src="newasset/js/jquery.js"></script>
+    <script src="newasset/js/bootstrap.min.js"></script>
+    @endenv
 
-        <div class="form-wrap login-form-wrap wow fadeIn">
-            <h1> تسجيل دخول </h1>
-            {{-- {{App\Logic\APIClient\WhmcsAPILogic::WHMCS_LOGIN_URL}} --}}
-        <form method="POST" action="/TahqqLogin">
-                @csrf
-                @method('POST')
-                <input type="hidden" name="returnUrl" value="{{$returnUrl}}">
-                <div class="form-group wow fadeInDown">
-                    <h6> البريد الألكتروني </h6>
-                    <input type="email" class="form-input" placeholder="هنا البريد الألكتروني" required=" " id="username" name="username" >
-                    @error('username')
-                        <p>{{$message}}</p>
-                    @enderror
-                </div>
-                <div class="form-group wow fadeInDown">
-                    <h6> كلمة المرور </h6>
-                    <input type="password" class="form-input" placeholder="هنا كلمة المرور" required=" " id="password" name="password">
-                    @error('password')
-                         <p>{{$message}}</p>
-                    @enderror
-                </div>
-                <div class="form-links wow fadeInDown">
-                    <p>
-                        <input type="checkbox" id="test1" />
-                        <label for="test1">تذكرني</label>
-                      </p>
-                    <a href="#" class="forget-pass">نسيت كلمة المرور؟</a>
-                </div>
-                <div class="form-group wow fadeInDown">
-                    <button type="submit" class="form-submit" value="Login">دخول</button>
-                </div>
-            </form>
-            <p style="color: red; ">{{$error??''}}</p>
-            @if($newUserCreated != 'true')
-                <div class="form-links wow fadeInDown" style="margin-right: 30%;">
-                    <a href="/TahqqRegistration?a=new">هل انت مشترك جديد</a>
-                </div>
-            @endif
-    </div>
-</section>
-<!--script-->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script type="text/javascript" src="js/wow.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!--end script-->
+    @env('prod')
+    <script src="newasset/js/jquery.js"></script>
+    <script src="newasset/js/bootstrap.min.js"></script>
+    @endenv
 </body>
+
 </html>
