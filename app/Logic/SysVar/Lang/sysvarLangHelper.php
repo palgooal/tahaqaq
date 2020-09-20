@@ -12,12 +12,14 @@ class sysvarLangHelper
 {
     public static $dataAR = array(
             "Title"=>"عنوان",
-            "Details"=>"تفاصيل"
+            "Details"=>"تفاصيل",
+            "Start Now Url"=>"رابط ابدء"
     );
 
     public static $dataEN = array(
             "Title"=>"Title",
-            "Details"=>"Details"
+            "Details"=>"Details",
+            "Start Now Url"=>"Start Url"
     );
 
     public static function translate($key,$lang){
