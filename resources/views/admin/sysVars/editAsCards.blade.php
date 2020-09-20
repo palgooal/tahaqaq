@@ -34,11 +34,11 @@
                                     @foreach ($type as $sysVar)
                                         <div class="row">
                                             <div class="col-md">
-                                                <label class="form-label" for="txt_ar_{{$key}}_{{$sysVar->id}}">{{$sysVar->key}}</label>
-                                            <textarea class="form-control" name="value_ar_{{$sysVar->id}}" id="txt_ar_{{$key}}_{{$sysVar->id}}" >{{$sysVar->value_ar}}</textarea>
+                                                <label class="form-label" for="txt_ar_{{$key}}_{{$sysVar->id}}">{{ sysvarLangHelper::translate($sysVar->key,'ar')}} </label>
+                                                <textarea class="form-control" name="value_ar_{{$sysVar->id}}" id="txt_ar_{{$key}}_{{$sysVar->id}}" >{{$sysVar->value_ar}}</textarea>
                                             </div>
                                             <div class="col-md">
-                                                <label class="form-label" for="txt_en_{{$key}}_{{$sysVar->id}}">{{$sysVar->key}}</label>
+                                                <label class="form-label" for="txt_en_{{$key}}_{{$sysVar->id}}">{{ sysvarLangHelper::translate($sysVar->key,'en')}} </label>
                                                 <textarea class="form-control"  name="value_en_{{$sysVar->id}}" id="txt_en_{{$key}}_{{$sysVar->id}}">{{$sysVar->value_en}}</textarea>
                                             </div>
                                         </div>

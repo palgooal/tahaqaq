@@ -227,7 +227,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'WhmcsClientRegisterProgress' => App\Logic\APIClient\WhmcsClientRegisterProgress::class,
-        'TahaqqSessionInfo'=> App\Logic\TahaqqSessionInfo::class
+        'TahaqqSessionInfo'=> App\Logic\TahaqqSessionInfo::class,
+        'sysvarLangHelper'=> App\Logic\SysVar\Lang\sysvarLangHelper::class
     ],
 
 ];
