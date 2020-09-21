@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="newasset/css/new-style.css">
     <link rel="stylesheet" href="newasset/css/who-us-style.css">
     <link rel="stylesheet" href="newasset/css/login-style.css">
-    <link rel="stylesheet" href="newasset/css/index.css">
-    <link rel="stylesheet" href="newasset/css/test.scss">
+    @yield('index')
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     @endenv
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="newasset/css/who-us-style.css">
     <link rel="stylesheet" href="newasset/css/login-style.css">
     <link rel="stylesheet" href="newasset/css/index.css">
-    <link rel="stylesheet" href="newasset/css/test.scss">
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     @endenv
 

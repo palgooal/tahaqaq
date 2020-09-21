@@ -1,4 +1,8 @@
-@extends('layouts.newapp') @section('content') @include('partials.navbarnew')
+@extends('layouts.newapp')
+@section('index')
+<link rel="stylesheet" href="newasset/css/index.css">
+@endsection
+@section('content') @include('partials.navbarnew')
 <!--content first-section-->
 <section class="container d-flex align-items-center justify-content-center pt-5 ">
 	<div class="d-grid pt-5">
