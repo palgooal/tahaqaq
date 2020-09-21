@@ -50,7 +50,7 @@ function getDataTemplateCategoryNew(idCatecory) {
                     <img src="images/${response.data[i].image_url}"
                         alt="Image" style="max-width:100%;">
                     </a>
-                    <div class="middle">
+                    <div class="middle w-100" >
                         <p class="mb-3"> ${response.data[i].title_ar}</p>
                         <button class="btn primery-button"
                         onclick="getoneTamplateNewAjax('${response.data[i].id}')">اختيار

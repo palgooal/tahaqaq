@@ -5,7 +5,7 @@
    <div class="row blog">
       <div class="col-md-12">
          <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators m-auto btn-floating car-indicators">
+            <ol class="carousel-indicators m-auto btn-floating ">
                 <li data-target="#blogCarousel" data-slide-to="0" class="active ">
                     <span class="primery-color">1</span>
                 </li>
