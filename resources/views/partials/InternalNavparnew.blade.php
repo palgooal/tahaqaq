@@ -1,6 +1,6 @@
-<!--   Start here   -->
+<!-- Start here -->
 <header>
-	<!--  Nav Bar       -->
+	<!-- Nav Bar  -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light wow fadeInDown py-4" id="navbar"> <a class="navbar-brand pt-3 mr-5" href="/">
             @env('local')
     <base href="../">
@@ -24,7 +24,7 @@
 		</button>
 		<div class="collapse navbar-collapse res-nav-group " id="navbarSupportedContent">
 			<ul class="navbar-nav m-auto d-flex justify-content-center align-items-center nav-links-group ">@foreach ($menus as $menu)
-				<li class="nav-item @if($loop->first) active @endif primery-color "> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->name_ar}}<span
+				<li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->name_ar}}<span
                             class="sr-only">(current)</span></a>
 				</li>@endforeach</ul>
 			<form class="form-inline my-2 my-lg-0  login-button">@if($isClientLogin)
