@@ -1,6 +1,8 @@
 @extends('layouts.newapp')
-@section('index')
+@section('headcss')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 <link rel="stylesheet" href="newasset/css/index.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 @endsection
 @section('content') @include('partials.navbarnew')
 <!--content first-section-->

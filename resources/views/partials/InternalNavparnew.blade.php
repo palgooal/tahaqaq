@@ -3,7 +3,7 @@
 	<!--  Nav Bar       -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light wow fadeInDown py-4" id="navbar">
 		<a class="navbar-brand pt-3 mr-5" href="/">
-			<img src="/img/logo.png" alt="logo" />
+			<img src="./img/logo.png" alt="logo" />
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none">
 			<div class="container w-75" onclick="myFunction(this)">

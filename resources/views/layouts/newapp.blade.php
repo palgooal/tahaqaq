@@ -11,7 +11,7 @@
     @env('local')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوست </title>
+    <title>@yield('title' , 'تحقق')</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link href="newasset/css/animate.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="newasset/css/new-style.css">
     <link rel="stylesheet" href="newasset/css/who-us-style.css">
     <link rel="stylesheet" href="newasset/css/login-style.css">
-    @yield('index')
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    @yield('headcss')
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     @endenv
     @env('prod')

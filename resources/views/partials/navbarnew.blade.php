@@ -3,7 +3,7 @@
     <!--  Nav Bar       -->
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light wow fadeInDown py-4" id="navbar">
-        <a class="navbar-brand pt-3 mr-5" href="#">
+        <a class="navbar-brand pt-3 mr-5" href="/">
             <img src="./img/logo.png" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
