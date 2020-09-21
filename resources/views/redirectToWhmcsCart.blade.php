@@ -153,7 +153,6 @@ function onLoad_iframe() {
 
         createJets();</script>
 
-  @endsection
 
 @endsection
 
