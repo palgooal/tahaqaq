@@ -5,13 +5,16 @@
    <div class="row blog">
       <div class="col-md-12">
          <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators m-auto indicators">
-               <li data-target="#blogCarousel" data-slide-to="0" class="active ">
-               </li>
-               <li data-target="#blogCarousel" data-slide-to="1">
-               </li>
-               <li data-target="#blogCarousel" data-slide-to="2">
-               </li>
+            <ol class="carousel-indicators m-auto btn-floating car-indicators">
+                <li data-target="#blogCarousel" data-slide-to="0" class="active ">
+                    <span class="primery-color">1</span>
+                </li>
+                <li data-target="#blogCarousel" data-slide-to="1">
+                    <span class="primery-color">2</span>
+                </li>
+                <li data-target="#blogCarousel" data-slide-to="2">
+                    <span class="primery-color">3</span>
+                </li>
             </ol>
             <!-- Carousel items -->
             <div class="carousel-inner">
@@ -42,10 +45,10 @@
 
          <button
             class="btn primery-button d-flex align-items-center  res-button  nextBtn  pull-right py-3"
-            style="float: left !important; margin-left: 40%; margin-top: 100px; padding-right: 30px;"
+            style="float: left !important; margin-left: 42%; margin-top: 100px; padding-right: 30px;"
             type="button">
             متابعة
-            <div style="border-radius: 10px; margin-right: 58px;"> <i
+            <div style="border-radius: 10px; margin-right: 22px;"> <i
                class="fas fa-chevron-left mr-4"></i>
             </div>
          </button>

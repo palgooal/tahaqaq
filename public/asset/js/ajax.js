@@ -51,7 +51,7 @@ function getDataTemplateCategoryNew(idCatecory) {
                         alt="Image" style="max-width:100%;">
                     </a>
                     <div class="middle">
-                        <p class="mb-5"> ${response.data[i].title_ar}</p>
+                        <p class="mb-3"> ${response.data[i].title_ar}</p>
                         <button class="btn primery-button"
                         onclick="getoneTamplateNewAjax('${response.data[i].id}')">اختيار
                         </button>
@@ -81,12 +81,12 @@ function getoneTamplateNewAjax(id) {
             document.getElementById('idTemplateSelector').innerHTML = `
             <h4 class="my-3 primery-color text-center">القالب التجريبي 1 </h4>
             <img src="images/${response.image_url}" class="img-fluid p-5 pb-0" alt="">
-            <p class="template-p mt-1 p-5">
+            <p class="template-p  p-5 py-2">
             ${response.getDetails}
             </p>
             <p class="mt-1 px-5"></p>
             <a href='${response.preview_url}' target="_blank">
-            <button class="btn primery-button text-center my-5 w-25" style="margin-left: 38%;">
+            <button class="btn primery-button text-center my-5 w-25" style="margin-left: 37%;">
             مشاهدة الموقع
             </button>
         </a>

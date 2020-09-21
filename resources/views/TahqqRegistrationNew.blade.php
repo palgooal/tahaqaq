@@ -223,8 +223,7 @@
                     </div>
 
                     <!-- Step 3-->
-                    <div class="panel panel-primary setup-content h-100" id="step-3"
-                        style="border: none ; ">
+                    <div class="panel panel-primary setup-content h-100" id="step-3" style="border: none ; ">
 
                         <div class="panel-body ">
                             <h3 class="primery-color text-center mb-5"> اختر القالب المناسب </h3>
@@ -238,9 +237,9 @@
 
                     <!-- Step 4-->
                     <div class="panel panel-primary setup-content" id="step-4"
-                        style="border: none;background: none !important;">
+                            style="border: none;background: none !important;">
 
-                        <div class="panel-body">
+
                             <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
                                 @method('post')
                                 @csrf
