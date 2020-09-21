@@ -39,18 +39,18 @@ class PageSeeder extends Seeder
                 </div>
 
                 <div class="col col-md-5  d-flex align-items-center justify-content-center img-cont">
-                    <img class=" image-size img-fluid" src="/img/1212121221.png" alt=""></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont"><br></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont"><br></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont">
+                    <img class=" image-size img-fluid" src="newasset/img/1212121221.png" alt=""></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont"><br></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont"><br></div><div class="col col-md-5  d-flex align-items-center justify-content-center img-cont">
                 </div>
             </div>
         </div>
 
-<img src="/img/ass.png" class="img-fluid rounded mx-auto d-block">
+<img src="newasset/img/ass.png" class="img-fluid rounded mx-auto d-block">
 <br><br><br><br><br><br>
 
 <div class="d-grid  mb-1  text-right">
             <div class="row">
 <div class="col col-md-5  d-flex align-items-center justify-content-center img-cont">
-                    <img class="image-size img-fluid note-float-right" src="/img/12222.png" alt="" style="float: right;">
+                    <img class="image-size img-fluid note-float-right" src="newasset/img/12222.png" alt="" style="float: right;">
                 </div>
                 <div class="col col-md-6 col-sm-11 right-side-who  mx-5 mb-5 mt-1 text-right">
 

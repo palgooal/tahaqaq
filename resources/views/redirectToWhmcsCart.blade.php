@@ -7,9 +7,9 @@
 	<img src="img/Infinity-1.4s-200px.svg" alt="">
 </div>
 <div class="text-center ">
-	<p class="heading mt-0">جار الانتقال الى الخطوات الاخيرة ... حجز الدومين واتمام عملية الشراء</p>
-	<p class="heading mt-0"></p>
-	<p class="heading primery-color mt-0">تهانينا لك !</p>
+	<p class="mt-0">جار الانتقال الى الخطوات الاخيرة ... حجز الدومين واتمام عملية الشراء</p>
+	<p class="mt-0"></p>
+	<p class="primery-color mt-0">تهانينا لك !</p>
 </div>
 <iframe style="visibility: hidden" src="{!! $redirectUrl !!}" width="50px" height="50px" onload="onLoad_iframe()" ></iframe>
 
@@ -36,6 +36,7 @@ function onLoad_iframe() {
     window.location.href = 'https://client.tahqq.com/cart.php?a=add&pid='+ pid +'&carttpl=standard_cart';
 }
     </script>
+    @endsection
     <script>
         var jetBubbles = document.getElementsByClassName('jetBubble');
         var rocketManSVG = document.querySelector('.rocketManSVG');
