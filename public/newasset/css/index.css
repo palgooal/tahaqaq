@@ -1,6 +1,4 @@
-body{
-    background: none !important;
-}
+
 /* first section */
 .top-header{
     background: url('../img/1030.png') 30% 5% no-repeat padding-box;
@@ -14,7 +12,7 @@ body{
 .top-header-heading{
     width: 60%;
     line-height: 1.7;
-    
+
 }
 .top-of-the-head{
     font-size : 1rem !important;
@@ -145,14 +143,14 @@ body{
     width: 60px;
     height: 34px;
   }
-  
+
   /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-  
+
   /* The slider */
   .slider {
     position: absolute;
@@ -165,7 +163,7 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   .slider:before {
     position: absolute;
     content: "";
@@ -177,15 +175,15 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   input:checked + .slider {
     background-color: #7657E5;
   }
-  
+
   input:focus + .slider {
     box-shadow: 0 0 1px  #7657E5;
   }
-  
+
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
@@ -197,7 +195,7 @@ body{
   .cc{
     box-shadow: 0px 6px 20px #0000001A;
     border: none !important;
-  } 
+  }
   .props{
       font-size: 11px;
   }
@@ -205,10 +203,10 @@ body{
   .slider.round {
     border-radius: 34px;
   }
-  
+
   .slider.round:before {
     border-radius: 50%;
-  } 
+  }
   .sa{
       font-size: 0.75rem !important;
       padding-top: 5px ;
@@ -287,7 +285,7 @@ body{
 }
 .package-container {
     flex-wrap: wrap;
-   
+
     font-family: "FFShamelFamily-SansOneMedium";
 
 }
@@ -300,7 +298,7 @@ body{
     color: #221950;
     font-size: 13px !important;
     font-family: "FFShamelFamily-SansOneBook";
-    
+
 
 }
 
@@ -309,7 +307,7 @@ body{
     .index-main-vector{
         height: 270px;
     }
-   
+
 }
 @media (max-width:990px){
     .index-main-vector{
@@ -337,7 +335,7 @@ body{
     .package-item{
         padding-right: 30px !important;
       }
-      
+
 }
 @media (max-width: 768px){
     .top-header-heading{
@@ -348,7 +346,7 @@ body{
         margin-left: auto !important;
     }
     .heading , .index-top-p{
-      text-align: center;  
+      text-align: center;
     }
     .login-button{
         display: flex;
@@ -389,7 +387,7 @@ body{
       .props{
         font-size: 9px;
     }
-   
+
 }
 @media (max-width:556px){
     .res-show{
@@ -410,8 +408,8 @@ body{
         padding-right: 0px !important;
         padding-left: 10px !important;
       }
-      
-   
+
+
 }
 @media (max-width:425px){
     .res-star{

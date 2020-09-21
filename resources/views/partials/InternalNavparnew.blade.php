@@ -45,7 +45,7 @@
                 </a> --}} @else <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl=/TahqqRegistration" target="">
                     تسجيل دخول
                 </a>
-				<a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="./new-signUp-step1.html" target="">
+				<a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
                     ابدء الان
                 </a>
 				@endif	<a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="#" target="">
