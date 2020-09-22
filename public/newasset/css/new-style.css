@@ -440,6 +440,16 @@ form input::placeholder , textarea::placeholder{
     color: #7657E5;
 
 }
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 0;
+}
 
 .stepwizard-step {
     display: table-cell;
@@ -679,6 +689,17 @@ form input::placeholder , textarea::placeholder{
 
 /*Media queries -responsive */
 @media (max-width:768px){
+    .stepwizard-row::before {
+        top: 29px;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 71%;
+        height: 1px;
+        background-color: #ccc;
+        z-index: 0;
+        left: 68px;
+    }
     .carousel-caption-format div{
         background: none !important;
 
@@ -732,7 +753,12 @@ form input::placeholder , textarea::placeholder{
     }
     
 }
+
 @media (max-width:570px){
+    .stepwizard-row::before {
+        width: 65%;
+        left: 70px;
+    }
     .top-slider{
         flex-direction: column !important;
     }
@@ -800,6 +826,12 @@ form input::placeholder , textarea::placeholder{
         padding-right: 10px !important;
     }
 
+}
+@media (max-width:400px){
+    .stepwizard-row::before {
+        width: 63%;
+        left: 50px;
+    }
 }
 
 

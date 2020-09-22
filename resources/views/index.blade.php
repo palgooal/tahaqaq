@@ -24,7 +24,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  d-flex  align-items-center justify-content-center res-hide-index wow bounceInLeft">
+			<div class="col col-lg-5 col-md-4 col-sm-11 col-xs-12  d-flex  align-items-center justify-content-center res-hide-index wow bounceInLeft">
 				<img class="index-main-vector " src="./img/Illustration4.png" alt="">
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 			<div class="col  col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center wow bounceInLeft">
 				<div class="text-right ">
 					<p class="top-of-the-head mt-0">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</p>
-					<p class="h3  primery-color my-4">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_SubTitle)}}</p>
+					<p class="h3 top-header-heading w-100  primery-color my-4">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_SubTitle)}}</p>
 					<p class="index-top-p">{!! $sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Details) !!}</p>{{--
 					<p class="index-top-p mt-4">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع</p>--}}</div>
 			</div>
