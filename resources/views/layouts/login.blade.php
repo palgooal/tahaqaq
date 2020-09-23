@@ -23,7 +23,7 @@ License: You must have a valid license purchased only from themeforest(the above
         @endenv
 
                 <meta charset="utf-8"/>
-        <title>Metronic | Dashboard</title>
+        <title>تسجيل الدخول</title>
         <meta name="description" content="Updates and statistics"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
