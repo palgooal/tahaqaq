@@ -26,26 +26,40 @@
 <div class="title-features">
 	<h2> مميزات المواقع لدينا </h2>
 </div>
-<div class="Features-single">@foreach ($specifications as $specification)
+<div class="Features-single">
+    @foreach ($specifications as $specification)
     <div class="col-xs-4">
         <img src="{{$specification->image}}">
         <h6>{{$specification->getText(App::getLocale())}}</h6>
     </div>
-	@endforeach</div>
+    @endforeach
+</div>
 <section class="toggle">
 	<div class="container">
 		<div class="top">
 			<h1>أسعار الباقات</h1>
-			<h2> باقات الاشتراك في تحقق</h2>
+			{{-- <h2> باقات الاشتراك في تحقق</h2>
 			<div class="toggle-btn"> <span style="margin: 0.8em;">ربع سنوي</span>
 				<label class="switch">
 					<input type="checkbox" id="checbox" onclick="check()" ; /> <span class="slider round"></span>
 				</label> <span style="margin: 0.8em;">سنوي</span>
-			</div>
+			</div> --}}
 		</div>
 		<br>
-		<br>
-		<div class="package-container">
+        <br>
+        <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
+            @method('post')
+            @csrf
+
+            <input type="hidden" name="selectedTemplateId" value="{{$templateOne->id}}" id="selectedTemplateId">
+            <input type="hidden" name="selectedPlanName" id="selectedPlanName">
+
+            <div class="">
+                @include('template.partials.planSelectorNew')
+            </div>
+        </form>
+        {{-- <div class="package-container">
+
 			<div class="packages">
 				<h1>الباقة البرونزية</h1>
 				<h2 class="text1">423 ريال سعودي</h2>
@@ -107,7 +121,16 @@
 						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
 				</ul> <a href="#" class="button button3">ابدا الان</a>
 			</div>
-		</div>
+		</div>--}}
 	</div>
 </section>
-</div>@endsection
+</div>
+@endsection
+@section('footerJs')
+    <script>
+        function planStartNow_Click($plan){
+            document.planSelectFrm.selectedPlanName.value = $plan;
+            document.planSelectFrm.submit();
+        }
+    </script>
+@endsection

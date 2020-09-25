@@ -23,31 +23,40 @@
 			</div>
 		</button>
 		<div class="collapse navbar-collapse res-nav-group " id="navbarSupportedContent">
-			<ul class="navbar-nav m-auto d-flex justify-content-center align-items-center nav-links-group ">@foreach ($menus as $menu)
+			<ul class="navbar-nav m-auto d-flex justify-content-center align-items-center nav-links-group ">
+                @foreach ($menus as $menu)
 				<li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->name_ar}}<span
                             class="sr-only">(current)</span></a>
-				</li>@endforeach</ul>
-			<form class="form-inline my-2 my-lg-0  login-button">@if($isClientLogin)
-				<div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </li>
+                @endforeach
+                @if ($isClientLogin)
+                <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">templates<span
+                    class="sr-only">(current)</span></a>
+                </li>
+                @endif
+            </ul>
+			<form class="form-inline my-2 my-lg-0  login-button">
+                @if($isClientLogin)
+                    <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{$loggedClientName}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+                            <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
+                            {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
+                    </div>{{-- <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
                         {{$loggedClientName}}
                     </a>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
-						<a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
-						{{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
-				</div>{{-- <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
-                    {{$loggedClientName}}
-                </a>
-				<a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogout" target="">
-                    تسجيل خروج
-                </a>
-				<a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
-                   دخول منطقة العملاء
-                </a> --}} @else <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl=/TahqqRegistration" target="">
-                    تسجيل دخول
-                </a>
-				<a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
-                    ابدء الان
-                </a>
+                    <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogout" target="">
+                        تسجيل خروج
+                    </a>
+                    <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
+                    دخول منطقة العملاء
+                    </a> --}} @else <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl=/TahqqRegistration" target="">
+                        تسجيل دخول
+                    </a>
+                    <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
+                        ابدء الان
+                    </a>
 				@endif	<a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="#" target="">
                     EN
                 </a>

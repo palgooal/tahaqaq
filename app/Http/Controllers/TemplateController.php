@@ -39,7 +39,10 @@ class TemplateController extends Controller
         return view('admin.templates.index', compact(['templates','categories']));
     }
 
-    public function viewTemplate(){
+    public function viewTemplate(Request $request){
+        if(!TahaqqSessionInfo::IsClientLogin()){
+            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
+        }
 
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
@@ -83,12 +86,16 @@ class TemplateController extends Controller
     //get one template
     public function getOneTemplate(Request $request)
     {
+        if(!TahaqqSessionInfo::IsClientLogin()){
+            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
+        }
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $specif = TemplateSpecification::where('template_id', $request->id)->get();
 
-        return view('template.singletemplate')->with("templateOne",Template::findOrFail($request->id))
+        return view('template.singletemplate')
+                ->with("templateOne",Template::findOrFail($request->id))
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)

@@ -11,7 +11,13 @@
                 <ul>
                      @foreach ($menus as $menu)
                     <li class="@if($loop->first) active @endif"><a href="{{$menu->url}}">{{$menu->name_ar}}</a></li>
-              @endforeach
+                     @endforeach
+                     @if ($isClientLogin)
+                     {{-- <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">templates<span
+                         class="sr-only">(current)</span></a>
+                     </li> --}}
+                     <li class=""><a href="/template">templates</a></li>
+                     @endif
                 </ul>
                 <div class="login-btns">
                     @if($isClientLogin)

@@ -39,6 +39,12 @@
                     <a class="nav-link  res-nav-link" href="#rfq"> المدونة</a>
                 </li> --}}
                 @endforeach
+                @if ($isClientLogin)
+                <li class="nav-item mr-2 res-nav-item">
+                    <a class="nav-link   res-nav-link" href="/template">templates<span
+                            class="sr-only"></span></a>
+                </li>
+                @endif
             </ul>
             <form class="form-inline my-2 my-lg-0  login-button">
             @if($isClientLogin)

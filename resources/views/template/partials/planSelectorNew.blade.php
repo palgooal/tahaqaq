@@ -32,37 +32,35 @@
     <!-- End -->
     <!-- Start  -->
     <div class="packages res-star wow bounceInDown"
-    style="background-color: rgb(118, 87, 229); color: rgb(246, 246, 246); visibility: visible; animation-name: bounceInDown; margin-right: 0 !important;">
-    <img src="img/star.png">
+             style="background-color: rgb(118, 87, 229); color: rgb(246, 246, 246); visibility: visible; animation-name: bounceInDown; margin-right: 0 !important;">
+        <img src="img/star.png">
+        <h3 class="my-4 pt-4">الباقة الفضية</h3>
+        <h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">423 ريال سعودي
+        </h6>
 
-
-    <h3 class="my-4 pt-4">الباقة الفضية</h3>
-    <h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">423 ريال سعودي
-    </h6>
-
-    <ul class="list">
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-        <li class="set-color text-white">
-            <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
-        </li>
-    </ul>
+        <ul class="list">
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+            <li class="set-color text-white">
+                <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت
+            </li>
+        </ul>
         {{-- <div class="button index-sign-button py-2 px-5">
             <a onclick="planStartNow_Click('silver')"  class="button index-sign-button py-2 px-5">ابدء الان</a>
         </div> --}}
@@ -71,13 +69,13 @@
     <!-- End -->
     <!-- Start  -->
     <div class="packages wow bounceInLeft"
-    style="visibility: visible; animation-name: bounceInLeft;">
-    <h3 class="my-4 pt-4">الباقة الفضية</h3>
-    <h6 class="text1 rounded-price p-3">423 ريال سعودي</h6>
-        {{-- <div class="bg-primery py-2 my-5 text-center "
-            style="border-radius: 40px;">
-            <h5 class="">423 ريال سعودي</h5>
-        </div> --}}
+            style="visibility: visible; animation-name: bounceInLeft;">
+        <h3 class="my-4 pt-4">الباقة الفضية</h3>
+        <h6 class="text1 rounded-price p-3">423 ريال سعودي</h6>
+            {{-- <div class="bg-primery py-2 my-5 text-center "
+                style="border-radius: 40px;">
+                <h5 class="">423 ريال سعودي</h5>
+            </div> --}}
 
         <ul class="list">
             <li class="set-color">
@@ -107,5 +105,5 @@
             <a onclick="planStartNow_Click('gould')" class="btn primery-button  ">ابدء الان</a>
         </div> --}}
     </div>
-    </div>
+</div>
     <!-- End -->
