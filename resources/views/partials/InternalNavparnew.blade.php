@@ -30,7 +30,7 @@
                 </li>
                 @endforeach
                 @if ($isClientLogin)
-                <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">templates<span
+                <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">تصفح القوالب<span
                     class="sr-only">(current)</span></a>
                 </li>
                 @endif

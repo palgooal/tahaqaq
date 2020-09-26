@@ -7,6 +7,7 @@ class WhmcsAPIActions{
     const Client_GetContacts = "GetContacts";
     const Client_GetClientsDetails = "GetClientsDetails";
     const Client_UpdateClient = "UpdateClient";
+    const Client_GetOrders = "GetOrders";
 
     const Auth_ValidateLogin = "ValidateLogin";
     const Auth_CreateSsoToken = "CreateSsoToken";

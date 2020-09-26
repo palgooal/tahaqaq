@@ -120,6 +120,11 @@ class TahqqRegistrationController extends Controller
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        if(TahaqqSessionInfo::GetIsClientHasOrder()){
+            return view('TahqqRegistrationCompletedMsg',
+            compact(['menus','sysVarFooter','sysVarSocialMedia']));
+        }
+
         $templateCategories = TemplateCategory::all();
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
         $templateCode = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetProjectCategory()??'';

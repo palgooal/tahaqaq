@@ -138,11 +138,10 @@ class WhmcsAPILogic{
             $loginResult->createSsoTokenResult = $ssoResult;
             $loginResult->clientDetailsResult = $clientDetailResult;
             $loginResult->message= "Login succrssfully";
-            TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
+            TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult,true);
 
             return $loginResult;
         }
-
 
         $validateLoginResult = $this->ValidateLogin($email, $password);
         if(!$validateLoginResult->isSuccess){
@@ -164,7 +163,7 @@ class WhmcsAPILogic{
             return $loginResult;
         }
 
-
+        $isClientHasOrder = $this->IsClientHasOrder($validateLoginResult->clientId);
 
         $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId, null, null, null, null);
         if(!$ssoResult->isSuccess){
@@ -180,7 +179,7 @@ class WhmcsAPILogic{
         $loginResult->clientDetailsResult = $clientDetailResult;
         $loginResult->message= "تم تسجيل الدخول بنجاح";
 
-        TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult);
+        TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult,$isClientHasOrder);
 
         return $loginResult;
     }
@@ -315,6 +314,16 @@ class WhmcsAPILogic{
 
         $ssoResult = $this->CreateSsoToken($clientId, null, null, null, null);
         return $ssoResult;
+    }
+
+    public function IsClientHasOrder($clientId){
+        $postfields = $this->getPostFileArray(array(
+            "userid"=>$clientId
+        ), WhmcsAPIActions::Client_GetOrders);
+        $result = $this->callAPI($postfields);
+
+        dump($result);
+        return $result->result == "success" && $result->totalresults >0;
     }
 
 }

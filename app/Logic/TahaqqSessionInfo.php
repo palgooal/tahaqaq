@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 
 class  TahaqqSessionInfo{
 
-    public static function CompleteClientLogin(LoginResult $loginResult, CreateSsoTokenResult $ssoResult, GetClientsDetailsResult $clientDetails){
+    public static function CompleteClientLogin(LoginResult $loginResult, CreateSsoTokenResult $ssoResult, GetClientsDetailsResult $clientDetails, $isClientHasOrder){
         if($loginResult->isSuccess){
             Session::put('isClientLogin','true');
             Session::put('loginResultJson',json_encode($loginResult));
@@ -25,6 +25,8 @@ class  TahaqqSessionInfo{
 
             Session::put('accessToken',$ssoResult->accessToken);
             Session::put('redirectUrl',$ssoResult->redirectUrl);
+
+            Session::put('isClientHasOrder', $isClientHasOrder);
         }
     }
 
@@ -79,6 +81,10 @@ class  TahaqqSessionInfo{
     }
     public  static function GetLoggedClientRedirectUrl(){
         return  Session::get('redirectUrl');
+    }
+
+    public static function GetIsClientHasOrder(){
+        return Session::get('isClientHasOrder');
     }
 
 }
