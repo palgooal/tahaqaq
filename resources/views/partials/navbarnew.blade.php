@@ -23,37 +23,24 @@
                     <a class="nav-link   res-nav-link" href="{{$menu->url}}">{{$menu->name_ar}}<span
                             class="sr-only">@if($loop->first) (current) @endif</span></a>
                 </li>
-                {{-- <li class="nav-item  mr-2 res-nav-item">
-                    <a class="nav-link  res-nav-link" href="index.html#latest-news">لماذا تحقق</a>
-                </li>
-                <li class="nav-item mr-2 res-nav-item">
-                    <a class="nav-link  res-nav-link" href="index.html#policies">الخدمات</a>
-                </li>
-                <li class="nav-item mr-2 res-nav-item">
-                    <a class="nav-link  res-nav-link" href="#footer">كيف نعمل</a>
-                </li>
-                <li class="nav-item mr-2 res-nav-item">
-                    <a class="nav-link  res-nav-link" href="#rfq">الاسعار</a>
-                </li>
-                <li class="nav-item mr-2 res-nav-item">
-                    <a class="nav-link  res-nav-link" href="#rfq"> المدونة</a>
-                </li> --}}
+
                 @endforeach
                 @if ($isClientLogin)
                 <li class="nav-item mr-2 res-nav-item">
-                    <a class="nav-link   res-nav-link" href="/template">templates<span
+                    <a class="nav-link   res-nav-link" href="/template">منتجاتنا<span
                             class="sr-only"></span></a>
                 </li>
                 @endif
             </ul>
             <form class="form-inline my-2 my-lg-0  login-button">
             @if($isClientLogin)
-            <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
+            <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$loggedClientName}}
             </a>
-            <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogout" target="">
-                تسجيل خروج
-            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+                <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
+                {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
+        </div>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
                 منطقة العملاء
             </a>
