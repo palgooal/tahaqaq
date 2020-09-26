@@ -292,6 +292,7 @@ class TahqqRegistrationController extends Controller
      */
     public function StartNowToWhmcs(Request $request)
     {
+        TahaqqSessionInfo::RemoveIsClientHasOrderFromSession();
         $data = request()->validate([
             'selectedTemplateId' => 'required',
             'selectedPlanName' => 'required'

@@ -6,6 +6,7 @@ namespace App\Logic;
 use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
 use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\APIClient\APIResult\LoginResult;
+use App\Logic\APIClient\WhmcsAPILogic;
 use Illuminate\Support\Facades\Session;
 
 class  TahaqqSessionInfo{
@@ -26,7 +27,7 @@ class  TahaqqSessionInfo{
             Session::put('accessToken',$ssoResult->accessToken);
             Session::put('redirectUrl',$ssoResult->redirectUrl);
 
-            Session::put('isClientHasOrder', $isClientHasOrder);
+            // Session::put('isClientHasOrder', $isClientHasOrder);
         }
     }
 
@@ -51,7 +52,6 @@ class  TahaqqSessionInfo{
             }
             return new GetClientsDetailsResult(false);
         } catch (\Throwable $th) {
-            dump($th);
             return new GetClientsDetailsResult(false);
         }
     }
@@ -84,7 +84,25 @@ class  TahaqqSessionInfo{
     }
 
     public static function GetIsClientHasOrder(){
+        if(env('APP_ENV') == 'local')
+        {
+            Session::put('isClientHasOrder',false);
+            return Session::get('isClientHasOrder');
+        }
+
+        if(!Session::has('isClientHasOrder') && self::GetLoggedClientId() != null){
+            $whmcsLogic = new WhmcsAPILogic();
+            $isClientHasOrder = $whmcsLogic->IsClientHasOrder(self::GetLoggedClientId());
+            //GetIsClientHasOrder(self::GetLoggedClientId());
+            Session::put('isClientHasOrder',$isClientHasOrder);
+        }
+
         return Session::get('isClientHasOrder');
     }
+
+    public static function RemoveIsClientHasOrderFromSession(){
+        Session::remove('isClientHasOrder');
+    }
+
 
 }

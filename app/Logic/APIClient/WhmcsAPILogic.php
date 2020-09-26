@@ -163,7 +163,7 @@ class WhmcsAPILogic{
             return $loginResult;
         }
 
-        $isClientHasOrder = $this->IsClientHasOrder($validateLoginResult->clientId);
+        $isClientHasOrder = null;//$this->IsClientHasOrder($validateLoginResult->clientId);
 
         $ssoResult = $this->CreateSsoToken($validateLoginResult->clientId, null, null, null, null);
         if(!$ssoResult->isSuccess){
@@ -314,6 +314,7 @@ class WhmcsAPILogic{
 
         $ssoResult = $this->CreateSsoToken($clientId, null, null, null, null);
         return $ssoResult;
+
     }
 
     public function IsClientHasOrder($clientId){
@@ -322,8 +323,7 @@ class WhmcsAPILogic{
         ), WhmcsAPIActions::Client_GetOrders);
         $result = $this->callAPI($postfields);
 
-        dump($result);
-        return $result->result == "success" && $result->totalresults >0;
+        return ($result->result == "success" && $result->totalresults >0);
     }
 
 }
