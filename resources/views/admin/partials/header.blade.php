@@ -11,10 +11,10 @@
                     <!--begin::Header Nav-->
                     <ul class="menu-nav ">
                         <li class="menu-item  menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active"
-                            data-menu-toggle="click" aria-haspopup="true"><a href="javascript:;"
-                                class="menu-link menu-toggle"><span class="menu-text">Pages</span><i
+                            data-menu-toggle="click" aria-haspopup="true"><a href="/"
+                                class="menu-link menu-toggle"><span class="menu-text">الصفحة الرئيسية</span><i
                                     class="menu-arrow"></i></a>
-                            <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                            {{-- <div class="menu-submenu menu-submenu-classic menu-submenu-left">
                                 <ul class="menu-subnav">
                                     <li class="menu-item  menu-item-active " aria-haspopup="true"><a href="index.html"
                                             class="menu-link "><span class="svg-icon menu-icon">
@@ -158,9 +158,9 @@
                                                 <!--end::Svg Icon--></span><span class="menu-text">Create New
                                                 Project</span></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </li>
-                        <li class="menu-item  menu-item-submenu" data-menu-toggle="click" aria-haspopup="true"><a
+                        {{-- <li class="menu-item  menu-item-submenu" data-menu-toggle="click" aria-haspopup="true"><a
                                 href="javascript:;" class="menu-link menu-toggle"><span
                                     class="menu-text">Features</span><i class="menu-arrow"></i></a>
                             <div class="menu-submenu  menu-submenu-fixed menu-submenu-left" style="width:1000px">
@@ -365,8 +365,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </li>
-                        <li class="menu-item  menu-item-submenu menu-item-rel" data-menu-toggle="click"
+                        </li> --}}
+                        {{-- <li class="menu-item  menu-item-submenu menu-item-rel" data-menu-toggle="click"
                             aria-haspopup="true"><a href="javascript:;" class="menu-link menu-toggle"><span
                                     class="menu-text">Apps</span><i class="menu-arrow"></i></a>
                             <div class="menu-submenu menu-submenu-classic menu-submenu-left">
@@ -508,7 +508,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> --}}
                     </ul>
                     <!--end::Header Nav-->
                 </div>
@@ -588,7 +588,7 @@
                 <!--end::Search-->
 
                 <!--begin::Notifications-->
-                <div class="dropdown">
+                {{-- <div class="dropdown">
                     <!--begin::Toggle-->
                     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                         <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
@@ -1202,11 +1202,11 @@
                         </form>
                     </div>
                     <!--end::Dropdown-->
-                </div>
+                </div> --}}
                 <!--end::Notifications-->
 
                 <!--begin::Quick Actions-->
-                <div class="dropdown">
+                {{-- <div class="dropdown">
                     <!--begin::Toggle-->
                     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                         <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
@@ -1346,11 +1346,11 @@
                         <!--end:Nav-->
                     </div>
                     <!--end::Dropdown-->
-                </div>
+                </div> --}}
                 <!--end::Quick Actions-->
 
                 <!--begin::Cart-->
-                <div class="topbar-item">
+                {{-- <div class="topbar-item">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_cart_toggle">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Cart3.svg--><svg
@@ -1369,11 +1369,11 @@
                             <!--end::Svg Icon-->
                         </span>
                     </div>
-                </div>
+                </div> --}}
                 <!--end::Cart-->
 
                 <!--begin::Quick panel-->
-                <div class="topbar-item">
+                {{-- <div class="topbar-item">
                     <div class="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_panel_toggle">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
@@ -1391,11 +1391,11 @@
                             <!--end::Svg Icon-->
                         </span>
                     </div>
-                </div>
+                </div> --}}
                 <!--end::Quick panel-->
 
                 <!--begin::Chat-->
-                <div class="topbar-item">
+                {{-- <div class="topbar-item">
                     <div class="btn btn-icon btn-clean btn-lg mr-1" data-toggle="modal" data-target="#kt_chat_modal">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group-chat.svg--><svg
@@ -1414,11 +1414,11 @@
                             <!--end::Svg Icon-->
                         </span>
                     </div>
-                </div>
+                </div> --}}
                 <!--end::Chat-->
 
                 <!--begin::Languages-->
-                <div class="dropdown">
+                {{-- <div class="dropdown">
                     <!--begin::Toggle-->
                     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                         <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
@@ -1490,14 +1490,14 @@
                         <!--end::Nav-->
                     </div>
                     <!--end::Dropdown-->
-                </div>
+                </div> --}}
                 <!--end::Languages-->
 
                 <!--begin::User-->
                 <div class="topbar-item">
                     <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2"
                         id="kt_quick_user_toggle">
-                        <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                        <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">مرحبا</span>
                         <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
                         <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
                             <span class="symbol-label font-size-h5 font-weight-bold">S</span>
@@ -1513,9 +1513,9 @@
     <!--end::Header-->
 
     <!--begin::Content-->
-    <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+    {{-- <div class="content  d-flex flex-column flex-column-fluid" id="kt_content"> --}}
         <!--begin::Subheader-->
-        <div class="subheader py-2 py-lg-4  subheader-solid " id="kt_subheader">
+        {{-- <div class="subheader py-2 py-lg-4  subheader-solid " id="kt_subheader">
             <div class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
                 <!--begin::Info-->
                 <div class="d-flex align-items-center flex-wrap mr-2">
@@ -1647,10 +1647,10 @@
                 </div>
                 <!--end::Toolbar-->
             </div>
-        </div>
+        </div> --}}
         <!--end::Subheader-->
 
 
-    </div>
+    {{-- </div> --}}
     <!--end::Content-->
 

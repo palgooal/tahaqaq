@@ -61651,7 +61651,8 @@ body {
       .aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
         font-weight: 400;
         font-size: 1rem;
-        text-transform: initial; }
+        text-transform: initial;
+        font-family: 'Cairo', sans-serif; }
       .aside-menu .menu-nav > .menu-item > .menu-heading .menu-icon,
       .aside-menu .menu-nav > .menu-item > .menu-link .menu-icon {
         -webkit-box-flex: 0;

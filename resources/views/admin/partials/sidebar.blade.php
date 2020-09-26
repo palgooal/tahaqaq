@@ -2,8 +2,8 @@
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
 	<!--begin::Logo-->
-	<a href="/pg-admin">
-		<img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
+	<a href="/">
+    <img alt="Logo" src="{{asset('newasset/img/logo.png')}}" />
 	</a>
 	<!--end::Logo-->
 	<!--begin::Toolbar-->
@@ -47,8 +47,8 @@
 			<!--begin::Brand-->
 			<div class="brand flex-column-auto " id="kt_brand">
 				<!--begin::Logo-->
-				<a href="index.html" class="brand-logo">
-					<img alt="Logo" src="admin/assets/media/logos/logo-light.png" />
+				<a href="/" class="brand-logo">
+                <img alt="Logo" src="{{asset('newasset/img/logo.png')}}"  style="width: 100px; height: 42px;" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Toggle-->
@@ -80,7 +80,7 @@
 				<div id="kt_aside_menu" class="aside-menu my-4 " data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
 					<!--begin::Menu Nav-->
 					<ul class="menu-nav ">
-						<li class="menu-item  menu-item-active" aria-haspopup="true">
+						<li class="menu-item  menu-item-submenu" aria-haspopup="true">
 							<a href="/" class="menu-link "> <span class="svg-icon menu-icon">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -97,10 +97,10 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-								<span class="menu-text">Dashboard</span>
+								<span class="menu-text">الصفحة الرئيسية</span>
 							</a>
 						</li>
-						<li class="menu-item  menu-item-active" aria-haspopup="true">
+						<li class="menu-item  menu-item-submenu" aria-haspopup="true">
 							<a href="/pg-admin/menus" class="menu-link "> <span class="symbol-label">
                                     <span class="svg-icon svg-icon-lg svg-icon-danger">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg-->
@@ -282,7 +282,7 @@
 								</ul>
 							</div>
 						</li>{{-- end blogs --}} @include('admin.partials.apperanceMenuItem'); {{-- start Contact us --}}
-						<li class="menu-item  menu-item-active" aria-haspopup="true">
+						<li class="menu-item  menu-item-submenu" aria-haspopup="true">
 							<a href="/pg-admin/Contactus" class="menu-link "> <span class="symbol-label">
                                     <span class="svg-icon svg-icon-lg svg-icon-danger">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg-->
