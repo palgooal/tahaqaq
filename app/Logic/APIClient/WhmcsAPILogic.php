@@ -318,6 +318,10 @@ class WhmcsAPILogic{
     }
 
     public function IsClientHasOrder($clientId){
+        if(env('APP_ENV') == 'local')
+        {
+          return true;
+        }
         $postfields = $this->getPostFileArray(array(
             "userid"=>$clientId
         ), WhmcsAPIActions::Client_GetOrders);
