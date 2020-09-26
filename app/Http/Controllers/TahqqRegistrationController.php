@@ -121,7 +121,7 @@ class TahqqRegistrationController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         // if(TahaqqSessionInfo::GetIsClientHasOrder()){
-        if($this->whmcsAPILogic->IsClientHasOrder(TahaqqSessionInfo::GetLoggedClientId())){
+        if(TahaqqSessionInfo::IsClientLogin() && $this->whmcsAPILogic->IsClientHasOrder(TahaqqSessionInfo::GetLoggedClientId())){
             return view('TahqqRegistrationCompletedMsg',
             compact(['menus','sysVarFooter','sysVarSocialMedia']));
         }
