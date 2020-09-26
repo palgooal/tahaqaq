@@ -120,7 +120,8 @@ class TahqqRegistrationController extends Controller
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        if(TahaqqSessionInfo::GetIsClientHasOrder()){
+        // if(TahaqqSessionInfo::GetIsClientHasOrder()){
+        if($this->whmcsAPILogic->IsClientHasOrder(TahaqqSessionInfo::GetLoggedClientId())){
             return view('TahqqRegistrationCompletedMsg',
             compact(['menus','sysVarFooter','sysVarSocialMedia']));
         }
@@ -292,7 +293,7 @@ class TahqqRegistrationController extends Controller
      */
     public function StartNowToWhmcs(Request $request)
     {
-        TahaqqSessionInfo::RemoveIsClientHasOrderFromSession();
+        // TahaqqSessionInfo::RemoveIsClientHasOrderFromSession();
         $data = request()->validate([
             'selectedTemplateId' => 'required',
             'selectedPlanName' => 'required'

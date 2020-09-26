@@ -83,26 +83,26 @@ class  TahaqqSessionInfo{
         return  Session::get('redirectUrl');
     }
 
-    public static function GetIsClientHasOrder(){
-        if(env('APP_ENV') == 'local')
-        {
-            Session::put('isClientHasOrder',false);
-            return Session::get('isClientHasOrder');
-        }
+    // public static function GetIsClientHasOrder(){
+    //     if(env('APP_ENV') == 'local')
+    //     {
+    //         Session::put('isClientHasOrder',false);
+    //         return Session::get('isClientHasOrder');
+    //     }
 
-        if(!Session::has('isClientHasOrder') && self::GetLoggedClientId() != null){
-            $whmcsLogic = new WhmcsAPILogic();
-            $isClientHasOrder = $whmcsLogic->IsClientHasOrder(self::GetLoggedClientId());
-            //GetIsClientHasOrder(self::GetLoggedClientId());
-            Session::put('isClientHasOrder',$isClientHasOrder);
-        }
+    //     if(!Session::has('isClientHasOrder') && self::GetLoggedClientId() != null){
+    //         $whmcsLogic = new WhmcsAPILogic();
+    //         $isClientHasOrder = $whmcsLogic->IsClientHasOrder(self::GetLoggedClientId());
+    //         //GetIsClientHasOrder(self::GetLoggedClientId());
+    //         Session::put('isClientHasOrder',$isClientHasOrder);
+    //     }
 
-        return Session::get('isClientHasOrder');
-    }
+    //     return Session::get('isClientHasOrder');
+    // }
 
-    public static function RemoveIsClientHasOrderFromSession(){
-        Session::remove('isClientHasOrder');
-    }
+    // public static function RemoveIsClientHasOrderFromSession(){
+    //     Session::remove('isClientHasOrder');
+    // }
 
 
 }
