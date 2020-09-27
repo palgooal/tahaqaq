@@ -36,7 +36,7 @@ Route::resource('/', 'HomeController');
 Route::get('/lang/{local}', 'HomeController@lang');
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('pg-admin', 'admin/index')->middleware('auth');
+Route::get('/pg-admin', 'PgAdminController@index')->middleware('auth');
 // menus
 Route::resource('/pg-admin/menus', 'MenuController')->middleware('auth');
 // upload

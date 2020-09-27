@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\TahaqqSessionInfo;
+use App\User;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -45,6 +46,8 @@ class AppServiceProvider extends ServiceProvider
             $view->with('isClientLogin', $isClientLogin)
                  ->with('loggedClientName',$loggedClientName);
         });
+
+     
 
     }
 }

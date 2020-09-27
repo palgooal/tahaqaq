@@ -10,6 +10,7 @@ use App\Logic\SysVar\SysVarTypes;
 use App\Model\Blog;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -36,6 +37,7 @@ class HomeController extends Controller
 
         $menus =  Menu::get();
         $blogs  = Blog::get();
+        $users = user::get();
 
         $lang = App::getLocale();
 
@@ -70,7 +72,7 @@ class HomeController extends Controller
         return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
-       'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4']));
+       'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4','users']));
     }
 
 

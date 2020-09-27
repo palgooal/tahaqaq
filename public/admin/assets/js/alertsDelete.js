@@ -57,3 +57,13 @@ $('#deletetemplate').on('show.bs.modal', function (event) {
 
     modal.find('.modal-body #template_id').val(template_id)
     })
+
+    // Contact User template
+$('#deleteuser').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget)
+    var user_id = button.data('userid')
+    var modal = $(this)
+
+    modal.find('.modal-body #user_id').val(user_id)
+    })
