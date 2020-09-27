@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function create(){
         $users = user::get();
-        return view('admin.users.EditeUsers', compact('users'));
+        return view('admin.users.AddUser', compact('users'));
     }
 
     public function store(Request $request){
