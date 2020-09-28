@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Menu;
 use App\Model\Page;
+use App\User;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -16,8 +17,8 @@ class MenuController extends Controller
     public function index()
     {
         return view('admin.menu.menu')->with('menus',Menu::orderBy('sort','asc')->get())
-        ->with('pages', Page::get());
-
+        ->with('pages', Page::get())
+        ->with('users', User::get());
     }
 
     /**

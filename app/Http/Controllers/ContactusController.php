@@ -9,7 +9,7 @@ use App\Logic\SysVar\SysVarLogic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
-
+use App\User;
 
 class ContactusController extends Controller
 {
@@ -30,7 +30,8 @@ class ContactusController extends Controller
      */
     public function index()
     {
-        return view('admin.contact.contact')->with('contacts', Contactus::get());
+        return view('admin.contact.contact')->with('contacts', Contactus::get())
+        ->with('users', User::get());
     }
 
     public function viewAll()

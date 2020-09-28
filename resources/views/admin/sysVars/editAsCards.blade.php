@@ -46,7 +46,7 @@
 
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="submit" class="btn btn-primary">تعديل</button>
                                 </div>
                             </div>
                         </form>

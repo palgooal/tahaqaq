@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
+use App\User;
 
 class PageController extends Controller
 {
@@ -30,7 +31,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.IndexPages')->with('pages', Page::get());
+        return view('admin.pages.IndexPages')->with('pages', Page::get())->with('users',User::get());
 
 
     }
@@ -42,7 +43,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.AddPages');
+        return view('admin.pages.AddPages')->with('users', User::get());
     }
 
     /**
@@ -91,7 +92,7 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.pages.EditPages')->with('pages', Page::find($id));
+        return view('admin.pages.EditPages')->with('pages', Page::find($id))->with('users', User::get());
     }
 
     /**

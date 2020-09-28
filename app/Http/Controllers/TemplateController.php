@@ -11,6 +11,7 @@ use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
+use App\User;
 
 class TemplateController extends Controller
 {
@@ -36,7 +37,8 @@ class TemplateController extends Controller
         //
         $templates = Template::paginate(10);
         $categories = TemplateCategory::all();
-        return view('admin.templates.index', compact(['templates','categories']));
+        $users = User::get();
+        return view('admin.templates.index', compact(['templates','categories', 'users']));
     }
 
     public function viewTemplate(Request $request){
@@ -147,8 +149,8 @@ class TemplateController extends Controller
         //
         $categories = TemplateCategory::all();
         $templateSpecifications = new TemplateSpecification();
-
-        return view('admin.templates.create', compact(['categories', 'templateSpecifications']));
+        $users = User::get();
+        return view('admin.templates.create', compact(['categories', 'templateSpecifications','users']));
     }
 
     /**
@@ -234,7 +236,7 @@ class TemplateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::get();
         $template = Template::findOrFail($id);
         $categories = TemplateCategory::all();
         $templateSpecifications = TemplateSpecification::where('template_id',$id)->get();
@@ -248,7 +250,7 @@ class TemplateController extends Controller
             ));
         }
         $tsJson = json_encode($ts_array);
-        return view('admin.templates.edit', compact(['template','tsJson','categories']));
+        return view('admin.templates.edit', compact(['template','tsJson','categories','users']));
     }
 
     /**

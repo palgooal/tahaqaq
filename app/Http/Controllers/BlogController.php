@@ -6,6 +6,7 @@ use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
 use App\Model\Blog;
 use App\Model\Menu;
+use App\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -33,7 +34,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('admin.blog.IndexBlog')->with('blogs', Blog::get());
+        return view('admin.blog.IndexBlog')->with('blogs', Blog::get())
+        ->with('users', User::get());
     }
 
     /**
@@ -43,7 +45,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.AddBlog');
+        return view('admin.blog.AddBlog')->with('users', User::get());
     }
 
     /**
@@ -107,7 +109,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.blog.EditeBlog')->with('blogs', Blog::find($id));
+        return view('admin.blog.EditeBlog')->with('blogs', Blog::find($id))
+        ->with('users', User::get());
     }
 
     /**

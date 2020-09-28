@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Logic\SysVar\Lang\sysvarLangHelper;
 use App\Logic\SysVar\SysVarLogic;
 use App\Model\SysVar;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -26,8 +27,8 @@ class SysVarController extends Controller
         //
         $sysVars= $this->sysVarLogic->GetAllPagination(10);
         $sysTypes = $this->sysVarLogic->GetTypes();
-
-        return view('admin.sysVars.index', compact(['sysVars','sysTypes']));
+        $users = User::get();
+        return view('admin.sysVars.index', compact(['sysVars','sysTypes','users']));
     }
 
     /**
@@ -84,8 +85,8 @@ class SysVarController extends Controller
         //
         $sysVars = $this->sysVarLogic->GetAll();
         $data = $sysVars->groupBy('type');
-
-        return  view('admin.sysVars.editAsCards', compact(['data']));
+        $users = User::get();
+        return  view('admin.sysVars.editAsCards', compact(['data', 'users']));
     }
 
       /**
@@ -99,8 +100,8 @@ class SysVarController extends Controller
         //
         $sysVars = $this->sysVarLogic->GetByType($type);
         $data = $sysVars->groupBy('type');
-
-        return  view('admin.sysVars.editAsCards', compact(['data']));
+        $users = User::get();
+        return  view('admin.sysVars.editAsCards', compact(['data', 'users']));
     }
 
     /**

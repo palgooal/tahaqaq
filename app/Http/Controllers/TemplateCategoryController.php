@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\TemplateCategory;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,9 +17,9 @@ class TemplateCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::get();
         $categoris = TemplateCategory::all();
-        return view('admin.templateCategories.category', compact(['categoris']));
+        return view('admin.templateCategories.category', compact(['categoris','users']));
     }
 
     /**

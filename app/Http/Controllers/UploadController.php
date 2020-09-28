@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Upload;
+use App\User;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller
@@ -14,11 +15,12 @@ class UploadController extends Controller
      */
     public function index()
     {
-        return view('admin.upload.upload')->with('uploads', upload::orderBy('id','desc')->get());
+        return view('admin.upload.upload')->with('uploads', upload::orderBy('id','desc')->get())
+        ->with('users', User::get());
     }
 
     public function addMedia(){
-        return view('admin.upload.formAddMedia');
+        return view('admin.upload.formAddMedia')->with('users', User::get());
     }
 
     public function selectMedia(){
