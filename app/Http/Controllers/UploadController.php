@@ -60,8 +60,8 @@ class UploadController extends Controller
         $upload->path = $path;
         $upload->alt = $request->alt;
         $upload->save();
-        return redirect('pg-admin/selectMedia');
-        // return back()->with('success',trans('تم اضافة بنجاح'));
+        // return redirect('pg-admin/upload');
+        return back()->with('success',trans('تم اضافة بنجاح'));
     }
 
     /**

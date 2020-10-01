@@ -3,7 +3,7 @@
 <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
 	<!--begin::Logo-->
 	<a href="/">
-		<img alt="Logo" src="{{asset('newasset/img/logo.png')}}" />
+		<img alt="Logo" src="{{asset('/public/newasset/img/logo.png')}}" />
 	</a>
 	<!--end::Logo-->
 	<!--begin::Toolbar-->
@@ -152,14 +152,14 @@
 											<span class="menu-text">المعرض</span>
 										</a>
 									</li>
-									<li class="menu-item " aria-haspopup="true">
+									{{-- <li class="menu-item " aria-haspopup="true">
 										<a href="/pg-admin/addMedia" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
                                                 <span>
                                                 </span>
                                             </i>
 											<span class="menu-text">رقع الصور</span>
 										</a>
-									</li>
+									</li> --}}
 								</ul>
 							</div>
 						</li>{{-- end upload --}} {{-- start pages --}}

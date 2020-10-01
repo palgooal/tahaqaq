@@ -6,6 +6,7 @@ use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
 use App\Model\Blog;
 use App\Model\Menu;
+use App\Model\Upload;
 use App\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -110,7 +111,8 @@ class BlogController extends Controller
     public function edit($id)
     {
         return view('admin.blog.EditeBlog')->with('blogs', Blog::find($id))
-        ->with('users', User::get());
+        ->with('users', User::get())
+        ->with('uploads', Upload::get());
     }
 
     /**

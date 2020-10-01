@@ -32,7 +32,7 @@
 				 <span id="viewImg">
 					<div class="card cardImageTeam" style="" id="">
 						<div class="card-body">
-						<img src="/images/{{$blogs->image}}" alt="">
+						<img src="images/{{$blogs->image}}" alt="">
 
 						</div>
 					  </div>
@@ -47,18 +47,38 @@
 				  <div class="modal-dialog modal-lg" role="document" style="width: 100%">
 					<div class="modal-content">
 					  <div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+						<h5 class="modal-title" id="exampleModalLabel">مكتبة الوسائط</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						  <span aria-hidden="true">&times;</span>
-						</button>
+                        </button>
+                        <div class="text-left">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">تحميل صورة</button>
+						</div>
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">تحميل صورة</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">@include('admin.partials.uploadMedia')</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					  </div>
 					  <div class="modal-body modalUpload">
-						<iframe src="/pg-admin/selectMedia" width="100%" height="450px" style="border:none;">
+                        @include('admin.partials.gallary')
+						{{-- <iframe src="/pg-admin/selectMedia" width="100%" height="450px" style="border:none;">
 
-						</iframe>
+						</iframe> --}}
 					  </div>
 					  <div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
 						<button type="button" onclick="FunctionPast()" class="btn btn-primary" data-dismiss="modal">اختيار</button>
 
 					  </div>

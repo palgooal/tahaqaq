@@ -1,8 +1,4 @@
-@extends('layouts.admin')
-@section('content')
-{{-- start content --}}
-{{-- @include('admin.partials.gallary') --}}
-
+@extends('layouts.admin') @section('content') {{-- start content --}} {{-- @include('admin.partials.gallary') --}}
 <!--begin::Entry-->
 <div class="d-flex flex-column-fluid">
 	<!--begin::Container-->
@@ -16,36 +12,28 @@
 					<div class="card-header">
 						<div class="card-title">
 							<h3 class="card-label">كل الوسائط</h3>
-                        </div>
-                        {{-- modal upload media --}}
+						</div>{{-- modal upload media --}}
 						<div class="text-left">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">تحميل صورة</button>
-                        </div>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                    @include('admin.partials.uploadMedia')
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        {{-- end modal upload --}}
-					</div>
-					<div class="card-body">
-                        @include('admin.partials.gallary')
-						<!--begin::Example-->
-						{{-- <div class="example mb-10">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">تحميل صورة</button>
+						</div>
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">تحميل صورة</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">@include('admin.partials.uploadMedia')</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
+									</div>
+								</div>
+							</div>
+						</div>{{-- end modal upload --}}</div>
+					<div class="card-body">@include('admin.partials.gallary')
+						<!--begin::Example-->{{--
+						<div class="example mb-10">
 							<div class="example-preview">
 								<table class="table">
 									<thead class="thead-light">
@@ -93,7 +81,7 @@
 									</tbody>
 								</table>
 							</div>
-						</div> --}}
+						</div>--}}
 						<!--end::Example-->
 					</div>
 				</div>
@@ -107,6 +95,4 @@
 </div>
 <!--end::Content-->
 </div>
-<!--end::Content-->
-
-@endsection
+<!--end::Content-->@endsection
