@@ -19,13 +19,13 @@ class UploadController extends Controller
         ->with('users', User::get());
     }
 
-    // public function addMedia(){
-    //     return view('admin.upload.formAddMedia')->with('users', User::get());
-    // }
+    public function addMedia(){
+        return view('admin.upload.formAddMedia')->with('users', User::get());
+    }
 
-    // public function selectMedia(){
-    //     return view('admin.upload.selectMedia')->with('uploads', upload::orderBy('id','ASC')->get());
-    // }
+    public function selectMedia(){
+        return view('admin.upload.selectMedia')->with('uploads', upload::orderBy('id','ASC')->get());
+    }
 
     public function addMediaModal(){
         return view('admin.partials.uploadMedia');

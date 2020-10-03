@@ -58,10 +58,10 @@
 
 					  </div>
 					  <div class="modal-body modalUpload">
-                        @include('admin.partials.gallary')
-						{{-- <iframe src="/pg-admin/selectMedia" width="100%" height="450px" style="border:none;">
+                        {{-- @include('admin.partials.gallary') --}}
+						<iframe src="/pg-admin/selectMedia" width="100%" height="450px" style="border:none;">
 
-						</iframe> --}}
+						</iframe>
 					  </div>
 					  <div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
