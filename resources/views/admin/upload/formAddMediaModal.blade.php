@@ -1,4 +1,4 @@
-@extends('layouts.admin2')
+@extends('layouts.admin')
 @section('content')
 {{-- start content --}}
 @include('admin.partials.uploadMedia')

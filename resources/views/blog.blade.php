@@ -1,4 +1,9 @@
-@extends('layouts.newapp') @section('content') @include('partials.InternalNavparnew')
+@extends('layouts.newapp')
+@section('title')
+المدونة | تحقق
+@endsection
+
+@section('content') @include('partials.InternalNavparnew')
 <!-- Top of the slider -->
 <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider" style="margin-top: 100px;">
 	<div class="back">

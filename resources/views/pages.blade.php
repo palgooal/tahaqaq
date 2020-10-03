@@ -1,5 +1,8 @@
-@extends('layouts.newapp') @section('meta')
-<meta name="keywords" content="{{$page->tags}} ">@endsection @section('title') تحقق | {{$page->getTitle(App::getLocale())}} @endsection
+@extends('layouts.newapp')
+@section('meta')
+<meta name="keywords" content="{{$page->tags}}">
+@endsection
+@section('title') تحقق | {{$page->getTitle(App::getLocale())}} @endsection
  @section('content')
   @include('partials.InternalNavparnew')
   <!-- Top of the slider -->
@@ -22,3 +25,4 @@
     {!!$page->getcontent(App::getLocale())!!}
 </div>
 
+@endsection

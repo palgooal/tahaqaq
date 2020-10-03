@@ -112,7 +112,7 @@ class BlogController extends Controller
     {
         return view('admin.blog.EditeBlog')->with('blogs', Blog::find($id))
         ->with('users', User::get())
-        ->with('uploads', Upload::get());
+        ->with('uploads', Upload::orderBy('id','desc')->get());
     }
 
     /**

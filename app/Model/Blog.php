@@ -24,4 +24,5 @@ class Blog extends Model
                 return $this->Title_ar;
         }
     }
+
 }
