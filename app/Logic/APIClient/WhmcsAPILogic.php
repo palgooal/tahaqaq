@@ -124,8 +124,8 @@ class WhmcsAPILogic{
                 "firstname":"user",
                 "lastname":"user",
                 "phonenumber":"055646",
-                "customfields1":"Ecommerce",
-                "customfields2":"Ecommerce Templates",
+                "customfields1":"Personal",
+                "customfields2":"Personal Template",
                 "customfields3":"ecommerseecommerseecommerseecommerse ecommerse",
                 "customfields4":"CompleteProjectInfo"
 
@@ -138,7 +138,7 @@ class WhmcsAPILogic{
             $loginResult->createSsoTokenResult = $ssoResult;
             $loginResult->clientDetailsResult = $clientDetailResult;
             $loginResult->message= "Login succrssfully";
-            TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult,true);
+            TahaqqSessionInfo::CompleteClientLogin($loginResult,$ssoResult,$clientDetailResult,false);
 
             return $loginResult;
         }
@@ -320,7 +320,7 @@ class WhmcsAPILogic{
     public function IsClientHasOrder($clientId){
         if(env('APP_ENV') == 'local')
         {
-          return true;
+          return false;
         }
         $postfields = $this->getPostFileArray(array(
             "userid"=>$clientId

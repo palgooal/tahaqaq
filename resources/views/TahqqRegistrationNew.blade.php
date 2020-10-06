@@ -229,7 +229,7 @@
                             <h3 class="primery-color text-center mb-5"> اختر القالب المناسب </h3>
                             <!--start -->
                                 {{-- include selectTemplate new --}}
-                                @include('template.partials.templateSelectorNew')
+                                @include('template.partials.templateSelectorNew2')
 
                         </div>
                     </div>
@@ -352,11 +352,17 @@
         $(function () {
             const categoryId = {!! $categoryId !!};
                 // getDataTemplateCategory(categoryId);
-                getDataTemplateCategoryNew(categoryId)
+
+                // getDataTemplateCategoryNew2(categoryId)
+                getDataTemplateSelectorCategory2(categoryId)
         });
 
         function planStartNow_Click($plan){
+            const templateId = $("input[name=templates]:checked").val();
+            if(templateId == undefined || templateId == null  )
+                return;
             document.planSelectFrm.selectedPlanName.value = $plan;
+            document.planSelectFrm.selectedTemplateId.value = templateId;
             document.planSelectFrm.submit();
         }
     </script>
