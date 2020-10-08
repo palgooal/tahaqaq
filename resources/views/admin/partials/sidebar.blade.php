@@ -48,7 +48,7 @@
 			<div class="brand flex-column-auto " id="kt_brand">
 				<!--begin::Logo-->
 				<a href="/" class="brand-logo">
-					<img alt="Logo" src="{{asset('newasset/img/logo.png')}}" style="width: 100px; height: 42px;" />
+					<img alt="Logo" src="{{asset('/public/newasset/img/logo.png')}}" style="width: 100px; height: 42px;" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Toggle-->
@@ -197,14 +197,7 @@
 											<span class="menu-text">اضافة صفحة</span>
 										</a>
 									</li>
-									<li class="menu-item " aria-haspopup="true">
-										<a href="/pg-admin/sysVars_editAsCards" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
-                                                <span>
-                                                </span>
-                                            </i>
-											<span class="menu-text">sys vars</span>
-										</a>
-									</li>
+									
 								</ul>
 							</div>
 						</li>

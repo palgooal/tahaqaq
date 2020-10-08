@@ -1,7 +1,7 @@
 
 @extends('layouts.admin')
 @section('content')
- <!--begin::Entry-->
+ {{-- <!--begin::Entry-->
  <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class=" container ">
@@ -2428,7 +2428,7 @@
     </div>
     <!--end::Container-->
     </div>
-    <!--end::Entry-->
-
+    <!--end::Entry--> --}}
+اهلا بكم في تحقق
 
 @endsection

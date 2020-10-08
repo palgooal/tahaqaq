@@ -36,7 +36,7 @@ class HomeController extends Controller
     {
 
         $menus =  Menu::get();
-        $blogs  = Blog::get();
+        $blogs  = Blog::orderBy('created_at','DESC')->get();
         $users = user::get();
 
         $lang = App::getLocale();

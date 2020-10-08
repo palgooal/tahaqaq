@@ -519,7 +519,7 @@
             <!--begin::Topbar-->
             <div class="topbar">
                 <!--begin::Search-->
-                <div class="dropdown" id="kt_quick_search_toggle">
+                {{-- <div class="dropdown" id="kt_quick_search_toggle">
                     <!--begin::Toggle-->
                     <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                         <div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
@@ -584,7 +584,7 @@
                         </div>
                     </div>
                     <!--end::Dropdown-->
-                </div>
+                </div> --}}
                 <!--end::Search-->
 
                 <!--begin::Notifications-->

@@ -51,9 +51,9 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						  <span aria-hidden="true">&times;</span>
                         </button>
-                        <div class="text-left">
+                        {{-- <div class="text-left">
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" data-whatever="@getbootstrap">تحميل صورة</button>
-						</div>
+						</div> --}}
 
 
 					  </div>

@@ -30,7 +30,7 @@ class ContactusController extends Controller
      */
     public function index()
     {
-        return view('admin.contact.contact')->with('contacts', Contactus::get())
+        return view('admin.contact.contact')->with('contacts', Contactus::paginate(10))
         ->with('users', User::get());
     }
 
@@ -69,20 +69,7 @@ class ContactusController extends Controller
         $data->email = $request->email;
         $data->message = $request->message;
         $data->save();
-        if($data->save()){
-            return response()->json(
-                 array(
-                     'success' => true,
-                      'message'=>'تم ارسال الرسالة بنجاح'
-                    ));
-        }else{
-            return response()->json(
-                array(
-                    'success' => false,
-                    'message' => "يوجد خطأ في ارسال الرسالة الرجاء ارسال الطلب مرة اخرى",
-                    )
-                );
-        }
+        return back();
 
     }
 
@@ -94,7 +81,8 @@ class ContactusController extends Controller
      */
     public function show($id)
     {
-        return view('admin.contact.showContact')->with('contact',Contactus::find($id));
+        return view('admin.contact.showContact')->with('contact',Contactus::find($id))
+        ->with('users', User::get());
     }
 
     /**

@@ -14,7 +14,7 @@
 						<div class="card-title">
 							<h3 class="card-label">كل المدونات</h3>
 						</div>
-						<div class="text-left"> <a type="button" class="btn btn-primary" href="/pg-admin/blogs/create">اضافة مدونة جديدة</a>
+						<div class="text-left"> <a type="button" class="btn btn-primary" href="/pg-admin/blogs/create" style="margin-top: 19px;">اضافة مدونة جديدة</a>
 						</div>
 					</div>
 					<div class="card-body">

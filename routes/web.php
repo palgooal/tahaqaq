@@ -25,11 +25,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
-
-
-
 Auth::routes();
 // Route::get('/logins', 'LoginController@getlog');
 Route::resource('/', 'HomeController');

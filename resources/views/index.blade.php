@@ -310,7 +310,7 @@
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)
-		<div class="col mb-5 text-right">
+		{{-- <div class="col mb-5 text-right">
 			<div class="card custom-card p-0" style="max-width: 500px;">
 				<div class="row no-gutters">
 					<div class="col-sm-5"> <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
@@ -338,5 +338,42 @@
 					</div>
 				</div>
 			</div>
-		</div>@endforeach</div>
+        </div>--}}
+
+        <div class="col mb-5 text-right">
+            <div class="card custom-card p-0" style="max-width: 500px;">
+                <div class="row no-gutters" >
+                    <div class="col-sm-5 image-backgrond overflow-hidden" style ="background : url('/images/{{$blog->image}}') ;"  >
+                        <a href="/blogs/{{$blog->slug}}" class="card-img-hover"> <img src="" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="card-body px-3 py-0">
+                            <div class="gray-color text-right text-right my-3">
+                                <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
+                                <span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
+                            </div>
+                            <h5 class="card-title h5 my-3 card-h">
+                                <a href="/blogs/{{$blog->slug}}">
+                                    {{$blog->getTitle(App::getLocale())}}
+                                </a>
+                            </h5>
+                            <p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
+                            <div class="d-flex mb-2 float-left ">
+                                <div class="ml-3  gray-color ">
+                                    <i class="far fa-comment"></i>
+                                    25
+                                </div>
+                                <div class="mr-3 gray-color">
+                                    <i class="far fa-heart"></i>
+                                    19
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @endforeach</div>
 </div>@endsection
