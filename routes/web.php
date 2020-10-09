@@ -96,6 +96,9 @@ Route::resource('/pg-admin/Contactus', 'ContactusController');
 Route::get('Contactus','ContactusController@viewAll');
 Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
 
+// packages
+
+Route::resource('/pg-admin/packges', 'PackageController')->middleware('auth');
 
 
 

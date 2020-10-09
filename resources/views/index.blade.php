@@ -238,10 +238,13 @@
 		</div>
 		<div class="package-container d-flex justify-content-center align-itaems-center">
 			<div class="packages wow bounceInRight">
-				<h3 class="my-4 pt-4">الباقة الفضية</h3>
-				<h6 class="text1 rounded-price p-3">423 ريال سعودي</h6>
+            <h3 class="my-4 pt-4">{{$packages[0]->name_package}}</h3>
+				<h6 class="text1 rounded-price p-3">{{$packages[0]->price}} ريال سعودي</h6>
 				<ul class="list">
-					<li class="set-color">
+                    {!!$packages[0]->Details!!}
+					{{-- <li class="set-color">
+						<img src="img/shape-star.png" class="float-right ml-3"></li> --}}
+					{{-- <li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
@@ -252,18 +255,17 @@
 					<li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li> --}}
 				</ul> <a href="#" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">أبدا
                         الان</a>
 			</div>
 			<div class="packages res-star wow bounceInDown" style="background-color: #7657E5; color: #F6F6F6">
 				<img src="img/star.png">
-				<h3 class="my-4 pt-4">الباقة الفضية</h3>
-				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">423 ريال سعودي</h6>
+				<h3 class="my-4 pt-4">{{$packages[1]->name_package}}</h3>
+				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">{{$packages[1]->price}} ريال سعودي</h6>
 				<ul class="list">
-					<li class="set-color text-white">
+                    {!!$packages[1]->Details!!}
+					{{-- <li class="set-color text-white">
 						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color text-white">
 						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
@@ -276,14 +278,15 @@
 					<li class="set-color text-white">
 						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li> --}}
 				</ul> <a href="#" class="button index-sign-button py-2 px-5">ابدا الان</a>
 			</div>
 			<div class="packages wow bounceInLeft">
-				<h3 class="my-4 pt-4">الباقة الفضية</h3>
-				<h6 class="text1 rounded-price p-3">423 ريال سعودي</h6>
+				<h3 class="my-4 pt-4">{{$packages[2]->name_package}}</h3>
+				<h6 class="text1 rounded-price p-3">{{$packages[2]->price}} ريال سعودي</h6>
 				<ul class="list">
-					<li class="set-color">
+                    {!!$packages[2]->Details!!}
+					{{-- <li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
@@ -296,7 +299,7 @@
 					<li class="set-color">
 						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
 					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li> --}}
 				</ul> <a href="#" class="btn primery-button start-now-btn py-2 px-5">أبدا الان</a>
 			</div>
 		</div>
@@ -310,62 +313,35 @@
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)
-		{{-- <div class="col mb-5 text-right">
-			<div class="card custom-card p-0" style="max-width: 500px;">
-				<div class="row no-gutters">
-					<div class="col-sm-5"> <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
-                                <img src="images/{{$blog->image}}" class="card-img-top h-100" alt="...">
-                            </a>
-					</div>
-					<div class="col-sm-7">
-						<div class="card-body px-3 py-0">
-							<div class="gray-color text-right text-right my-3"> <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-								<span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
-							</div>
-							<h5 class="card-title h5 my-3 card-h">
-                                    <a href="#">
-                                        {{$blog->getTitle(App::getLocale())}}
-                                    </a>
-                                </h5>
-							<p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
-							<div class="d-flex mb-2 float-left ">
-								<div class="ml-3  gray-color "> <i class="far fa-comment"></i>
-									25</div>
-								<div class="mr-3 gray-color"> <i class="far fa-heart"></i>
-									19</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </div>--}}
 
         <div class="col mb-5 text-right">
             <div class="card custom-card p-0" style="max-width: 500px;">
-                <div class="row no-gutters" >
-                    <div class="col-sm-5 image-backgrond overflow-hidden" style ="background : url('/images/{{$blog->image}}') ;"  >
-                        <a href="/blogs/{{$blog->slug}}" class="card-img-hover"> <img src="" alt="">
-                        </a>
+                <div class="row no-gutters">
+                    <div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */">
+                        <a href="/blogs/mdon-akhtbar" class="card-img-hover">
+<img src="/images/{{$blog->image}}" style="height: 191px;width: 100%;">
+
+                      </a>
                     </div>
                     <div class="col-sm-7">
                         <div class="card-body px-3 py-0">
                             <div class="gray-color text-right text-right my-3">
-                                <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
+                                <i class="far fa-calendar-alt" style="font-size: 15px;" aria-hidden="true"></i>
                                 <span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
                             </div>
                             <h5 class="card-title h5 my-3 card-h">
-                                <a href="/blogs/{{$blog->slug}}">
+                                <a href="/blogs/mdon-akhtbar">
                                     {{$blog->getTitle(App::getLocale())}}
                                 </a>
                             </h5>
                             <p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
                             <div class="d-flex mb-2 float-left ">
                                 <div class="ml-3  gray-color ">
-                                    <i class="far fa-comment"></i>
+                                    <i class="far fa-comment" aria-hidden="true"></i>
                                     25
                                 </div>
                                 <div class="mr-3 gray-color">
-                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-heart" aria-hidden="true"></i>
                                     19
                                 </div>
                             </div>

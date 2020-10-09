@@ -29,17 +29,17 @@ class UserController extends Controller
 
     }
 
-    public function show(Upload $upload){
-        return view('users.users')->with('users',user::orderBy('name','asc')->get());
-    }
+    // public function show(Upload $upload){
+    //     return view('users.users')->with('users',user::orderBy('name','asc')->get());
+    // }
 
-    public function edit(Upload $upload){
+    // public function edit(Upload $upload){
 
-    }
+    // }
 
-    public function update(Request $request, Upload $upload){
+    // public function update(Request $request, Upload $upload){
 
-    }
+    // }
 
     public function destroy(Request $request){
         $users = user::findOrFail($request->user_id);
