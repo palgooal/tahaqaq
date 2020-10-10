@@ -50,7 +50,7 @@ Route::get('/pg-admin/sysVars_editAsCards', 'SysVarController@editAsCards')->mid
 Route::get('/pg-admin/sysVars_editAsCards/{type}', 'SysVarController@editPerType')->middleware('auth');
 Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->middleware('auth');
 
-// blogs
+// blogs\   \
 Route::resource('/pg-admin/blogs', 'BlogController');
 Route::get('/blogs', 'BlogController@Indexshow');
 Route::get('/blogs/{slug}', 'BlogController@show');
