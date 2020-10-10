@@ -14,6 +14,7 @@ use App\Model\Menu;
 use App\Logic\TahaqqSessionInfo;
 use App\Model\Template;
 use App\Model\TemplateCategory;
+use Illuminate\Support\Facades\Redirect;
 
 use function Symfony\Component\String\b;
 
@@ -122,8 +123,9 @@ class TahqqRegistrationController extends Controller
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         // if(TahaqqSessionInfo::GetIsClientHasOrder()){
         if(TahaqqSessionInfo::IsClientLogin() && $this->whmcsAPILogic->IsClientHasOrder(TahaqqSessionInfo::GetLoggedClientId())){
-            return view('TahqqRegistrationCompletedMsg',
-            compact(['menus','sysVarFooter','sysVarSocialMedia']));
+            return redirect('/GotoClientArea');
+            // return view('TahqqRegistrationCompletedMsg',
+            // compact(['menus','sysVarFooter','sysVarSocialMedia']));
         }
 
         $templateCategories = TemplateCategory::all();
