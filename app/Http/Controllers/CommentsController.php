@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Blog;
 use App\Model\Comments;
+use App\User;
 use Illuminate\Http\Request;
 
 class CommentsController extends Controller
@@ -14,7 +16,9 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comments::get();
+        $users  = User::get();
+        return view('admin.Comments.IndexComments', compact('comments', 'users'));
     }
 
     /**
@@ -24,7 +28,8 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('SinglePost');
     }
 
     /**
@@ -35,7 +40,12 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comments = new Comments();
+        $comments->name =$request->name;
+        $comments->email =$request->email;
+        $comments->comment =$request->comment;
+        $comments->save();
+        return back();
     }
 
     /**
@@ -44,9 +54,11 @@ class CommentsController extends Controller
      * @param  \App\Model\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function show(Comments $comments)
+    public function show($id)
     {
-        //
+        $comments = Comments::find($id);
+        $users = User::get();
+        return view('admin.Comments.showComments', compact('comments', 'users'));
     }
 
     /**

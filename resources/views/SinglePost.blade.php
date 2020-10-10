@@ -64,19 +64,20 @@
 						</div>
 					</div>
 					<div class=" container form-wrapper mt-5">
-						<form class="pt-5">
+                        <form class="pt-5" method="POST" action="/pg-admin/comment">
+                            @csrf
 							<h5 class="primery-color mb-5 mr-4">اترك تعليق</h5>
 							<div class="form-group ">
-								<label for="exampleFormControlInput1">الاسم بالكامل</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="هنا الاسم بالكامل">
+								<label for="exampleFormControlInput1">الاسم</label>
+								<input type="text" class="form-control" id="name" name="name" placeholder="اكتب اسمك هنا">
 							</div>
 							<div class="form-group">
 								<label for="exampleFormControlInput1">البريد الإلكتروني</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="هنا البريد الإلكتروني">
+								<input type="email" class="form-control" name="email" placeholder="هنا البريد الإلكتروني">
 							</div>
 							<div class="form-group">
 								<label for="exampleFormControlTextarea1">التعليق</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=" اكتب التعليق"></textarea>
+								<textarea class="form-control" name="comment" rows="3" placeholder=" اكتب التعليق"></textarea>
 							</div>
 							<button type="submit" class="btn primery-button mt-4 py-3 w-100">ارسال</button>
 						</form>

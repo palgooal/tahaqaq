@@ -23,6 +23,9 @@
         @yield('headcss')
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="{{asset('newasset/js/jquery.js')}}"></script>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="newasset/img/favicon.ico" type="image/x-icon">
+
     @endenv
     @env('prod')
         <meta charset="UTF-8">
@@ -37,6 +40,8 @@
         <link rel="stylesheet" href="newasset/css/index.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="newasset/js/jquery.js"></script>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="newasset/img/favicon.ico" type="image/x-icon">
     @endenv
 
 

@@ -7,7 +7,7 @@
 <!-- Top of the slider -->
 <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider" style="margin-top: 100px;">
 	<div class="back">
-		<a href="#" class="d-flex align-items-center justify-content-center text-center text-truncate" style="color: #000;" id=""> <i class="fas fa-arrow-right ml-2"></i>
+		<a href="/" class="d-flex align-items-center justify-content-center text-center text-truncate" style="color: #000;" id=""> <i class="fas fa-arrow-right ml-2"></i>
 			الرجوع الى الرئيسية</a>
 	</div>
 	<div class="mx-5 wow fadeInDown ">

@@ -80,14 +80,14 @@ class BlogController extends Controller
     public function show($slug)
     {
         $lang = App::getLocale();
-
+        $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-       return view('SinglePost',compact(['sysVarFooter','sysVarSocialMedia']))
+       return view('SinglePost',compact(['sysVarFooter','sysVarSocialMedia', 'menus']))
        ->with('blogs', Blog::where('slug', $slug)->first())
-                                ->with('menus', Menu::get())
-                                ->with('blogers',Blog::get())    ;
+
+                                ->with('blogers',Blog::get());
     }
 
     public function Indexshow()

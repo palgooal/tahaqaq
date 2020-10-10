@@ -100,6 +100,9 @@ Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
 
 Route::resource('/pg-admin/packges', 'PackageController')->middleware('auth');
 
+// Comments
 
+Route::resource('/pg-admin/comment', 'CommentsController')->middleware('auth');
+Route::get('/pg-admin/comment/{id}', 'CommentsController@show')->middleware('auth');
 
 
