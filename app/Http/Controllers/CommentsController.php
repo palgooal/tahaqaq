@@ -6,6 +6,7 @@ use App\Model\Blog;
 use App\Model\Comments;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CommentsController extends Controller
 {
@@ -16,7 +17,12 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comments::get();
+        $comments = DB::table('Comments')
+        ->join('Blogs', 'Comments.blog_id', '=', 'Blogs.id')
+        ->select('Comments.*', 'Blogs.slug', 'Blogs.Title_ar')
+        ->get();
+
+        // $comments = Comments::get();
         $users  = User::get();
         return view('admin.Comments.IndexComments', compact('comments', 'users'));
     }
@@ -44,6 +50,7 @@ class CommentsController extends Controller
         $comments->name =$request->name;
         $comments->email =$request->email;
         $comments->comment =$request->comment;
+        $comments->blog_id =$request->blog_id;
         $comments->save();
         return back();
     }

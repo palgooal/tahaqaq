@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
 use App\Model\Blog;
+use App\Model\Comments;
 use App\Model\Menu;
 use App\Model\Upload;
 use App\User;
@@ -81,11 +82,14 @@ class BlogController extends Controller
     {
         $lang = App::getLocale();
         $menus = Menu::get();
+        $blog = Blog::where('slug', $slug)->first();
+        $comments = Comments::where('blog_id','=',$blog->id)->get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-       return view('SinglePost',compact(['sysVarFooter','sysVarSocialMedia', 'menus']))
-       ->with('blogs', Blog::where('slug', $slug)->first())
+       return view('SinglePost',
+       compact(['sysVarFooter','sysVarSocialMedia', 'menus','comments']))
+       ->with('blogs', $blog)
 
                                 ->with('blogers',Blog::get());
     }

@@ -37,6 +37,7 @@ class TemplateController extends Controller
         //
         $templates = Template::paginate(10);
         $categories = TemplateCategory::all();
+
         $users = User::get();
         return view('admin.templates.index', compact(['templates','categories', 'users']));
     }

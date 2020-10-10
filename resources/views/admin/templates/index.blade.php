@@ -27,17 +27,17 @@
 											<th scope="col">التصنيف</th>
 											<th scope="col">الاسم</th>
 											<th scope="col">العنوان</th>
-											<th scope="col">العنوان EN</th>
+											{{-- <th scope="col">العنوان EN</th> --}}
 											<th scope="col"></th>
 										</tr>
 									</thead>
 									<tbody>@foreach ($templates as $index=>$template)
 										<tr>
 											<th scope="row">{{$index+1}}</th>
-											<td>{{$template->category_id}}</td>
+											<td>{{$categories->find($template->category_id)->text_ar}}</td>
 											<td>{{$template->name}}</td>
 											<td>{{$template->title_ar}}</td>
-											<td>{{$template->title_en}}</td>
+											{{-- <td>{{$template->title_en}}</td> --}}
 											<td><a type="button" class="btn btn-success" target="_blank" href="/template/{{$template->id}}">مشاهدة</a>
 												<a type="button" class="btn btn-secondary" href="/pg-admin/templates/{{$template->id}}/edit">تعديل</a>
 												<button type="button" class="btn btn-danger" data-templateid="{{$template->id}}" data-toggle="modal" data-target="#deletetemplate">حذف</button>

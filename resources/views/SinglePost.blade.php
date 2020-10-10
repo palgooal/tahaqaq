@@ -1,9 +1,9 @@
 @extends('layouts.newapp')
 @section('meta')
-<meta name="keywords" content="{{$blogs->Tags}}">
+{{-- <meta name="keywords" content="{{$blogs->Tags}}"> --}}
 @endsection
 @section('title')
-{{$blogs->getTitle(App::getLocale())}} | تحقق
+{{$blogs->getTitle(App::getLocale()) ?? ''}} | تحقق
 @endsection
 
 @section('content') @include('partials.InternalNavparnew')
@@ -52,20 +52,24 @@
 				<hr class="my-5 mx-5 w-50">
 				<!-- Card -->
 				<div class=" mt-5 p-0 text-right">
-					<div class="d-flex  align-items-center  mb-5">
+                    @foreach ($comments as $comment)
+                    <div class="d-flex  align-items-center  mb-5">
 						<img src="./img/shutterstock_1109232059 (1).png" class="w-25" style="border-radius: 30px;" alt="">
 						<div class="container card-body mr-4">
-							<div class=" d-flex justify-content-between pl-5 mt-4 gray-color"> <span>محمد عوض</span>
+                        <div class=" d-flex justify-content-between pl-5 mt-4 gray-color"> <span>{{$comment->name}}</span>
 								<div> <i class="far fa-calendar-alt" style="font-size: 15px;"></i>
-									<small class="text-muted mr-3" style="font-size: 11px !important;">01/15/2019</small>
+                                <small class="text-muted mr-3" style="font-size: 11px !important;">{{$comment->created_at}}</small>
 								</div>
 							</div>
-							<p class="mt-4 card-p" style="font-size: 13px !important;">هل هناك منتج تجد نفسك تستخدمه يومًا بعد يوم؟ على سبيل المثال: منتج يساعدك في إدارة فريق عملك؟ فلما لا تتواصل مع الشركة المنتجة له وتقديم تقييم جيد لهذا المنتج، بشكل كبير تعتمد الشركات على شهادات المستخدمين ودراسات الحالة للمساعدة في زيادة مبيعاتها وبناء الثقة.</p>
+                        <p class="mt-4 card-p" style="font-size: 13px !important;">{{$comment->comment}}</p>
 						</div>
 					</div>
+                    @endforeach
+
 					<div class=" container form-wrapper mt-5">
                         <form class="pt-5" method="POST" action="/pg-admin/comment">
                             @csrf
+                            <input type="hidden" name="blog_id" value="{{$blogs->id}}">
 							<h5 class="primery-color mb-5 mr-4">اترك تعليق</h5>
 							<div class="form-group ">
 								<label for="exampleFormControlInput1">الاسم</label>

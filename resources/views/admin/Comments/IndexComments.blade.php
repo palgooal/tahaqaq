@@ -27,7 +27,7 @@
 											<th scope="col">#</th>
                                             <th scope="col">الاسم</th>
                                             <th scope="col">البريد الالكتروني</th>
-											<th scope="col">تفعيل</th>
+                                            <th scope="col">slug</th>								<th scope="col">تفعيل</th>
 											<th scope="col"></th>
 											{{-- <th scope="col">تعديل</th>
 											<th scope="col">حذف</th> --}}
@@ -39,14 +39,16 @@
                                                 <th scope="row">{{$index+1}}</th>
                                                 <td>{{$comment->name}}</td>
                                                 <td>{{$comment->email}}</td>
+                                                <td>{{$comment->Title_ar}}</td>
+
                                                 <td>
-                                                    <label class="checkbox checkbox-lg">
+                                                    {{-- <label class="checkbox checkbox-lg">
                                                         <input type="checkbox" data-blogid="{{$comment->id}}" name="pinOnSlider_{{$comment->id}}" id="pinOnSlider"
                                                         {{ $comment->pin_to_slider?'checked':''}}
                                                         onclick="pinOnSliderClick(this);"
                                                         />
                                                         <span></span>
-                                                    </label>
+                                                    </label> --}}
                                                 </td>
                                                 <td>
                                                     <a type="button" class="btn btn-success" href="/pg-admin/comment/{{$comment->id}}">مشاهدة</a>
