@@ -21,7 +21,7 @@
   <div class="d-block "></div>
 
 </section>
-<div class="d-flex flex-column mb-5 p-5">
+<div class="d-flex flex-column mb-5">
     {!!$page->getcontent(App::getLocale())!!}
 </div>
 

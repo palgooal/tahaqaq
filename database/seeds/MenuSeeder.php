@@ -40,7 +40,7 @@ class MenuSeeder extends Seeder
         DB::table('menus')->insert([
             'name_ar'=>"الاسعار",
             'name_en'=>"the prices",
-            'url'=>"#",
+            'url'=>"/pages/alasaaar",
             'sort' =>"4",
         ]);
         DB::table('menus')->insert([

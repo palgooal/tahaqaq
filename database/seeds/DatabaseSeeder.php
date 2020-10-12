@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             TemplateCategorySeeder::class,
             BlogSeeder::class,
             PageSeeder::class,
-            PackageSeeder::class,
+            PricingSeeder::class,
 
         ]);
     }

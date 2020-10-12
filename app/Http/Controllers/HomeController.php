@@ -11,6 +11,7 @@ use App\Model\Blog;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
 use App\Model\Package;
+use App\Model\pricing;
 use App\User;
 
 class HomeController extends Controller
@@ -41,7 +42,7 @@ class HomeController extends Controller
         $users = user::get();
 
         $lang = App::getLocale();
-        $packages = Package::get();
+        $packages = pricing::get();
 
         //header vars
         $header_title= $this->sysVarLogic

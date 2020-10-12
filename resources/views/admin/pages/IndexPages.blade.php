@@ -13,7 +13,7 @@
 						<div class="card-title">
 							<h3 class="card-label">كل الصفحات</h3>
 						</div>
-						<div class="text-left"> <a type="button" class="btn btn-primary"  href="/pg-admin/packges" style="margin-top: 19px;">اضافة باقة جديدة</a>
+						<div class="text-left"> <a type="button" class="btn btn-primary"  href="/pg-admin/pages/create" style="margin-top: 19px;">اضافة صفحة جديدة</a>
 						</div>
 					</div>
 					<div class="card-body">

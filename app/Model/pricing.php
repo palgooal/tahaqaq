@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Package extends Model
+class pricing extends Model
 {
     //
 }

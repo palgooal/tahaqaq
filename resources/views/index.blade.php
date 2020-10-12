@@ -318,8 +318,8 @@
             <div class="card custom-card p-0" style="max-width: 500px;">
                 <div class="row no-gutters">
                     <div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */">
-                        <a href="/blogs/mdon-akhtbar" class="card-img-hover">
-<img src="/images/{{$blog->image}}" style="height: 191px;width: 100%;">
+                        <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
+<img src="images/{{$blog->image}}" style="height: 191px;width: 100%;">
 
                       </a>
                     </div>
@@ -330,7 +330,7 @@
                                 <span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
                             </div>
                             <h5 class="card-title h5 my-3 card-h">
-                                <a href="/blogs/mdon-akhtbar">
+                                <a href="/blogs/{{$blog->slug}}">
                                     {{$blog->getTitle(App::getLocale())}}
                                 </a>
                             </h5>

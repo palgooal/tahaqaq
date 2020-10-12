@@ -128,4 +128,11 @@ class PageController extends Controller
         $page->delete();
         return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
+
+    public function pricingpage(){
+        $lang = App::getLocale();
+        $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+        $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+        return view('pricing', compact('sysVarFooter', 'lang', 'sysVarSocialMedia'));
+    }
 }

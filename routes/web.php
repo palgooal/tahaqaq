@@ -42,6 +42,7 @@ Route::get('/pg-admin/addMediaModal', 'UploadController@addMediaModal')->middlew
 // pages
 Route::resource('/pg-admin/pages', 'PageController')->middleware('auth');
 Route::get('/pages/{slug}', 'PageController@show');
+Route::get('/pricing', 'PageController@pricingpage');
 // show user
 Route::resource('/pg-admin/users', 'UserController')->middleware('auth');
 //sysVars
@@ -98,11 +99,11 @@ Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
 
 // packages
 
-Route::resource('/pg-admin/packges', 'PackageController')->middleware('auth');
+Route::resource('/pg-admin/packges', 'PricingController')->middleware('auth');
 
 // Comments
 
-Route::resource('/pg-admin/comment', 'CommentsController')->middleware('auth');
+Route::resource('/pg-admin/comment', 'CommentsController');
 Route::get('/pg-admin/comment/{id}', 'CommentsController@show')->middleware('auth');
 
 

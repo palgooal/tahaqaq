@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="newasset/css/new-style.css">
         <link rel="stylesheet" href="newasset/css/who-us-style.css">
         <link rel="stylesheet" href="newasset/css/login-style.css">
+        <link rel="stylesheet" href="newasset/css/pricing.css">
         @yield('headcss')
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="{{asset('newasset/js/jquery.js')}}"></script>
@@ -35,9 +36,10 @@
         <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
         <link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="newasset/css/new-style.css">
-        <link rel="stylesheet" href="newasset/css/who-us-style.css">
+        {{-- <link rel="stylesheet" href="newasset/css/who-us-style.css"> --}}
         <link rel="stylesheet" href="newasset/css/login-style.css">
         <link rel="stylesheet" href="newasset/css/index.css">
+        <link rel="stylesheet" href="newasset/css/pricing.css">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="newasset/js/jquery.js"></script>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">

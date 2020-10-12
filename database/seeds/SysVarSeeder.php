@@ -29,8 +29,7 @@ class SysVarSeeder extends Seeder
             'key'=>SysVarTypes::Type_Header_Key_Title,
             'value_en'=>"Your journey in the sites
             Electronic begins with a check",
-            'value_ar' =>"رحلتك في المواقع
-            الالكترونية تبدأ مع تحقق",
+            'value_ar' =>"أكسر حاجز الوقت والمال والجهد .. أطلق مشروعك بدقائق !!",
         ]);
 
         DB::table('sys_vars')->insert([
@@ -41,9 +40,8 @@ class SysVarSeeder extends Seeder
             Since the fifteenth century, when an unknown press created a group of letters in a shape
             I took it from text, as a booklet as a guide or formal reference for these letters. five",
 
-            'value_ar' =>"وُيستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنصالشكلي
-            منذ القرن الخامسعشر عندما قامت مطبعة مجهولة برصمجموعة من الأحرف بشكل
-            عشوائي أخذتها من نص، لتك ّون كتّيب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة",
+            'value_ar' =>"قوالب جاهزة عدلها على كيفك تناسب مشروعك .. تسويق الكتروني ممول على منصات قوقل أحصائيات وتقارير تثبت نجاح مشروعك ، عدل و جرب حتى تجد طريقك للنجاح
+            ",
         ]);
 
         DB::table('sys_vars')->insert([
@@ -101,15 +99,13 @@ The project",
             'type'=> SysVarTypes::Type_TahaqaqInfo1,
             'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Title,
             'value_en'=>"Store management",
-            'value_ar' =>"إدارة المتجر",
+            'value_ar' =>"قوالب جاهزة لمشروعك",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo1,
             'key'=>SysVarTypes::Type_TahaqaqInfo1_Key_Details,
-            'value_en'=>"",
-            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-            ابتداء من ادراجها في المتجر وانتهاء بادارتها
-            .وتسويقها",
+            'value_en'=>"/",
+            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لبناء مشروعك ابتداء من الصفحات البسيطة الى المتاجر وانتهاء بادارتها .وتسويقها",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo1,
@@ -123,15 +119,13 @@ The project",
             'type'=> SysVarTypes::Type_TahaqaqInfo2,
             'key'=>SysVarTypes::Type_TahaqaqInfo2_Key_Title,
             'value_en'=>"Payment Method",
-            'value_ar' =>"وسائل الدفع",
+            'value_ar' =>"التسويق الالكتروني",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo2,
             'key'=>SysVarTypes::Type_TahaqaqInfo2_Key_Details,
-            'value_en'=>"",
-            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-            ابتداء من ادراجها في المتجر وانتهاء بادارتها
-            .وتسويقها",
+            'value_en'=>"/",
+            'value_ar' =>"من اهم خدمات تحقق أطلاق حملات تسويقية ممولة بطريقة سهلة وذكية من داخل تحقق مع احصائيات خاصة بالزوار",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo2,
@@ -144,15 +138,13 @@ The project",
             'type'=> SysVarTypes::Type_TahaqaqInfo3,
             'key'=>SysVarTypes::Type_TahaqaqInfo3_Key_Title,
             'value_en'=>"Professional designs",
-            'value_ar' =>"تصاميم احترافية",
+            'value_ar' =>"نطاقات واستضافة",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo3,
             'key'=>SysVarTypes::Type_TahaqaqInfo3_Key_Details,
-            'value_en'=>"",
-            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-            ابتداء من ادراجها في المتجر وانتهاء بادارتها
-            .وتسويقها",
+            'value_en'=>"/",
+            'value_ar' =>"أستضافة مجانية ونطاق (Domain) وايميلات رسمية ومساحة مفتوحة بدون ان تحمل هم ادارة الاستضافة ومشقتها كل شي جاهز لاطلاق مشروعك",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo3,
@@ -167,15 +159,13 @@ The project",
             'type'=> SysVarTypes::Type_TahaqaqInfo4,
             'key'=>SysVarTypes::Type_TahaqaqInfo4_Key_Title,
             'value_en'=>"Advanced reports",
-            'value_ar' =>"تقارير متقدمة",
+            'value_ar' =>"بدون أكواد",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo4,
             'key'=>SysVarTypes::Type_TahaqaqInfo4_Key_Details,
-            'value_en'=>"",
-            'value_ar' =>"تيح لك خدمات تحقق الادارة السهلة لمنتجاتك
-            ابتداء من ادراجها في المتجر وانتهاء بادارتها
-            .وتسويقها",
+            'value_en'=>"/",
+            'value_ar' =>"تتيح لك خدمات تحقق التحكم الكامل والتعديل لقالب موقعك ابتداء من تعديل المحتوى والالوان وانتهاء بادارتها .وتسويقها",
         ]);
         DB::table('sys_vars')->insert([
             'type'=> SysVarTypes::Type_TahaqaqInfo4,
