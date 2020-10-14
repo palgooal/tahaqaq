@@ -67,3 +67,14 @@ $('#deleteuser').on('show.bs.modal', function (event) {
 
     modal.find('.modal-body #user_id').val(user_id)
     })
+
+    // comments
+
+    $('#deletecomment').on('show.bs.modal', function (event) {
+
+        var button = $(event.relatedTarget)
+        var comment_id = button.data('commentid')
+        var modal = $(this)
+
+        modal.find('.modal-body #comment_id').val(comment_id)
+        })

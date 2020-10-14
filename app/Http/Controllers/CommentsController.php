@@ -17,14 +17,10 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = DB::table('Comments')
-        ->join('Blogs', 'Comments.blog_id', '=', 'Blogs.id')
-        ->select('Comments.*', 'Blogs.slug', 'Blogs.Title_ar')
-        ->get();
-
-        // $comments = Comments::get();
+        $blogs = Blog::all();
+        $comments = Comments::get();
         $users  = User::get();
-        return view('admin.Comments.IndexComments', compact('comments', 'users'));
+        return view('admin.Comments.IndexComments', compact('comments', 'users', 'blogs'));
     }
 
     /**
@@ -97,8 +93,10 @@ class CommentsController extends Controller
      * @param  \App\Model\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function destroy(Request $request)
     {
-        //
+        $comments = Comments::findOrFail($request->comment_id);
+        $comments->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
     }
 }

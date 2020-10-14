@@ -9,10 +9,12 @@
                 <!--begin::Header Menu-->
                 <div id="kt_header_menu" class="header-menu header-menu-mobile  header-menu-layout-default ">
                     <!--begin::Header Nav-->
+
                     <ul class="menu-nav ">
-                        <li class="menu-item  menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active"
+
+                        <li class="menu-item  menu-item-open menu-item-here  menu-item-rel menu-item-open menu-item-here menu-item-active"
                             data-menu-toggle="click" aria-haspopup="true"><a href="/"
-                                class="menu-link menu-toggle"><span class="menu-text">الصفحة الرئيسية</span><i
+                                class="menu-link"><span class="menu-text">الصفحة الرئيسية</span><i
                                     class="menu-arrow"></i></a>
                             {{-- <div class="menu-submenu menu-submenu-classic menu-submenu-left">
                                 <ul class="menu-subnav">
@@ -160,6 +162,13 @@
                                 </ul>
                             </div> --}}
                         </li>
+                        <li class="menu-item  menu-item-open menu-item-here  menu-item-rel menu-item-open menu-item-here menu-item-active"
+                            data-menu-toggle="click" aria-haspopup="true"><a href="/pg-admin/logout"
+                                class="menu-link"><span class="menu-text">تسجيل الخروج</span><i
+                                    class="menu-arrow"></i></a>
+
+                        </li>
+
                         {{-- <li class="menu-item  menu-item-submenu" data-menu-toggle="click" aria-haspopup="true"><a
                                 href="javascript:;" class="menu-link menu-toggle"><span
                                     class="menu-text">Features</span><i class="menu-arrow"></i></a>

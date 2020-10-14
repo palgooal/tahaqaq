@@ -1,0 +1,96 @@
+.map-background{
+background: url('../img/Mask\ Group\ 1.png') ;
+background-position: center;
+background-repeat: no-repeat;
+height: 50vh;
+margin-bottom: 650px;
+}
+.overlay-wrapper{
+background: #fff ;
+width: 85%;
+margin: auto;
+margin-top: 20px ;
+border-radius: 48px;
+box-shadow: 0px 6px 20px #0000001A;
+
+}
+.hide-call{
+    display: flex ;
+}
+.call-us-vector{
+    height: 100%;
+    width: 105%;
+    margin-top: -10px;
+}
+.under-vector-i {
+    color: #7657E5 !important;
+    fill: #7657E5 !important;
+}
+.under-vector-i i{
+width: 15px !important;
+}
+.lol{
+    padding-right: 3rem;
+}
+.fonty{
+    font-size:10px
+}
+.call-us-location{
+    flex-direction: row;
+}
+.index-card-img {
+    border-radius: 50%;
+}
+.index-card-img img{
+    width: 18px;
+    height: 18px;
+}
+form label{
+    margin-right: 27px;
+    font-family: "FFShamelFamily-SansOneBook" !important;
+    
+}
+.top-header-heading{
+    font-size: 1.5rem;
+}
+@media (max-width:1220px){
+    .fonty{
+        font-size: 8px;
+    }
+}
+@media (max-width:1017px){
+    .call-us-location{
+        flex-direction: column !important;
+    }
+}
+@media (max-width:800px){
+    .hide-call{
+        display: none ;
+       
+    }
+    
+    .top-of-the-head ,.top-header-heading {
+
+        text-align: center;
+    }
+    .lol{
+        padding-right: 10px !important;
+    }
+    form{
+        padding: 1.5rem;
+    }
+}
+@media (max-width:768px){
+    .overlay-wrapper{
+        width:100%;
+   
+    }
+}
+@media (max-width:400px){
+    .call-us-head{
+        font-size: 20px;
+    }
+    .top-header-heading{
+        font-size: 21px;
+    }
+}

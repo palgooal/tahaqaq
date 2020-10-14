@@ -271,6 +271,14 @@
                                             </i>
 											<span class="menu-text">اضافة تدوينة جديدة</span>
 										</a>
+                                    </li>
+                                    <li class="menu-item" aria-haspopup="true">
+										<a href="/pg-admin/comment" class="menu-link "> <i class="menu-bullet menu-bullet-dot">
+                                                <span>
+                                                </span>
+                                            </i>
+											<span class="menu-text">التعليقات</span>
+										</a>
 									</li>
 								</ul>
 							</div>

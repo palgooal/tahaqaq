@@ -13,7 +13,7 @@
 						<div class="card-title">
 							<h3 class="card-label">قوالب Wordpress</h3>
 						</div>
-						<div class="text-left"> <a type="button" class="btn btn-primary" href="/pg-admin/templates/create">اضافة قالب جديدة</a>
+						<div class="text-left"> <a type="button" class="btn btn-primary" href="/pg-admin/templates/create" style="margin-top: 19px;">اضافة قالب جديدة</a>
 						</div>
 					</div>
 					<div class="card-body">

@@ -30,12 +30,6 @@ class ContactusController extends Controller
      */
     public function index()
     {
-        return view('admin.contact.contact')->with('contacts', Contactus::paginate(10))
-        ->with('users', User::get());
-    }
-
-    public function viewAll()
-    {
         $lang = App::getLocale();
         $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
@@ -43,6 +37,13 @@ class ContactusController extends Controller
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         return view('Contactus',compact(['menus','sysVarFooter','sysVarSocialMedia','isClientLogin']));
 
+    }
+
+    public function viewAll()
+    {
+
+        return view('admin.contact.contact')->with('contacts', Contactus::paginate(10))
+        ->with('users', User::get());
     }
 
 
@@ -69,7 +70,7 @@ class ContactusController extends Controller
         $data->email = $request->email;
         $data->message = $request->message;
         $data->save();
-        return back();
+        return back()->with('success',trans('تم ارسال الرسالة بنجاح سوف يتم التواصل معك عما قريب'));
 
     }
 

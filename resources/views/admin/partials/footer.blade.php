@@ -5,16 +5,16 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted font-weight-bold mr-2">2020&copy;</span>
-            <a href="http://keenthemes.com/metronic" target="_blank"
-                class="text-dark-75 text-hover-primary">Keenthemes</a>
+            <a href="https://tahqq.com" target="_blank"
+                class="text-dark-75 text-hover-primary">تحقق</a>
         </div>
         <!--end::Copyright-->
 
         <!--begin::Nav-->
         <div class="nav nav-dark">
-            <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">About</a>
+            {{-- <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">About</a>
             <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">Team</a>
-            <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-0">Contact</a>
+            <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-0">Contact</a> --}}
         </div>
         <!--end::Nav-->
     </div>
@@ -31,10 +31,12 @@
 <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
     <!--begin::Header-->
     <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
+        @if (Route::has('login'))
         <h3 class="font-weight-bold m-0">
-            User Profile
-            <small class="text-muted font-size-sm ml-2">12 messages</small>
+            {{$users[0]->name}}
+            {{-- <small class="text-muted font-size-sm ml-2">12 messages</small> --}}
         </h3>
+
         <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
             <i class="ki ki-close icon-xs text-muted"></i>
         </a>
@@ -51,7 +53,7 @@
             </div>
             <div class="d-flex flex-column">
                 <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
-                    James Jones
+                    {{$users[0]->name}}
                 </a>
                 <div class="text-muted mt-1">
                     Application Developer
@@ -73,13 +75,14 @@
                                         </g>
                                     </svg>
                                     <!--end::Svg Icon--></span> </span>
-                            <span class="navi-text text-muted text-hover-primary">jm@softplus.com</span>
+                            <span class="navi-text text-muted text-hover-primary">{{$users[0]->email}}</span>
                         </span>
                     </a>
 
-                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="/pg-admin/logout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">تسجيل الخروج</a>
                 </div>
             </div>
+            @endif
         </div>
         <!--end::Header-->
 
@@ -122,7 +125,7 @@
             <!--end:Item-->
 
             <!--begin::Item-->
-            <a href="custom/apps/user/profile-3.html" class="navi-item">
+            {{-- <a href="custom/apps/user/profile-3.html" class="navi-item">
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
@@ -141,9 +144,9 @@
                                         <rect fill="#000000" opacity="0.3" x="17" y="11" width="3" height="6"
                                             rx="1.5" />
                                     </g>
-                                </svg>
-                                <!--end::Svg Icon--></span> </div>
-                    </div>
+                                </svg> --}}
+                                {{-- <!--end::Svg Icon--></span> </div> --}}
+                    {{-- </div>
                     <div class="navi-text">
                         <div class="font-weight-bold">
                             My Messages
@@ -153,11 +156,11 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            </a> --}}
             <!--end:Item-->
 
             <!--begin::Item-->
-            <a href="custom/apps/user/profile-2.html" class="navi-item">
+            {{-- <a href="custom/apps/user/profile-2.html" class="navi-item">
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
@@ -174,8 +177,8 @@
                                             d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z"
                                             fill="#000000" fill-rule="nonzero" />
                                     </g>
-                                </svg>
-                                <!--end::Svg Icon--></span> </div>
+                                </svg> --}}
+                                {{-- <!--end::Svg Icon--></span> </div>
                     </div>
                     <div class="navi-text">
                         <div class="font-weight-bold">
@@ -186,11 +189,11 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            </a> --}}
             <!--end:Item-->
 
             <!--begin::Item-->
-            <a href="custom/apps/userprofile-1/overview.html" class="navi-item">
+            {{-- <a href="custom/apps/userprofile-1/overview.html" class="navi-item">
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
@@ -207,8 +210,8 @@
                                             d="M3.79274528,6.57253826 L12,12.5 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 Z"
                                             fill="#000000" />
                                     </g>
-                                </svg>
-                                <!--end::Svg Icon--></span> </div>
+                                </svg> --}}
+                                {{-- <!--end::Svg Icon--></span> </div>
                     </div>
                     <div class="navi-text">
                         <div class="font-weight-bold">
@@ -219,25 +222,25 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            </a> --}}
             <!--end:Item-->
-        </div>
+        {{-- </div> --}}
         <!--end::Nav-->
 
         <!--begin::Separator-->
-        <div class="separator separator-dashed my-7"></div>
+        {{-- <div class="separator separator-dashed my-7"></div> --}}
         <!--end::Separator-->
 
         <!--begin::Notifications-->
-        <div>
+        {{-- <div> --}}
             <!--begin:Heading-->
-            <h5 class="mb-5">
+            {{-- <h5 class="mb-5">
                 Recent Notifications
-            </h5>
+            </h5> --}}
             <!--end:Heading-->
 
             <!--begin::Item-->
-            <div class="d-flex align-items-center bg-light-warning rounded p-5 gutter-b">
+            {{-- <div class="d-flex align-items-center bg-light-warning rounded p-5 gutter-b">
                 <span class="svg-icon svg-icon-warning mr-5">
                     <span class="svg-icon svg-icon-lg">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg--><svg
@@ -253,8 +256,8 @@
                                     x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
                             </g>
                         </svg>
-                        <!--end::Svg Icon--></span> </span>
-
+                        <!--end::Svg Icon--></span> </span> --}}
+{{--
                 <div class="d-flex flex-column flex-grow-1 mr-2">
                     <a href="#" class="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1">Another
                         purpose persuade</a>
@@ -291,11 +294,11 @@
                 </div>
 
                 <span class="font-weight-bolder text-success py-1 font-size-lg">+50%</span>
-            </div>
+            </div> --}}
             <!--end::Item-->
 
             <!--begin::Item-->
-            <div class="d-flex align-items-center bg-light-danger rounded p-5 gutter-b">
+            {{-- <div class="d-flex align-items-center bg-light-danger rounded p-5 gutter-b">
                 <span class="svg-icon svg-icon-danger mr-5">
                     <span class="svg-icon svg-icon-lg">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group-chat.svg--><svg
@@ -319,11 +322,11 @@
                 </div>
 
                 <span class="font-weight-bolder text-danger py-1 font-size-lg">-27%</span>
-            </div>
+            </div> --}}
             <!--end::Item-->
 
             <!--begin::Item-->
-            <div class="d-flex align-items-center bg-light-info rounded p-5">
+            {{-- <div class="d-flex align-items-center bg-light-info rounded p-5">
                 <span class="svg-icon svg-icon-info mr-5">
                     <span class="svg-icon svg-icon-lg">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/General/Attachment2.svg--><svg
@@ -365,11 +368,11 @@
     </div>
     <!--end::Content-->
 </div>
-<!-- end::User Panel-->
+<!-- end::User Panel--> --}}
 
 
 <!--begin::Quick Cart-->
-<div id="kt_quick_cart" class="offcanvas offcanvas-right p-10">
+{{-- <div id="kt_quick_cart" class="offcanvas offcanvas-right p-10">
     <!--begin::Header-->
     <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
         <h4 class="font-weight-bold m-0">
@@ -378,11 +381,11 @@
         <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_cart_close">
             <i class="ki ki-close icon-xs text-muted"></i>
         </a>
-    </div>
+    </div> --}}
     <!--end::Header-->
 
     <!--begin::Content-->
-    <div class="offcanvas-content">
+    {{-- <div class="offcanvas-content">
         <!--begin::Wrapper-->
         <div class="offcanvas-wrapper mb-5 scroll-pull">
             <!--begin::Item-->
@@ -491,11 +494,11 @@
                 <a href="#" class="symbol symbol-70 flex-shrink-0">
                     <img src="admin/assets/media/stock-600x400/img-4.jpg" title="" alt="" />
                 </a>
-            </div>
+            </div> --}}
             <!--end::Item-->
 
             <!--begin::Separator-->
-            <div class="separator separator-solid"></div>
+            {{-- <div class="separator separator-solid"></div>
             <!--end::Separator-->
 
             <!--begin::Item-->
@@ -647,11 +650,11 @@
                         </div>
                         <span
                             class="btn btn-sm btn-light font-weight-bolder my-lg-0 my-2 py-1 text-dark-50">+4500$</span>
-                    </div>
+                    </div> --}}
                     <!--end: Item-->
 
                     <!--begin: Item-->
-                    <div class="d-flex align-items-center flex-wrap">
+                    {{-- <div class="d-flex align-items-center flex-wrap">
                         <div class="symbol symbol-50 symbol-light mr-5">
                             <span class="symbol-label">
                                 <img src="admin/assets/media/svg/misc/014-kickstarter.svg"
@@ -1041,9 +1044,9 @@
                 </div>
                 <!--end::Nav-->
             </div>
-            <!--end::Tabpane-->
+            <!--end::Tabpane--> --}}
 
-            <!--begin::Tabpane-->
+            {{-- <!--begin::Tabpane-->
             <div class="tab-pane fade pt-3 pr-5 mr-n5" id="kt_quick_panel_settings" role="tabpanel">
                 <form class="form">
                     <!--begin::Section-->
@@ -1172,11 +1175,11 @@
         </div>
     </div>
     <!--end::Content-->
-</div>
+</div> --}}
 <!--end::Quick Panel-->
 
 <!--begin::Chat Panel-->
-<div class="modal modal-sticky modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
+{{-- <div class="modal modal-sticky modal-sticky-bottom-right" id="kt_chat_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!--begin::Card-->
@@ -1451,9 +1454,9 @@
                     </div>
                     <!--end::Scroll-->
                 </div>
-                <!--end::Body-->
+                <!--end::Body--> --}}
 
-                <!--begin::Footer-->
+                {{-- <!--begin::Footer-->
                 <div class="card-footer align-items-center">
                     <!--begin::Compose-->
                     <textarea class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
@@ -1470,7 +1473,7 @@
                         </div>
                     </div>
                     <!--begin::Compose-->
-                </div>
+                </div> --}}
                 <!--end::Demo Panel-->
 
                         <script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>

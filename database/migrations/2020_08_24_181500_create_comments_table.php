@@ -19,6 +19,7 @@ class CreateCommentsTable extends Migration
             $table->string('email');
             $table->string('comment');
             $table->bigInteger('blog_id');
+            $table->boolean('pin_to_comment')->default(false);
             $table->timestamps();
         });
     }

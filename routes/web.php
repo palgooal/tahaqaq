@@ -68,14 +68,6 @@ Route::get('/getOneTemplateAjax/{id}','TemplateController@getOneTemplateAjax');
 Route::get('/testTemplateSelecotr','TemplateController@testTemplateSelector');
 // Route::get('/getOneTemplate/{id}','TemplateController@show');
 
-
-//login
-// Route::get('/TahqqLogin', function(){
-//     return view('login');
-// });
-
-
-
 // TahqqRegistration تسجيل مشترك جديد
 Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
 Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
@@ -94,8 +86,9 @@ Route::get('/GotoClientArea', 'TahqqRegistrationController@GotoClientArea');
 
 // Contact us
 Route::resource('/pg-admin/Contactus', 'ContactusController');
-Route::get('Contactus','ContactusController@viewAll');
-Route::get('/pg-admin/readcontact/{id}','ContactusController@show');
+Route::get('Contactus', 'ContactusController@index');
+Route::get('/pg-admin/Contactus','ContactusController@viewAll')->middleware('auth');
+Route::get('/pg-admin/readcontact/{id}','ContactusController@show')->middleware('auth');
 
 // packages
 
@@ -104,6 +97,11 @@ Route::resource('/pg-admin/packges', 'PricingController')->middleware('auth');
 // Comments
 
 Route::resource('/pg-admin/comment', 'CommentsController');
+Route::get('/pg-admin/comment', 'CommentsController@index')->middleware('auth');
 Route::get('/pg-admin/comment/{id}', 'CommentsController@show')->middleware('auth');
 
-
+// logout
+Route::get('pg-admin/logout', function () {
+    Auth::logout();
+    return redirect('/pg-admin');
+})->middleware('auth');
