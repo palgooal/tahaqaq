@@ -4,7 +4,7 @@
 <!--  start -->
 <div class="container d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
 	<!-- <img class="my-5 " style="background: transparent !important;" src="./img/Eclipse-2.1s-200px.svg" alt=""> -->
-	<img src="img/Infinity-1.4s-200px.svg" alt="">
+	<img src="/img/Infinity-1.4s-200px.svg" alt="">
 </div>
 <div class="text-center ">
 	<p class="mt-0">جار الانتقال الى الخطوات الاخيرة ... حجز الدومين واتمام عملية الشراء</p>

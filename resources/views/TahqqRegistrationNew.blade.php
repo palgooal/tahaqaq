@@ -88,10 +88,10 @@
                                 <div class="form-row">
                                     <div class="offset-md-1"></div>
                                     <div class="form-group col-md-5  mb-3 my-4">
-                                        <label class="control-label fields-label">الاسم بالكامل</label>
+                                        <label class="control-label fields-label">الإسم الأول</label>
                                         <input name="firstname" type="text" class="form-control p-4  overrideheight"
                                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
-                                            placeholder="الاسم بالكامل" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
+                                            placeholder="الاسم الاول" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
                                     <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">الإسم الاخير</label>
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="form-group col-md-5  mb-3 my-4">
                                         <label class="control-label fields-label">رقم الهاتف</label>
-                                        <input name="phonenumber" maxlength="100" type="phone" class="form-control p-4"
+                                        <input name="phonenumber" maxlength="100" type="number" class="form-control p-4"
                                             placeholder="رقم الهاتف" required="required" value="{{$isClientLogin? ($clientDetailsInfo->GetPhoneNumber()??'' ): ''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
                                     <div class="offset-md-1"></div>

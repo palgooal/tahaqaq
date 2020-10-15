@@ -10,7 +10,7 @@
 			<!-- Menú de navegación -->
 			<ul id="submenu" class="lista-menu aln-centro">
                 <li>
-                    <a href="/template"> الكلل  </a>
+                    <a href="/template"> الكل  </a>
                 </li>
                 @foreach ($categoris as $categoris)
 				<li>

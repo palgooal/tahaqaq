@@ -832,6 +832,15 @@ form input::placeholder , textarea::placeholder{
         display: none !important;
 
     }
+    .stepwizard{
+        background: #fff;
+        margin-bottom: -30px !important;
+
+    }
+    .stepwizard-step a{
+        background-color: #7657E5 !important;
+        color: #fff !important;
+    }
 
 }
 
