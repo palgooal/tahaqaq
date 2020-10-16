@@ -132,5 +132,10 @@
             document.planSelectFrm.selectedPlanName.value = $plan;
             document.planSelectFrm.submit();
         }
+
+        $(function () {
+            const templateId = {!! $templateOne->id !!};
+            LoadPlanSelectorNewData(templateId);
+        });
     </script>
 @endsection

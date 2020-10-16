@@ -10,6 +10,7 @@ use App\Logic\APIClient\APIResult\CreateSsoTokenResult;
 use App\Logic\APIClient\APIResult\GetClientsDetailsResult;
 use App\Logic\TahaqqSessionInfo;
 use App\Logic\APIClient\APIResult\GetContactResult;
+use App\Model\Template;
 use Illuminate\Support\Facades\Http;
 
 class WhmcsAPILogic{
@@ -314,13 +315,12 @@ class WhmcsAPILogic{
 
         $ssoResult = $this->CreateSsoToken($clientId, null, null, null, null);
         return $ssoResult;
-
     }
 
     public function IsClientHasOrder($clientId){
         if(env('APP_ENV') == 'local')
         {
-          return true;
+          return false;
         }
         $postfields = $this->getPostFileArray(array(
             "userid"=>$clientId
@@ -330,4 +330,85 @@ class WhmcsAPILogic{
         return ($result->result == "success" && $result->totalresults >0);
     }
 
+    public function GetTemplatePlans($templateId){
+        $template = Template::findOrFail($templateId);
+        $productPlan = new ProductPlan();
+        if(empty($template->whmcs_gid)){
+            return $productPlan;
+        }
+
+        if(env('APP_ENV') == 'local'){
+            $productPlan->gould = ["مساحة القرص 1000 MB",
+            "معدل نقل البيانات 80 GB",
+            "عدد قواعد البيانات غير محدود",
+            "عدد حسابات البريد الإلكتروني غير محدود",
+            "عدد الموقع غير محدود",
+            "النسخ الاحتياطي قاعدة البيانات / استعادة يومي – اسبوعي – شهري",
+            "الدعم الفني 24/7"];
+
+            $productPlan->silver = [
+                "مساحة القرص 500MB",
+                "معدل نقل البيانات 50 GB",
+                "عدد قواعد البيانات غير محدود",
+                "عدد حسابات البريد الإلكتروني غير محدود",
+                "عدد الموقع غير محدود",
+                "النسخ الاحتياطي قاعدة البيانات / استعادة يومي – اسبوعي – شهري",
+                "الدعم الفني 24/7"
+             ];
+
+            $productPlan->bronze = [
+                "مساحة القرص 5000MB",
+                 "معدل نقل البيانات 150 GB",
+                 "عدد قواعد البيانات غير محدود",
+                 "عدد حسابات البريد الإلكتروني غير محدود",
+                 "عدد الموقع غير محدود",
+                 "النسخ الاحتياطي قاعدة البيانات / استعادة يومي – اسبوعي – شهري",
+                 "الدعم الفني 24/7"
+              ];
+
+
+            return $productPlan;
+        }
+        $postfields = $this->getPostFileArray(array(
+            // "pid"=>1,
+             "gid"=>$template->whmcs_gid
+        ), WhmcsAPIActions::Prod_GetProducts);
+
+        $result = $this->callAPI($postfields);
+        if($result->result == "success" ){
+
+            foreach ($result->products->product as $p) {
+
+                $data = explode("\r\n", $p->description);
+                $pricing = $p->pricing->USD;
+                if($p->pid == $template->whmcs_gould_pid) {
+                    $productPlan->gould = $data;
+                    $productPlan->pricing['gould']['annually']=$pricing->annually;
+                    $productPlan->pricing['gould']['quarterly']=$pricing->quarterly;
+                }else if($p->pid == $template->whmcs_silver_pid){
+                    $productPlan->silver = $data;
+                    $productPlan->pricing['silver']['annually']=$pricing->annually;
+                    $productPlan->pricing['silver']['quarterly']=$pricing->quarterly;
+                }else if($p->pid == $template->whmcs_bronze_pid){
+                    $productPlan->bronze = $data;
+                    $productPlan->pricing['bronze']['annually']=$pricing->annually;
+                    $productPlan->pricing['bronze']['quarterly']=$pricing->quarterly;
+                }
+            }
+        }
+
+        return $productPlan;
+    }
+
+
+}
+class ProductPlan{
+    public $gould = array();
+    public $silver = array();
+    public $bronze = array();
+    public $pricing = array(
+            'gould'=> array('annually'=>'0','quarterly'=>'0'),
+            'bronze'=> array('annually'=>'0','quarterly'=>'0'),
+            'silver'=> array('annually'=>'0','quarterly'=>'0')
+        );
 }

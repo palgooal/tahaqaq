@@ -1,5 +1,6 @@
 <?php
 
+use App\Logic\APIClient\WhmcsAPILogic;
 use App\Logic\TahaqqSessionInfo;
 use App\Model\Menu;
 use Facade\FlareClient\Api;
@@ -105,3 +106,10 @@ Route::get('pg-admin/logout', function () {
     Auth::logout();
     return redirect('/pg-admin');
 })->middleware('auth');
+
+
+Route::get('/GetTemplatePlans/{id}', function($id){
+    $logic = new WhmcsAPILogic();
+    $result = $logic->GetTemplatePlans($id);
+    return response()->json($result);
+});

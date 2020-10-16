@@ -1,6 +1,8 @@
 @extends('layouts.newapp')
 @section('content')
 @include('partials.InternalNavparnew')
+<?php header('Access-Control-Allow-Origin: *'); ?>
+
 <div class=" pt-5" style="background: transparent!important;margin-top: 120px;">
     <div class=" mb-5 primery-color">
 
@@ -224,7 +226,6 @@
 
                     <!-- Step 3-->
                     <div class="panel panel-primary setup-content h-100" id="step-3" style="border: none ; ">
-
                         <div class="panel-body ">
                             <h3 class="primery-color text-center mb-5"> اختر القالب المناسب </h3>
                             <!--start -->
@@ -341,8 +342,18 @@
 @endsection
 @section('footerJs')
     <script>
+
       $(function () {
-        var no = {!! WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] !!};
+        $("#step-4").bind('panelShow', function (e) {
+            const templateId = $("input[name=templates]:checked").val();
+            if(templateId == undefined || templateId == null  ){
+                alert('please select template')
+                $('#lnkStep-3').trigger('click');
+                return;
+            }
+            LoadPlanSelectorNewData(templateId);
+        });
+        const no = {!! WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] !!};
         $('#lnkStep-'+(no+1)).trigger('click');
       });
     </script>

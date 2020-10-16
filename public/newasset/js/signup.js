@@ -17,6 +17,7 @@ $(document).ready(function () {
             allWells.hide();
             $target.show();
             $target.find('input:eq(0)').focus();
+            $target.trigger('panelShow');
         }
     });
 
