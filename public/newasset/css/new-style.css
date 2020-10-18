@@ -287,14 +287,15 @@ footer .col {
 }
 .card-p{
     font-family: "FFShamelFamily-SansOneBook" !important;
-    font-size: 10px !important;
+    font-size: 12px !important;
     text-align: right;
     color: #221950;
     margin: 20px 0 10px 0 !important;
 }
 .card-h {
     color: #221950 !important;
-    font-size: 11px !important;
+    font-size: 14px !important;
+    line-height: 1.5;
     text-align: right;
     margin: 20px 0 10px 0 !important;
 }

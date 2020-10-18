@@ -36,7 +36,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('admin.blog.IndexBlog')->with('blogs', Blog::get())
+        return view('admin.blog.IndexBlog')->with('blogs', Blog::orderBy('id','desc')->get())
         ->with('users', User::get());
     }
 
@@ -47,7 +47,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.AddBlog')->with('users', User::get());
+        return view('admin.blog.AddBlog')->with('users', User::get())->with('blogs', Blog::get());
     }
 
     /**
@@ -58,6 +58,13 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        $data = request()->validate([
+            'Title_ar' => 'required',
+            'Body_ar' => 'required',
+            'image' => 'required',
+            'Tags_ar' => 'required',
+            'meta_Describe_ar' => 'required',
+        ]);
 
         $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_en)  ;
         $blog = new Blog();
@@ -67,9 +74,12 @@ class BlogController extends Controller
         $blog->Body_en = $request->Body_en;
         $blog->image = $request->image;
         $blog->slug = $slug;
-        $blog->Tags = $request->Tags;
+        $blog->Tags_ar = $request->Tags_ar;
+        $blog->Tags_en = $request->Tags_en;
+        $blog->meta_Describe_ar = $request->meta_Describe_ar;
+        $blog->meta_Describe_en = $request->meta_Describe_en;
         $blog->save();
-        return back();
+        return redirect('/pg-admin/blogs')->with('success',trans('تم اضافة الصفحة بنجاح'))->with('errors',trans('تم اضافة الصفحة بنجاح'));
     }
 
     /**
@@ -90,19 +100,16 @@ class BlogController extends Controller
        return view('SinglePost',
        compact(['sysVarFooter','sysVarSocialMedia', 'menus','comments']))
        ->with('blogs', $blog)
-
-                                ->with('blogers',Blog::get());
+       ->with('blogers',Blog::orderBy('created_at','DESC')->get());
     }
 
     public function Indexshow()
     {
         $lang = App::getLocale();
-
-
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))->with('blogs', Blog::paginate(10))
+        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))->with('blogs', Blog::orderBy('created_at','DESC')->paginate(10))
         ->with('menus', Menu::get());
     }
 
@@ -136,9 +143,12 @@ class BlogController extends Controller
         $blog->Body_en = $request->Body_en;
         $blog->image = $request->image;
         $blog->slug = $slug;
-        $blog->Tags = $request->Tags;
+        $blog->Tags_ar = $request->Tags_ar;
+        $blog->Tags_en = $request->Tags_en;
+        $blog->meta_Describe_ar = $request->meta_Describe_ar;
+        $blog->meta_Describe_en = $request->meta_Describe_en;
         $blog->save();
-        return redirect('/pg-admin/blogs');
+        return redirect('/pg-admin/blogs')->with('success',trans('تم تعديل بنجاح'));
 
     }
 

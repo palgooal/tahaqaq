@@ -23,8 +23,14 @@
 						</div>
 						<div class="form-group">
 							<label>الكلمات الدلالية (Tags)</label>
-							<input id="kt_tagify_1" class="form-control tagify" name='Tags' placeholder='اضافة الكلمات الدلالية هنا ثم اضغط Enter ثم اضف كلمة اخري' value='{{$blogs->Tags}}' data-blacklist='.NET,PHP' />
+							<input id="kt_tagify_1" class="form-control tagify" name='Tags_ar' placeholder='اضافة الكلمات الدلالية هنا ثم اضغط Enter ثم اضف كلمة اخري' value='{{$blogs->Tags_ar}}' data-blacklist='.NET,PHP' />
 							<div class="mt-3"> <a href="javascript:;" id="kt_tagify_1_remove" class="btn btn-sm btn-light-primary font-weight-bold">مسح الكلمات الدلالية</a>
+							</div>
+                        </div>
+                        <div class="form-group row">
+                            <label>وصف مختصر</label>
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<textarea class="form-control z-depth-1" rows="3" id="exampleFormControlTextarea3" name="meta_Describe_ar">{{$blogs->meta_Describe_ar}}</textarea>
 							</div>
 						</div>
 						{{-- start modal gallery --}}

@@ -53,7 +53,7 @@ Route::get('/pg-admin/sysVars_editAsCards/{type}', 'SysVarController@editPerType
 Route::put('/pg-admin/sysVars_updateAsCards', 'SysVarController@updateAsCard')->middleware('auth');
 
 // blogs\   \
-Route::resource('/pg-admin/blogs', 'BlogController');
+Route::resource('/pg-admin/blogs', 'BlogController')->middleware('auth');
 Route::get('/blogs', 'BlogController@Indexshow');
 Route::get('/blogs/{slug}', 'BlogController@show');
 Route::post('/pg-admin/pinBlogToSlide/{id}', 'BlogController@pinToSlider' );

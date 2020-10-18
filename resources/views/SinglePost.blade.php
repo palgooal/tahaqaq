@@ -1,6 +1,7 @@
 @extends('layouts.newapp')
 @section('meta')
-{{-- <meta name="keywords" content="{{$blogs->Tags}}"> --}}
+<meta name="keywords" content="{!!$blogs->getTags(App::getLocale())!!}">
+<meta name="description" content="{{$blogs->getDescribe(App::getLocale())}}">
 @endsection
 @section('title')
 {{$blogs->getTitle(App::getLocale()) ?? ''}} | تحقق
@@ -29,7 +30,7 @@
                 border-radius: 19px; font-size: 14px;"> <i class="far fa-calendar-alt ml-3"></i>
 					{{$blogs->created_at->format('Y-m-d')}}</div>
 				<h4 class="mt-4 text-right">{{$blogs->getTitle(App::getLocale())}}</h4>
-				<p class="mt-4 text-right carousel-p ">{!! Str::words($blogs->getBody(App::getLocale()), 70 , '.....') !!}</p>
+				<p class="mt-4 text-right carousel-p ">{{ Str::words($blogs->getDescribe(App::getLocale()), 70 , '.....') }}</p>
 				<div class="d-flex">
 					<div class="ml-3"> <i class="far fa-comment"></i>
 						25</div>

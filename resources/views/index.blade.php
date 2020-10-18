@@ -334,7 +334,7 @@
                                     {{$blog->getTitle(App::getLocale())}}
                                 </a>
                             </h5>
-                            <p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
+                            <p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()) , 10 , '.....') }}</p>
                             <div class="d-flex mb-2 float-left ">
                                 <div class="ml-3  gray-color ">
                                     <i class="far fa-comment" aria-hidden="true"></i>

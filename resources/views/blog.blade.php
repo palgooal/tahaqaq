@@ -34,7 +34,7 @@
                         border-radius: 19px;  font-size: 14px;"> <i class="far fa-calendar-alt ml-3"></i>
 						{{$blogsSliderimg->created_at->format('Y-m-d')}}</div>
 					<h5 class="mt-5 text-right">{{$blogsSliderimg->getTitle(App::getLocale())}}</h5>
-					<p class="mt-5 text-right carousel-p ">{!! Str::words($blogsSliderimg->getBody(App::getLocale()), 70 , '.....') !!}</p>
+					<p class="mt-5 text-right carousel-p ">{{ Str::words($blogsSliderimg->getDescribe(App::getLocale()), 70 , '.....') }}</p>
 					<div class="d-flex">
 						<div class="ml-3"> <i class="far fa-comment"></i>
 							25</div>
@@ -72,7 +72,7 @@
                                             {{$blog->getTitle(App::getLocale())}}
                                         </a>
                                     </h5>
-								<p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
+								<p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()), 10 , '.....') }}</p>
 								<div class="d-flex mb-2 float-left ">
 									<div class="ml-3  gray-color "> <i class="far fa-comment"></i>
 										25</div>

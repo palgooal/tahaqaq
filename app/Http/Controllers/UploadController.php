@@ -24,11 +24,12 @@ class UploadController extends Controller
     }
 
     public function selectMedia(){
-        return view('admin.upload.selectMedia')->with('uploads', upload::orderBy('id','ASC')->get());
+        $users = User::get();
+        return view('admin.upload.selectMedia', compact('users'))->with('uploads', upload::orderBy('id','ASC')->get());
     }
 
     public function addMediaModal(){
-        return view('admin.partials.uploadMedia');
+        return view('admin.partials.uploadMedia')->with('users', User::get());
     }
 
 
@@ -62,9 +63,9 @@ class UploadController extends Controller
         $upload->alt = $request->alt;
         $upload->save();
 
-        // return redirect('pg-admin/upload');
+         return redirect('pg-admin/upload');
         // return redirect()->action('UploadController@addMedia', ['id'=>'exampleModal']);
-        return back()->with('success',trans('تم اضافة بنجاح'));
+        // return back()->with('success',trans('تم اضافة بنجاح'));
     }
 
     /**

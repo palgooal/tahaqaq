@@ -71,6 +71,8 @@
 .index-card-img{
     background: #F6F3FF 0% 0% no-repeat padding-box;
     border-radius: 37px;
+    width: 38px !important;
+    padding: 10px !important;
 }
 .index-card-img img{
     height: 30px;

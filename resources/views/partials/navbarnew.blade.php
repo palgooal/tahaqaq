@@ -37,7 +37,7 @@
             <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$loggedClientName}}
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
                 <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
                 {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
         </div>

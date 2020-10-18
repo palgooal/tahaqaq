@@ -21,7 +21,10 @@ class CreateBlogsTable extends Migration
             $table->longText('Body_en')->nullable();
             $table->string('image')->nullable();
             $table->string('slug')->unique();
-            $table->string('Tags');
+            $table->string('Tags_ar');
+            $table->string('Tags_en')->nullable();
+            $table->longText('meta_Describe_ar');
+            $table->longText('meta_Describe_en')->nullable();
             $table->boolean('pin_to_slider')->default(false);
             $table->timestamps();
         });

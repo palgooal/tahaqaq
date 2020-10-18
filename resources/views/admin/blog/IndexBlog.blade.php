@@ -21,11 +21,14 @@
 						<!--begin::Example-->
 						<div class="example mb-10">
 							<div class="example-preview">
+                                <div class="alert-text">@include('alerts.success')</div>
 								<table class="table">
 									<thead class="thead-light">
 										<tr>
 											<th scope="col">#</th>
                                             <th scope="col">عنوان المدونة</th>
+                                            <th scope="col">تاريخ الانشاء</th>
+                                            <th scope="col">تاريخ الانشاء</th>
                                             <th scope="col">عرض على لسلايدر</th>
 											<th scope="col"></th>
 											{{-- <th scope="col">تعديل</th>
@@ -37,6 +40,8 @@
                                             <tr>
                                                 <th scope="row">{{$index+1}}</th>
                                                 <td>{{$blog->Title_ar}}</td>
+                                                <td>{{$blog->created_at->format('Y-m-d')}}</td>
+                                                <td>{{$blog->updated_at->format('Y-m-d')}}</td>
                                                 <td>
                                                     <label class="checkbox checkbox-lg">
                                                         <input type="checkbox" data-blogid="{{$blog->id}}" name="pinOnSlider_{{$blog->id}}" id="pinOnSlider"
