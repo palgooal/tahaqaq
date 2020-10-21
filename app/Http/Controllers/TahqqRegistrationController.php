@@ -338,8 +338,8 @@ class TahqqRegistrationController extends Controller
     public function GotoClientArea(){
         if(!TahaqqSessionInfo::IsClientLogin())
             return back();
-
-        $ssoResult = $this->whmcsAPILogic->CreateSsoToken(TahaqqSessionInfo::GetLoggedClientId(), "clientarea:profile", null, null, null);
+            https://client.tahqq.com/clientarea.php
+        $ssoResult = $this->whmcsAPILogic->CreateSsoToken(TahaqqSessionInfo::GetLoggedClientId(), "clientarea:billing_info", null, null, null);
         if($ssoResult->isSuccess == true){
             return redirect($ssoResult->redirectUrl);
         }
