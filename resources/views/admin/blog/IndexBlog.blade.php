@@ -41,7 +41,7 @@
                                                 <th scope="row">{{$index+1}}</th>
                                                 <td>{{$blog->Title_ar}}</td>
                                                 <td>{{$blog->created_at->format('Y-m-d')}}</td>
-                                                <td>{{$blog->updated_at->format('Y-m-d')}}</td>
+                                                <td>{{$blog->updated_at != null? $blog->updated_at->format('Y-m-d'):''}}</td>
                                                 <td>
                                                     <label class="checkbox checkbox-lg">
                                                         <input type="checkbox" data-blogid="{{$blog->id}}" name="pinOnSlider_{{$blog->id}}" id="pinOnSlider"

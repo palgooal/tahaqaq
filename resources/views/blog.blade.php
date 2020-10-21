@@ -13,8 +13,8 @@
 	<div class="mx-5 wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold ">المدونة</h1>
 	</div>
-	<form action="">
-		<input class="form-control search-top px-5 py-3 mt-0 " type="search" placeholder="ابحث عن ما تريد" id="">
+	<form action="/blogs">
+		<input class="form-control search-top px-5 py-3 mt-0" value="{{ $filterKey }}" type="search" placeholder="ابحث عن ما تريد" id="filterKey" name="filterKey">
 	</form>
 </section>
 </header>

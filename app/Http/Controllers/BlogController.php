@@ -36,8 +36,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('admin.blog.IndexBlog')->with('blogs', Blog::orderBy('id','desc')->get())
-        ->with('users', User::get());
+        return view('admin.blog.IndexBlog')
+                ->with('blogs', Blog::orderBy('id','desc')->get())
+                ->with('users', User::get());
     }
 
     /**
@@ -76,8 +77,8 @@ class BlogController extends Controller
         $blog->slug = $slug;
         $blog->Tags_ar = $request->Tags_ar;
         $blog->Tags_en = $request->Tags_en;
-        $blog->meta_Describe_ar = $request->meta_Describe_ar;
-        $blog->meta_Describe_en = $request->meta_Describe_en;
+        $blog->meta_Describe_ar = $request->meta_Describe_ar != null?$request->meta_Describe_ar:'';
+        $blog->meta_Describe_en = $request->meta_Describe_en != null ? $request->meta_Describe_en:'';
         $blog->save();
         return redirect('/pg-admin/blogs')->with('success',trans('تم اضافة الصفحة بنجاح'))->with('errors',trans('تم اضافة الصفحة بنجاح'));
     }
@@ -99,18 +100,33 @@ class BlogController extends Controller
 
        return view('SinglePost',
        compact(['sysVarFooter','sysVarSocialMedia', 'menus','comments']))
-       ->with('blogs', $blog)
-       ->with('blogers',Blog::orderBy('created_at','DESC')->get());
+                ->with('blogs', $blog)
+                ->with('blogers',Blog::orderBy('created_at','DESC')->get());
     }
 
-    public function Indexshow()
+    public function Indexshow(Request $request)
     {
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
-        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))->with('blogs', Blog::orderBy('created_at','DESC')->paginate(10))
-        ->with('menus', Menu::get());
+        $blogs = null;
+        $filterKey = null;
+        if($request->has('filterKey') && !empty($request->filterKey)){
+            $filterKey = $request->filterKey;
+            $blogs =  Blog::where('Title_en','LIKE',''.$filterKey.'%')
+                         ->orWhere('Title_ar','LIKE',''.$filterKey.'%')
+                        ->orderBy('created_at','DESC')
+                        ->paginate(10);
+        }else{
+            $blogs =  Blog::orderBy('created_at','DESC')->paginate(10);
+            $filterKey = null;
+        }
+
+        return view('blog',compact(['sysVarFooter','sysVarSocialMedia']))
+        ->with('blogs', $blogs)
+        ->with('menus', Menu::get())
+        ->with('filterKey',$filterKey);
     }
 
     /**
