@@ -39,7 +39,7 @@
                         {{-- start modal gallery --}} @include('admin.partials.modalGallary') {{-- end modal gallery --}}
 						<div class="form-group row">
 							<div class="col-lg-12 col-md-12 col-sm-12">
-								<textarea class="summernote" id="kt_summernote_1" name="Body_ar"></textarea>
+								<textarea class="summernote" id="summernote" rows="7" name="Body_ar"></textarea>
 							</div>
 						</div>
 					</div>

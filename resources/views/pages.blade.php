@@ -2,6 +2,9 @@
 @section('meta')
 <meta name="keywords" content="{{$page->tags}}">
 @endsection
+@section('headcss')
+<link rel="stylesheet" href="newasset/css/who-us-style.css">
+@endsection
 @section('title') تحقق | {{$page->getTitle(App::getLocale())}} @endsection
  @section('content')
   @include('partials.InternalNavparnew')
