@@ -83,7 +83,7 @@
 			</div>
 			<div class="col  col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center wow bounceInLeft">
 				<div class="text-right ">
-					<p class="top-of-the-head mt-0">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</p>
+					{{-- <p class="top-of-the-head mt-0">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</p> --}}
 					<p class="h3 top-header-heading w-100  primery-color my-4">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_SubTitle)}}</p>
 					<p class="index-top-p">{!! $sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Details) !!}</p>{{--
 					<p class="index-top-p mt-4">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع</p>--}}</div>
@@ -141,7 +141,7 @@
                                                         {{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 12px !important;">{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Details)}}</p>
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
@@ -219,7 +219,7 @@
 <section class="container  py-5 section-five">
 	<div class="text-center mb-5 wow bounceInDown">
 		<p class="top-of-the-head mt-0">كيف يعمل تحقق</p>
-		<p class="h3 primery-color my-4">نحن نساعدك بالوصول السريع لاعمالك</p>
+		<p class="h3 primery-color my-4">المهم ليس الفكرة المهم هو التحقق منها ..</p>
 	</div>
 	<div class="how-to-do w-100 m-auto "></div>
 </section>
@@ -334,7 +334,7 @@
                                     {{$blog->getTitle(App::getLocale())}}
                                 </a>
                             </h5>
-                            <p class="card-text mb-2 card-p">{!! Str::words($blog->getBody(App::getLocale()), 10 , '.....') !!}</p>
+                            <p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()) , 10 , '.....') }}</p>
                             <div class="d-flex mb-2 float-left ">
                                 <div class="ml-3  gray-color ">
                                     <i class="far fa-comment" aria-hidden="true"></i>

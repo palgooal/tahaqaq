@@ -1568,16 +1568,19 @@
                      <!--end::Page Scripts-->
                      <script src="admin\assets\js\alertsDelete.js"></script>
                      <script>
-                    $('#summernote').summernote({
+                   $('#summernote').summernote({
                   toolbar: [
-                    // [groupName, [list of button]]
-                    ['style', ['bold', 'italic', 'underline', 'clear', 'hr']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    // [groupName, [list of button]];
+                    ['style', ['bold', 'italic', 'underline', 'clear', 'hr','style']],
+                    // ['font', ['strikethrough', 'superscript', 'subscript']],
                     ['fontsize', ['fontsize', 'height', 'color']],
                     ['para', ['ul', 'ol', 'paragraph']],
+                    ['paragraph2', ['h1' ]],
                     ['insert', ['link', 'picture', 'video']],
                     ['table', ['table']],
                     ['view', ['fullscreen', 'codeview', 'help']],
+                    ['fontNames', ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New']],
+
                   ]
                 });
                 </script>
@@ -1614,16 +1617,25 @@
                   <script>
                     $('#summernote').summernote({
                   toolbar: [
-                    // [groupName, [list of button]]
-                    ['style', ['bold', 'italic', 'underline', 'clear', 'hr']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    // [groupName, [list of button]];
+                    ['style', ['bold', 'italic', 'underline', 'clear', 'hr','style']],
+                    // ['font', ['strikethrough', 'superscript', 'subscript']],
                     ['fontsize', ['fontsize', 'height', 'color']],
                     ['para', ['ul', 'ol', 'paragraph']],
+                    ['paragraph2', ['h1' ]],
                     ['insert', ['link', 'picture', 'video']],
                     ['table', ['table']],
                     ['view', ['fullscreen', 'codeview', 'help']],
+                    ['fontNames', ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New']],
+
                   ]
+
+
+
                 });
+
+
+
                 </script>
                   @endenv
 @yield('footerLib')

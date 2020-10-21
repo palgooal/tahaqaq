@@ -52,7 +52,7 @@
                                 <a id="lnkStep-5" href="#step-5" type="button"
                                 class="btn btn-default btn-circle mb-3 "
                                 >5</a>
-                                <p><small>اختر التيمبليت</small></p>
+                                <p><small>اختر دومين</small></p>
                             </div>
                             <div class="stepwizard-step col-xs-1 ">
                             </div>

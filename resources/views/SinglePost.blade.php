@@ -1,6 +1,7 @@
 @extends('layouts.newapp')
 @section('meta')
-{{-- <meta name="keywords" content="{{$blogs->Tags}}"> --}}
+<meta name="keywords" content="{!!$blogs->getTags(App::getLocale())!!}">
+<meta name="description" content="{{$blogs->getDescribe(App::getLocale())}}">
 @endsection
 @section('title')
 {{$blogs->getTitle(App::getLocale()) ?? ''}} | تحقق
@@ -10,7 +11,7 @@
 <!-- Top of the slider -->
 <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider" style="margin-top: 100px;">
 	<div class="back">
-		<a href="#" class="d-flex align-items-center justify-content-center text-center text-truncate" style="color: #000;" id=""> <i class="fas fa-arrow-right ml-2"></i>
+		<a href="/" class="d-flex align-items-center justify-content-center text-center text-truncate" style="color: #000;" id=""> <i class="fas fa-arrow-right ml-2"></i>
 			الرجوع الى الرئيسية</a>
 	</div>
 	<form action="">
@@ -23,13 +24,13 @@
 <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="./img/12.png" class="d-block w-100" alt="{{$blogs->getTitle(App::getLocale())}}">
+			<img src="images/{{$blogs->image}}" class="d-block w-100" alt="{{$blogs->getTitle(App::getLocale())}}">
 			<div class="carousel-caption carousel-caption-format d-none text-center d-md-block">
 				<div class=" w-25 p-0 pt-2 date " style="background: #F582EA 0% 0% no-repeat padding-box;
                 border-radius: 19px; font-size: 14px;"> <i class="far fa-calendar-alt ml-3"></i>
 					{{$blogs->created_at->format('Y-m-d')}}</div>
 				<h4 class="mt-4 text-right">{{$blogs->getTitle(App::getLocale())}}</h4>
-				<p class="mt-4 text-right carousel-p ">{!! Str::words($blogs->getBody(App::getLocale()), 70 , '.....') !!}</p>
+				<p class="mt-4 text-right carousel-p ">{{ Str::words($blogs->getDescribe(App::getLocale()), 70 , '.....') }}</p>
 				<div class="d-flex">
 					<div class="ml-3"> <i class="far fa-comment"></i>
 						25</div>
@@ -44,8 +45,9 @@
 <div class="bg-white" style="padding-top:70px">
 	<div class=" d-flex flex-row justify-content-between ">
 		<div class=" right-side  d-flex flex-column ">
-			<div class="container res-container">
-				<!--content-->
+			<div class="container">
+                <!--content-->
+
 				<div class="container content">{!!$blogs->getBody(App::getLocale())!!}</div>
 			</div>
 			<div class="container mx-5 " style="padding-left:60px !important">

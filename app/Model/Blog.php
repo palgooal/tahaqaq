@@ -24,5 +24,21 @@ class Blog extends Model
                 return $this->Title_ar;
         }
     }
+    function getTags($lang){
+        switch ($lang) {
+            case 'en':
+                return $this->Tags_en;
+            case 'ar':
+                return $this->Tags_ar;
+        }
+    }
+        function getDescribe($lang){
+            switch ($lang) {
+                case 'en':
+                    return $this->meta_Describe_en;
+                case 'ar':
+                    return $this->meta_Describe_ar;
+            }
+    }
 
 }

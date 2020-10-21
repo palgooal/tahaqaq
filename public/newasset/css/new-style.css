@@ -98,7 +98,7 @@ body {
 opacity: 0.7;
 color: #2e6da4;
 */
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+.h1,.h2,.h3,.h4,.h5,.h6{
     font-family: "FFShamelFamily-SansOneBold" !important;
 
 }
@@ -287,14 +287,15 @@ footer .col {
 }
 .card-p{
     font-family: "FFShamelFamily-SansOneBook" !important;
-    font-size: 10px !important;
+    font-size: 12px !important;
     text-align: right;
     color: #221950;
     margin: 20px 0 10px 0 !important;
 }
 .card-h {
     color: #221950 !important;
-    font-size: 11px !important;
+    font-size: 14px !important;
+    line-height: 1.5;
     text-align: right;
     margin: 20px 0 10px 0 !important;
 }
@@ -319,18 +320,18 @@ footer .col {
 
 
 /* Single post style*/
-.content h3{
+/* .content h3{
     text-align: right;
     color: #343A40;
     font:   23px/53px "FFShamelFamily-SansOneBook" !important;
     font-size: 23px !important;
 
-}
+} */
 .content p{
     font-family: "FFShamelFamily-SansOneBook" !important;
-    font-size: 11px;
+    /* font-size: 11px;
     font-weight: 500;
-    color:#74787D;
+    color:#74787D; */
 }
 
 .left-side{
@@ -414,6 +415,15 @@ form input::placeholder , textarea::placeholder{
 /* Optional theme */
 
 /*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
+@media (min-width:1366px){
+    .stepwizard-step{
+        display: flex !important;
+    flex-direction: row !important;
+    }.stepwizard-step p small{
+        font-size: 10px;
+        margin-right: 10px;
+    }
+}
 
 .stepwizard-step p {
     margin-top: 0px;
@@ -648,17 +658,17 @@ form input::placeholder , textarea::placeholder{
 
 
 }
-.container h5 {
+/* .container h5 {
     color: #221950;
     font-size: 21px;
     margin: 0px 43%;
 
-}
-.container h4 {
+} */
+/* .container h4 {
     margin: 1% 28% 5% 28%;
     font-size: 32px;
     color: #7657E5;
-}
+} */
 
 .list li {
     font-size: 18px;

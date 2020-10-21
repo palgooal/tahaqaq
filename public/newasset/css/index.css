@@ -10,7 +10,7 @@
     box-shadow: none;
 }
 .top-header-heading{
-    width: 60%;
+    width: 80%;
     line-height: 1.7;
 
 }
@@ -37,7 +37,7 @@
     color: #fff !important;
 }
 .index-top-p{
-    font-size: 15px;
+    font-size: 18px;
     color: #221950;
     font-family: "FFShamelFamily-SansOneBook" !important;
 
@@ -71,6 +71,8 @@
 .index-card-img{
     background: #F6F3FF 0% 0% no-repeat padding-box;
     border-radius: 37px;
+    width: 38px !important;
+    padding: 10px !important;
 }
 .index-card-img img{
     height: 30px;
