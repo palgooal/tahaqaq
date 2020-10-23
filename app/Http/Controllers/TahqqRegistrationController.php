@@ -267,6 +267,7 @@ class TahqqRegistrationController extends Controller
     public function logout(Request $request)
     {
         $this->whmcsAPILogic->Logout();
+
         return redirect('/');
     }
 

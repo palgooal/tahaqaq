@@ -37,9 +37,11 @@
             <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$loggedClientName}}
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;">
+                <a class="dropdown-item" href="javascript:logout();">تسجيل خروج</a>
                 <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
-                {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
+                {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+            </div>
         </div>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
                 منطقة العملاء
@@ -61,5 +63,14 @@
             </form>
         </div>
     </nav>
+    <iframe style="visibility: hidden" id="frameLogoutWHMCS" name="frameLogoutWHMCS" src="" width="50px" height="50px" onload="onLoad_frameLogoutWHMCS()" ></iframe>
+<script>
+    function onLoad_frameLogoutWHMCS() {
+        window.location = '/TahqqLogout';
+    }
 
+    function logout(){
+        $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
+    }
+</script>
 
