@@ -380,7 +380,7 @@ class WhmcsAPILogic{
             foreach ($result->products->product as $p) {
 
                 $data = explode("\r\n", $p->description);
-                $pricing = $p->pricing->USD;
+                $pricing = $p->pricing->SAR;
                 if($p->pid == $template->whmcs_gould_pid) {
                     $productPlan->gould = $data;
                     $productPlan->pricing['gould']['annually']=$pricing->annually;
