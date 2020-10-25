@@ -38,7 +38,8 @@
                 {{$loggedClientName}}
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;">
-                <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+                <a class="dropdown-item" onclick="logout()">تسجيل خروج</a>
+                {{-- href="/TahqqLogout" --}}
                 <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
                 {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
             </div>
@@ -63,20 +64,15 @@
             </form>
         </div>
     </nav>
-    {{-- <iframe style="visibility: hidden" id="frameLogoutWHMCS" name="frameLogoutWHMCS" width="50px" height="50px" ></iframe> --}}
+    <iframe style="visibility: hidden" id="frameLogoutWHMCS" name="frameLogoutWHMCS" width="0px" height="0px" ></iframe>
 
-{{-- <script>
-    function frameLogoutWHMCS_load(){
-
-    }
-
+<script>
     function logout(){
         $('#frameLogoutWHMCS').on('load',function(e){
-            // window.location = '/TahqqLogout';
-            alert('ready');
+            // alert('ready');
+            window.location = '/TahqqLogout';
         });
-        // $('#frameLogoutWHMCS').attr('onload', 'javascript:alert("asd")');
         $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
     }
-</script> --}}
+</script>
 

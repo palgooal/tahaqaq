@@ -40,7 +40,8 @@
                     <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{$loggedClientName}}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="/TahqqLogout">تسجيل خروج</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" onclick="logout()">تسجيل خروج</a>
                             <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
                             {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
                     </div>{{-- <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
@@ -62,5 +63,16 @@
                 </a>
 			</form>
 		</div>
-	</nav>
+    </nav>
+    <iframe style="visibility: hidden" id="frameLogoutWHMCS" name="frameLogoutWHMCS" width="0px" height="0px" ></iframe>
+
+    <script>
+        function logout(){
+            $('#frameLogoutWHMCS').on('load',function(e){
+                // alert('ready');
+                window.location = '/TahqqLogout';
+            });
+            $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
+        }
+    </script>
 </header>
