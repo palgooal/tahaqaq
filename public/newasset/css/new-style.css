@@ -280,7 +280,7 @@ footer .col {
 .carousel-p {
     line-height: 1.7;
     font-family: "FFShamelFamily-SansOneBook" !important;
-    font-size: 12px;
+    font-size: 18px;
     width: 120%;
 
 
@@ -715,7 +715,9 @@ form input::placeholder , textarea::placeholder{
     /* border: 1px solid #fff;
     cursor: pointer;} */
 
-
+    a.colorslidr {
+        color: #fff;
+    }
     label {
         width: 100%;
         font-size: 1rem;
@@ -1036,3 +1038,20 @@ form input::placeholder , textarea::placeholder{
     }
 
 }
+
+@media (max-width:692px){
+    iframe {
+    width:500px
+    }
+    }
+    @media (max-width:540px){
+    iframe {
+    width:400px
+    }
+    }
+    @media (max-width:440px){
+    iframe {
+    width:287px
+    }
+    }
+

@@ -69,13 +69,14 @@
     border: none !important;
 }
 .index-card-img{
-    background: #F6F3FF 0% 0% no-repeat padding-box;
+    /*background: #F6F3FF 0% 0% no-repeat padding-box;*/
     border-radius: 37px;
     width: 38px !important;
     padding: 10px !important;
 }
 .index-card-img img{
-    height: 30px;
+    width: 48px;
+    height: 48px;
 }
 .index-card{
     background: #fff;
@@ -322,7 +323,7 @@
         font-size: 1.25rem;
     }
     .index-top-p{
-        font-size: 12px;
+        font-size: 15px;
     }
     /***/
     .index-chart-image{

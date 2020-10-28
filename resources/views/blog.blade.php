@@ -28,13 +28,14 @@
 		<div class="carousel-inner">
 			<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderimg) @if ($blogsSliderimg->pin_to_slider == 1)
 			<div class="carousel-item1 carousel-item @if($loop->first) active @endif">
-				<img src="./img/12.png" class="d-block w-100" alt="...">
+                <img class="d-block w-100" alt="{{$blogsSliderimg->getTitle(App::getLocale())}}" style="height: 70vh;" src="/images/{{$blogsSliderimg->image}}">
+
 				<div class="carousel-caption carousel-caption-format  text-center d-md-block">
 					<div class=" w-25 px-1 pt-2 date " style="background: #F582EA 0% 0% no-repeat padding-box;
                         border-radius: 19px;  font-size: 14px;"> <i class="far fa-calendar-alt ml-3"></i>
 						{{$blogsSliderimg->created_at->format('Y-m-d')}}</div>
-					<h5 class="mt-5 text-right">{{$blogsSliderimg->getTitle(App::getLocale())}}</h5>
-					<p class="mt-5 text-right carousel-p ">{{ Str::words($blogsSliderimg->getDescribe(App::getLocale()), 70 , '.....') }}</p>
+				<h5 class="mt-5 text-right"> <a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{$blogsSliderimg->getTitle(App::getLocale())}}</a></h5>
+					<p class="mt-5 text-right carousel-p "><a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{ Str::words($blogsSliderimg->getDescribe(App::getLocale()), 70 , '.....') }}</a></p>
 					<div class="d-flex">
 						<div class="ml-3"> <i class="far fa-comment"></i>
 							25</div>

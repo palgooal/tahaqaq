@@ -1,5 +1,6 @@
 @extends('layouts.newapp')
 @section('headcss')
+
 <link rel="stylesheet" href="newasset/css/index.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 @endsection
@@ -83,7 +84,7 @@
 			</div>
 			<div class="col  col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center wow bounceInLeft">
 				<div class="text-right ">
-					{{-- <p class="top-of-the-head mt-0">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</p> --}}
+					<!--<p class="top-of-the-head mt-0">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Title)}}</p>-->
 					<p class="h3 top-header-heading w-100  primery-color my-4">{{$sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_SubTitle)}}</p>
 					<p class="index-top-p">{!! $sysVarWhyTahaqaq->GetValue(App\Logic\SysVar\SysVarTypes::Type_WhyTahaqaq_Key_Details) !!}</p>{{--
 					<p class="index-top-p mt-4">وهو آخر ماتوصل اليه علم المشاريع البرمجية , لتوفير الوقت والجهد , يتيح لصاحب اي فكرة مشروع تقني سواء كان موقع خدمات الكتروني او منصة تعليمية او تجارة الكترونية عمل نمو 1ج اولي يساعده في تخيل الشكل النهائي وعرضه على مستخدمين من الوطن العربي والعالم كافة , يقيموا ويساعدوا في دعم او تعديل فكرة المشروع</p>--}}</div>
@@ -108,14 +109,14 @@
 									<div class="">
 										<div class="card-body px-3 py-4">
 											<div class=" index-card-img py-2 w-25 d-flex justify-content-center align-items-center">
-												<img src="./img/wallet.png" alt="">
+												<img src="newasset/img/pumpkin_mobile.webp" alt="">
 											</div>
 											<h5 class="card-title primery-color h5 my-3 card-h">
                                                     <a class="h6" href="{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_URL)}}">
                                                         {{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 12px !important;">{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Details)}}</p>
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
@@ -134,7 +135,7 @@
 									<div class="">
 										<div class="card-body px-3 py-4">
 											<div class=" index-card-img py-2 w-25 d-flex justify-content-center align-items-center">
-												<img src="./img/wallet.png" alt="">
+												<img src="newasset/img/forest_stack.webp" alt="">
 											</div>
 											<h5 class="card-title primery-color h5 my-3 card-h">
                                                     <a class="h6" href="{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_URL)}}">
@@ -158,16 +159,16 @@
 							<div class="card custom-card p-0 index-card" style="max-width: 500px;">
 								<div class="row no-gutters">
 									<div class="">
-										<div class="card-body px-3 py-4">
+										<div class="card-body px-3 py-0">
 											<div class=" index-card-img py-2 w-25 d-flex justify-content-center align-items-center">
-												<img src="./img/tab.png" alt="">
+												<img src="newasset/img/forest_chart.webp" alt="">
 											</div>
 											<h5 class="card-title primery-color h5 my-3 card-h">
                                                     <a class="h6" href="{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_URL)}}">
                                                         {{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 12px !important;">{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Details)}}</p>
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
@@ -184,16 +185,16 @@
 							<div class="card custom-card p-0 index-card" style="max-width: 500px;">
 								<div class="row no-gutters">
 									<div class="">
-										<div class="card-body px-3 py-4">
+										<div class="card-body px-3 py-0">
 											<div class=" index-card-img py-2 w-25 d-flex justify-content-center align-items-center">
-												<img src="./img/news.png" alt="">
+												<img src="newasset/img/indigo_globe.webp" alt="">
 											</div>
 											<h5 class="card-title primery-color h5 my-3 card-h">
                                                     <a class="h6" href="{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_URL)}}">
                                                         {{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 12px !important;">{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Details)}}</p>
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
@@ -309,7 +310,7 @@
 <div class="container cards-container p-0 pt-5  mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">
 		<p class="top-of-the-head text-center mt-0">مدونة تحقق</p>
-		<p class="h3  primery-color text-center my-4">ضيف الى مشروعك الخاص ما يطوره</p>
+		<p class="h3  primery-color text-center my-4">الفكرة تبقى مجرد فكرة حتى تنفذها !</p>
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)
@@ -319,7 +320,7 @@
                 <div class="row no-gutters">
                     <div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */">
                         <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
-<img src="images/{{$blog->image}}" style="height: 191px;width: 100%;">
+<img src="/images/{{$blog->image}}" style="height: 191px;width: 100%;">
 
                       </a>
                     </div>

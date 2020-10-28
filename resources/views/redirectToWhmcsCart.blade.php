@@ -11,33 +11,37 @@
 	<p class="mt-0"></p>
 	<p class="primery-color mt-0">تهانينا لك !</p>
 </div>
-<iframe style="visibility: hidden" src="{!! $redirectUrl !!}" width="50px" height="50px" onload="onLoad_iframe()" ></iframe>
+<iframe style="visibility: hidden"
+src="{!! $redirectUrl !!}"
+width="50px"
+height="50px"
+onload="onLoad_iframe()" ></iframe>
 
 
   @section('footerJs')
-  <script src="asset/js/ajax.js"></script>
+    <script src="asset/js/ajax.js"></script>
     <script>
-            $(document).ready(function () {
-                const redirectUrl = "{!! $redirectUrl !!}";
+            // $(document).ready(function () {
+            //     const redirectUrl = "{!! $redirectUrl !!}";
+            //     const pid = {!! $pid !!};
+            //     // getDataTemplateCategory(categoryId);
+            //         $.ajax({
+            //             type: "get",
+            //             url: redirectUrl,
+            //             success: function (response) {
+            //                     window.location.href = 'https://client.tahqq.com/cart.php?a=add&pid='+ pid +'&carttpl=standard_cart';
+            //             }
+            //         });
+
+            // });
+
+            function onLoad_iframe() {
                 const pid = {!! $pid !!};
-                // getDataTemplateCategory(categoryId);
-                    $.ajax({
-                        type: "get",
-                        url: redirectUrl,
-                        success: function (response) {
-                                window.location.href = 'https://client.tahqq.com/cart.php?a=add&pid='+ pid +'&carttpl=standard_cart';
-                        }
-                    });
-
-            });
-
-function onLoad_iframe() {
-    const pid = {!! $pid !!};
-    window.location.href = 'https://client.tahqq.com/cart.php?a=add&pid='+ pid +'&carttpl=standard_cart';
-}
+                window.location.href = 'https://client.tahqq.com/cart.php?a=add&pid='+ pid +'&carttpl=standard_cart';
+            }
     </script>
     @endsection
-    <script>
+    {{-- <script>
         var jetBubbles = document.getElementsByClassName('jetBubble');
         var rocketManSVG = document.querySelector('.rocketManSVG');
         var shakeGroup = document.querySelector('.shakeGroup');
@@ -152,7 +156,7 @@ function onLoad_iframe() {
           yoyo:false
         }, 0.1)
 
-        createJets();</script>
+        createJets();</script> --}}
 
 
 @endsection
