@@ -307,10 +307,10 @@
 	</div>
 </section>
 <!-- last section-->
-<div class="container cards-container p-0 pt-5  mt-5 d-grid">
+<div class="container cards-container p-0 mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">
-		<p class="top-of-the-head text-center mt-0">مدونة تحقق</p>
-		<p class="h3  primery-color text-center my-4">الفكرة تبقى مجرد فكرة حتى تنفذها !</p>
+		<p class="top-of-the-headd text-center mt-0">مدونة تحقق</p>
+		<p class="h3  primery-color text-center my-4 the-top-head-res">الفكرة تبقى مجرد فكرة حتى تنفذها !</p>
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)

@@ -18,7 +18,7 @@
     font-size : 1rem !important;
 }
 .index-button{
-    font-size: 13px !important;
+    font-size: 18px !important;
 }
 
 .index-sign-button{
@@ -435,3 +435,12 @@
     }
 
 }
+
+@media (max-width:576px){
+    .the-top-head-res{
+    font-size:18px;
+    }
+    .top-of-the-headd{
+    font-size: 21px !important;
+    }
+    }

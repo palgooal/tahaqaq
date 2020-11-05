@@ -24,35 +24,37 @@
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-1" href="#step-1" type="button"
                                     class="btn btn-success primery-color btn-circle mb-3 ">1</a>
-                                <p><small>المعلومات الشخصية</small></p>
+                                <p><small>معلومات</small></p>
+                                <!--<p><small>المعلومات <span class="word-hide">الشخصية</span></small>-->
+	                            </p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-2" href="#step-2" type="button"
                                     class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"active":"disabled"}}"
                                     >2</a>
-                                <p><small>تفاصيل عن المشروع</small></p>
+                                <p><small>تفاصيل</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-3" href="#step-3" type="button"
                                 class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
                                 >3</a>
-                                <p><small> إختار قالب</small></p>
+                                <p><small>قوالب</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-4" href="#step-4" type="button"
                                 class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
                                 >4</a>
-                                <p><small>باقات الاشتراك</small></p>
+                                <p><small>الباقات</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-5" href="#step-5" type="button"
                                 class="btn btn-default btn-circle mb-3 "
                                 >5</a>
-                                <p><small>اختر دومين</small></p>
+                                <p><small>الدومين</small></p>
                             </div>
                             <div class="stepwizard-step col-xs-1 ">
                             </div>
