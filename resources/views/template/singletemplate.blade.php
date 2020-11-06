@@ -1,52 +1,85 @@
-@extends('layouts.app') @section('content') @include('partials.InternalNavpar')
-<a href="/template" class="re-index">
-	<img src="img/arrow-right.png">تصفح جميع القوالب</a>
-<div class="section-title wow fadeInDown">{{$templateOne->title_ar}}</div>
-<section class="courses wow fadeIn" style="background-color: transparent;">
-	<div class="container">
-		<div class="home-wrap">
-			<div class="text">
-				<h2 class="wow fadeInDown">{{$templateOne->small_details_ar}}</h2>
-				<br>
-				<p class="wow fadeInDown">{!!$templateOne->details_ar!!}</p>
-			</div>
-			<img src="images/{{$templateOne->image_url}}" class="wow fadeInDown">
-		</div>
-	</div>
+@extends('layouts.newapp')
+@section('headcss')
+<link rel="stylesheet" href="newasset/css/templates.css">
+<link rel="stylesheet" href="newasset/css/index.css">
+@endsection
+@section('content') @include('partials.InternalNavparnew')
+
+  <!-- Top of the slider -->
+  <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider"
+  style="margin-top: 100px;">
+  <div class="back">
+      <a href="/template" class="d-flex align-items-center justify-content-center text-center text-truncate"
+          style="color: #000;" id="">
+          <i class="fas fa-arrow-right ml-2"></i>
+          تصفح جميع القوالب
+      </a>
+  </div>
+  <div class="mx-5 wow fadeInDown ">
+      <h1 class="h3 primery-color font-weight-bold text-center">{{$templateOne->title_ar}}</h1>
+  </div>
+  <div class="mr-5 pr-5"></div>
+
 </section>
-<section class="button-single">
-	<div class="container">
-		<a href="{{$templateOne->preview_url}}">
-			<button class="button">مشاهدة الموقع</button>
-		</a>
-		<a href="#">
-			<button class="button">اختار هذا الموقع</button>
-		</a>
-</section>
-<div class="title-features">
-	<h2> مميزات المواقع لدينا </h2>
-</div>
-<div class="Features-single">
-    @foreach ($specifications as $specification)
-    <div class="col-xs-4">
-        <img src="{{$specification->image}}">
-        <h6>{{$specification->getText(App::getLocale())}}</h6>
+ <!--content first-section-->
+
+ <section class="container d-flex align-items-center justify-content-center  ">
+    <div class="d-grid ">
+        <div class="row ">
+            <div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5 ">
+                <img class="index-main-vector  " src="images/{{$templateOne->image_url}}" alt="">
+            </div>
+
+            <div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0 pt-5 wow bounceInRight"
+                data-wow-delay="">
+                <div class="text-right ">
+                    <p class="h4  primery-color top-header-heading w-100 my-5 ">{{$templateOne->small_details_ar}}</p>
+                    <p class="index-top-p">{!!$templateOne->details_ar!!}
+                    </p>
+                    <form class="form-inline my-2 mb-5 mt-4 pt-2  login-button">
+                        <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link "
+                            href="{{$templateOne->preview_url}}" target="">
+                            مشاهدة هذاالموقع
+                        </a>
+                        <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
+                            href="#" target="">
+                           اختر هذاالموقع
+                        </a>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div
+                class="col col-lg-5 col-md-4 col-sm-11 col-xs-12  d-flex  align-items-center justify-content-center res-hide-index wow bounceInLeft">
+                <img class="index-main-vector " src="images/{{$templateOne->image_url}}" alt="">
+
+            </div>
+
+        </div>
     </div>
-    @endforeach
-</div>
-<section class="toggle">
-	<div class="container">
-		<div class="top">
-			<h1>أسعار الباقات</h1>
-			{{-- <h2> باقات الاشتراك في تحقق</h2>
-			<div class="toggle-btn"> <span style="margin: 0.8em;">ربع سنوي</span>
-				<label class="switch">
-					<input type="checkbox" id="checbox" onclick="check()" ; /> <span class="slider round"></span>
-				</label> <span style="margin: 0.8em;">سنوي</span>
-			</div> --}}
-		</div>
-		<br>
-        <br>
+
+</section>
+
+<div > <p class="h3 primery-color text-center my-5" id="fetures">مميزات المواقع لدينا </p>
+    <div class="Features-single">
+        @foreach ($specifications as $specification)
+        <div class="col-xs-4">
+            <img src="{{$specification->image}}">
+            <h6>{{$specification->getText(App::getLocale())}}</h6>
+        </div>
+        @endforeach
+    </div></div>
+   <!-- sixth section  -->
+   <section class=" py-5 section-six">
+    <div class="">
+        <div class=" text-center mb-5 wow bounceInDown">
+            <!-- <p class="top-of-the-head mt-0">أسعار الباقات</p> -->
+            <p class="h3 primery-color my-4">باقات الاشتراك </p>
+
+        </div>
         <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
             @method('post')
             @csrf
@@ -58,74 +91,56 @@
                 @include('template.partials.planSelectorNew')
             </div>
         </form>
-        {{-- <div class="package-container">
 
-			<div class="packages">
-				<h1>الباقة البرونزية</h1>
-				<h2 class="text1">423 ريال سعودي</h2>
-				<ul class="list">
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-				</ul> <a href="#" class="button button1">أبدا الان</a>
-			</div>
-			<div class="packages" style="background-color: #7657E5; color: #F6F6F6">
-				<img src="img/star.png">
-				<h1>الباقة الفضية</h1>
-				<h2 class="text1">1102 ريال سعودي</h2>
-				<ul class="list">
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-				</ul> <a href="#" class="button button2">ابدا الان</a>
-			</div>
-			<div class="packages">
-				<h1>الباقة الذهبية</h1>
-				<h2 class="text1">2500 ريال سعودي</h2>
-				<ul class="list">
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-					<li>
-						<img src="img/shape-star.png" style="float: right">الدفع بواسطة كي نت</li>
-				</ul> <a href="#" class="button button3">ابدا الان</a>
-			</div>
-		</div>--}}
-	</div>
+            {{-- <div class="packages res-star wow bounceInDown" style="background-color: #7657E5; color: #F6F6F6">
+                <img src="img/star.png">
+                <h3 class="my-4 pt-4">الباقة الفضية</h3>
+                <h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">423 ريال سعودي</h6>
+                <ul class="list">
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color text-white">
+                        <img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
+                </ul>
+                <a href="#" class="button index-sign-button py-2 px-5">ابدا الان</a>
+            </div> --}}
+            {{-- <div class="packages wow bounceInLeft">
+                <h3 class="my-4 pt-4">الباقة الفضية</h3>
+                <h6 class="text1 rounded-price p-3">423 ريال سعودي</h6>
+                <ul class="list">
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                    <li class="set-color">
+                        <img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
+                </ul>
+                <a href="#" class="btn primery-button start-now-btn py-2 px-5">أبدا الان</a>
+
+            </div> --}}
+        </div>
+
+    </div>
 </section>
-</div>
-@endsection
+
 @section('footerJs')
     <script>
         function planStartNow_Click($plan){
