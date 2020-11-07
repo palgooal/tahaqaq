@@ -49,11 +49,7 @@ style="margin-top: 100px;">
                   {{-- @if ($loop->first) --}}
 
                  <li class="nav-item px-3 ">
-                    <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab"  href="#follow-classic"
-                      role="tab" aria-controls="{{$categoris->id}}" aria-selected="false">
-                      <span>{{$categoris->text_ar}}</span>
-                      {{-- <span class="word-hide">تعليمي </span> --}}
-                    </a>
+                    <a class="nav-link  waves-light"  onclick="getDataTemplateCategory('{{$categoris->id}}')">{{$categoris->text_ar}}</a>
                   </li>
                   {{-- @endif --}}
 
@@ -130,7 +126,7 @@ style="margin-top: 100px;">
         </div>
 
       </div>
-      <div class="tab-content " id="myClassicTabContent">
+      {{-- <div class="tab-content " id="myClassicTabContent">
         <div class="tab-pane fade active show" id="profile-classic" role="tabpanel"
           aria-labelledby="profile-tab-classic">
           <div class="d-grid pt-2">
@@ -146,7 +142,8 @@ style="margin-top: 100px;">
                             <p class="mb-3">{{$templateAll->title_ar}}</p> <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a>
                         </div>
                     </div>
-                </div>@endforeach @endisset
+                </div>@endforeach @endisset --}}
+                @include('template.partials.section')
               <!-- /card -->
 
               <!-- card -->
@@ -200,9 +197,9 @@ style="margin-top: 100px;">
 
           </div>
         </div>
-        <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
-         ghfjghs
-        </div>
+        {{-- <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+            @include('template.partials.section')
+        </div> --}}
         {{-- <div class="tab-pane fade" id="contact-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
           <p>قالب 2 </p>
         </div>
@@ -214,7 +211,7 @@ style="margin-top: 100px;">
     </div>
     <!-- Classic tabs -->
 
-
+    {{-- @include('template.partials.section') --}}
 
   </section>
 

@@ -1,4 +1,4 @@
-<section class="template" id="contintTemplate">
+{{-- <section class="template" id="contintTemplate">
     @isset($templateAll)
         @foreach ($templateAll as $templateAll)
         <a href="/template/{{$templateAll->id}}">
@@ -11,4 +11,32 @@
         </a>
         @endforeach
         @endisset
-</section>
+</section> --}}
+
+
+        <!-- Row -->
+        <div class="row container m-auto " id="contintTemplate">
+            <div class="col-md-1 col-hide"></div>
+          <!-- card -->
+          @isset($templateAll)
+          @foreach ($templateAll as $templateAll)
+          <div class="col-md-3 m-4 ">
+            <div class=" hover-state">
+              <a href="/template/{{$templateAll->id}}">
+                <img src="images/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
+              </a>
+              <div class="middle card-section">
+                <p class="mb-3"> {{$templateAll->title_ar}} </p>
+                <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+          @endforeach
+          @endisset
+          <!-- /card -->
+

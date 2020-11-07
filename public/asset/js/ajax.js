@@ -11,15 +11,20 @@ function getDataTemplateCategory(idCatecory) {
                 let element = response.data[i].name;
                 console.log(element);
                 document.getElementById('contintTemplate').innerHTML +=
-                `
+                ` <div class="col-md-3 m-4 ">
+                <div class=" hover-state">
                 <a href="/template/${response.data[i].id}">
-                <div class="wrapper">
-                    <div class="shadow"></div>
-                    <h2 class="animated bounceInLeft">${response.data[i].title_ar}</h2>
-                    <p class="animated bounceInLeft">${response.data[i].small_details_ar}</p>
-                    <img alt="" src="images/${response.data[i].image_url}">
-                </div>
-            </a>
+                <img src="images/${response.data[i].image_url}" alt="Image" style="max-width:100%;">
+              </a>
+              <div class="middle card-section">
+                <p class="mb-3">${response.data[i].title_ar}</p>
+                <a class="btn primery-button" href="/template/${response.data[i].id}">تفاصيل </a>
+
+              </div>
+
+
+            </div>
+
                 `
             }
         },
