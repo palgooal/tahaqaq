@@ -27,6 +27,8 @@
     color: #fff !important;
     border: none !important;
 }
+a{
+    cursor:pointer;}
 .start-now-btn{
     border-radius: 12px !important;
 }

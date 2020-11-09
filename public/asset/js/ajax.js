@@ -11,19 +11,29 @@ function getDataTemplateCategory(idCatecory) {
                 let element = response.data[i].name;
                 console.log(element);
                 document.getElementById('contintTemplate').innerHTML +=
-                ` <div class="col-md-3 m-4 ">
-                <div class=" hover-state">
+                `  <div class="tab-content " id="contintTemplate">
+                <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                    <div class="d-grid pt-2 mt-5">
+                        <!-- Row -->
+                        <div class="row container m-auto mt-5 ">
+                <div class="col-md-4 mb-5 ">
+                <div class=" hover-state card-with-title">
                 <a href="/template/${response.data[i].id}">
                 <img src="images/${response.data[i].image_url}" alt="Image" style="max-width:100%;">
+
               </a>
-              <div class="middle card-section">
-                <p class="mb-3">${response.data[i].title_ar}</p>
-                <a class="btn primery-button" href="/template/${response.data[i].id}">تفاصيل </a>
-
               </div>
-
-
+              <div class="text-center ">
+              <a href="/template/${response.data[i].id}">
+              <p class="my-3 primery-color">${response.data[i].title_ar}</p>
+          </a> <a class="btn primery-button" href="/template/${response.data[i].id}">تفاصيل </a>
+      </div>
+  </div>
+  <div class="col-md-1 col-hide"></div>
+  </div>
+                </div>
             </div>
+        </div>
 
                 `
             }

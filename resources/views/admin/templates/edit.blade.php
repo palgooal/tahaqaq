@@ -140,40 +140,40 @@
                                                     <div class="radio-inline">
 
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/analysis.png"/> <span></span>
-                                                            <img src="/img/icon/analysis.png" alt="" width="50px" height="50px"  id="exampleRadios2">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/analysis.png"/> <span></span>
+                                                            <img src="img/icon/analysis.png" alt="" width="50px" height="50px"  id="exampleRadios2">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/browser.png"/> <span></span>
-                                                            <img src="/img/icon/browser.png" alt="" width="50px" height="50px">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="img/icon/browser.png"/> <span></span>
+                                                            <img src="img/icon/browser.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/customer-service.png" /> <span></span>
-                                                            <img src="/img/icon/customer-service.png" alt="" width="50px" height="50px">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/customer-service.png" /> <span></span>
+                                                            <img src="img/icon/customer-service.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/free-delivery.png"  /> <span></span>
-                                                            <img src="/img/icon/free-delivery.png" alt="" width="50px" height="50px">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/free-delivery.png"  /> <span></span>
+                                                            <img src="img/icon/free-delivery.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/medal.png"  /> <span></span>
-                                                            <img src="/img/icon/medal.png" alt="" width="50px" height="50px">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="img/icon/medal.png"  /> <span></span>
+                                                            <img src="img/icon/medal.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/responsive-1.png" /> <span></span>
-                                                            <img src="/img/icon/responsive-1.png" alt="" width="50px" height="50px">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/responsive-1.png" /> <span></span>
+                                                            <img src="img/icon/responsive-1.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/security.png" /> <span></span>
-                                                            <img src="/img/icon/security.png" alt="" width="50px" height="50px">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/security.png" /> <span></span>
+                                                            <img src="img/icon/security.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="/img/icon/settings.png" /> <span></span>
-                                                            <img src="/img/icon/settings.png" alt="" width="50px" height="50px">
+                                                            <input type="radio" name="ts_img" id="exampleRadios2" value="img/icon/settings.png" /> <span></span>
+                                                            <img src="img/icon/settings.png" alt="" width="50px" height="50px">
                                                         </label>
                                                         <label class="radio">
-                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="/img/icon/translation.png" /> <span></span>
-                                                            <img src="/img/icon/translation.png" alt="" width="50px" height="50px">
+                                                            <input type="radio"  name="ts_img" id="exampleRadios2" value="img/icon/translation.png" /> <span></span>
+                                                            <img src="img/icon/translation.png" alt="" width="50px" height="50px">
                                                         </label>
                                                     </div>
                                                 </div>

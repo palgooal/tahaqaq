@@ -63,15 +63,30 @@
 
 </section>
 
-<div > <p class="h3 primery-color text-center my-5" id="fetures">مميزات المواقع لدينا </p>
-    <div class="Features-single">
-        @foreach ($specifications as $specification)
-        <div class="col-xs-4">
-            <img src="{{$specification->image}}">
-            <h6>{{$specification->getText(App::getLocale())}}</h6>
-        </div>
-        @endforeach
-    </div></div>
+<div class="my-5">
+    <p class="h3 primery-color text-center my-5" id="fetures">مميزات المواقع لدينا </p>
+    <div class="container">
+        <ul class="d-grid">
+           <div class="row">
+            @foreach ($specifications as $specification)
+            <li class="col-md-4 mt-5">
+                <div class="text-center">
+                    <img class="icon-image" src="{{$specification->image}}" alt="{{$specification->getText(App::getLocale())}}">
+                    <p class="mt-3">{{$specification->getText(App::getLocale())}}</p>
+                </div>
+            </li>
+            @endforeach
+           </div>
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+
+
    <!-- sixth section  -->
    <section class=" py-5 section-six">
     <div class="">

@@ -42,7 +42,7 @@ style="margin-top: 100px;">
                 <ul class=" d-flex justify-content-between m-auto mb-0" id="myClassicTab" role="tablist">
 
                   <li class="nav-item px-3 ">
-                    <a class="nav-link  waves-light" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+                    <a class="nav-link  waves-light" href="/template"
                       role="tab" aria-controls="profile-classic" aria-selected="true">الكل</a>
                   </li>
                   @foreach ($categoris->take(5) as $categoris)
@@ -57,7 +57,7 @@ style="margin-top: 100px;">
               </ul>
               </div>
 
-          <div class="carousel-item container px-5">
+          {{-- <div class="carousel-item container px-5">
             <ul class=" d-flex justify-content-between  mb-0" id="myClassicTab" role="tablist">
               <li class="nav-item px-3 ">
                 <a class="nav-link  waves-light" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
@@ -117,7 +117,7 @@ style="margin-top: 100px;">
 
 
             </ul>
-          </div>
+          </div> --}}
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon " aria-hidden="true"></span>
 
