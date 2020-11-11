@@ -25,12 +25,12 @@
                 </li>
 
                 @endforeach
-                @if ($isClientLogin)
+                {{-- @if ($isClientLogin)
                 <li class="nav-item mr-2 res-nav-item">
                     <a class="nav-link   res-nav-link" href="/template">منتجاتنا<span
                             class="sr-only"></span></a>
                 </li>
-                @endif
+                @endif --}}
             </ul>
             <form class="form-inline my-2 my-lg-0  login-button">
             @if($isClientLogin)

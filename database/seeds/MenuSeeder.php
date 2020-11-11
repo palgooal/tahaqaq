@@ -49,5 +49,14 @@ class MenuSeeder extends Seeder
             'url'=>"/blogs",
             'sort' =>"5",
         ]);
+
+        DB::table('menus')->insert([
+            'name_ar'=>"منتجاتنا",
+            'name_en'=>"Templates",
+            'url'=>"/template",
+            'sort' =>"6",
+        ]);
+
+
     }
 }

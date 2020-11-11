@@ -43,9 +43,9 @@ class TemplateController extends Controller
     }
 
     public function viewTemplate(Request $request){
-        if(!TahaqqSessionInfo::IsClientLogin()){
-            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
-        }
+        // if(!TahaqqSessionInfo::IsClientLogin()){
+        //     return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
+        // }
 
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
@@ -89,9 +89,9 @@ class TemplateController extends Controller
     //get one template
     public function getOneTemplate(Request $request)
     {
-        if(!TahaqqSessionInfo::IsClientLogin()){
-            return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
-        }
+        // if(!TahaqqSessionInfo::IsClientLogin()){
+        //     return redirect('/TahqqLogin?returnUrl='.$request->getRequestUri());
+        // }
         $lang = App::getLocale();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);

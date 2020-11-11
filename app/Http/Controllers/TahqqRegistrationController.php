@@ -71,15 +71,18 @@ class TahqqRegistrationController extends Controller
         if($request->password != $request->confirmPassword){
             return back()->withErrors(['كلمة المرور غير متطابقة']);
         }
+
+        $templateUrlParam = $request->templateUrlParam;
+        dump($templateUrlParam);
         //confirmPassword
         //
         $addClientParam = new AddClientParameter();
 
-        $addClientParam->firstname=$request->firstname;
-        $addClientParam->lastname=$request->lastname;
-        $addClientParam->email=$request->email;
-        $addClientParam->phonenumber=$request->phonenumber;
-        $addClientParam->password2=$request->password;
+        $addClientParam->firstname = $request->firstname;
+        $addClientParam->lastname = $request->lastname;
+        $addClientParam->email = $request->email;
+        $addClientParam->phonenumber = $request->phonenumber;
+        $addClientParam->password2 = $request->password;
 
 
         // $addClientParam->companyname='';
@@ -98,12 +101,36 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            return redirect('/TahqqLogin?newUserCreated=true&returnUrl='.$request->getRequestUri());
+            $returnUrl = urlencode('/CompleteRegistrationFromTemplate?'.$templateUrlParam.'&returnUrl='.$request->getRequestUri());
+            dump($returnUrl);
+            $msg = "تم انشاء حساب جديد بنجاح، قم بتسجيل الدخول ليتم اتمام حجز القالب.";
+            return redirect('/TahqqLogin?newUserCreated=true&msg='.$msg.'&returnUrl='.$returnUrl);
         }
         else
             return back()->withErrors([$result->message]);
     }
 
+    public function completeRegistrationFromTemplate(Request $request){
+        //save project info
+        $clientId = TahaqqSessionInfo::GetLoggedClientId();
+        // $setClientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() == WhmcsClientRegisterProgress::CompletePersonInfo;
+        $templateId = $request->templateId;
+        $planName = $request->planName;
+        $template = Template::findOrFail($templateId);
+        $category = TemplateCategory::findOrFail($template->category_id);
+
+        $isSuccess = $this->whmcsAPILogic->SaveClientProjectInfo
+        ($clientId, $template->name, $category->code ,'' ,true);
+
+        // $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
+
+        if(!$isSuccess)
+            return back()->withErrors(['حدث خطأ اثناء حفظ بيانات المشروع.']);
+
+        return \redirect('/PlanSelected?selectedTemplateId='.$templateId.'&selectedPlanName='.$planName);
+        //save goto domain
+
+    }
     /**
      * Display the specified resource.
      *
@@ -113,7 +140,18 @@ class TahqqRegistrationController extends Controller
     public function show(Request $request)
     {
         $isNew = isset($request->a) && $request->a == "new";
-
+        $paramTemplateId = $request->templateId;
+        $paramPlanName = $request->planName;
+        $paramPid = $request->pid;
+        $paramGid = $request->gid;
+        $paramReturnUrl = $request->returnUrl;
+        $templateUrlParam = '';
+        $customLoginReturnUrl = null;
+        if(!empty($paramTemplateId) && !empty($paramPlanName))
+        {
+            $templateUrlParam = 'templateId='.$paramTemplateId.'&planName='.$paramPlanName.'&pid='.$paramPid.'&gid='.$paramGid;//.'&returnUrl='.$paramReturnUrl
+            $customLoginReturnUrl = urlencode('/CompleteRegistrationFromTemplate?'.$templateUrlParam);
+        }
         if(!TahaqqSessionInfo::IsClientLogin() && !$isNew){
             return redirect('TahqqLogin?returnUrl='.$request->getRequestUri());
         }
@@ -137,7 +175,10 @@ class TahqqRegistrationController extends Controller
         }
 
         $templateAll =Template::orderBy('id','desc')->get();
-        return view('TahqqRegistrationNew',compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia','templateCategories','clientRegisterProgress','categoryId']));
+        return view('TahqqRegistrationNew',
+                        compact(['menus','templateAll','sysVarFooter','sysVarSocialMedia',
+                                 'templateCategories','clientRegisterProgress','categoryId','templateUrlParam','customLoginReturnUrl'])
+                    );
     }
 
     /**
@@ -320,20 +361,26 @@ class TahqqRegistrationController extends Controller
                 break;
         }
 
-        $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
-        if($ssoResult->isSuccess == true){
-            $lang = App::getLocale();
-            $menus = Menu::get();
-            $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
-            $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-            return view ('redirectToWhmcsCart')
-                    ->with('redirectUrl', $ssoResult->redirectUrl)
-                    ->with('pid', $pid)
-                    ->with('menus', $menus)
-                    ->with('sysVarFooter',$sysVarFooter)
-                    ->with('sysVarSocialMedia',$sysVarSocialMedia);
+        if(TahaqqSessionInfo::IsClientLogin()){
+            $ssoResult =  $this->whmcsAPILogic->WhmcsDirectShoppingCartLink($pid);
+            if($ssoResult->isSuccess == true){
+                $lang = App::getLocale();
+                $menus = Menu::get();
+                $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+                $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+                return view ('redirectToWhmcsCart')
+                        ->with('redirectUrl', $ssoResult->redirectUrl)
+                        ->with('pid', $pid)
+                        ->with('menus', $menus)
+                        ->with('sysVarFooter',$sysVarFooter)
+                        ->with('sysVarSocialMedia',$sysVarSocialMedia);
+            }
+            return back()->withErrors([json_encode($ssoResult)]);
+        }else{
+            return \redirect('/TahqqRegistration?a=new&templateId='.$template->id.'&planName='.$selectedPlanName.'&pid='.$pid.'&gid='.$gid.'&returnUrl='.$request->getRequestUri());
         }
-        return back()->withErrors([json_encode($ssoResult)]);
+
+        return back()->withErrors(['invalid process']);
     }
 
     public function GotoClientArea(){

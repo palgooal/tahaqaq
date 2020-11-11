@@ -71,6 +71,7 @@ Route::get('/testTemplateSelecotr','TemplateController@testTemplateSelector');
 
 // TahqqRegistration تسجيل مشترك جديد
 Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
+Route::get('/CompleteRegistrationFromTemplate', 'TahqqRegistrationController@completeRegistrationFromTemplate');
 Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
 Route::post('/SaveClientProjectInfo', 'TahqqRegistrationController@SaveClientProjectInfo');
 Route::post('/PlanSelected', 'TahqqRegistrationController@StartNowToWhmcs');

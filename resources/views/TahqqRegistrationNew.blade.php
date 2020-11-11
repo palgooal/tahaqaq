@@ -146,6 +146,10 @@
                                 <div style="border-radius: 10px; margin-right: 37px;"> <i
                                         class="fas fa-chevron-left mr-4"></i></div></button>
                                 @else
+                                    @isset($templateUrlParam)
+                                    <input type="hidden" name="templateUrlParam" value="{{$templateUrlParam}}"/>
+                                    @endisset
+
                                     <button form="frmRegClient"
                                     class="btn primery-button d-flex align-items-center  res-button start-now mt-5 step-button pull-right py-3"
                                     value="Submit"
