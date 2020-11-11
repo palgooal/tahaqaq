@@ -127,7 +127,11 @@ class TahqqRegistrationController extends Controller
         if(!$isSuccess)
             return back()->withErrors(['حدث خطأ اثناء حفظ بيانات المشروع.']);
 
-        return \redirect('/PlanSelected?selectedTemplateId='.$templateId.'&selectedPlanName='.$planName);
+         return \redirect('/PlanSelected?selectedTemplateId='.$templateId.'&selectedPlanName='.$planName);
+        // 'TahqqRegistrationController@StartNowToWhmcs'
+        // return redirect()
+        // ->action([TahqqRegistrationController::class,'StartNowToWhmcs'],
+        //         ['selectedTemplateId'=>$templateId, 'selectedPlanName'=>$planName], 302, ['method'=>'post']);
         //save goto domain
 
     }

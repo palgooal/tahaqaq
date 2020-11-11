@@ -192,8 +192,8 @@
                             </form>
                           </div>
                           <div style="width: 100%; margin:0% 0%" class="tab-pane {{ WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 3 ?"active":""}}" role="tabpanel" id="step4">
-                            <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
-                                @method('post')
+                            <form action="/PlanSelected" role="form" method="get" name="planSelectFrm">
+                                @method('get')
                                 @csrf
                                 @include('template.partials.planSelector')
                                 <input type="hidden" name="selectedTemplateId" id="selectedTemplateId">

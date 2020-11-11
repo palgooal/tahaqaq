@@ -96,8 +96,8 @@
             <p class="h3 primery-color my-4">باقات الاشتراك </p>
 
         </div>
-        <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
-            @method('post')
+        <form action="/PlanSelected" role="form" method="get" name="planSelectFrm">
+            @method('get')
             @csrf
 
             <input type="hidden" name="selectedTemplateId" value="{{$templateOne->id}}" id="selectedTemplateId">
