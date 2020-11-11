@@ -14,29 +14,26 @@
 </section> --}}
 
 
-        <!-- Row -->
-        <div class="row container m-auto " id="contintTemplate">
-            <div class="col-md-1 col-hide"></div>
-          <!-- card -->
-          @isset($templateAll)
-          @foreach ($templateAll as $templateAll)
-          <div class="col-md-3 m-4 ">
-            <div class=" hover-state">
-              <a href="/template/{{$templateAll->id}}">
-                <img src="images/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
-              </a>
-              <div class="middle card-section">
-                <p class="mb-3"> {{$templateAll->title_ar}} </p>
-                <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a>
+          <div class="tab-content " id="contintTemplate">
+            <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                <div class="d-grid pt-2 mt-5">
+                    <!-- Row -->
+                    <div class="row container m-auto mt-5 ">
+                        <!-- card -->@isset($templateAll) @foreach ($templateAll as $templateAll)
+                        <div class="col-md-4 mb-5 ">
+                            <a href="/template/{{$templateAll->id}}">
+                            <div class=" hover-state card-with-title">
+                            <img src="images/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
 
-              </div>
-
-
+                            </div></a>
+                            <div class="text-center ">
+                                <a href="/template/{{$templateAll->id}}">
+                                    <p class="my-3 primery-color">{{$templateAll->title_ar}}</p>
+                                {{-- </a> <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a> --}}
+                            </div>
+                        </div>@endforeach @endisset
+                        <div class="col-md-1 col-hide"></div>
+                    </div>
+                </div>
             </div>
-
-
-          </div>
-          @endforeach
-          @endisset
-          <!-- /card -->
-
+        </div>

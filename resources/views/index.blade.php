@@ -17,7 +17,7 @@
 					<p class="h4  primery-color top-header-heading my-5">{{$header_title}}</p>
 					<p class="index-top-p">{{$header_details}}</p>
 					<form class="form-inline my-2 mb-5 mt-4 pt-2  login-button"> <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$header_startNowUrl}}" target="">
-                            ابدء الان
+                        ‫ابدأ الآن
                         </a>
 						<a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="{{$header_tryNowUrl}}" target="">
                             تجربة تحقق
@@ -230,12 +230,12 @@
 		<div class=" text-center mb-5 wow bounceInDown">
 			<p class="top-of-the-head mt-0">أسعار الباقات</p>
 			<p class="h3 primery-color my-4">باقات الاشتراك في تحقق</p>
-			<div class="toggle-btn my-5 "> <span class="m-3">ربع سنوي</span>
+			{{-- <div class="toggle-btn my-5 "> <span class="m-3">ربع سنوي</span>
 				<!-- Rounded switch -->
 				<label class="switch">
 					<input type="checkbox"> <span class="slider round"></span>
 				</label> <span class="m-3 ">سنوي</span>
-			</div>
+			</div> --}}
 		</div>
 		<div class="package-container d-flex justify-content-center align-itaems-center">
 			<div class="packages wow bounceInRight">
@@ -243,22 +243,8 @@
 				<h6 class="text1 rounded-price p-3">{{$packages[0]->price}} ريال سعودي</h6>
 				<ul class="list">
                     {!!$packages[0]->Details!!}
-					{{-- <li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3"></li> --}}
-					{{-- <li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li> --}}
-				</ul> <a href="#" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">أبدا
-                        الان</a>
+
+				</ul> <a href="{{$packages[0]->link}}" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">ابدأ الآن‫</a>
 			</div>
 			<div class="packages res-star wow bounceInDown" style="background-color: #7657E5; color: #F6F6F6">
 				<img src="img/star.png">
@@ -266,42 +252,16 @@
 				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">{{$packages[1]->price}} ريال سعودي</h6>
 				<ul class="list">
                     {!!$packages[1]->Details!!}
-					{{-- <li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color text-white">
-						<img src="img/shape-star.png" class="float-right  ml-3">الدفع بواسطة كي نت</li> --}}
-				</ul> <a href="#" class="button index-sign-button py-2 px-5">ابدا الان</a>
+
+				</ul> <a href="{{$packages[1]->link}}" class="button index-sign-button py-2 px-5">‫ابدأ الآن</a>
 			</div>
 			<div class="packages wow bounceInLeft">
 				<h3 class="my-4 pt-4">{{$packages[2]->name_package}}</h3>
 				<h6 class="text1 rounded-price p-3">{{$packages[2]->price}} ريال سعودي</h6>
 				<ul class="list">
                     {!!$packages[2]->Details!!}
-					{{-- <li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li>
-					<li class="set-color">
-						<img src="img/shape-star.png" class="float-right ml-3">الدفع بواسطة كي نت</li> --}}
-				</ul> <a href="#" class="btn primery-button start-now-btn py-2 px-5">أبدا الان</a>
+
+				</ul> <a href="{{$packages[2]->link}}" class="btn primery-button start-now-btn py-2 px-5">ابدأ الآن</a>
 			</div>
 		</div>
 	</div>

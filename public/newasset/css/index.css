@@ -27,6 +27,8 @@
     color: #fff !important;
     border: none !important;
 }
+a{
+    cursor:pointer;}
 .start-now-btn{
     border-radius: 12px !important;
 }
@@ -323,7 +325,7 @@
         font-size: 1.25rem;
     }
     .index-top-p{
-        font-size: 15px;
+        font-size: 18px;
     }
     /***/
     .index-chart-image{

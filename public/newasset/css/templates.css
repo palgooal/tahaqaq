@@ -36,6 +36,11 @@ i{
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    
+}
+.card-with-title-1:hover .card-with-title a img{
+    opacity: 1;
+    border-radius: 5px;
 }
 .middle {
     transition: .5s ease;
@@ -76,6 +81,12 @@ i{
     width: auto;
     margin-right: 10px !important;
     margin-left: 10px !important;
+}
+.card-with-title{
+    position: relative;
+}
+.icon-image{
+    width: 40px;
 }
 @media (max-width: 1200px){
     .tabs-wizard li a{
