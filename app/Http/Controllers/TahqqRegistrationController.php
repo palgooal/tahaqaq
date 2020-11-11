@@ -73,7 +73,6 @@ class TahqqRegistrationController extends Controller
         }
 
         $templateUrlParam = $request->templateUrlParam;
-        dump($templateUrlParam);
         //confirmPassword
         //
         $addClientParam = new AddClientParameter();
@@ -101,8 +100,10 @@ class TahqqRegistrationController extends Controller
         if($result->result == "success")
         {
             $clientid = $result->clientid;
-            $returnUrl = urlencode('/CompleteRegistrationFromTemplate?'.$templateUrlParam.'&returnUrl='.$request->getRequestUri());
-            dump($returnUrl);
+            if(!empty($templateUrlParam))
+                $returnUrl = urlencode('/CompleteRegistrationFromTemplate?'.$templateUrlParam.'&returnUrl='.$request->getRequestUri());
+            else
+                $returnUrl= $request->getRequestUri();
             $msg = "تم انشاء حساب جديد بنجاح، قم بتسجيل الدخول ليتم اتمام حجز القالب.";
             return redirect('/TahqqLogin?newUserCreated=true&msg='.$msg.'&returnUrl='.$returnUrl);
         }

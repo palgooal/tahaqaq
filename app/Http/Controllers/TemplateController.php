@@ -162,7 +162,6 @@ class TemplateController extends Controller
      */
     public function store(Request $request)
     {
-        // dump($request);
         $out = new \Symfony\Component\Console\Output\ConsoleOutput();
         // $out->writeln(json_encode($request->all()));
         // return back()->with('req', json_encode($request->all()));

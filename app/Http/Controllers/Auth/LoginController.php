@@ -47,10 +47,8 @@ class LoginController extends Controller
 
     public function getLogin() {
         // $departments = Department::orderBy('department_name', 'asc')->get();
-        dump('asd');
         $lang = App::getLocale();
         $loginActionUrl = $this->sysVarLogic->GetValueByKey(SysVarTypes::Type_Setting, SysVarTypes::Type_Setting_Key_LoginActionUrl, $lang);
-        dump($loginActionUrl);
         return view('auth.login', compact('loginActionUrl','user'));
      }
 }
