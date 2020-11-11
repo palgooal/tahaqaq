@@ -21,14 +21,15 @@
                     <div class="row container m-auto mt-5 ">
                         <!-- card -->@isset($templateAll) @foreach ($templateAll as $templateAll)
                         <div class="col-md-4 mb-5 ">
-                            <div class=" hover-state card-with-title"> <a href="/template/{{$templateAll->id}}">
+                            <a href="/template/{{$templateAll->id}}">
+                            <div class=" hover-state card-with-title">
                             <img src="images/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
-                          </a>
-                            </div>
+
+                            </div></a>
                             <div class="text-center ">
                                 <a href="/template/{{$templateAll->id}}">
                                     <p class="my-3 primery-color">{{$templateAll->title_ar}}</p>
-                                </a> <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a>
+                                {{-- </a> <a class="btn primery-button" href="/template/{{$templateAll->id}}">تفاصيل </a> --}}
                             </div>
                         </div>@endforeach @endisset
                         <div class="col-md-1 col-hide"></div>

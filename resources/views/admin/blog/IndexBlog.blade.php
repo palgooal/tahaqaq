@@ -28,7 +28,7 @@
 											<th scope="col">#</th>
                                             <th scope="col">عنوان المدونة</th>
                                             <th scope="col">تاريخ الانشاء</th>
-                                            <th scope="col">تاريخ الانشاء</th>
+                                            <th scope="col">تاريخ التعديل</th>
                                             <th scope="col">عرض على لسلايدر</th>
 											<th scope="col"></th>
 											{{-- <th scope="col">تعديل</th>

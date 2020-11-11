@@ -189,7 +189,7 @@ a:hover {
     height: 40px !important;
 }
 .res-nav-group{
-    background: rgba(250, 250, 250, 0.9);
+    background: rgb(249 249 250);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -966,7 +966,7 @@ form input::placeholder , textarea::placeholder{
             margin-left: 10px !important;
         }
         .res-nav-link{
-            font-size: 12px !important;
+            font-size: 18px !important;
         }
         nav form {
             padding: 0 !important;
@@ -1009,9 +1009,9 @@ form input::placeholder , textarea::placeholder{
     }
     /***/
     .res-button{
-        width: 50% !important;
-        font-size: 9px;
-        margin-left: 30% !important;
+        width: 73% !important;
+        font-size: 18px;
+        margin-left: 15% !important;
     }
     .res-container{
         padding-left: 0 !important;
@@ -1027,7 +1027,7 @@ form input::placeholder , textarea::placeholder{
     .nav-links-group{
         margin: auto !important ;
     }
-
+}
 @media (max-width:333px){
     .chev{
         display: none !important;

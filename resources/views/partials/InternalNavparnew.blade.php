@@ -56,7 +56,7 @@
                         تسجيل دخول
                     </a>
                     <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
-                        ابدء الان
+                        ‫ابدأ الآن
                     </a>
 				@endif	<a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="#" target="">
                     EN
@@ -75,4 +75,4 @@
             $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
         }
     </script>
-</header>
+

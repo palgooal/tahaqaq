@@ -7,7 +7,7 @@
     <div class=" mb-5 primery-color">
 
         <h2 class="h2 text-center" style="font-family: 'FFShamelFamily-SansOneBold' !important;">
-            ابدء بإنشاء مشروعك
+            ‫ابدأ بإنشاء مشروعك
         </h2>
 
     </div>

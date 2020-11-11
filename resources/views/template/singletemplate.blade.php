@@ -21,6 +21,7 @@
   <div class="mr-5 pr-5"></div>
 
 </section>
+</header>
  <!--content first-section-->
 
  <section class="container d-flex align-items-center justify-content-center  ">
@@ -168,4 +169,5 @@
             LoadPlanSelectorNewData(templateId);
         });
     </script>
+    @endsection
 @endsection
