@@ -92,74 +92,84 @@
                             @endif
                                 <!-- form row -->
                                 <div class="form-row">
-                                    <div class="offset-md-1"></div>
-                                    <div class="form-group col-md-5  mb-3 my-4">
-                                        <label class="control-label fields-label">الإسم الأول</label>
+                                    <div class="offset-md-3"></div>
+                                    {{-- col-md-5 mb-3 my-4 --}}
+                                    <div class="form-group col">
+                                        <label class="control-label fields-label">الإسم</label>
                                         <input name="firstname" type="text" class="form-control p-4  overrideheight"
                                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
-                                            placeholder="الاسم الاول" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
+                                            placeholder="الاسم" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
-                                    <div class="form-group col-md-5 mb-3 my-4">
+                                    {{-- <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">الإسم الاخير</label>
                                         <input name="lastname" maxlength="100" type="text" class="form-control p-4"
                                             placeholder="الإسم الاخير" required value="{{ $isClientLogin ? ($clientDetailsInfo->GetLastName()??'') :''}}" {{$isClientLogin?'disabled':''}} />
-                                    </div>
-                                    <div class="offset-md-1"></div>
+                                    </div> --}}
+                                    <div class="offset-md-3"></div>
                                 </div>
                                 <!--form row-->
                                 <div class="form-row">
-                                    <div class="offset-md-1"></div>
-                                    <div class="form-group col-md-5 mb-3 my-4">
+                                    <div class="offset-md-3"></div>
+                                    {{-- col-md-5 mb-3 my-4 --}}
+                                    <div class="form-group col">
                                         <label class="control-label fields-label">البريد الإلكتروني</label>
                                         <input name="email" maxlength="100" type="email" class="form-control p-4"
                                             placeholder="البريد الإلكتروني" required="required" value="{{$isClientLogin? ($clientDetailsInfo->GetEmail()??''):''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
-                                    <div class="form-group col-md-5  mb-3 my-4">
+                                    {{-- <div class="form-group col-md-5  mb-3 my-4">
                                         <label class="control-label fields-label">رقم الهاتف</label>
                                         <input name="phonenumber" maxlength="100" type="number" class="form-control p-4"
                                             placeholder="رقم الهاتف" required="required" value="{{$isClientLogin? ($clientDetailsInfo->GetPhoneNumber()??'' ): ''}}" {{$isClientLogin?'disabled':''}}/>
-                                    </div>
-                                    <div class="offset-md-1"></div>
+                                    </div> --}}
+                                    <div class="offset-md-3"></div>
                                 </div>
                                 @if (!$isClientLogin)
                                 <!-- form row -->
                                 <div class="form-row">
-                                    <div class="offset-md-1"></div>
-                                    <div class="form-group col-md-5 mb-3 my-4">
+                                    <div class="offset-md-3"></div>
+                                    {{-- col-md-5 mb-3 my-4 --}}
+                                    <div class="form-group col">
                                         <label class="control-label fields-label">كلمة المرور</label>
                                         <input  name="password" maxlength="100" type="password"
                                             class="form-control p-4 px-5" placeholder="كلمة المرور" required/>
                                     </div>
-                                    <div class="form-group col-md-5 mb-3 my-4">
+                                    {{-- <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label"> تأكيد كلمة المرور </label>
                                         <input name="confirmPassword" maxlength="100" type="password"
                                             class="form-control p-4 px-5" placeholder="تأكيد كلمة المرور" required/>
-                                    </div>
-                                    <div class="offset-md-1"></div>
+                                    </div> --}}
+                                    <div class="offset-md-3"></div>
                                 </div>
                                 @endif
                                 {{-- <input type="submit" value="submit" form="frmRegClient"/> --}}
                                 <!-- <div class="form-row d-flex justify-content-center align-items-center mt-5 p-5"> -->
-                                @if ($isClientLogin)
-                                <button form="frmRegClient"
-                                class="btn primery-button d-flex align-items-center  res-button start-now mt-5 nextBtn step-button pull-right py-3"
-                                type="button"  id="step-1">
-                                متابعة
-                                <div style="border-radius: 10px; margin-right: 37px;"> <i
-                                        class="fas fa-chevron-left mr-4"></i></div></button>
-                                @else
-                                    @isset($templateUrlParam)
-                                    <input type="hidden" name="templateUrlParam" value="{{$templateUrlParam}}"/>
-                                    @endisset
+                                <div class="form-row ">
+                                    <div class="offset-md-3"></div>
+                                        <div style="text-align: center" class="form-group col ">
+                                            @if ($isClientLogin)
+                                                <button form="frmRegClient"
+                                                    class="btn primery-button d-flex align-items-center  res-button start-now mt-5 nextBtn step-button pull-right py-3"
+                                                    type="button"  id="step-1">
+                                                متابعة
+                                                    <div style="border-radius: 10px; margin-right: 37px;"> <i
+                                                        class="fas fa-chevron-left mr-3"></i></div>
+                                                </button>
+                                            @else
+                                                @isset($templateUrlParam)
+                                                <input type="hidden" name="templateUrlParam" value="{{$templateUrlParam}}"/>
+                                                @endisset
 
-                                    <button form="frmRegClient"
-                                    class="btn primery-button d-flex align-items-center  res-button start-now mt-5 step-button pull-right py-3"
-                                    value="Submit"
-                                    type="submit" >
-                                    انشاء حساب
-                                    <div style="border-radius: 10px; margin-right: 37px;"> <i
-                                            class="fas fa-chevron-left mr-4"></i></div></button>
-                                @endif
+                                                <button form="frmRegClient"
+                                                class="btn primery-button d-flex align-items-center  res-button start-now mt-5 step-button pull-right py-3"
+                                                value="Submit"
+                                                type="submit" >
+                                                انشاء حساب
+                                                <div style="border-radius: 10px; margin-right: 37px;"> <i
+                                                        class="fas fa-chevron-left mr-4"></i></div></button>
+                                            @endif
+                                        </div>
+                                    <div class="offset-md-3"></div>
+                                </div>
                             </form>
 
                             <!-- </div> -->

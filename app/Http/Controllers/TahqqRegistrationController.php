@@ -62,15 +62,15 @@ class TahqqRegistrationController extends Controller
     {
         $data = request()->validate([
             'firstname' => 'required',
-            'lastname' => 'required',
+            // 'lastname' => 'required',
             'email'=>'required',
-            'phonenumber'=>'required',
+            // 'phonenumber'=>'required',
             'password'=>'required',
-            'confirmPassword'=>'required'
+            // 'confirmPassword'=>'required'
         ]);
-        if($request->password != $request->confirmPassword){
-            return back()->withErrors(['كلمة المرور غير متطابقة']);
-        }
+        // if($request->password != $request->confirmPassword){
+        //     return back()->withErrors(['كلمة المرور غير متطابقة']);
+        // }
 
         $templateUrlParam = $request->templateUrlParam;
         //confirmPassword
@@ -78,9 +78,9 @@ class TahqqRegistrationController extends Controller
         $addClientParam = new AddClientParameter();
 
         $addClientParam->firstname = $request->firstname;
-        $addClientParam->lastname = $request->lastname;
+        // $addClientParam->lastname = $request->lastname;
         $addClientParam->email = $request->email;
-        $addClientParam->phonenumber = $request->phonenumber;
+        // $addClientParam->phonenumber = $request->phonenumber;
         $addClientParam->password2 = $request->password;
 
 
