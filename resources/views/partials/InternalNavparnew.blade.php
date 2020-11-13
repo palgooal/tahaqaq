@@ -2,7 +2,7 @@
 <header>
 	<!-- Nav Bar  -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light wow fadeInDown py-4" id="navbar"> <a class="navbar-brand pt-3 mr-5" href="/">
-            @env('local')
+    @env('local')
     <base href="../">
     @endenv
     @env('prod')
@@ -75,4 +75,4 @@
             $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
         }
     </script>
-
+</header>

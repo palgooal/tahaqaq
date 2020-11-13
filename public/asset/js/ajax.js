@@ -92,18 +92,16 @@ function getDataTemplateCategoryNew(idCatecory) {
 //template selector 2
 function getDataTemplateSelectorCategory2(idCatecory) {
     // try{
-
-
-    console.log("ssasdaa");
     $.ajax({
         type: "GET",
         url: "/viewTemplateCatecory/"+idCatecory,
         data: "data",
         dataType: "json",
         success: function (response) {
-            document.getElementById('contentSlideOL').innerHTML = ' ';
-            document.getElementById('contintTemplate2').innerHTML = ' ';
-            document.getElementById('contentModal').innerHTML = ' ';
+            let contentSlideOL = '';
+            let contintTemplate2 = '';
+            let contentModal = '';
+
             var counterLI = 1
 
             for (let i = 0; i < response.data.length; i++) {
@@ -112,8 +110,8 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                 if(i == 0){
                      active = 'active'
                 }
-                if(i%6 == 0){
-                    document.getElementById('contentSlideOL').innerHTML +=
+                if(i%6 == 0){//pager
+                    contentSlideOL +=
                     `
                     <li data-target="#blogCarousel" data-slide-to="${counterLI}" class="${active}">
                         <span class="primery-color">${counterLI}</span>
@@ -122,25 +120,21 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                     counterLI+=1
                 }
 
-                console.log(`${i} / 6 =  ${i / 6} after`);
-
                 if(i/6 == 1){
-                    console.log(`${i} / 6 = ${i / 6} befor`);
-
-                    document.getElementById('contintTemplate2').innerHTML +=
+                    contintTemplate2 +=
                     `
                         </div>
                     </div>
                     `
                 }
                 if(i%6 == 0){
-                    document.getElementById('contintTemplate2').innerHTML +=
+                    contintTemplate2 +=
                     `
                         <div class="carousel-item c-i ${active}">
                         <div class="row">
                     `
                 }
-                document.getElementById('contintTemplate2').innerHTML +=
+                contintTemplate2 +=
                 `
                     <div class="col-md-3 m-4">
                         <div class="">
@@ -151,7 +145,6 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                                     value="${response.data[i].id}">
                                 <div class="card card-select h-100"
                                     data-cardSelect>
-
                                     <div class=" hover-state">
                                         <a href="#">
                                             <img src="images/${response.data[i].image_url}"
@@ -159,62 +152,50 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                                                 style="max-width:100%;">
                                         </a>
 
-
                                         <div class="middle card-section">
                                             <p class="mb-3"> ${response.data[i].title_ar}</p>
                                             <button class="btn primery-button"
                                                 data-toggle="modal"
                                                 data-target="#exampleModal-${i+1}">تفاصيل
                                             </button>
-
                                         </div>
-
-
                                     </div>
-
                                 </div>
-
                             </label>
-
                         </div>
                     </div>
-
                 `
 
+                contentModal +=
+                            `
+                            <div class="modal fade" id="exampleModal-${i+1}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-${i+1}" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel-${i+1}">${response.data[i].title_ar}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
 
-
-            document.getElementById('contentModal').innerHTML +=
-            `
-            <div class="modal fade" id="exampleModal-${i+1}" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="my-3 primery-color text-center"
-                            style="font-size: 21px;">${response.data[i].title_ar}</h4>
-                        <button type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-
-                        <img src="images/${response.data[i].image_url}" class="img-fluid p-5 pb-0" alt="">
-                        <p class="template-p  p-5 py-2">
-                           ${response.data[i].details_ar}
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn primery-button text-center my-5 "
-                            style="margin-left: 36%;">
-                            <a href='${response.data[i].preview_url}' target="_blank">مشاهدة الموقع</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-            `
-            }
+                                            <img src="images/${response.data[i].image_url}" class="img-fluid p-5 pb-0" alt="">
+                                            <p class="template-p  p-5 py-2">
+                                            ${response.data[i].details_ar}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn primery-button text-center my-5 " style="margin-left: 36%;">
+                                                <a href='${response.data[i].preview_url}' target="_blank">مشاهدة الموقع</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `
+            }//end for
+            document.getElementById('contentSlideOL').innerHTML = contentSlideOL;
+            document.getElementById('contintTemplate2').innerHTML = contintTemplate2;
+            document.getElementById('contentModal').innerHTML = contentModal;
         },
         fail: function(e){
             alert(e);

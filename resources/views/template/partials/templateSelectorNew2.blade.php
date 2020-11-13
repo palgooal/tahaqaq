@@ -18,7 +18,6 @@
                                 <span class="primery-color">3</span>
                             </li> --}}
                         </ol>
-
                         <!-- Carousel items -->
                         <div class="carousel-inner" id="contintTemplate2">
 
@@ -67,7 +66,6 @@
 
 
                         </div>
-
                     </div>
                     <!--.Carousel-->
                     <!--  here to put the templates content -->

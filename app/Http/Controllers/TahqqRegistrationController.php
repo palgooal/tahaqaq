@@ -296,7 +296,7 @@ class TahqqRegistrationController extends Controller
                 return  redirect($request->returnUrl);
 
             if(TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress() != WhmcsClientRegisterProgress::Completed)
-                return redirect('/TahqqRegistration');
+                return redirect('/TahqqRegistrationNew');
             return redirect('/');
         }
         else{
@@ -382,7 +382,7 @@ class TahqqRegistrationController extends Controller
             }
             return back()->withErrors([json_encode($ssoResult)]);
         }else{
-            return \redirect('/TahqqRegistration?a=new&templateId='.$template->id.'&planName='.$selectedPlanName.'&pid='.$pid.'&gid='.$gid.'&returnUrl='.$request->getRequestUri());
+            return \redirect('/TahqqRegistrationNew?a=new&templateId='.$template->id.'&planName='.$selectedPlanName.'&pid='.$pid.'&gid='.$gid.'&returnUrl='.$request->getRequestUri());
         }
 
         return back()->withErrors(['invalid process']);

@@ -1,7 +1,9 @@
 @extends('layouts.newapp')
 @section('content')
 @include('partials.InternalNavparnew')
-<?php header('Access-Control-Allow-Origin: *'); ?>
+<?php
+//header('Access-Control-Allow-Origin: *');
+?>
 
 <div class=" pt-5" style="background: transparent!important;margin-top: 120px;">
     <div class=" mb-5 primery-color">
@@ -346,6 +348,7 @@
     </div>
 </div>
 @endsection
+
 @section('footerJs')
     <script>
 
