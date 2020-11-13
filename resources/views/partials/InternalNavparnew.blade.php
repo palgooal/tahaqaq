@@ -30,9 +30,9 @@
                 </li>
                 @endforeach
                 @if ($isClientLogin)
-                <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">منتجاتنا<span
+                {{-- <li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="/template">منتجاتنا<span
                     class="sr-only">(current)</span></a>
-                </li>
+                </li> --}}
                 @endif
             </ul>
 			<form class="form-inline my-2 my-lg-0  login-button">

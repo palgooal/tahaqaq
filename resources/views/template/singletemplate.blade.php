@@ -15,7 +15,7 @@
           تصفح جميع القوالب
       </a>
   </div>
-  <div class="mx-5 wow fadeInDown ">
+  <div class=" wow fadeInDown ">
       <h1 class="h3 primery-color font-weight-bold text-center">{{$templateOne->title_ar}}</h1>
   </div>
   <div class="mr-5 pr-5"></div>
