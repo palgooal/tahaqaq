@@ -74,7 +74,7 @@ Route::get('/TahqqRegistration', 'TahqqRegistrationController@show');
 Route::get('/CompleteRegistrationFromTemplate', 'TahqqRegistrationController@completeRegistrationFromTemplate');
 Route::post('/TahqqRegistration', 'TahqqRegistrationController@store');
 Route::post('/SaveClientProjectInfo', 'TahqqRegistrationController@SaveClientProjectInfo');
-Route::get('/PlanSelected', 'TahqqRegistrationController@StartNowToWhmcs');
+Route::post('/PlanSelected', 'TahqqRegistrationController@StartNowToWhmcs');
 
 Route::get('/TahqqLogin', 'TahqqRegistrationController@loginView');
 Route::post('/TahqqLogin', 'TahqqRegistrationController@login');

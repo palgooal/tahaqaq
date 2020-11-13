@@ -249,8 +249,8 @@
                             style="border: none;background: none !important;">
 
 
-                            <form action="/PlanSelected" role="form" method="get" name="planSelectFrm">
-                                @method('get')
+                            <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">
+                                @method('post')
                                 @csrf
 
                                 <input type="hidden" name="selectedTemplateId" id="selectedTemplateId">

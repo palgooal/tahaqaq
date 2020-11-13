@@ -128,7 +128,8 @@ class TahqqRegistrationController extends Controller
         if(!$isSuccess)
             return back()->withErrors(['حدث خطأ اثناء حفظ بيانات المشروع.']);
 
-         return \redirect('/PlanSelected?selectedTemplateId='.$templateId.'&selectedPlanName='.$planName);
+        return $this->startNewToWhmcs($templateId, $planName, $request);
+        //  return \redirect('/PlanSelected?selectedTemplateId='.$templateId.'&selectedPlanName='.$planName);
         // 'TahqqRegistrationController@StartNowToWhmcs'
         // return redirect()
         // ->action([TahqqRegistrationController::class,'StartNowToWhmcs'],
@@ -351,6 +352,24 @@ class TahqqRegistrationController extends Controller
         $selectedTemplateId = $request->selectedTemplateId;
         $selectedPlanName = $request->selectedPlanName;
 
+        return $this->startNewToWhmcs($selectedTemplateId, $selectedPlanName,$request);
+
+        // return back()->withErrors(['invalid process']);
+    }
+
+    public function GotoClientArea(){
+        if(!TahaqqSessionInfo::IsClientLogin())
+            return back();
+            // https://client.tahqq.com/clientarea.php
+        $ssoResult = $this->whmcsAPILogic->CreateSsoToken(TahaqqSessionInfo::GetLoggedClientId(),null, null, null, null);
+        if($ssoResult->isSuccess == true){
+            return redirect($ssoResult->redirectUrl);
+        }
+        return back()->withErrors([json_encode($ssoResult)]);
+    }
+
+   private function startNewToWhmcs($selectedTemplateId, $selectedPlanName,$request)
+   {
         $template = Template::findOrFail($selectedTemplateId);
         $pid = 0;
         $gid= $template->whmcs_gid;
@@ -384,18 +403,5 @@ class TahqqRegistrationController extends Controller
         }else{
             return \redirect('/TahqqRegistrationNew?a=new&templateId='.$template->id.'&planName='.$selectedPlanName.'&pid='.$pid.'&gid='.$gid.'&returnUrl='.$request->getRequestUri());
         }
-
-        return back()->withErrors(['invalid process']);
-    }
-
-    public function GotoClientArea(){
-        if(!TahaqqSessionInfo::IsClientLogin())
-            return back();
-            https://client.tahqq.com/clientarea.php
-        $ssoResult = $this->whmcsAPILogic->CreateSsoToken(TahaqqSessionInfo::GetLoggedClientId(),null, null, null, null);
-        if($ssoResult->isSuccess == true){
-            return redirect($ssoResult->redirectUrl);
-        }
-        return back()->withErrors([json_encode($ssoResult)]);
     }
 }
