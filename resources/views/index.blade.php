@@ -216,6 +216,120 @@
 		</div>
 	</div>
 </section>
+
+ <!-- ماذا قالو عن تحقق  -->
+ <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+        <h6 class="heading mt-4 "></h6>
+    </div>
+    <div>
+        <h1 class="sub-heading h3  primery-color d-flex justify-content-center align-items-center mt-3 mb-5">
+            قالو عن تحقق</h1>
+    </div>
+</div>
+  <!-- carousel  -->
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="container carousel slide carousel-multi-item" data-ride="carousel">
+
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+
+                <div class="col-md-11">
+                    <div class="card who-card mb-2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img class="who-card-img ml-4" src="newasset/img/ABED.jpeg" alt="">
+
+                                <div class="d-flex flex-column text-right">
+                                    <span style="font-size: 20px">عبدالعزيز دخيل الله الجهني</span>
+                                    <small class="text-muted">المدير التنفيذي CEO</small>
+                                </div>
+                            </div>
+                            <p class="card-text who-card-text my-5">تحقق منصة متخصصة لرواد الاعمال !
+                                نعم تحقق هي منصة بنيت من اجل رواد الاعمال أمثالك ، الذين لا يمتلكون قدرة برمجية وليسوا مبرمجين ، بسهولة تستطيع ان تبني صفحة هبوط عالية التحويل من داخل تحقق وتقوم بالاعلان والتسويق لها لتقيس مدى رغبة عملائك وتفهم احتياجهم .</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--/.First slide-->
+
+            <!--Second slide-->
+            <div class="carousel-item">
+
+                <div class="col-md-11">
+                    <div class="card who-card mb-2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">
+
+                                <div class="d-flex flex-column text-right">
+                                    <span style="font-size: 20px">محمد الثبيتي</span>
+                                    <small class="text-muted">مؤسس Founder</small>
+                                </div>
+                            </div>
+                            <p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه  .</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--/.Second slide-->
+
+            <!--Third slide-->
+            {{-- <div class="carousel-item">
+
+                <div class="col-md-11">
+                    <div class="card who-card mb-2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img class="who-card-img ml-4" src="https://source.unsplash.com/random/58×58" alt="">
+
+                                <div class="d-flex flex-column text-right">
+                                    <span>محمد عوض </span>
+                                    <small class="text-muted">مؤسس شركة عكار</small>
+                                </div>
+                            </div>
+                            <p class="card-text who-card-text my-5">تعمل منصة سلة على حماية معلومات التُجّار والمتاجر
+                                بموجب أنظمة حماية
+                                إلكترونية وتقنية ذات جودة عالية وتُحدّث بشكل مستمر ودوري.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div> --}}
+            <!--/.Third slide-->
+
+        </div>
+        <!--/.Slides-->
+
+        <!--Controls-->
+        <div class="controls-top d-flex justify-content-center mt-5">
+
+            <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next"><i
+                    class="fas fa-arrow-right"></i></a>
+            <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev"><i
+                    class="fas fa-arrow-left"></i></a>
+
+        </div>
+        <!--/.Controls-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <!-- نهاية ماذا قالو عن تحقق -->
 <!-- fifth section  -->
 <section class="container  py-5 section-five">
 	<div class="text-center mb-5 wow bounceInDown">
@@ -313,4 +427,9 @@
         </div>
 
         @endforeach</div>
-</div>@endsection
+</div>
+
+
+
+
+@endsection

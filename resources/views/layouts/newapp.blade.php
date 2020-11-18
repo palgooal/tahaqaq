@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
         <link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="newasset/css/new-style.css">
-        {{-- <link rel="stylesheet" href="newasset/css/who-us-style.css"> --}}
+        <link rel="stylesheet" href="newasset/css/who-us-style.css">
         <link rel="stylesheet" href="newasset/css/login-style.css">
         <link rel="stylesheet" href="newasset/css/pricing.css">
         <link rel="stylesheet" href="newasset/css/call-us.css">
@@ -37,7 +37,7 @@
         <link rel="stylesheet" href="newasset/css/bootstrap.min.css">
         <link rel="stylesheet" href="newasset/css/bootstrap-rtl.min.css">
         <link rel="stylesheet" href="newasset/css/new-style.css">
-        {{-- <link rel="stylesheet" href="newasset/css/who-us-style.css"> --}}
+        <link rel="stylesheet" href="newasset/css/who-us-style.css">
         <link rel="stylesheet" href="newasset/css/login-style.css">
         {{-- <link rel="stylesheet" href="newasset/css/index.css"> --}}
         <link rel="stylesheet" href="newasset/css/pricing.css">

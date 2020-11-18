@@ -30,7 +30,7 @@ style="margin-top: 100px;">
 
 
 
-      <div id="carouselExampleControls" class="carousel slide  tabs-wizard py-3 px-2" data-interval="false">
+      {{-- <div id="carouselExampleControls" class="carousel slide  tabs-wizard py-3 px-2" data-interval="false">
 
         <div class="carousel-inner container">
             <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
@@ -46,18 +46,18 @@ style="margin-top: 100px;">
                       role="tab" aria-controls="profile-classic" aria-selected="true">الكل</a>
                   </li>
                   @foreach ($categoris->take(5) as $categoris)
-                  {{-- @if ($loop->first) --}}
+
 
                  <li class="nav-item px-3 ">
                     <a class="nav-link  waves-light"  onclick="getDataTemplateCategory('{{$categoris->id}}')">{{$categoris->text_ar}}</a>
                   </li>
-                  {{-- @endif --}}
+
 
                   @endforeach
               </ul>
               </div>
 
-          {{-- <div class="carousel-item container px-5">
+          <div class="carousel-item container px-5">
             <ul class=" d-flex justify-content-between  mb-0" id="myClassicTab" role="tablist">
               <li class="nav-item px-3 ">
                 <a class="nav-link  waves-light" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
@@ -117,7 +117,7 @@ style="margin-top: 100px;">
 
 
             </ul>
-          </div> --}}
+          </div>
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon " aria-hidden="true"></span>
 
@@ -125,7 +125,7 @@ style="margin-top: 100px;">
 
         </div>
 
-      </div>
+      </div> --}}
       {{-- <div class="tab-content " id="myClassicTabContent">
         <div class="tab-pane fade active show" id="profile-classic" role="tabpanel"
           aria-labelledby="profile-tab-classic">

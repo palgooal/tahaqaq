@@ -8,14 +8,14 @@ body{
 .form-linkes{
     color: #221950 !important;
     text-decoration-line: underline !important;
-    font-size: 12px !important;
+    font-size: 15px !important;
     font-family: "FFShamelFamily-SansOneBook";
 }
 .new-customer-link{
     color: #F582EA !important;
 }
 .login-p{
-    font-size: 10px;
+    font-size: 18px;
     font-family: "FFShamelFamily-SansOneBook";
     color: #221950;
 

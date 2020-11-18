@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="newasset/css/new-style.css">
 	<link rel="stylesheet" href="newasset/css/login-style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="icon" href="newasset/img/favicon.ico" type="image/x-icon">
     @endenv
 
     @env('prod')
@@ -30,6 +31,7 @@
 	<link rel="stylesheet" href="newasset/css/new-style.css">
 	<link rel="stylesheet" href="newasset/css/login-style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="icon" href="newasset/img/favicon.ico" type="image/x-icon">
     @endenv
 </head>
 
@@ -41,7 +43,7 @@
 					<img class="vector-image " src="./img/Scene 9.png" alt="">
 					<div class="text-right ">
 						<p class="heading ">لماذا تحقق</p>
-						<h1 class="sub-heading h3 primery-color mt-3 mb-3"> كيف يمكننا مساعدتك في تحقق !</h1>
+						<h1 class="sub-heading h3 primery-color mt-3 mb-3"> سعيدين بعودتك مجددا  !</h1>
 						<p class="login-p">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية</p>
 					</div>
 				</div>
@@ -60,11 +62,11 @@
 							<input type="password" required="required" class="form-control p-4" placeholder="كلمة المرور" id="password" name="password" />@error('password')
 							<p>{{$message}}</p>@enderror</div>
 						<div class="under-form-login d-flex justify-content-between align-items-center col-md- px-5">
-							<div>
-								<input type="checkbox" id="defaultCheck" name="example2">
-								<label class="form-linkes mr-1 mb-3" for="defaultCheck">تذكرني</label>
+							<div class="d-flex justify-content-center align-items-center">
+								<input type="checkbox" name="example2" class="mt-0" id="defaultCheck">
+								<label for="defaultCheck" class="form-linkes mr-3 mb-0 ">تذكرني</label>
 							</div>
-							<div> <a class="form-linkes" href="">هل نسيت كلمة المرور</a>
+							<div> <a class="form-linkes" href="https://client.tahqq.com/index.php/password/reset/begin">هل نسيت كلمة المرور</a>
 							</div>
 						</div>
 						<div class="">
