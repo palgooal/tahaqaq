@@ -1070,3 +1070,24 @@ form input::placeholder , textarea::placeholder{
     width:287px
     }
     }
+
+    .page-item .page-link {
+        color:  #fff !important;
+        background: #7657E5;
+        outline: none !important;
+    }
+
+    .page-item.active .page-link {
+        color: #fff;
+        background-color:#221950;
+        border-color: #221950;
+        color:  #fff !important;
+    }
+
+     .page-item.disabled .page-link{
+        color: #fff;
+        background-color:#7657E5;
+        border-color: #7657E5;
+        color:  #fff !important;
+        border: none !important;
+    }

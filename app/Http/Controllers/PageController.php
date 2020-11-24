@@ -131,8 +131,9 @@ class PageController extends Controller
 
     public function pricingpage(){
         $lang = App::getLocale();
+        $menus = Menu::get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
-        return view('pricing', compact('sysVarFooter', 'lang', 'sysVarSocialMedia'));
+        return view('pricing', compact('sysVarFooter', 'lang', 'sysVarSocialMedia', 'menus'));
     }
 }

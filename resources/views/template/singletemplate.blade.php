@@ -40,12 +40,12 @@
                     <form class="form-inline my-2 mb-5 mt-4 pt-2  login-button">
                         <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link "
                             href="{{$templateOne->preview_url}}" target="">
-                            مشاهدة هذاالموقع
+                            مشاهدة
                         </a>
-                        <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
+                        {{-- <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
                             href="#" target="">
                            اختر هذاالموقع
-                        </a>
+                        </a> --}}
 
                     </form>
 
@@ -65,7 +65,7 @@
 </section>
 
 <div class="my-5">
-    <p class="h3 primery-color text-center my-5" id="fetures">مميزات المواقع لدينا </p>
+    <p class="h3 primery-color text-center my-5" id="fetures">مميزات القالب </p>
     <div class="container">
         <ul class="d-grid">
            <div class="row">

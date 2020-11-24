@@ -19,8 +19,8 @@
 				</li>
 				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">سياسة الخصوصية</a>
 				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_HowDoWeWork)}}">كيف نعمل</a>
-				</li>
+				{{-- <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_HowDoWeWork)}}">كيف نعمل</a>
+				</li> --}}
 			</ul>
 		</div>
 		<!--  -->
@@ -29,7 +29,8 @@
 				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Contact)}}">اتصل بنا </a>
 				</li>
 				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Services)}}">خدماتنا </a>
-				</li>
+                </li>
+                <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">سياسة الخصوصية</a>
 			</ul>
 		</div>
 		<!--  -->

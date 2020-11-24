@@ -92,12 +92,16 @@
 	<ul class="pagination">
 		<li class="page-item disabled pagination-hide {{ ($blogs->currentPage() == 1) ? ' disabled' : '' }}" style="margin-left: -19px;
             border: none !important;">
-			<a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-left: -8px; z-index: 10;" href="{{ $blogs->url(1) }}" tabindex="-1" aria-disabled="true"> <i class="fas fa-chevron-right ml-3 chev"></i>Previous</a>
+			<a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-left: -8px; z-index: 10;" href="{{ $blogs->url(1) }}" tabindex="-1" aria-disabled="true"> <i class="fas fa-chevron-right ml-3 chev"></i>السابق</a>
         </li>
         @for ($i = 1; $i<=$blogs->lastPage(); $i++)
 			<li class="page-item " aria-current="page"> <a class="page-link bg-primery px-5" style="background:#1f0b64!important;" href="{{ $blogs->url($i) }}">{{ $i }}<span
                         class="sr-only">(current)</span></a>
 			</li>@endfor
-			<li class="page-item pagination-hide {{ ($blogs->currentPage() == $blogs->lastPage()) ? ' disabled' : '' }} "> <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-right: -24px; z-index: 10;" href="{{ $blogs->url($blogs->currentPage()+1) }}">Next<i class="fas fa-chevron-left mr-3 chev"></i></a>
+			<li class="page-item pagination-hide {{ ($blogs->currentPage() == $blogs->lastPage()) ? ' disabled' : '' }} "> <a class="page-link bg-primery px-4 " style="border-radius: 40px; margin-right: -24px; z-index: 10;" href="{{ $blogs->url($blogs->currentPage()+1) }}">التالي<i class="fas fa-chevron-left mr-3 chev"></i></a>
 			</li>
-	</ul>@endif</nav>@endsection
+    </ul>@endif</nav>
+
+
+
+    @endsection

@@ -94,7 +94,7 @@
         font-size: 18px !important;
     }
     .heading-p{
-        font-size: 14px !important;
+        font-size: 18px !important;
     }
     .right-side-who{
         margin: 0 !important;
@@ -114,7 +114,7 @@
         justify-content: center;
     }
     .who-head{
-        margin: 0 !important;
+        margin: -20px !important;
         margin-top: 30px !important;
     }
     .hide{
@@ -127,8 +127,8 @@
 
     }
     .content-who{
-        margin-right: 0 !important;
-        margin-left: 0 !important;
+        margin-right: 25 !important;
+        margin-left: 25 !important;
     }
     .custom-square{
         display: none;
