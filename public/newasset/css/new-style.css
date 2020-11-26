@@ -288,7 +288,7 @@ footer .col {
 .card-p{
     font-family: "FFShamelFamily-SansOneBook" !important;
     font-size: 15px !important;
-    text-align: right;
+    text-align: justify;
     color: #221950;
     margin: 20px 0 10px 0 !important;
 }

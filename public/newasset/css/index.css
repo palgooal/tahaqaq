@@ -355,7 +355,7 @@ a{
         margin-left: auto !important;
     }
     .heading , .index-top-p{
-      text-align: center;
+      text-align: justify;
     }
     .login-button{
         display: flex;
@@ -445,4 +445,7 @@ a{
     .top-of-the-headd{
     font-size: 21px !important;
     }
+    }
+    section.content-section.bg-primary.text-white.py-5 {
+        background-color: #684ec5 !important;
     }

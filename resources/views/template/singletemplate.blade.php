@@ -39,7 +39,7 @@
                     </p>
                     <form class="form-inline my-2 mb-5 mt-4 pt-2  login-button">
                         <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link "
-                            href="{{$templateOne->preview_url}}" target="">
+                            href="{{$templateOne->preview_url}}" target="_blank">
                             مشاهدة
                         </a>
                         {{-- <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"

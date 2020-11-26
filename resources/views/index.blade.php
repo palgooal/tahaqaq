@@ -245,8 +245,8 @@
                                 <img class="who-card-img ml-4" src="newasset/img/ABED.jpeg" alt="">
 
                                 <div class="d-flex flex-column text-right">
-                                    <span style="font-size: 20px">عبدالعزيز دخيل الله الجهني</span>
-                                    <small class="text-muted">المدير التنفيذي CEO</small>
+                                    <span style="font-size: 18px">عبدالعزيز الجهني</span>
+                                    <small class="text-muted text-center">مؤسس</small>
                                 </div>
                             </div>
                             <p class="card-text who-card-text my-5">تحقق منصة متخصصة لرواد الاعمال !
@@ -271,7 +271,7 @@
 
                                 <div class="d-flex flex-column text-right">
                                     <span style="font-size: 20px">محمد الثبيتي</span>
-                                    <small class="text-muted">مؤسس Founder</small>
+                                    <small class="text-muted">مدير التسويق</small>
                                 </div>
                             </div>
                             <p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه  .</p>
@@ -380,6 +380,16 @@
 		</div>
 	</div>
 </section>
+
+<section class="content-section bg-primary text-white  py-5">
+    <div class="container text-center">
+        <h3 class="mb-4">فرصة رائعة تجرب منصة تحقق مجانا</h3>
+        <p class="top-of-the-headd text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان . <br>
+            المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p>
+            {{-- <h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}}
+       <a class="button index-sign-button py-2 px-5" role="button" href="https://tahqq.com/TahqqRegistration?a=new">اشترك لمدة شهر مجانا</a></div>
+</section>
+
 <!-- last section-->
 <div class="container cards-container p-0 mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">

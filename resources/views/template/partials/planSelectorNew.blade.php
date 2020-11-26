@@ -2,7 +2,7 @@
 
     <h1 class="top-heading">باقات الاشتراك في تحقق</h1>
 </div> --}}
-<div class="package-container d-flex justify-content-center align-items-center">
+<div class="package-container d-flex justify-content-center align-itaems-center">
     <!-- Start  -->
     <div class="packages wow bounceInRight"
                                 style="visibility: visible; animation-name: bounceInRight;">

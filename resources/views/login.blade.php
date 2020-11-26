@@ -42,9 +42,9 @@
 				<div class="col col-md-6 offset-md-1 hide ">
 					<img class="vector-image " src="./img/Scene 9.png" alt="">
 					<div class="text-right ">
-						<p class="heading ">لماذا تحقق</p>
-						<h1 class="sub-heading h3 primery-color mt-3 mb-3"> سعيدين بعودتك مجددا  !</h1>
-						<p class="login-p">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية</p>
+						{{-- <p class="heading ">لماذا تحقق</p> --}}
+						<h1 class="sub-heading h3 primery-color mt-5 mb-3"> سعيدين بعودتك مجددا  !</h1>
+						{{-- <p class="login-p">هي القدرة على تنفيذ ومشاهدة الخدمة النهائية من مشروع العميل بأقل ادوات وعمل برمجي , مما يساعد على ر ؤية شيء من النتيجة النهائية</p> --}}
 					</div>
 				</div>
 				<div class="col col-md-5 col-sm-12 col-xs-12">
