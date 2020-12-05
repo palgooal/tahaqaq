@@ -53,7 +53,8 @@ a{
 
 /** second section **/
 .index-statistics{
-    background: #F6F3FF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    padding-bottom: 80px !important;
 }
 .index-statistics-box{
     background: #7657E5 0% 0% no-repeat padding-box;
@@ -414,6 +415,13 @@ a{
     package-item{
         padding-right: 0px !important;
         padding-left: 10px !important;
+      }
+
+      .title-forsa{
+        font-size: 18px;
+      }
+      .title-forsabody{
+        font-size: 14px !important;
       }
 
 

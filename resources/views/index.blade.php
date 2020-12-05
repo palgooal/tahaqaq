@@ -33,6 +33,19 @@
 </section>
 </header>
 <!-- second-section  -->
+
+<section class=" index-statistics px-5 py-5 mt-0 ">
+
+    <h5>Integrations to help you validate more</h5><br/>
+    <div class="row">
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/google-adword.png" class="img-fluid" width="80%" /></div>
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%" /></div>
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/facebook-ads.png" width="80%" /></div>
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/mailchemp.png" width="80%" /></div>
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/hotjar.png" width="80%" /></div>
+        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/wordpress.png" width="80%" /></div>
+    </div>
+</section>
 <!-- <section class=" index-statistics px-5 py-5 mt-5 ">
         <div class="container index-statistics-box wow bounceInDown">
             <div class="d-grid">
@@ -383,9 +396,9 @@
 
 <section class="content-section bg-primary text-white  py-5">
     <div class="container text-center">
-        <h3 class="mb-4">فرصة رائعة تجرب منصة تحقق مجانا</h3>
-        <p class="top-of-the-headd text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان . <br>
-            المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p>
+        <h3 class="mb-4 title-forsa">فرصة رائعة تجرب منصة تحقق مجانا</h3>
+        <p class="title-forsabody text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان . <br>
+            المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p><br/>
             {{-- <h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}}
        <a class="button index-sign-button py-2 px-5" role="button" href="https://tahqq.com/TahqqRegistration?a=new">اشترك لمدة شهر مجانا</a></div>
 </section>
