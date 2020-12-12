@@ -29,6 +29,11 @@
 							<label>اسم القائمة<span class="text-danger">*</span>
 							</label>
 							<input type="text" name="name_ar" class="form-control" placeholder="اكتب عنوان القائمة"> <span class="form-text text-muted">يمكنك تعريف قائمة جديدة بأضافة اسم القائمة لكي تظهر في الموقع</span>
+                        </div>
+                        <div class="form-group">
+							<label>اسم بالانجليزي<span class="text-danger">*</span>
+							</label>
+							<input type="text" name="name_en" class="form-control" placeholder="اكتب عنوان القائمة"> <span class="form-text text-muted">يمكنك تعريف قائمة جديدة بأضافة اسم القائمة لكي تظهر في الموقع</span>
 						</div>{{-- start toggel url --}}
 						<button class="btn" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
 							<label class="switch">التنقل بين الروابط

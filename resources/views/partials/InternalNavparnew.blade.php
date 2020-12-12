@@ -58,9 +58,16 @@
                     <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
                         ‫ابدأ الآن
                     </a>
-				@endif	<a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="#" target="">
+                @endif
+                @if (App::isLocale('en'))
+                <a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="/lang/ar" target="">
+                    عربي
+                </a>
+                @else
+                <a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="/lang/en" target="">
                     EN
                 </a>
+                @endif
 			</form>
 		</div>
     </nav>

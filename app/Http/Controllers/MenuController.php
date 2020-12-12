@@ -41,6 +41,7 @@ class MenuController extends Controller
     {
         $data = request()->validate([
             'name_ar' => 'required',
+            'url' => 'required',
 
             'sort' => 'required'
 

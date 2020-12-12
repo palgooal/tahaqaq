@@ -8,15 +8,19 @@
              </button>
           </div>
           <div class="modal-body">
-             
+
              <form method="post" action="/pg-admin/menus/{{$menu->id}}" accept-charset="UTF-8" class="form-horizontal" role="form" >
                 <input type="hidden" name="_method" value="put">
                 @csrf
                 <div class="form-body">
                    <div class="form-group">
                       <label>اسم القائمة</label>
-                      <input class="form-control spinner" type="text" placeholder="اكتب عنوان القائمة بالعربية" value="{{$menu->name_ar}}" name="name_ar" required/>                
+                      <input class="form-control spinner" type="text" placeholder="اكتب عنوان القائمة بالعربية" value="{{$menu->name_ar}}" name="name_ar" required/>
                    </div>
+                   <div class="form-group">
+                    <label>اسم القائمة بالانجليزي</label>
+                    <input class="form-control spinner" type="text" placeholder="اكتب عنوان القائمة بالعربية" value="{{$menu->name_en}}" name="name_en" required/>
+                 </div>
                    <div class="form-group">
                       <label>رابط عنوان القائمة </label>
                       <input class="form-control spinner" type="text" placeholder="اكتب هنا رابط القائمة url http://" name="url" id="url" value="{{$menu->url}}" required>
