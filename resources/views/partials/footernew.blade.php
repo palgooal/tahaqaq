@@ -4,39 +4,41 @@
 	<div class="row">
 		<div class="col py-5 pr-5 pl-0 res-footer-col" style="text-align: right !important;">
 			<ul class="list-unstyled ">
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Subscription)}}">الاشتراك</a>
+            <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Subscription)}}">{{__('footer.Subscription')}}</a>
 				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Pricing)}}">الاسعار</a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Pricing)}}">{{__('footer.prices')}}</a>
 				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Blog)}}">المدونة</a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Blog)}}">{{__('footer.blog')}}</a>
 				</li>
 			</ul>
 		</div>
 		<!--  -->
 		<div class="col py-5  pl-0">
 			<ul class="list-unstyled ">
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_About)}}">من نحن </a>
-				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">سياسة الخصوصية</a>
-				</li>
-				{{-- <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_HowDoWeWork)}}">كيف نعمل</a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_About)}}">{{__('footer.About Us')}}</a>
+                </li>
+                <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Services)}}">{{__('footer.Our services')}} </a>
+                </li>
+				{{-- <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">سياسة الخصوصية</a>
 				</li> --}}
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_HowDoWeWork)}}">{{__('footer.work')}}</a>
+				</li>
 			</ul>
 		</div>
 		<!--  -->
 		<div class="col p-5 res-footer-col res-footer-col-l" style="text-align: right !important;">
 			<ul class="list-unstyled ">
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Contact)}}">اتصل بنا </a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Contact)}}">{{__('footer.Contact us')}}</a>
 				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Services)}}">خدماتنا </a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Services)}}">{{__('footer.Usage Policy')}} </a>
                 </li>
-                <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">سياسة الخصوصية</a>
+                <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">{{__('footer.Privacy policy')}}</a>
 			</ul>
 		</div>
 		<!--  -->
 		<div class="col py-5 pr-0 pl-5">
 			<ul class="list-unstyled ">
-				<li class="footer-linkes" style="font-size: 20px">وسائل الدفع</li>
+				<li class="footer-linkes" style="font-size: 20px">{{__('footer.Payment methods')}}</li>
 				<li class="d-flex justify-content-between w-75 mt-5 ">
 					<a href="" class="ml-4 img-hover">
 						<img src="./img/visa.png" alt="">
@@ -53,7 +55,7 @@
 		<!--   -->
 		<div class="col p-5" style="text-align: right !important;">
 			<ul class="list-unstyled ">
-				<li class="footer-linkes" style="font-size: 20px">تابعنا</li>
+				<li class="footer-linkes" style="font-size: 20px">{{__('footer.Follow us')}}</li>
 				<li class="d-flex mt-5 ">
 					<a href="{{$sysVarSocialMedia->GetValue(App\Logic\SysVar\SysVarTypes::Type_SocialMedia_Facbook)}}" class="ml-4 img-hover img-resize-none">
 						<img src="./img/logo-fb-simple.png" alt="fb">
@@ -68,7 +70,7 @@
 						<img src="./img/logo-youtube.png" alt="youtube">
 					</a>
 				</li>
-				<li class="footer-linkes mt-4" style="font-size: 10px !important;">جميع الحقوق محفوظة ل تدريب</li>
+				<li class="footer-linkes mt-4" style="font-size: 10px !important;">{{__('footer.all rights are save')}}</li>
 			</ul>
 		</div>
 	</div>

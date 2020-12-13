@@ -17,10 +17,10 @@
 					<p class="h4  primery-color top-header-heading my-5">{{$header_title}}</p>
 					<p class="index-top-p">{{$header_details}}</p>
 					<form class="form-inline my-2 mb-5 mt-4 pt-2  login-button"> <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$header_startNowUrl}}" target="">
-                        ‫ابدأ الآن
+                        {{ __('index.start now')}}
                         </a>
 						<a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="{{$header_tryNowUrl}}" target="">
-                            تجربة تحقق
+                            {{ __('index.Experience Tahqq') }}
                         </a>
 					</form>
 				</div>
@@ -237,7 +237,7 @@
     </div>
     <div>
         <h1 class="sub-heading h3  primery-color d-flex justify-content-center align-items-center mt-3 mb-5">
-            قالو عن تحقق</h1>
+        {{ __('index.They said about Tahqq') }}</h1>
     </div>
 </div>
   <!-- carousel  -->
@@ -346,8 +346,8 @@
 <!-- fifth section  -->
 <section class="container  py-5 section-five">
 	<div class="text-center mb-5 wow bounceInDown">
-		<p class="top-of-the-head mt-0">كيف يعمل تحقق</p>
-		<p class="h3 primery-color my-4">المهم ليس الفكرة المهم هو التحقق منها ..</p>
+    <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
+		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p>
 	</div>
 	<div class="how-to-do w-100 m-auto "></div>
 </section>
@@ -355,8 +355,8 @@
 <section class=" py-5 section-six">
 	<div class="">
 		<div class=" text-center mb-5 wow bounceInDown">
-			<p class="top-of-the-head mt-0">أسعار الباقات</p>
-			<p class="h3 primery-color my-4">باقات الاشتراك في تحقق</p>
+        <p class="top-of-the-head mt-0">{{__('index.Packages prices') }}</p>
+        <p class="h3 primery-color my-4">{{__('index.Check subscription packages')}}</p>
 			{{-- <div class="toggle-btn my-5 "> <span class="m-3">ربع سنوي</span>
 				<!-- Rounded switch -->
 				<label class="switch">
@@ -367,28 +367,28 @@
 		<div class="package-container d-flex justify-content-center align-itaems-center">
 			<div class="packages wow bounceInRight">
             <h3 class="my-4 pt-4">{{$packages[0]->name_package}}</h3>
-				<h6 class="text1 rounded-price p-3">{{$packages[0]->price}} ريال سعودي</h6>
+            <h6 class="text1 rounded-price p-3">{{$packages[0]->price}} {{__('index.SR')}}</h6>
 				<ul class="list">
                     {!!$packages[0]->Details!!}
 
-				</ul> <a href="{{$packages[0]->link}}" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">ابدأ الآن‫</a>
+				</ul> <a href="{{$packages[0]->link}}" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">{{ __('index.start now')}}‫</a>
 			</div>
 			<div class="packages res-star wow bounceInDown" style="background-color: #7657E5; color: #F6F6F6">
 				<img src="img/star.png">
 				<h3 class="my-4 pt-4">{{$packages[1]->name_package}}</h3>
-				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">{{$packages[1]->price}} ريال سعودي</h6>
+				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">{{$packages[1]->price}} {{__('index.SR')}}</h6>
 				<ul class="list">
                     {!!$packages[1]->Details!!}
 
-				</ul> <a href="{{$packages[1]->link}}" class="button index-sign-button py-2 px-5">‫ابدأ الآن</a>
+				</ul> <a href="{{$packages[1]->link}}" class="button index-sign-button py-2 px-5">{{ __('index.start now')}}‫</a>
 			</div>
 			<div class="packages wow bounceInLeft">
 				<h3 class="my-4 pt-4">{{$packages[2]->name_package}}</h3>
-				<h6 class="text1 rounded-price p-3">{{$packages[2]->price}} ريال سعودي</h6>
+				<h6 class="text1 rounded-price p-3">{{$packages[2]->price}} {{__('index.SR')}}</h6>
 				<ul class="list">
                     {!!$packages[2]->Details!!}
 
-				</ul> <a href="{{$packages[2]->link}}" class="btn primery-button start-now-btn py-2 px-5">ابدأ الآن</a>
+				</ul> <a href="{{$packages[2]->link}}" class="btn primery-button start-now-btn py-2 px-5">{{ __('index.start now')}}</a>
 			</div>
 		</div>
 	</div>
@@ -406,8 +406,8 @@
 <!-- last section-->
 <div class="container cards-container p-0 mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">
-		<p class="top-of-the-headd text-center mt-0">مدونة تحقق</p>
-		<p class="h3  primery-color text-center my-4 the-top-head-res">الفكرة تبقى مجرد فكرة حتى تنفذها !</p>
+    <p class="top-of-the-headd text-center mt-0">{{__('index.Tahqq Blog')}}</p>
+    <p class="h3  primery-color text-center my-4 the-top-head-res">{{__('index.The idea remains just an idea until you implement it!')}}</p>
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)
