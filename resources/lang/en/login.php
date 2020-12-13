@@ -10,7 +10,11 @@ return [
     'Remember me'=>'Remember me',
     'Forget Password ?'=>'Forget Password ?',
     'Sign In'=>'Sign In',
-    'Home'=>'Home'
+    'Home'=>'Home',
+    'Are you a new subscriber?'=>"Are you a new subscriber?",
+    'Happy to come back again!'=>"Happy to come back again!",
+
+
 
 
 
