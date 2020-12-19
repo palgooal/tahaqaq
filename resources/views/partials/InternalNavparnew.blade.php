@@ -25,7 +25,7 @@
 		<div class="collapse navbar-collapse res-nav-group " id="navbarSupportedContent">
 			<ul class="navbar-nav m-auto d-flex justify-content-center align-items-center nav-links-group ">
                 @foreach ($menus as $menu)
-				<li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->name_ar}}<span
+				<li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->getname(App::getLocale())}}<span
                             class="sr-only">(current)</span></a>
                 </li>
                 @endforeach
@@ -53,10 +53,10 @@
                     <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
                     دخول منطقة العملاء
                     </a> --}} @else <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl={{$customLoginReturnUrl??'/TahqqRegistration'}}" target="">
-                        تسجيل دخول
+                        {{__('login.Login')}}
                     </a>
                     <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
-                        ‫ابدأ الآن
+                        {{__('index.start now')}}
                     </a>
                 @endif
                 @if (App::isLocale('en'))

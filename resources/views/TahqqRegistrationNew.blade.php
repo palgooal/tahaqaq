@@ -9,7 +9,7 @@
     <div class=" mb-5 primery-color">
 
         <h2 class="h2 text-center" style="font-family: 'FFShamelFamily-SansOneBold' !important;">
-            ‫ابدأ بإنشاء مشروعك
+            {{__('TahqqRegistration.Start creating your project')}}
         </h2>
 
     </div>
@@ -26,7 +26,7 @@
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-1" href="#step-1" type="button"
                                     class="btn btn-success primery-color btn-circle mb-3 ">1</a>
-                                <p><small>معلومات</small></p>
+                                <p><small>{{__('TahqqRegistration.informations')}}</small></p>
                                 <!--<p><small>المعلومات <span class="word-hide">الشخصية</span></small>-->
 	                            </p>
                             </div>
@@ -35,28 +35,28 @@
                                 <a id="lnkStep-2" href="#step-2" type="button"
                                     class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"active":"disabled"}}"
                                     >2</a>
-                                <p><small>تفاصيل</small></p>
+                                <p><small>{{__('TahqqRegistration.details')}}</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-3" href="#step-3" type="button"
                                 class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
                                 >3</a>
-                                <p><small>قوالب</small></p>
+                                <p><small>{{__('TahqqRegistration.Templates')}}</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-4" href="#step-4" type="button"
                                 class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
                                 >4</a>
-                                <p><small>الباقات</small></p>
+                                <p><small>{{__('TahqqRegistration.Packages')}}</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-5" href="#step-5" type="button"
                                 class="btn btn-default btn-circle mb-3 "
                                 >5</a>
-                                <p><small>الدومين</small></p>
+                                <p><small>{{__('TahqqRegistration.Domain')}}</small></p>
                             </div>
                             <div class="stepwizard-step col-xs-1 ">
                             </div>
@@ -95,10 +95,10 @@
                                     <div class="offset-md-3"></div>
                                     {{-- col-md-5 mb-3 my-4 --}}
                                     <div class="form-group col">
-                                        <label class="control-label fields-label">الإسم</label>
+                                        <label class="control-label fields-label">{{__('TahqqRegistration.Name')}}</label>
                                         <input name="firstname" type="text" class="form-control p-4  overrideheight"
                                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
-                                            placeholder="الاسم" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
+                                            placeholder="{{__('TahqqRegistration.Name')}}" required="required" value="{{ $isClientLogin ? ($clientDetailsInfo->GetFullName()??'') :''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
                                     {{-- <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label">الإسم الاخير</label>
@@ -112,9 +112,9 @@
                                     <div class="offset-md-3"></div>
                                     {{-- col-md-5 mb-3 my-4 --}}
                                     <div class="form-group col">
-                                        <label class="control-label fields-label">البريد الإلكتروني</label>
+                                        <label class="control-label fields-label">{{__('TahqqRegistration.Email')}}</label>
                                         <input name="email" maxlength="100" type="email" class="form-control p-4"
-                                            placeholder="البريد الإلكتروني" required="required" value="{{$isClientLogin? ($clientDetailsInfo->GetEmail()??''):''}}" {{$isClientLogin?'disabled':''}}/>
+                                            placeholder="{{__('TahqqRegistration.Email')}}" required="required" value="{{$isClientLogin? ($clientDetailsInfo->GetEmail()??''):''}}" {{$isClientLogin?'disabled':''}}/>
                                     </div>
                                     {{-- <div class="form-group col-md-5  mb-3 my-4">
                                         <label class="control-label fields-label">رقم الهاتف</label>
@@ -129,9 +129,9 @@
                                     <div class="offset-md-3"></div>
                                     {{-- col-md-5 mb-3 my-4 --}}
                                     <div class="form-group col">
-                                        <label class="control-label fields-label">كلمة المرور</label>
+                                        <label class="control-label fields-label">{{__('TahqqRegistration.password')}}</label>
                                         <input  name="password" maxlength="100" type="password"
-                                            class="form-control p-4 px-5" placeholder="كلمة المرور" required/>
+                                            class="form-control p-4 px-5" placeholder="{{__('TahqqRegistration.password')}}" required/>
                                     </div>
                                     {{-- <div class="form-group col-md-5 mb-3 my-4">
                                         <label class="control-label fields-label"> تأكيد كلمة المرور </label>
@@ -150,7 +150,7 @@
                                                 <button form="frmRegClient"
                                                     class="btn primery-button d-flex align-items-center  res-button start-now mt-5 nextBtn step-button pull-right py-3"
                                                     type="button"  id="step-1">
-                                                متابعة
+                                                    {{__('TahqqRegistration.Continue')}}
                                                     <div style="border-radius: 10px; margin-right: 37px;"> <i
                                                         class="fas fa-chevron-left mr-3"></i></div>
                                                 </button>
@@ -163,7 +163,7 @@
                                                 class="btn primery-button d-flex align-items-center  res-button start-now mt-5 step-button pull-right py-3"
                                                 value="Submit"
                                                 type="submit" >
-                                                انشاء حساب
+                                                {{__('TahqqRegistration.Create an account')}}
                                                 <div style="border-radius: 10px; margin-right: 37px;"> <i
                                                         class="fas fa-chevron-left mr-4"></i></div></button>
                                             @endif
@@ -188,9 +188,9 @@
                                 @csrf
                                 <div>
                                     <div class="form-group col col-md-12 mb-3 my-4">
-                                        <label class="control-label fields-label">اسم المشروع</label>
+                                        <label class="control-label fields-label">{{__('TahqqRegistration.project name')}}</label>
                                         <input name="projectName" id="projectName" maxlength="100" type="text" class="form-control p-4"
-                                            placeholder="الإسم الاخير"
+                                            placeholder="{{__('TahqqRegistration.project name')}}"
                                             required value="{{$clientDetailsInfo->GetProductName()??''}}"/>
                                             @error('projectName')
                                             <h5>Error : {{$message}}</h5>
@@ -198,7 +198,7 @@
                                     </div>
 
                                     <div class=" form-group col col-md-12 ">
-                                        <label class="control-label fields-label">اختر نوع المشروع</label>
+                                        <label class="control-label fields-label">{{__('TahqqRegistration.Choose the type of project')}}</label>
                                         <select name="projectCategory" id="projectCategory" class="form-control select-t " >
                                             @foreach ($templateCategories as $category)
                                                 <option {{$clientDetailsInfo->GetProjectCategory() == $category->code?'selected':''}} value="{{$category->code}}">{{$category->getText(App::getLocale())}}</option>
@@ -209,10 +209,10 @@
                                         @enderror
                                     </div>
                                     <div class="form-group col col-md-12">
-                                        <label class="control-label fields-label "> وصف مختصر عن المشروع
+                                        <label class="control-label fields-label "> {{__('TahqqRegistration.A brief description of the project')}}
                                         </label>
                                         <textarea name="projectDetails" id="projectDetails" maxlength="100" type="text" required="required" class="form-control "
-                                            placeholder=" وصف مختصر عن المشروع ">{{$clientDetailsInfo->GetProjectDetails()??''}}</textarea>
+                                            placeholder="{{__('TahqqRegistration.A brief description of the project')}}">{{$clientDetailsInfo->GetProjectDetails()??''}}</textarea>
                                         @error('projectDetails')
                                             <h5>Error : {{$message}}</h5>
                                         @enderror
@@ -233,7 +233,7 @@
                                         style="float: left !important; margin-left: 38%; padding-right: 80px;"
                                         value="Submit"
                                         type="submit" >
-                                        متابعة
+                                        {{__('TahqqRegistration.Continue')}}
                                         <div style="border-radius: 10px; margin-right: 58px;"> <i
                                                 class="fas fa-chevron-left mr-4"></i></div></button>
                                 {{-- @endif --}}
@@ -245,7 +245,7 @@
                     <!-- Step 3-->
                     <div class="panel panel-primary setup-content h-100" id="step-3" style="border: none ; ">
                         <div class="panel-body ">
-                            <h3 class="primery-color text-center mb-5"> اختر القالب المناسب </h3>
+                            <h3 class="primery-color text-center mb-5">{{__('TahqqRegistration.Choose the right template')}}</h3>
                             <!--start -->
                                 {{-- include selectTemplate new --}}
                                 @include('template.partials.templateSelectorNew2')

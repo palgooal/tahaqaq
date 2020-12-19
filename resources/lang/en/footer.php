@@ -9,7 +9,7 @@ return [
     'About Us' => 'About Us',
     'Our services' => 'Our services',
     'Contact us' => 'Contact us',
-    'Usage Policy' => 'Usage Policy',
+    'Usage Policy' => 'Terms and Conditions',
     'Privacy policy' => 'Privacy policy',
     'work' => 'how do we work',
     'Payment methods' => 'Payment methods',

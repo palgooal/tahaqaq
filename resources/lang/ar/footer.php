@@ -9,7 +9,7 @@ return [
     'About Us' => 'من نحن',
     'Our services' => 'خدماتنا',
     'Contact us' => 'اتصل بنا',
-    'Usage Policy' => 'سياسة الاستخدام',
+    'Usage Policy' => 'الشروط والأحكام',
     'Privacy policy' => 'سياسة الخصوصية',
     'work' => 'كيف نعمل',
     'Payment methods' => 'وسائل الدفع',
