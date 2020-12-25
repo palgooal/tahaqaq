@@ -145,6 +145,11 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                                     value="${response.data[i].id}">
                                 <div class="card card-select h-100"
                                     data-cardSelect>
+
+                                    <div class="card-title mb-1">
+
+                                    </div>
+
                                     <div class=" hover-state">
                                         <a href="#">
                                             <img src="images/${response.data[i].image_url}"
