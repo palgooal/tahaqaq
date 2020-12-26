@@ -45,6 +45,10 @@ class WhmcsAPILogic{
 
     public function SaveClientProjectInfo(int $clientId,string $projectName,string $projectCategory,string $projectDetails,bool $SetClientRegisterProgress){
 
+        if(env('APP_ENV') == 'local')
+        {
+            return true;
+        }
         $customfieldsArray = array(
             'ProjectName' => $projectName,
             'ProjectCategory' => $projectCategory,

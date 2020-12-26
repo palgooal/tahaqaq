@@ -147,7 +147,7 @@ function getDataTemplateSelectorCategory2(idCatecory) {
                                     data-cardSelect>
 
                                     <div class="card-title mb-1">
-
+                                        <span style="float:right;padding:3px 5px 0px 0px;">إختر القالب</span>
                                     </div>
 
                                     <div class=" hover-state">

@@ -231,7 +231,7 @@ class TahqqRegistrationController extends Controller
         $clientRegisterProgress = TahaqqSessionInfo::GetLoggedClientDetailsObj()->GetClientRegisterProgress();
 
         if($isSuccess)
-            return back()->with('success','تم الحفظ بنجاح')
+            return back()//->with('success','تم الحفظ بنجاح')
             ->with('clientRegisterProgress', $clientRegisterProgress);
         else
             return back()->withErrors(['حدث خطأ اثناء حفظ بيانات المشروع.'])
