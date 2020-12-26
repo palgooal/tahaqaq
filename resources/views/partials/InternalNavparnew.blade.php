@@ -75,11 +75,16 @@
 
     <script>
         function logout(){
-            $('#frameLogoutWHMCS').on('load',function(e){
-                // alert('ready');
+            let localEnv = {!! env('APP_ENV') == 'local' !!};
+            if(localEnv){
                 window.location = '/TahqqLogout';
-            });
-            $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
+            }else{
+                $('#frameLogoutWHMCS').on('load',function(e){
+                    // alert('ready');
+                    window.location = '/TahqqLogout';
+                });
+                $('#frameLogoutWHMCS').attr('src', 'https://client.tahqq.com/logout.php');
+            }
         }
     </script>
 </header>

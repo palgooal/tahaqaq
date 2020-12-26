@@ -159,7 +159,7 @@
                     <button
                         class="btn primery-button d-flex align-items-center  res-button  nextBtn  pull-right py-3"
                         style="float: left !important; margin-left: 42%; margin-top: 100px; padding-right: 30px;"
-                        type="button">
+                        type="button" id="btnNext-3">
                         متابعة
                         <div style="border-radius: 10px; margin-right: 22px;"> <i
                                 class="fas fa-chevron-left mr-4"></i>
@@ -186,5 +186,13 @@
         }
     });
 
+    $('#btnNext-3').on('mouseup',function (e) {
+        if($("input[name=templates]:checked").val()){
+            $('#lnkStep-3').addClass('completed');
+            $('#lnkStep-3').removeClass('active');
+            $('#lnkStep-4').addClass('active');
+            $('#lnkStep-4').removeClass('disabled');
+        }
+      });
 
 </script>

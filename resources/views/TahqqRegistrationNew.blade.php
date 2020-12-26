@@ -13,6 +13,7 @@
         </h2>
 
     </div>
+    @dump(WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress])
     <div class="container">
         <div class="" style="background: #fff!important;">
             <!--  FORM  -->
@@ -25,7 +26,7 @@
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-1" href="#step-1" type="button"
-                                    class="btn btn-success primery-color btn-circle mb-3 ">1</a>
+                                    class="btn btn-success primery-color btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 0 ? "active" : (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1? "completed":"disabled" )}}">1</a>
                                 <p><small>{{__('TahqqRegistration.informations')}}</small></p>
                                 <!--<p><small>المعلومات <span class="word-hide">الشخصية</span></small>-->
 	                            </p>
@@ -33,28 +34,30 @@
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-2" href="#step-2" type="button"
-                                    class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 1?"active":"disabled"}}"
+                                    class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 1?"active": (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] > 1? "completed" :"disabled")}}"
                                     >2</a>
                                 <p><small>{{__('TahqqRegistration.details')}}</small></p>
                             </div>
+
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-3" href="#step-3" type="button"
-                                class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
+                                class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] == 2?"active": (WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] > 2 ? "completed":"disabled")}}"
                                 >3</a>
                                 <p><small>{{__('TahqqRegistration.Templates')}}</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center">
                                 <a id="lnkStep-4" href="#step-4" type="button"
-                                class="btn btn-default btn-circle mb-3 {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 2?"active":"disabled"}}"
+                                class="btn btn-default btn-circle mb-3 disabled"
                                 >4</a>
+                                {{-- {{WhmcsClientRegisterProgress::WhmcsClientRegisterProgressSorted[$clientRegisterProgress] >= 3?"active":"disabled"}} --}}
                                 <p><small>{{__('TahqqRegistration.Packages')}}</small></p>
                             </div>
                             <div
                                 class="stepwizard-step col-xs-2 d-flex flex-column align-items-center justify-content-center ">
                                 <a id="lnkStep-5" href="#step-5" type="button"
-                                class="btn btn-default btn-circle mb-3 "
+                                class="btn btn-default btn-circle mb-3 disabled"
                                 >5</a>
                                 <p><small>{{__('TahqqRegistration.Domain')}}</small></p>
                             </div>
@@ -317,7 +320,6 @@
                                                 بين طرفين </li>
                                         </ul>
 
-
                                     </div>
                                     <div
                                         class="col mt-5 pt-3  d-flex flex-column align-items-center justify-content-center ">
@@ -331,20 +333,10 @@
                                                 <img class="ml-4" src="img/a1.png">
                                                 <img src="img/a2.png">
                                             </div>
-
-
                                         </div>
-
-
                                     </div>
-
-
                                 </div>
-
-
-
                             </div>
-
                             <button
                                 class="btn btn-success primery-button w-25 d-flex align-items-center justify-content-center  mt-5 nextBtn start-now pull-right py-3"
                                 type="button">

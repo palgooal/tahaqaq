@@ -460,6 +460,22 @@ form input::placeholder , textarea::placeholder{
     color: #7657E5;
 
 }
+
+.stepwizard .btn.completed, .stepwizard .btn[completed] {
+    opacity:1 !important;
+    background-color: #F582EA  !important;
+
+}
+
+
+.stepwizard .btn.active, .stepwizard .btn[active] {
+    opacity:1 !important;
+    background-color:#b3a2f1 !important;
+    font-weight: bold;
+    font-size: large;
+}
+
+
 .stepwizard-row:before {
     top: 14px;
     bottom: 0;
