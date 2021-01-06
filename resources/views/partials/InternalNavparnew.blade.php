@@ -55,7 +55,7 @@
                     </a> --}} @else <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin?returnUrl={{$customLoginReturnUrl??'/TahqqRegistration'}}" target="">
                         {{__('login.Login')}}
                     </a>
-                    <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/TahqqRegistration?a=new" target="">
+                    <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/template" target="">
                         {{__('index.start now')}}
                     </a>
                 @endif

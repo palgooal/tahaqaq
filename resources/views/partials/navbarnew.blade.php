@@ -37,43 +37,28 @@
             <div class="dropdown show"> <a class=" dropdown-toggle btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{$loggedClientName}}
             </a>
-            @if (App::isLocale('en'))
+
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;">
                 <a class="dropdown-item" onclick="logout()">تسجيل خروج</a>
                 {{-- href="/TahqqLogout" --}}
                 <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
                 {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
             </div>
-            @else
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;">
-                <a class="dropdown-item" onclick="logout()">Log out</a>
-                {{-- href="/TahqqLogout" --}}
-                <a class="dropdown-item" href="/GotoClientArea">customer area</a>
-                {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
-            </div>
-            @endif
+
         </div>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
                 منطقة العملاء
             </a>
             @else
-            @if (App::isLocale('en'))
+
             <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin" target="">
-                log in
+                {{__('login.Login')}}
             </a>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link"
-                href="/TahqqRegistration?a=new" target="">
-                start now
+                href="/template" target="">
+                {{__('index.start now')}}
             </a>
-            @else
-            <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin" target="">
-                تسجيل الدخول
-            </a>
-            <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link"
-                href="/TahqqRegistration?a=new" target="">
-                ‫ابدأ الآن
-            </a>
-            @endif
+
             @endif
             @if (App::isLocale('en'))
             <a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="/lang/ar" target="">
