@@ -104,7 +104,7 @@
             <input type="hidden" name="selectedPlanName" id="selectedPlanName">
 
             <div class="">
-                @include('template.partials.planSelectorNew')
+                @include('template.partials.planSelectorDirectToCart')
             </div>
         </form>
 
