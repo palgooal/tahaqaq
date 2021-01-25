@@ -74,7 +74,7 @@
 						</div>
 					</form>
 					<p style="color: red; ">{{$error??''}}</p>@if($newUserCreated != 'true')
-					<div class="d-flex justify-content-center align-items-center col col-md-12 mt-3"> <a class="form-linkes new-customer-link" href="/TahqqRegistration?a=new">{{__('login.Are you a new subscriber?')}}</a>
+					<div class="d-flex justify-content-center align-items-center col col-md-12 mt-3"> <a class="form-linkes new-customer-link" href="https://client.tahqq.com/register.php">{{__('login.Are you a new subscriber?')}}</a>
 					</div>@endif</div>
 			</div>
 		</div>

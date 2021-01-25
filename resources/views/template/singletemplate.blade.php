@@ -42,10 +42,10 @@
                             href="{{$templateOne->preview_url}}" target="_blank">
                             مشاهدة
                         </a>
-                        {{-- <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
-                            href="#" target="">
-                           اختر هذاالموقع
-                        </a> --}}
+                        <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
+                            href="/template/{{$templateOne->id}}/#p">
+                           اختر باقة
+                        </a> 
 
                     </form>
 
@@ -89,8 +89,8 @@
 
 
    <!-- sixth section  -->
-   <section class=" py-5 section-six">
-    <div class="">
+   <section class=" py-5 section-six" >
+    <div class="" id="p">
         <div class=" text-center mb-5 wow bounceInDown">
             <!-- <p class="top-of-the-head mt-0">أسعار الباقات</p> -->
             <p class="h3 primery-color my-4">باقات الاشتراك </p>
