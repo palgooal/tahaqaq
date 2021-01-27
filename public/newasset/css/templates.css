@@ -1,7 +1,7 @@
 .tabs-wizard{
     background: #7657e5;
     border-radius: 30px;
-    
+
 }
 .tabs-wizard li:hover{
     background: #947ee2;
@@ -36,7 +36,7 @@ i{
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    
+
 }
 .card-with-title-1:hover .card-with-title a img{
     opacity: 1;
@@ -122,7 +122,7 @@ i{
     .middle .btn{
         font-size:15px
     }
-   
+
 }
 @media (max-width: 385px){
     .waves-light{
@@ -132,7 +132,7 @@ i{
 
 /**/
 #fetures{
-    color:  #3b5998;
+    color:  #8b57e5;
 }
 
 

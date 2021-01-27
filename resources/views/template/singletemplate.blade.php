@@ -45,7 +45,7 @@
                         <a class="btn nav-primery-button index-button index-sign-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link"
                             href="/template/{{$templateOne->id}}/#p">
                            اختر باقة
-                        </a> 
+                        </a>
 
                     </form>
 
@@ -93,7 +93,7 @@
     <div class="" id="p">
         <div class=" text-center mb-5 wow bounceInDown">
             <!-- <p class="top-of-the-head mt-0">أسعار الباقات</p> -->
-            <p class="h3 primery-color my-4">باقات الاشتراك </p>
+            <p class="h3 primery-color my-4">اختر باقة الاشتراك</p>
 
         </div>
         <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">

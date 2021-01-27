@@ -59,7 +59,7 @@
                         {{__('index.start now')}}
                     </a>
                 @endif
-                @if (App::isLocale('en'))
+                {{-- @if (App::isLocale('en'))
                 <a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="/lang/ar" target="">
                     عربي
                 </a>
@@ -67,7 +67,7 @@
                 <a class="btn nav-lang-changer my-2 my-sm-0  ml-3 px-3 py-2 res-nav-link" href="/lang/en" target="">
                     EN
                 </a>
-                @endif
+                @endif --}}
 			</form>
 		</div>
     </nav>

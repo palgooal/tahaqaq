@@ -36,7 +36,7 @@
 
 <section class=" index-statistics px-5 py-5 mt-0 ">
 
-    <h5>Integrations to help you validate more</h5><br/>
+    <h5 class="text-right">حلول تقنية متكاملة لتقييم مشروعك</h5><br/>
     <div class="row">
         <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/google-adword.png" class="img-fluid" width="80%" /></div>
         <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%" /></div>
@@ -400,7 +400,7 @@
         <p class="title-forsabody text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان . <br>
             المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p><br/>
             {{-- <h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}}
-       <a class="button index-sign-button py-2 px-5" role="button" href="https://tahqq.com/TahqqRegistration?a=new">اشترك لمدة شهر مجانا</a></div>
+       <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك لمدة شهر مجانا</a></div>
 </section>
 
 <!-- last section-->

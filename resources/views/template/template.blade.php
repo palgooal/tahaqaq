@@ -16,7 +16,7 @@ style="margin-top: 100px;">
     </a>
 </div>
 <div class="mx-5 wow fadeInDown ">
-    <h1 class="h3 primery-color font-weight-bold text-center">القوالب</h1>
+    <h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
 </div>
 <div class="mr-5 pr-5"></div>
 
