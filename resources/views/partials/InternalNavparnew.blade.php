@@ -42,7 +42,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" onclick="logout()">تسجيل خروج</a>
-                            <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
+                            <a class="dropdown-item" href="/GotoClientArea">حسابي</a>
                             {{-- <a class="dropdown-item" href="#">Something else here</a> --}}</div>
                     </div>{{-- <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/" target="">
                         {{$loggedClientName}}

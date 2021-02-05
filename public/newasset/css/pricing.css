@@ -694,7 +694,7 @@ section.pricing-table-section {
 	font-size: 16px;
 	font-weight: 500;
     background: #fff;
-    
+
 }
 /* .fixedElement {
     position:fixed;
@@ -738,7 +738,7 @@ section.pricing-table-section {
 
 .p-table-b {
     background: #f2f4f6;
-    
+
 }
 
 .p-package span {
@@ -1621,7 +1621,7 @@ a.comment-edit-link {
 		width: 100%;
 		text-align: center
 	}
-	
+
 	.blog-tags span {
 		margin-right: 15px;
 		color: #b1b3be
@@ -1724,7 +1724,7 @@ a.comment-edit-link {
 		width: 45px;
 		height: 45px
 	}
-	
+
 	.hamburger {
 		padding: 0;
 		position: absolute;
@@ -2179,6 +2179,12 @@ a.comment-edit-link {
     }
 }
 
+.pakages-start-now {
+    border: 1px solid #7657E5;
+    background: #fff !important;
+    color: #7657E5 !important;
+    font-size: 12px;
+}
 
 
-  
+

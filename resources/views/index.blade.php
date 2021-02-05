@@ -1,10 +1,6 @@
-@extends('layouts.newapp')
-@section('headcss')
-
+@extends('layouts.newapp') @section('headcss')
 <link rel="stylesheet" href="newasset/css/index.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-@endsection
-@section('content') @include('partials.navbarnew')
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">@endsection @section('content') @include('partials.navbarnew')
 <!--content first-section-->
 <section class="container d-flex align-items-center justify-content-center pt-5 ">
 	<div class="d-grid pt-5">
@@ -33,19 +29,42 @@
 </section>
 </header>
 <!-- second-section  -->
-
+{{-- <section class=" index-statistics px-5 py-5 mt-0 ">
+	<h5 class="text-right">حلول تقنية متكاملة لتقييم مشروعك</h5>
+	<br/>
+	<div class="row">
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6 ">
+			<img src="newasset/img/google-adword.png" class="img-fluid" width="80%" />
+		</div>
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6 ">
+			<img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%" />
+		</div>
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
+			<img src="newasset/img/facebook-ads.png" width="80%" />
+		</div>
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
+			<img src="newasset/img/mailchemp.png" width="80%" />
+		</div>
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
+			<img src="newasset/img/hotjar.png" width="80%" />
+		</div>
+		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
+			<img src="newasset/img/wordpress.png" width="80%" />
+		</div>
+	</div>
+</section> --}}
 <section class=" index-statistics px-5 py-5 mt-0 ">
 
-    <h5 class="text-right">حلول تقنية متكاملة لتقييم مشروعك</h5><br/>
-    <div class="row">
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/google-adword.png" class="img-fluid" width="80%" /></div>
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6 "><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%" /></div>
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/facebook-ads.png" width="80%" /></div>
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/mailchemp.png" width="80%" /></div>
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/hotjar.png" width="80%" /></div>
-        <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/wordpress.png" width="80%" /></div>
-    </div>
-</section>
+    <p class="h4 top-header-heading text-right w-100 primery-color my-4">حلول تقنية متكاملة لتقييم مشروعك</p>
+     <div class="row justify-content-center align-items-center">
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/google-adword.png" class="img-fluid" width="80%"></div>
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%"></div>
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/facebook-ads.png" width="80%"></div>
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/mailchemp.png" width="80%"></div>
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/hotjar.png" width="80%"></div>
+         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/wordpress.png" width="80%"></div>
+     </div>
+ </section>
 <!-- <section class=" index-statistics px-5 py-5 mt-5 ">
         <div class="container index-statistics-box wow bounceInDown">
             <div class="d-grid">
@@ -129,14 +148,13 @@
                                                         {{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_Details)}}</p>{{--
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo1->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo1_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
 
                                                     </a>
-											</div>
-										</div>
+											</div>--}}</div>
 									</div>
 								</div>
 							</div>
@@ -155,14 +173,13 @@
                                                         {{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_Details)}}</p>{{--
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo2->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo2_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
 
                                                     </a>
-											</div>
-										</div>
+											</div>--}}</div>
 									</div>
 								</div>
 							</div>
@@ -181,14 +198,13 @@
                                                         {{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_Details)}}</p>{{--
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo3->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo3_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
 
                                                     </a>
-											</div>
-										</div>
+											</div>--}}</div>
 									</div>
 								</div>
 							</div>
@@ -207,14 +223,13 @@
                                                         {{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Title)}}
                                                     </a>
                                                 </h5>
-											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Details)}}</p>
+											<p class="card-text mb-2 card-p" style="font-size: 14px !important;">{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_Details)}}</p>{{--
 											<div class="d-flex mb-2 float-left more-details-link mb-3"> <a class="primery-color " href="{{$sysVarTahaqaqInfo4->GetValue(App\Logic\SysVar\SysVarTypes::Type_TahaqaqInfo4_Key_URL)}}">معلومات اضافية
 
                                                         <i class="fas fa-arrow-left more-details-i mr-2"></i>
 
                                                     </a>
-											</div>
-										</div>
+											</div>--}}</div>
 									</div>
 								</div>
 							</div>
@@ -229,230 +244,163 @@
 		</div>
 	</div>
 </section>
-
- <!-- ماذا قالو عن تحقق  -->
- <div class="container">
-    <div class="d-flex justify-content-center align-items-center">
-        <h6 class="heading mt-4 "></h6>
-    </div>
-    <div>
-        <h1 class="sub-heading h3  primery-color d-flex justify-content-center align-items-center mt-3 mb-5">
+<!-- ماذا قالو عن تحقق  -->
+<div class="container">
+	<div class="d-flex justify-content-center align-items-center">
+		<h6 class="heading mt-4 "></h6>
+	</div>
+	<div>
+		<h1 class="sub-heading h3  primery-color d-flex justify-content-center align-items-center mt-3 mb-5">
         {{ __('index.They said about Tahqq') }}</h1>
-    </div>
+	</div>
 </div>
-  <!-- carousel  -->
-    <!--Carousel Wrapper-->
-    <div id="multi-item-example" class="container carousel slide carousel-multi-item" data-ride="carousel">
-
-
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item active">
-
-                <div class="col-md-11">
-                    <div class="card who-card mb-2">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <img class="who-card-img ml-4" src="newasset/img/ABED.jpeg" alt="">
-
-                                <div class="d-flex flex-column text-right">
-                                    <span style="font-size: 18px">عبدالعزيز الجهني</span>
-                                    <small class="text-muted text-center">مؤسس</small>
-                                </div>
-                            </div>
-                            <p class="card-text who-card-text my-5">تحقق منصة متخصصة لرواد الاعمال !
-                                نعم تحقق هي منصة بنيت من اجل رواد الاعمال أمثالك ، الذين لا يمتلكون قدرة برمجية وليسوا مبرمجين ، بسهولة تستطيع ان تبني صفحة هبوط عالية التحويل من داخل تحقق وتقوم بالاعلان والتسويق لها لتقيس مدى رغبة عملائك وتفهم احتياجهم .</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!--/.First slide-->
-
-            <!--Second slide-->
-            <div class="carousel-item">
-
-                <div class="col-md-11">
-                    <div class="card who-card mb-2">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">
-
-                                <div class="d-flex flex-column text-right">
-                                    <span style="font-size: 20px">محمد الثبيتي</span>
-                                    <small class="text-muted">مدير التسويق</small>
-                                </div>
-                            </div>
-                            <p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه  .</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-            <!--/.Second slide-->
-
-            <!--Third slide-->
-            {{-- <div class="carousel-item">
-
-                <div class="col-md-11">
-                    <div class="card who-card mb-2">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <img class="who-card-img ml-4" src="https://source.unsplash.com/random/58×58" alt="">
-
-                                <div class="d-flex flex-column text-right">
-                                    <span>محمد عوض </span>
-                                    <small class="text-muted">مؤسس شركة عكار</small>
-                                </div>
-                            </div>
-                            <p class="card-text who-card-text my-5">تعمل منصة سلة على حماية معلومات التُجّار والمتاجر
-                                بموجب أنظمة حماية
-                                إلكترونية وتقنية ذات جودة عالية وتُحدّث بشكل مستمر ودوري.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div> --}}
-            <!--/.Third slide-->
-
-        </div>
-        <!--/.Slides-->
-
-        <!--Controls-->
-        <div class="controls-top d-flex justify-content-center mt-5">
-
-            <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next"><i
+<!-- carousel  -->
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="container carousel slide carousel-multi-item" data-ride="carousel">
+	<!--Slides-->
+	<div class="carousel-inner" role="listbox">
+		<!--First slide-->
+		<div class="carousel-item active">
+			<div class="col-md-11">
+				<div class="card who-card mb-2">
+					<div class="card-body">
+						<div class="d-flex justify-content-center align-items-center">
+							<img class="who-card-img ml-4" src="newasset/img/ABED.jpeg" alt="">
+							<div class="d-flex flex-column text-right"> <span style="font-size: 18px">عبدالعزيز الجهني</span>
+								<small class="text-muted text-center">مؤسس</small>
+							</div>
+						</div>
+						<p class="card-text who-card-text my-5">تحقق منصة متخصصة لرواد الاعمال ! نعم تحقق هي منصة بنيت من اجل رواد الاعمال أمثالك ، الذين لا يمتلكون قدرة برمجية وليسوا مبرمجين ، بسهولة تستطيع ان تبني صفحة هبوط عالية التحويل من داخل تحقق وتقوم بالاعلان والتسويق لها لتقيس مدى رغبة عملائك وتفهم احتياجهم .</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.First slide-->
+		<!--Second slide-->
+		<div class="carousel-item">
+			<div class="col-md-11">
+				<div class="card who-card mb-2">
+					<div class="card-body">
+						<div class="d-flex justify-content-center align-items-center">
+							<img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">
+							<div class="d-flex flex-column text-right"> <span style="font-size: 20px">محمد الثبيتي</span>
+								<small class="text-muted">مدير التسويق</small>
+							</div>
+						</div>
+						<p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه .</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.Second slide-->
+		<!--Third slide-->{{--
+		<div class="carousel-item">
+			<div class="col-md-11">
+				<div class="card who-card mb-2">
+					<div class="card-body">
+						<div class="d-flex justify-content-center align-items-center">
+							<img class="who-card-img ml-4" src="https://source.unsplash.com/random/58×58" alt="">
+							<div class="d-flex flex-column text-right"> <span>محمد عوض </span>
+								<small class="text-muted">مؤسس شركة عكار</small>
+							</div>
+						</div>
+						<p class="card-text who-card-text my-5">تعمل منصة سلة على حماية معلومات التُجّار والمتاجر بموجب أنظمة حماية إلكترونية وتقنية ذات جودة عالية وتُحدّث بشكل مستمر ودوري.</p>
+					</div>
+				</div>
+			</div>
+		</div>--}}
+		<!--/.Third slide-->
+	</div>
+	<!--/.Slides-->
+	<!--Controls-->
+	<div class="controls-top d-flex justify-content-center mt-5"> <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next"><i
                     class="fas fa-arrow-right"></i></a>
-            <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev"><i
+		<a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev"><i
                     class="fas fa-arrow-left"></i></a>
-
-        </div>
-        <!--/.Controls-->
-
-    </div>
-    <!--/.Carousel Wrapper-->
-
-    <!-- نهاية ماذا قالو عن تحقق -->
+	</div>
+	<!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+<!-- نهاية ماذا قالو عن تحقق -->
 <!-- fifth section  -->
 <section class="container  py-5 section-five">
 	<div class="text-center mb-5 wow bounceInDown">
-    <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
+		<p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
 		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p>
 	</div>
 	<div class="how-to-do w-100 m-auto "></div>
 </section>
-<!-- sixth section  -->
+<!-- sixth section  -->{{--
 <section class=" py-5 section-six">
 	<div class="">
 		<div class=" text-center mb-5 wow bounceInDown">
-        <p class="top-of-the-head mt-0">{{__('index.Packages prices') }}</p>
-        <p class="h3 primery-color my-4">{{__('index.Check subscription packages')}}</p>
-			{{-- <div class="toggle-btn my-5 "> <span class="m-3">ربع سنوي</span>
-				<!-- Rounded switch -->
-				<label class="switch">
-					<input type="checkbox"> <span class="slider round"></span>
-				</label> <span class="m-3 ">سنوي</span>
-			</div> --}}
+			<p class="top-of-the-head mt-0">{{__('index.Packages prices') }}</p>
+			<p class="h3 primery-color my-4">{{__('index.Check subscription packages')}}</p>
 		</div>
 		<div class="package-container d-flex justify-content-center align-itaems-center">
 			<div class="packages wow bounceInRight">
-            <h3 class="my-4 pt-4">{{$packages[0]->name_package}}</h3>
-            <h6 class="text1 rounded-price p-3">{{$packages[0]->price}} {{__('index.SR')}}</h6>
-				<ul class="list">
-                    {!!$packages[0]->Details!!}
-
-				</ul> <a href="{{$packages[0]->link}}" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">{{ __('index.start now')}}‫</a>
+				<h3 class="my-4 pt-4">{{$packages[0]->name_package}}</h3>
+				<h6 class="text1 rounded-price p-3">{{$packages[0]->price}} {{__('index.SR')}}</h6>
+				<ul class="list">{!!$packages[0]->Details!!}</ul> <a href="{{$packages[0]->link}}" class="btn primery-button start-now-btn py-2 px-5" style="border-radius: 12px !important;">{{ __('index.start now')}}‫</a>
 			</div>
 			<div class="packages res-star wow bounceInDown" style="background-color: #7657E5; color: #F6F6F6">
 				<img src="img/star.png">
 				<h3 class="my-4 pt-4">{{$packages[1]->name_package}}</h3>
 				<h6 class="text1 rounded-price p-3" style="background: #684EC5 ;">{{$packages[1]->price}} {{__('index.SR')}}</h6>
-				<ul class="list">
-                    {!!$packages[1]->Details!!}
-
-				</ul> <a href="{{$packages[1]->link}}" class="button index-sign-button py-2 px-5">{{ __('index.start now')}}‫</a>
+				<ul class="list">{!!$packages[1]->Details!!}</ul> <a href="{{$packages[1]->link}}" class="button index-sign-button py-2 px-5">{{ __('index.start now')}}‫</a>
 			</div>
 			<div class="packages wow bounceInLeft">
 				<h3 class="my-4 pt-4">{{$packages[2]->name_package}}</h3>
 				<h6 class="text1 rounded-price p-3">{{$packages[2]->price}} {{__('index.SR')}}</h6>
-				<ul class="list">
-                    {!!$packages[2]->Details!!}
-
-				</ul> <a href="{{$packages[2]->link}}" class="btn primery-button start-now-btn py-2 px-5">{{ __('index.start now')}}</a>
+				<ul class="list">{!!$packages[2]->Details!!}</ul> <a href="{{$packages[2]->link}}" class="btn primery-button start-now-btn py-2 px-5">{{ __('index.start now')}}</a>
 			</div>
 		</div>
 	</div>
-</section>
-
+</section>--}}
 <section class="content-section bg-primary text-white  py-5">
-    <div class="container text-center">
-        <h3 class="mb-4 title-forsa">فرصة رائعة تجرب منصة تحقق مجانا</h3>
-        <p class="title-forsabody text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان . <br>
-            المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p><br/>
-            {{-- <h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}}
-       <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك لمدة شهر مجانا</a></div>
+	<div class="container text-center">
+		<h3 class="mb-4 title-forsa">فرصة رائعة تجرب منصة تحقق مجانا</h3>
+		<p class="title-forsabody text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان .
+			<br>المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p>
+		<br/>{{--
+		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك لمدة شهر مجانا</a>
+	</div>
 </section>
-
 <!-- last section-->
 <div class="container cards-container p-0 mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">
-    <p class="top-of-the-headd text-center mt-0">{{__('index.Tahqq Blog')}}</p>
-    <p class="h3  primery-color text-center my-4 the-top-head-res">{{__('index.The idea remains just an idea until you implement it!')}}</p>
+		<p class="top-of-the-headd text-center mt-0">{{__('index.Tahqq Blog')}}</p>
+		<p class="h3  primery-color text-center my-4 the-top-head-res">{{__('index.The idea remains just an idea until you implement it!')}}</p>
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 ">
 		<!-- Card -->@foreach ($blogs->take(4) as $blog)
-
-        <div class="col mb-5 text-right">
-            <div class="card custom-card p-0" style="max-width: 500px;">
-                <div class="row no-gutters">
-                    <div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */">
-                        <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
+		<div class="col mb-5 text-right">
+			<div class="card custom-card p-0" style="max-width: 500px;">
+				<div class="row no-gutters">
+					<div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */"> <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
 <img src="/images/{{$blog->image}}" style="height: 191px;width: 100%;">
 
                       </a>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="card-body px-3 py-0">
-                            <div class="gray-color text-right text-right my-3">
-                                <i class="far fa-calendar-alt" style="font-size: 15px;" aria-hidden="true"></i>
-                                <span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
-                            </div>
-                            <h5 class="card-title h5 my-3 card-h">
+					</div>
+					<div class="col-sm-7">
+						<div class="card-body px-3 py-0">
+							<div class="gray-color text-right text-right my-3"> <i class="far fa-calendar-alt" style="font-size: 15px;" aria-hidden="true"></i>
+								<span class="gray-color mr-3" style="font-size: 12px;">{{$blog->created_at->format('Y-m-d')}}</span>
+							</div>
+							<h5 class="card-title h5 my-3 card-h">
                                 <a href="/blogs/{{$blog->slug}}">
                                     {{$blog->getTitle(App::getLocale())}}
                                 </a>
                             </h5>
-                            <p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()) , 10 , '.....') }}</p>
-                            <div class="d-flex mb-2 float-left ">
-                                <div class="ml-3  gray-color ">
-                                    <i class="far fa-comment" aria-hidden="true"></i>
-                                    25
-                                </div>
-                                <div class="mr-3 gray-color">
-                                    <i class="far fa-heart" aria-hidden="true"></i>
-                                    19
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        @endforeach</div>
-</div>
-
-
-
-
-@endsection
+							<p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()) , 10 , '.....') }}</p>{{--
+							<div class="d-flex mb-2 float-left ">
+								<div class="ml-3  gray-color "> <i class="far fa-comment" aria-hidden="true"></i>
+									25</div>
+								<div class="mr-3 gray-color"> <i class="far fa-heart" aria-hidden="true"></i>
+									19</div>
+							</div>--}}</div>
+					</div>
+				</div>
+			</div>
+		</div>@endforeach</div>
+</div>@endsection

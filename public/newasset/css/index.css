@@ -85,10 +85,12 @@ a{
     background: #fff;
     border-radius: 38px;
     border: none !important;
+
 }
 .more-details-link{
     font-size: 12px;
-    display: none !important;
+    /* display: none !important; */
+    display: block;
 }
 .more-details-i{
     border: 1px solid #7657E5;
@@ -102,10 +104,10 @@ a{
 .index-card:hover{
     background: #F6F3FF 0% 0% no-repeat padding-box;
 }
-.index-card:hover .index-card-img{
+/* .index-card:hover .index-card-img{
     display: none !important;
     transition: 0.7s ease-in-out;
-}
+} */
 .index-card:hover .more-details-link{
     display: block !important;
 }

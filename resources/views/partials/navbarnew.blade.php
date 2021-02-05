@@ -41,13 +41,13 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 12px;">
                 <a class="dropdown-item" onclick="logout()">تسجيل خروج</a>
                 {{-- href="/TahqqLogout" --}}
-                <a class="dropdown-item" href="/GotoClientArea">دخول منطقة العملاء</a>
+                <a class="dropdown-item" href="/GotoClientArea">حسابي</a>
                 {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
             </div>
 
         </div>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link" href="/GotoClientArea" target="">
-                منطقة العملاء
+                حسابي
             </a>
             @else
 
