@@ -16,7 +16,7 @@
 
           <div class="tab-content " id="contintTemplate">
             <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
-                <div class="d-grid pt-2 mt-5">
+                <div class="d-grid">
                     <!-- Row -->
                     <div class="row container m-auto mt-5 ">
                         <!-- card -->@isset($templateAll) @foreach ($templateAll as $templateAll)

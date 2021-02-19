@@ -109,10 +109,10 @@
     </section> -->
 <!-- third-section  -->
 <section class="container d-flex align-items-center justify-content-center">
-	<div class="d-grid pt-5">
+	<div class="d-grid">
 		<div class="row pt-5">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  d-flex  align-items-center justify-content-center offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1 mb-5 wow bounceInRight">
-				<img class="index-main-vector " src="./img/Elements-Image-Browser-1.png" alt="">
+				<img class="index-main-vector " src="newasset/img/Untitled.gif" alt="">
 			</div>
 			<div class="col  col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center wow bounceInLeft">
 				<div class="text-right ">
@@ -125,7 +125,7 @@
 	</div>
 </section>
 <!-- forth section  -->
-<section class="container d-flex align-items-center justify-content-center py-5 ">
+<section class="container d-flex align-items-center justify-content-center">
 	<div class="d-grid ">
 		<div class="row pt-5 wow bounceInDown">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5">
