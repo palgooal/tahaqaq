@@ -51,7 +51,7 @@
             </a>
             @else
 
-            <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="/TahqqLogin" target="">
+            <a class="btn nav-primery-button  my-2 my-sm-0 ml-3 px-4 py-2 res-nav-link" href="https://client.tahqq.com/clientarea.php" target="">
                 {{__('login.Login')}}
             </a>
             <a class="btn nav-inverted-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link"

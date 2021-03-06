@@ -36,12 +36,12 @@
 						{{$blogsSliderimg->created_at->format('Y-m-d')}}</div>
 				<h5 class="mt-5 text-right"> <a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{$blogsSliderimg->getTitle(App::getLocale())}}</a></h5>
 					<p class="mt-5 text-right carousel-p "><a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{ Str::words($blogsSliderimg->getDescribe(App::getLocale()), 70 , '.....') }}</a></p>
-					<div class="d-flex">
+					<!-- <div class="d-flex">
 						<div class="ml-3"> <i class="far fa-comment"></i>
 							25</div>
 						<div class="mr-3"> <i class="far fa-heart"></i>
 							19</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<?php $counterBlogerSlider++ ?>@endif @endforeach</div>
@@ -75,11 +75,11 @@
                                     </h5>
 								<p class="card-text mb-2 card-p">{{ Str::words($blog->getDescribe(App::getLocale()), 10 , '.....') }}</p>
 								<div class="d-flex mb-2 float-left ">
-									<div class="ml-3  gray-color "> <i class="far fa-comment"></i>
+									<!-- <div class="ml-3  gray-color "> <i class="far fa-comment"></i>
 										25</div>
 									<div class="mr-3 gray-color"> <i class="far fa-heart"></i>
 										19</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

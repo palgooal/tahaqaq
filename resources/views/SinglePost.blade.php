@@ -31,12 +31,12 @@
 					{{$blogs->created_at->format('Y-m-d')}}</div>
 				<h4 class="mt-4 text-right">{{$blogs->getTitle(App::getLocale())}}</h4>
 				<p class="mt-4 text-right carousel-p ">{{ Str::words($blogs->getDescribe(App::getLocale()), 70 , '.....') }}</p>
-				<div class="d-flex">
+				<!-- <div class="d-flex">
 					<div class="ml-3"> <i class="far fa-comment"></i>
 						25</div>
 					<div class="mr-3"> <i class="far fa-heart"></i>
 						19</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
