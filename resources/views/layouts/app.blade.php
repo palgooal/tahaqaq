@@ -25,6 +25,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script type="text/javascript" src="asset/js/jquery-1.9.1.min.js"></script>
+
     </head>
     <body class="home" dir="rtl">
         {{-- @include('partials.navbar') --}}

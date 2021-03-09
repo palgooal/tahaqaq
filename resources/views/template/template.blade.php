@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="newasset/css/index.css">
 @endsection
 @section('content') @include('partials.InternalNavparnew')
-
 <!-- Top of the slider -->
 <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider"
 style="margin-top: 100px;">
