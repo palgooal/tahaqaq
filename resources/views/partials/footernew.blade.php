@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col py-5 pr-5 pl-0 res-footer-col" style="text-align: right !important;">
 			<ul class="list-unstyled ">
-            <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Subscription)}}">{{__('footer.Subscription')}}</a>
+            <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Subscription) ?? '' }}">{{__('footer.Subscription')}}</a>
 				</li>
 				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Pricing)}}">{{__('footer.prices')}}</a>
 				</li>

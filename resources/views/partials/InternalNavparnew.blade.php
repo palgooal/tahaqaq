@@ -24,7 +24,7 @@
 		</button>
 		<div class="collapse navbar-collapse res-nav-group " id="navbarSupportedContent">
 			<ul class="navbar-nav m-auto d-flex justify-content-center align-items-center nav-links-group ">
-                @foreach ($menus as $menu)
+                @foreach ($menus ?? '' as $menu)
 				<li class="nav-item mr-2 res-nav-item"> <a class="nav-link primery-color list-li res-nav-link" href="{{$menu->url}}">{{$menu->getname(App::getLocale())}}<span
                             class="sr-only">(current)</span></a>
                 </li>
