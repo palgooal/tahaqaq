@@ -23,7 +23,7 @@
                         <div class="col-md-4 mb-5 ">
                             <a href="/template/{{$templateAll->id}}">
                             <div class=" hover-state card-with-title">
-                            <img src="images/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
+                            <img src="{{url('images')}}/{{$templateAll->image_url}}" alt="Image" style="max-width:100%;">
 
                             </div></a>
                             <div class="text-center ">

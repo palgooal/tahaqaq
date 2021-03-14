@@ -244,13 +244,13 @@ class TemplateController extends Controller
         foreach ($templateSpecifications as $ts) {
             array_push($ts_array,array(
                 "ts_id"=>$ts->id,
-                "ts_img"=>$ts->image,
+                "ts_img"=>$ts->image_url,
                 "ts_text_ar"=>$ts->text_ar,
                 "ts_text_en"=>$ts->text_en,
             ));
         }
         $tsJson = json_encode($ts_array);
-        return view('admin.templates.edit', compact(['template','tsJson','categories','users']));
+        return view('admin.templates.index', compact(['template','tsJson','categories','users']));
     }
 
     /**
