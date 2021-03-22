@@ -26,8 +26,8 @@
 									<img src="./img/wallet-1.png" alt="">
 								</div>
 								<div class="d-flex align-items-center justify-content-center flex-column mr-2 pt-3 text-right">
-									<p class="pricing-card-heading">الباقات الشهرية</p>
-									<p class="pricing-card-subheading">الاشتراك الشهري</p>
+									<p class="pricing-card-heading">الباقات سنوية</p>
+									<p class="pricing-card-subheading">الاشتراك السنوي</p>
 								</div>
 							</div>
 						</div>
@@ -53,7 +53,7 @@
 				</div>
 				<div class="p-table-main mobile-show">
 					<div class="p-table p-table-b">
-						<div class="p-cell p-bold">الباقات الشهرية</div>
+						<div class="p-cell p-bold">الباقات السنوية</div>
 						<div class="p-cell p-package basic"> <span class="small">الباقة البرونزية</span>
 						</div>
 						<div class="p-cell p-package plus"> <span class="small">الباقة الفضية</span>
@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="p-table bg-color">
-						<div class="p-cell">الاشتراك الشهري</div>
+						<div class="p-cell">الاشتراك السنوية</div>
 						<div class="p-cell p-price p-package basic">423 ريال سعودي</div>
 						<div class="p-cell p-price p-package plus">1102 ريال سعودي</div>
 						<div class="p-cell p-price p-package team">2500 ريال سعودي</div>

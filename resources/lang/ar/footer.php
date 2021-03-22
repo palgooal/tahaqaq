@@ -7,7 +7,7 @@ return [
     'prices' => 'الاسعار',
     'blog' => 'المدونة',
     'About Us' => 'من نحن',
-    'Our services' => 'خدماتنا',
+    'Our services' => 'منتجاتنا',
     'Contact us' => 'اتصل بنا',
     'Usage Policy' => 'الشروط والأحكام',
     'Privacy policy' => 'سياسة الخصوصية',
