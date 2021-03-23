@@ -28,6 +28,8 @@
 	</div>
 </section>
 </header>
+
+
 <!-- second-section  -->
 {{-- <section class=" index-statistics px-5 py-5 mt-0 ">
 	<h5 class="text-right">حلول تقنية متكاملة لتقييم مشروعك</h5>
@@ -330,6 +332,18 @@
 	</div>
 	<div class="how-to-do w-100 m-auto "></div>
 </section>
+
+{{-- start section template --}}
+<Section class="container templates">
+	<br><br>
+	<div class="wow fadeInDown ">
+		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
+	</div>
+	<div class="mr-5 pr-5"></div>
+	@include('template.partials.section')
+</Section>
+{{-- end section template --}}
+
 <!-- sixth section  -->{{--
 <section class=" py-5 section-six">
 	<div class="">
