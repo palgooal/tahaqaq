@@ -334,7 +334,7 @@
 </section>
 
 {{-- start section template --}}
-<Section class="container templates">
+<Section class="container templates" style="margin-bottom: 1.5rem">
 	<br><br>
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
