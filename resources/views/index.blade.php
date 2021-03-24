@@ -315,10 +315,12 @@
 	</div>
 	<!--/.Slides-->
 	<!--Controls-->
-	<div class="controls-top d-flex justify-content-center mt-5"> <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next"><i
-                    class="fas fa-arrow-right"></i></a>
-		<a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev"><i
-                    class="fas fa-arrow-left"></i></a>
+	<div class="controls-top d-flex justify-content-center mt-5">
+		 <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next">
+			 <i class="fas fa-arrow-right"></i>
+		</a>
+		<a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev">
+			<i class="fas fa-arrow-left"></i></a>
 	</div>
 	<!--/.Controls-->
 </div>
