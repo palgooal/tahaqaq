@@ -348,6 +348,11 @@
 
 {{-- sart section template mobile --}}
 <section class="container templates" id="templateMobile"> 
+	<br><br>
+	<div class="wow fadeInDown ">
+		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
+	</div>
+	<div class="mr-5 pr-5"></div>
 	@include('template.partials.sectionMobile')
 </section>
 
