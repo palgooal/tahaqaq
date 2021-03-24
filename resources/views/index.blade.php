@@ -334,7 +334,7 @@
 </section>
 
 {{-- start section template --}}
-<Section class="container templates" style="margin-bottom: 1.5rem">
+<Section class="container templates" id="templateDisktop" style="margin-bottom: 1.5rem">
 	<br><br>
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
@@ -344,6 +344,14 @@
 </Section>
 {{-- end section template --}}
 
+
+
+{{-- sart section template mobile --}}
+<section class="container templates" id="templateMobile"> 
+	@include('template.partials.sectionMobile')
+</section>
+
+{{-- end section template mobile --}}
 <!-- sixth section  -->{{--
 <section class=" py-5 section-six">
 	<div class="">

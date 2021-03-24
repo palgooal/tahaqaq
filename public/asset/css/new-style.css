@@ -1020,3 +1020,24 @@ form input::placeholder , textarea::placeholder{
 }
 }
 
+
+
+/* style template from index  disktop and mobile screen*/
+@media screen and (max-width: 600px) {
+    #templateMobile{
+        display: block !important;
+    }
+
+    #templateDisktop{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 600px) {
+    #templateMobile{
+        display: none !important;
+    }
+
+    #templateDisktop{
+        display: block !important;
+    }
+}
