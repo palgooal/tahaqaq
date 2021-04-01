@@ -22,6 +22,7 @@ style="margin-top: 100px;">
 <div class="mr-5 pr-5"></div>
 
 </section>
+{{-- custom alert --}}
 <div class="alert alert-secondary alert-dismissible fade show container" id="customRequest" role="alert" style=" ">
   <div class="row">
     <div class="col col-lg-6 col-sm-12 col-right">
@@ -35,6 +36,8 @@ style="margin-top: 100px;">
     </div>
   </div>
 </div>
+{{-- custom alert --}}
+
  <!-- First Section : Templates -->
  <section class="container templates">
     <!-- Classic tabs -->
