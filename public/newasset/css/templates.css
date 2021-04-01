@@ -180,3 +180,22 @@ i{
     margin-left: -15rem;
   }
 }
+
+
+#customRequest{
+    /* padding-left:0 */
+        /* text-align: center;
+        width: 80%;
+        display: table;
+        margin: auto; */
+}
+#customRequest a{
+    /* margin-right: 20px; */
+    /* margin-right: 20px;
+    text-align: l;
+    float: left; */
+}
+
+#customRequest .col-right{
+    padding-top: 13px;
+}
