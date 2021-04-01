@@ -16,6 +16,12 @@ style="margin-top: 100px;">
 </div>
 <div class="wow fadeInDown ">
     <h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
+      <div class="alert alert-secondary alert-dismissible fade show" role="alert" style=" padding-left:0">
+        اطلب قالبك <strong>المخصص</strong> 
+        <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="#" target="" style="margin-right: 20px;">
+          ابدأ الآن
+          </a>
+      </div>
 </div>
 <div class="mr-5 pr-5"></div>
 
