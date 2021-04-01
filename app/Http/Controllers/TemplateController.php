@@ -9,6 +9,7 @@ use App\Model\Menu;
 use Illuminate\Http\Request;
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
+use App\model\SysVar;
 use Illuminate\Support\Facades\App;
 use App\Logic\TahaqqSessionInfo;
 use App\User;
@@ -51,13 +52,15 @@ class TemplateController extends Controller
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
         $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+        $sysVar = SysVar::where('id','33')->get();
         return view('template.template')
                 ->with('templateAll',Template::orderBy('id','desc')->get())
                 ->with('menus',Menu::orderBy('sort','asc')->get())
                 ->with('sysVarFooter', $sysVarFooter)
                 ->with('sysVarSocialMedia',$sysVarSocialMedia)
                 ->with('categoris',TemplateCategory::get())
-                ->with('isClientLogin',$isClientLogin);
+                ->with('isClientLogin',$isClientLogin)
+                ->with('sysVar',$sysVar);
     }
 
     public function viewTemplateCatecory(Request $request){
@@ -139,6 +142,34 @@ class TemplateController extends Controller
         }
 
 
+
+        public function customAlert(Request $request){
+            $lang = App::getLocale();
+            $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
+            $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
+            $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
+            $users = User::get();
+            $sysVar = SysVar::where('id','33')->get();
+            return view('admin.templates.customAlert')
+                ->with('sysVarFooter', $sysVarFooter)
+                ->with('sysVarSocialMedia',$sysVarSocialMedia)
+                ->with('isClientLogin', $isClientLogin)
+                ->with('users',$users)
+                ->with('sysVar',$sysVar);
+
+        }
+
+
+        public function updateCustomAler(Request $request , $id){
+            $sysVar = SysVar::find($id);
+            $sysVar->value_ar = $request->value_ar;
+            $sysVar->value_en = $request->value_en;
+            $sysVar->key = $request->key;
+            $sysVar->save();
+            return back()->with('success',trans('تم التعديل بنجاح'));
+
+
+        }
 
     /**
      * Show the form for creating a new resource.

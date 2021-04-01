@@ -26,10 +26,10 @@ style="margin-top: 100px;">
   <div class="row">
     <div class="col col-lg-6 col-sm-12 col-right">
 
-      <span>اطلب قالبك <strong>المخصص</strong> </span>
+      <span>{{$sysVar[0]->value_ar}} </span>
     </div>
     <div class="col col-lg-6 col-sm-12 col-left">
-      <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="#" target="" style="">
+      <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$sysVar[0]->key}}" target="" style="">
         ابدأ الآن
       </a>
     </div>
