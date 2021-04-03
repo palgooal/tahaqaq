@@ -25,11 +25,11 @@ style="margin-top: 100px;">
 {{-- custom alert --}}
 <div class="alert alert-secondary alert-dismissible fade show container" id="customRequest" role="alert" style=" ">
   <div class="row">
-    <div class="col col-lg-6 col-sm-12 col-right">
+    <div class="col-lg-9 col-sm-12 col-right">
 
       <span>{{$sysVar[0]->value_ar}} </span>
     </div>
-    <div class="col col-lg-6 col-sm-12 col-left">
+    <div class="col-lg-3 col-sm-12 col-left">
       <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$sysVar[0]->key}}" target="" style="">
         ابدأ الآن
       </a>

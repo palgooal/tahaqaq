@@ -198,4 +198,9 @@ i{
 
 #customRequest .col-right{
     padding-top: 13px;
+    width: 100%;
+    text-align: center;
+}
+#customRequest .col-left a{
+    width: 100% !important;
 }
