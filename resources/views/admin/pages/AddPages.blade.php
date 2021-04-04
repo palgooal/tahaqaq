@@ -38,6 +38,12 @@
                     </div>
 
                 </div>
+				<div class="form-group row">
+					<label>وصف مختصر</label>
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<textarea class="form-control z-depth-1" rows="3" id="exampleFormControlTextarea3" name="description_ar"></textarea>
+					</div>
+				</div>
 			<div class="form-group row">
 
 				<div class="col-lg-12 col-md-12 col-sm-12">

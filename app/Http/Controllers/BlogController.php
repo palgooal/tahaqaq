@@ -12,6 +12,7 @@ use App\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use slug;
 
 use function Ramsey\Uuid\v1;
 
@@ -67,7 +68,7 @@ class BlogController extends Controller
             'meta_Describe_ar' => 'required',
         ]);
 
-        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_en)  ;
+        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_ar)  ;
         $blog = new Blog();
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;
@@ -141,7 +142,24 @@ class BlogController extends Controller
         ->with('users', User::get())
         ->with('uploads', Upload::orderBy('id','desc')->get());
     }
-
+    public function slug($string, $separator = '-') {
+        if (is_null($string)) {
+            return "";
+        }
+    
+        $string = trim($string);
+    
+        $string = mb_strtolower($string, "UTF-8");;
+    
+        $string = preg_replace("/[^a-z0-9_\sءاأإآؤئبتثجحخدذرزسشصضطظعغفقكلمنهويةى]#u/", "", $string);
+    
+        $string = preg_replace("/[\s-]+/", " ", $string);
+    
+        $string = preg_replace("/[\s_]/", $separator, $string);
+    
+        return $string;
+    }
+   
     /**
      * Update the specified resource in storage.
      *
@@ -151,7 +169,10 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_en)  ;
+        //$slug = $this->slug($request->slug);
+       // $slug = str_replace(' ','-',$blog['Title_ar']);
+        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_ar)  ;
+       //$slug =  Str::slug(transliterator_transliterate("Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC; [:Punctuation:] Remove; Lower();", Str::slug($request->Title_ar)));
         $blog = Blog::find($id);
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;

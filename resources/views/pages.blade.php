@@ -1,6 +1,7 @@
 @extends('layouts.newapp')
 @section('meta')
 <meta name="keywords" content="{{$page->tags}}">
+<meta name="description" content="{{$page->description_ar}}">
 @endsection
 @section('headcss')
 <link rel="stylesheet" href="newasset/css/who-us-style.css">

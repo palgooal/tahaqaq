@@ -62,6 +62,8 @@ class PageController extends Controller
         $page->title_en = $request->title_en;
         $page->content_en = $request->content_en;
         $page->tags = $request->tags;
+        $page->description_ar = $request->description_ar;
+        $page->description_en = $request->description_en;
         $page->save();
         return redirect('/pg-admin/pages');
     }
@@ -112,6 +114,8 @@ class PageController extends Controller
         $page->title_en = $request->title_en;
         $page->content_en = $request->content_en;
         $page->tags = $request->tags;
+        $page->description_ar = $request->description_ar;
+        $page->description_en = $request->description_en;
         $page->save();
         return back();
     }

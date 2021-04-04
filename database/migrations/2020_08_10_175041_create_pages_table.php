@@ -21,6 +21,8 @@ class CreatePagesTable extends Migration
             $table->string('title_en')->nullable();
             $table->longText('content_en')->nullable();
             $table->string('tags')->nullable();
+            $table->longText('description_ar')->nullable();
+            $table->longText('description_en')->nullable();
             $table->timestamps();
         });
     }

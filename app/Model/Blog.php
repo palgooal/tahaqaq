@@ -41,4 +41,6 @@ class Blog extends Model
             }
     }
 
+    
+
 }
