@@ -39,7 +39,7 @@
                                         @foreach ($blogs as $index=>$blog)
                                             <tr>
                                                 <th scope="row">{{$index+1}}</th>
-                                                <td>{{$blog->Title_ar}}</td>
+                                                <td>{{Str::words($blog->getTitle(App::getLocale()), 10 , '.....')}}</td>
                                                 <td>{{$blog->created_at->format('Y-m-d')}}</td>
                                                 <td>{{$blog->updated_at != null? $blog->updated_at->format('Y-m-d'):''}}</td>
                                                 <td>

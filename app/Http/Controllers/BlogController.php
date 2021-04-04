@@ -68,7 +68,7 @@ class BlogController extends Controller
             'meta_Describe_ar' => 'required',
         ]);
 
-        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_ar)  ;
+        $slug = str_replace(' ','-', $request->Title_en ==null) ? str_replace(' ','-',$request->Title_ar) : str_replace(' ','-',$request->Title_ar)  ;
         $blog = new Blog();
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;
@@ -142,23 +142,7 @@ class BlogController extends Controller
         ->with('users', User::get())
         ->with('uploads', Upload::orderBy('id','desc')->get());
     }
-    public function slug($string, $separator = '-') {
-        if (is_null($string)) {
-            return "";
-        }
     
-        $string = trim($string);
-    
-        $string = mb_strtolower($string, "UTF-8");;
-    
-        $string = preg_replace("/[^a-z0-9_\sءاأإآؤئبتثجحخدذرزسشصضطظعغفقكلمنهويةى]#u/", "", $string);
-    
-        $string = preg_replace("/[\s-]+/", " ", $string);
-    
-        $string = preg_replace("/[\s_]/", $separator, $string);
-    
-        return $string;
-    }
    
     /**
      * Update the specified resource in storage.
@@ -170,16 +154,18 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         //$slug = $this->slug($request->slug);
-       // $slug = str_replace(' ','-',$blog['Title_ar']);
-        $slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_ar)  ;
-       //$slug =  Str::slug(transliterator_transliterate("Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC; [:Punctuation:] Remove; Lower();", Str::slug($request->Title_ar)));
+      // $slug = str_replace(array(':', '\\', '/', '*'), ' ', $request->slug);
+        //$slug = Str::slug($request->Title_en ==null) ? Str::slug($request->Title_ar) : Str::slug($request->Title_ar)  ;
+     // $slug = str_replace('','-',transliterator_transliterate("Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC; [:Punctuation:] Remove; Lower();",$request->Title_ar));
+       //$slug = str_replace(array(':', '\\', '/', '*'), ' ', $request->Title_en ==null) ? str_replace(array(':', '\\', '/', '*'), '-',$request->Title_ar) : str_replace(array(':', '\\', '/', '*'), '-',$request->Title_ar)  ;
+       //$slug = $request->Title_ar;
         $blog = Blog::find($id);
         $blog->Title_ar = $request->Title_ar;
         $blog->Title_en = $request->Title_en;
         $blog->Body_ar = $request->Body_ar;
         $blog->Body_en = $request->Body_en;
         $blog->image = $request->image;
-        $blog->slug = $slug;
+        $blog->slug = str_replace(' ','-', $request->slug);
         $blog->Tags_ar = $request->Tags_ar;
         $blog->Tags_en = $request->Tags_en;
         $blog->meta_Describe_ar = $request->meta_Describe_ar;
