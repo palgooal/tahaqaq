@@ -21,7 +21,8 @@
 						<div class="form-group">
 							<label>عنوان الصفحة<span class="text-danger">*</span>
 							</label>
-							<input type="text" name="title_ar" value="{{$pages->title_ar}}" class="form-control" placeholder="اكتب عنوان الصفحة هنا"> <span class="form-text text-muted">معرف slug</span>
+							<input type="text" name="title_ar" value="{{$pages->title_ar}}" class="form-control" placeholder="اكتب عنوان الصفحة هنا">
+							<span class="form-text text-muted">معرف slug</span><input type="text" name="slug" value="{{$pages->slug}}" class="form-control" placeholder="اكتب عنوان الصفحة هنا"> 
 						</div>
 						<div class="form-group">
 							<label>الكلمات الدلالية (Tags)</label>

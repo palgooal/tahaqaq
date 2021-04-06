@@ -30,6 +30,7 @@
     @env('prod')
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         {{-- <link href="newasset/css/animate.css" rel="stylesheet" type="text/css"> --}}
         <link rel="stylesheet" href="newasset/css/bootstrap.min.css">

@@ -54,7 +54,15 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
+        $data = request()->validate([
+            'title_ar' => 'required',
+            'content_ar' => 'required',
+            'tags' => 'required',
+            'description_ar' => 'required',
+        ]);
+
+        $slug = str_replace(' ','-', $request->title_en ==null) ? str_replace(' ','-',$request->title_ar) : str_replace(' ','-',$request->title_ar)  ;
+        //$slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
         $page = new Page();
         $page->slug = $slug;
         $page->title_ar = $request->title_ar;
@@ -106,9 +114,9 @@ class PageController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        $slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
+        //$slug = Str::slug($request->title_en ==null) ? Str::slug($request->title_ar) : Str::slug($request->title_en)  ;
         $page = $page;
-        $page->slug = $slug;
+        $page->slug = str_replace(' ','-', $request->slug);;
         $page->title_ar = $request->title_ar;
         $page->content_ar = $request->content_ar;
         $page->title_en = $request->title_en;
