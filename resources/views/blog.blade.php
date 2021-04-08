@@ -2,6 +2,11 @@
 @section('title')
 المدونة | تحقق
 @endsection
+@section('headcss')
+<link rel="stylesheet" href="newasset/css/slider.css">
+<script class="u-script" type="text/javascript" src="newasset/sliderjs/jquery.js" defer=""></script>
+<script class="u-script" type="text/javascript" src="newasset/sliderjs/nicepage.js" defer=""></script>
+@endsection
 
 @section('content') @include('partials.InternalNavparnew')
 <!-- Top of the slider -->
@@ -18,40 +23,45 @@
 	</form>
 </section>
 </header>
-<!-- Images slider-->
-<div class="bg-white" style="overflow-x: hidden;">
-	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderPics) @if ($blogsSliderPics->pin_to_slider == 1)
-			<li data-target="#carouselExampleCaptions" data-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'active':''}}"></li>
-			<?php $counterBlogerSlider++ ?>@endif @endforeach</ol>
-		<div class="carousel-inner">
-			<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderimg) @if ($blogsSliderimg->pin_to_slider == 1)
-			<div class="carousel-item1 carousel-item @if($loop->first) active @endif">
-                <img class="d-block w-100" alt="{{$blogsSliderimg->getTitle(App::getLocale())}}" style="height: 70vh;" src="/images/{{$blogsSliderimg->image}}">
 
-				<div class="carousel-caption carousel-caption-format  text-center d-md-block">
-					<div class=" w-25 px-1 pt-2 date " style="background: #F582EA 0% 0% no-repeat padding-box;
-                        border-radius: 19px;  font-size: 14px;"> <i class="far fa-calendar-alt ml-3"></i>
-						{{$blogsSliderimg->created_at->format('Y-m-d')}}</div>
-				<h5 class="mt-5 text-right"> <a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{$blogsSliderimg->getTitle(App::getLocale())}}</a></h5>
-					<p class="mt-5 text-right carousel-p "><a class="colorslidr" href="/blogs/{{$blogsSliderimg->slug}}">{{ Str::words($blogsSliderimg->getDescribe(App::getLocale()), 70 , '.....') }}</a></p>
-					<!--<div class="d-flex">-->
-					<!--	<div class="ml-3"> <i class="far fa-comment"></i>-->
-					<!--		25</div>-->
-					<!--	<div class="mr-3"> <i class="far fa-heart"></i>-->
-					<!--		19</div>-->
-					<!--</div>-->
-				</div>
+<section id="carousel_7b84" class="u-carousel u-slide u-block-aa0d-1" data-u-ride="carousel" data-interval="5000">
+	<ol class="u-absolute-hcenter u-carousel-indicators u-block-aa0d-2">
+		<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderPics) @if ($blogsSliderPics->pin_to_slider == 1)
+	  <li data-u-target="#carousel_7b84" data-u-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'u-active':''}} u-grey-30"></li>
+	  <?php $counterBlogerSlider++ ?>@endif @endforeach
+	</ol>
+	<div class="u-carousel-inner" role="listbox">
+		<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderimg) @if ($blogsSliderimg->pin_to_slider == 1)
+	  <div class="@if($loop->first) u-active @endif u-align-center u-carousel-item u-clearfix u-image u-section-1-2" style=" background-image: url('{{url('images')}}/{{$blogsSliderimg->image}}');">
+		<div class="u-clearfix u-sheet u-sheet-1">
+		  <div class="u-align-center u-black u-container-style u-expanded-width u-group u-opacity u-opacity-40 u-group-1">
+			<div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
+			  <h1 class="u-align-center u-text u-text-1">
+				<a href="{{url('blogs')}}/{{$blogsSliderimg->slug}}" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">{{$blogsSliderimg->getTitle(App::getLocale())}}</a>
+			  </h1>
 			</div>
-			<?php $counterBlogerSlider++ ?>@endif @endforeach</div>
-		<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		  </div>
+		</div>
+	  </div>
+	  <?php $counterBlogerSlider++ ?>@endif @endforeach
 	</div>
+	<a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-aa0d-3" href="#carousel_7b84" role="button" data-u-slide="prev">
+	  <span aria-hidden="true">
+		<svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+				  c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+	  </span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-aa0d-4" href="#carousel_7b84" role="button" data-u-slide="next">
+	  <span aria-hidden="true">
+		<svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+				  c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+	  </span>
+	  <span class="sr-only">Next</span>
+	</a>
+  </section>
+
+
 	<!-- cards -->
 	<div class="container cards-container p-0 pt-5  mt-5 d-grid">
 		<div class="row row-cols-1 row-cols-md-2 ">
