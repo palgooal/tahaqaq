@@ -6,6 +6,11 @@
 @section('title')
 {{$blogs->getTitle(App::getLocale()) ?? ''}} | تحقق
 @endsection
+@section('headcss')
+<link rel="stylesheet" href="newasset/css/singelpost.css">
+<script class="u-script" type="text/javascript" src="newasset/sliderjs/jquery.js" defer=""></script>
+<script class="u-script" type="text/javascript" src="newasset/sliderjs/nicepage.js" defer=""></script>
+@endsection
 
 @section('content') @include('partials.InternalNavparnew')
 <!-- Top of the slider -->
@@ -20,8 +25,20 @@
 </section>
 </header>
 <!--end header -->
+
+<section class="u-clearfix u-image u-shading u-typography-custom-page-typography-14--Introduction u-section-1" src=""  style="background-image: linear-gradient(0deg, rgba(51,49,41,0.55), rgba(51,49,41,0.55)), url('/images/{{$blogs->image}}');">
+	<div class="u-clearfix u-sheet u-sheet-1">
+	  <div class="u-align-center u-container-style u-expanded-width u-group u-shape-rectangle u-similar-fill u-group-1">
+		<div class="u-container-layout u-container-layout-1">
+		  <h1 class="u-text u-text-1">
+			<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"  data-page-id="9063726">{{$blogs->getTitle(App::getLocale())}}</a>
+		  </h1>
+		</div>
+	  </div>
+	</div>
+</section>
 <!-- Images slider-->
-<div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+{{-- <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<img src="images/{{$blogs->image}}" class="d-block w-100" alt="{{$blogs->getTitle(App::getLocale())}}">
@@ -40,7 +57,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --}}
 <!--posts -->
 <div class="bg-white" style="padding-top:70px">
 	<div class=" d-flex flex-row justify-content-between ">
