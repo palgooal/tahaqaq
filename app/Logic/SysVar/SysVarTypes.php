@@ -56,6 +56,7 @@ class SysVarTypes {
     const Type_Footer_Key_HowDoWeWork = "How do we work";
     const Type_Footer_Key_Contact = "Contact";
     const Type_Footer_Key_Services = "Services";
+    const Type_Footer_Key_Terms = "Terms";
 
     //Social media
     const Type_SocialMedia = "Social Media";

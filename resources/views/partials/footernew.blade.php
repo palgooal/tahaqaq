@@ -30,7 +30,7 @@
 			<ul class="list-unstyled ">
 				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Contact)}}">{{__('footer.Contact us')}}</a>
 				</li>
-				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Services)}}">{{__('footer.Usage Policy')}} </a>
+				<li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_Terms)}}">{{__('footer.Usage Policy')}} </a>
                 </li>
                 <li class="mb-4"> <a class="footer-linkes" href="{{$sysVarFooter->GetValue(App\Logic\SysVar\SysVarTypes::Type_Footer_Key_PrivacyPolicy)}}">{{__('footer.Privacy policy')}}</a>
 			</ul>

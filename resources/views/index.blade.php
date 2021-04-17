@@ -388,11 +388,10 @@
 </section>--}}
 <section class="content-section bg-primary text-white  py-5">
 	<div class="container text-center">
-		<h3 class="mb-4 title-forsa">فرصة رائعة تجرب منصة تحقق مجانا</h3>
-		<p class="title-forsabody text-center mt-0">صحيح نحن في الاطلاق التجريبي ، ولذلك ستكون التجربة مجانية لمدة شهر من الان .
-			<br>المستخدمين الاوائل سيكون لهم خصم خاص عند الاطلاق الفعلي ..</p>
+		<h3 class="mb-4 title-forsa">جرب مجاناً مع منصة تحقق</h3>
+		<p class="title-forsabody text-center mt-0">90% من أصحاب الشركات وصناع القرار يفشلون في اطلاق افكارهم ومشاريعهم ، لهذا السبب ولتضمن ألا تكن واحداً منهم صممنا لك منصة تحقق وشهر مجاناً خلال فترة الإنطلاق. مع تحقق أنت من يصنع الفرق.</p>
 		<br/>{{--
-		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك لمدة شهر مجانا</a>
+		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك شهر مجاناً</a>
 	</div>
 </section>
 <!-- last section-->

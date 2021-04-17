@@ -12,6 +12,7 @@
     @env('local')
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
         @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         {{-- <link href="newasset/css/animate.css" rel="stylesheet" type="text/css"> --}}
@@ -30,6 +31,7 @@
     @env('prod')
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
         @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         {{-- <link href="newasset/css/animate.css" rel="stylesheet" type="text/css"> --}}

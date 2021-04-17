@@ -232,6 +232,13 @@ The project",
             'value_ar' =>"http:\\",
         ]);
 
+        DB::table('sys_vars')->insert([
+            'type'=> SysVarTypes::Type_Footer,
+            'key'=>SysVarTypes::Type_Footer_Key_Terms,
+            'value_en'=>"http:\\",
+            'value_ar' =>"http:\\",
+        ]);
+
 
         //Social media
         DB::table('sys_vars')->insert([

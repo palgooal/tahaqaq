@@ -10,6 +10,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1">
+        <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
         @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         <link href="asset/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +20,6 @@
         <link href="asset/css/style.css" rel="stylesheet" type="text/css">
         <link href="asset/css/responsive.css" rel="stylesheet" type="text/css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
         <link href="asset/custom.css" rel="stylesheet" type="text/css">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <meta name="csrf-token" content="{{ csrf_token() }}">
