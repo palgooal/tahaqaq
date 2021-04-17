@@ -39,7 +39,7 @@
 				 <span id="viewImg">
 					<div class="card cardImageTeam" style="" id="">
 						<div class="card-body">
-						<img src="images/{{$blogs->image}}" alt="">
+						<img src="{{url('images')}}/{{$blogs->image}}" alt="">
 
 						</div>
 					  </div>
@@ -48,7 +48,7 @@
 				 <label>اختار الصورة البارزة</label>
 					<input type="hidden" id="img" name="image" value="{{$blogs->image}}">
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">فتح المعرض</button>
-
+			  <span class="form-text text-muted">حجم الصورة 1519*421</span>
 			  <div id="modalIframUpload">
 				<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-lg" role="document" style="width: 100%">

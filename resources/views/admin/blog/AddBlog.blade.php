@@ -36,7 +36,7 @@
 							</div>
 						</div>
 
-                        {{-- start modal gallery --}} @include('admin.partials.modalGallary') {{-- end modal gallery --}}
+                        {{-- start modal gallery --}} @include('admin.partials.modalGallary') <span class="form-text text-muted">حجم الصورة 1519*421</span {{-- end modal gallery --}}
 						<div class="form-group row">
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<textarea class="summernote" id="summernote" rows="7" name="Body_ar"></textarea>
