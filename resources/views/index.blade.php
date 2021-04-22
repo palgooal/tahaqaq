@@ -1,4 +1,11 @@
-@extends('layouts.newapp') @section('headcss')
+@extends('layouts.newapp')
+@section('meta')
+<meta name="keywords" content="">
+<meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
+@endsection
+
+
+@section('headcss')
 <link rel="stylesheet" href="newasset/css/index.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">@endsection @section('content') @include('partials.navbarnew')
 <!--content first-section-->
@@ -389,7 +396,8 @@
 <section class="content-section bg-primary text-white  py-5">
 	<div class="container text-center">
 		<h3 class="mb-4 title-forsa">جرب مجاناً مع منصة تحقق</h3>
-		<p class="title-forsabody text-center mt-0">90% من أصحاب الشركات وصناع القرار يفشلون في اطلاق افكارهم ومشاريعهم ، لهذا السبب ولتضمن ألا تكن واحداً منهم صممنا لك منصة تحقق وشهر مجاناً خلال فترة الإنطلاق. مع تحقق أنت من يصنع الفرق.</p>
+		<p class="title-forsabody text-center mt-0">مع تحقق أنت من يصنع الفرق، يمكنك الآن اختبار مشروعك وإطلاقه خلال دقائق 
+			استغل العرض خلال فترة الإنطلاق واحصل على شهر اشتراك مجاناً</p>
 		<br/>{{--
 		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك شهر مجاناً</a>
 	</div>

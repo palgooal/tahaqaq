@@ -10,7 +10,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1">
-        <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
+      
         @yield('meta')
         <title>@yield('title' , 'تحقق')</title>
         <link href="asset/css/bootstrap.min.css" rel="stylesheet" type="text/css">
