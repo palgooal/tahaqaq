@@ -53,7 +53,7 @@ html{
 }
 
 body {
-    font-family: "FFShamelFamily-SansOneMedium" !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
     background: url(../img/Group\ 129.png) no-repeat right top !important;
 
 }
@@ -232,7 +232,7 @@ footer .col {
 .template-p{
     line-height: 1.7 !important;
     font-size: 13px !important;
-    font-family: "FFShamelFamily-SansOneMedium" !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
     text-align: right !important;
 
 }
@@ -666,12 +666,12 @@ form input::placeholder , textarea::placeholder{
     padding-inline-start: 0;
     border-width: 1px;
     padding: 15px;
-    font-family: "FFShamelFamily-SansOnemedium";
+    font-family: "FFShamelFamily-SansOneBook";
 }
 .package-container {
     flex-wrap: wrap;
 
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
 
 }
 .rounded-price{

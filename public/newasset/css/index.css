@@ -289,12 +289,12 @@ a{
     padding-inline-start: 0;
     border-width: 1px;
     padding: 15px;
-    font-family: "FFShamelFamily-SansOnemedium";
+    font-family: "FFShamelFamily-SansOneBook";
 }
 .package-container {
     flex-wrap: wrap;
 
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
 
 }
 .rounded-price{

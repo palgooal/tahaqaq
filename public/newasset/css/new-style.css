@@ -1,17 +1,17 @@
 @charset "utf-8";
 /* font converted using font-converter.net. thank you! */
-@font-face {
+/*@font-face {
     font-family: "FFShamelFamily-SansOneMedium";
     src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot"); /* IE9 Compat Modes */
-    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-      url("../fonts/ff/FFShamelFamily-SansOneMedium.otf") format("opentype"), /* Open Type Font */
-      url("../fonts/ff/FFShamelFamily-SansOneMedium.svg") format("svg"), /* Legacy iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneMedium.ttf") format("truetype"), /* Safari, Android, iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff") format("woff"), /* Modern Browsers */
-      url("../fonts/ff/FFShamelFamily-SansOneMedium.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
-  }
+/*    src: url("../fonts/ff/FFShamelFamily-SansOneMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+/*      url("../fonts/ff/FFShamelFamily-SansOneMedium.otf") format("opentype"), /* Open Type Font */
+ /*     url("../fonts/ff/FFShamelFamily-SansOneMedium.svg") format("svg"), /* Legacy iOS */
+/*      url("../fonts/ff/FFShamelFamily-SansOneMedium.ttf") format("truetype"), /* Safari, Android, iOS */
+ /*     url("../fonts/ff/FFShamelFamily-SansOneMedium.woff") format("woff"), /* Modern Browsers */
+ /*     url("../fonts/ff/FFShamelFamily-SansOneMedium.woff2") format("woff2"); /* Modern Browsers */
+/*    font-weight: normal;
+/*    font-style: normal;
+  }*/
 
   /* font converted using font-converter.net. thank you! */
 @font-face {
@@ -68,7 +68,7 @@ html{
 }
 
 body {
-    font-family: "FFShamelFamily-SansOneMedium" !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
     background: url(../img/Group\ 129.png) no-repeat right top !important;
 
 }
@@ -249,7 +249,7 @@ footer .col {
 .template-p{
     line-height: 1.7 !important;
     font-size: 13px !important;
-    font-family: "FFShamelFamily-SansOneMedium" !important;
+    font-family: "FFShamelFamily-SansOneBook" !important;
     text-align: right !important;
 
 }
@@ -719,12 +719,12 @@ form input::placeholder , textarea::placeholder{
     padding-inline-start: 0;
     border-width: 1px;
     padding: 15px;
-    font-family: "FFShamelFamily-SansOnemedium";
+    font-family: "FFShamelFamily-SansOneBook";
 }
 .package-container {
     flex-wrap: wrap;
 
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
 
 }
 .rounded-price{

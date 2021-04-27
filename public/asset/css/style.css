@@ -260,7 +260,7 @@ body{
 .home-wrap .text span{
     font-size:25px;
     color: #173771;
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
     font-weight:bold;
 }
 .home-wrap .text h2{
@@ -384,7 +384,7 @@ section .home-section wow fadeIn {
     background-color: #7657E5;
     color: white;
     border-radius: 50px;
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
     transition: all 0.3s;
 
 }
@@ -572,7 +572,7 @@ section .home-section wow fadeIn {
     padding-inline-start: 0;
     border-width: 1px;
     padding: 15px;
-    font-family: "FFShamelFamily-SansOnemedium";
+    font-family: "FFShamelFamily-SansOneBook";
 }
 /* section 7  */
 .blogs {
@@ -738,7 +738,7 @@ input:checked + .slider:before {
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 15%;
-    font-family: "FFShamelFamily-SansOneMedium";
+    font-family: "FFShamelFamily-SansOneBook";
 
 }
 
