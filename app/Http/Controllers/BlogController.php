@@ -115,8 +115,8 @@ class BlogController extends Controller
         $filterKey = null;
         if($request->has('filterKey') && !empty($request->filterKey)){
             $filterKey = $request->filterKey;
-            $blogs =  Blog::where('Title_en','LIKE',''.$filterKey.'%')
-                         ->orWhere('Title_ar','LIKE',''.$filterKey.'%')
+            $blogs =  Blog::where('Title_en','LIKE','%'.$filterKey.'%')
+                         ->orWhere('Title_ar','LIKE','%'.$filterKey.'%')
                         ->orderBy('created_at','DESC')
                         ->paginate(10);
         }else{

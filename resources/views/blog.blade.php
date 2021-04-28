@@ -26,13 +26,19 @@
 
 <section id="carousel_7b84" class="u-carousel u-slide u-block-aa0d-1" data-u-ride="carousel" data-interval="5000">
 	<ol class="u-absolute-hcenter u-carousel-indicators u-block-aa0d-2">
-		<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderPics) @if ($blogsSliderPics->pin_to_slider == 1)
-	  <li data-u-target="#carousel_7b84" data-u-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 1 ? 'u-active':''}} u-grey-30"></li>
-	  <?php $counterBlogerSlider++ ?>@endif @endforeach
+		<?php $counterBlogerSlider=0 ;?>
+			@foreach ($blogs as $blogsSliderPics)
+				 @if ($blogsSliderPics->pin_to_slider == 1)
+	  				<li data-u-target="#carousel_7b84" data-u-slide-to="{{$counterBlogerSlider}}" class="{{$counterBlogerSlider == 0 ? 'u-active':''}} u-grey-30"></li>
+	  	<?php $counterBlogerSlider++ ?>
+		  		@endif
+			 @endforeach
 	</ol>
 	<div class="u-carousel-inner" role="listbox">
-		<?php $counterBlogerSlider=0 ;?>@foreach ($blogs as $blogsSliderimg) @if ($blogsSliderimg->pin_to_slider == 1)
-	  <div class="@if($loop->first) u-active @endif u-align-center u-carousel-item u-clearfix u-image u-section-1-2" style=" background-image: url('{{url('images')}}/{{$blogsSliderimg->image}}');">
+		<?php $counterBlogerSlider=0 ;?>
+			@foreach ($blogs as $blogsSliderimg)
+				 @if ($blogsSliderimg->pin_to_slider == 1)
+	  				<div class="@if($counterBlogerSlider == 0) u-active @endif u-align-center u-carousel-item u-clearfix u-image u-section-1-2" style=" background-image: url('{{url('images')}}/{{$blogsSliderimg->image}}');">
 		<div class="u-clearfix u-sheet u-sheet-1">
 		  <div class="u-align-center u-black u-container-style u-expanded-width u-group u-opacity u-opacity-40 u-group-1">
 			<div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
