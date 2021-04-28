@@ -73,7 +73,7 @@
 				<div class=" mt-5 p-0 text-right">
                     @foreach ($comments as $comment)
                     <div class="d-flex  align-items-center  mb-5">
-						<img src="./img/shutterstock_1109232059 (1).png" class="w-25" style="border-radius: 30px;" alt="">
+						<img src="./img/canva-talking-man-with-speech-bubble-flat-style-MADpjuqmuM8.png" class="w-25" style="border-radius: 30px;" alt="">
 						<div class="container card-body mr-4">
                         <div class=" d-flex justify-content-between pl-5 mt-4 gray-color"> <span>{{$comment->name}}</span>
 								<div> <i class="far fa-calendar-alt" style="font-size: 15px;"></i>

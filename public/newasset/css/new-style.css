@@ -384,7 +384,7 @@ form input ,textarea  {
     padding:30px 30px!important;
     font-size: 14px !important;
     border: 1px solid #DFD6FF !important;
-    border-radius: 40px !important;
+    border-radius: 10px !important;
     outline: none !important;
     margin-top: 1rem !important;
 }
