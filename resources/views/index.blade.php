@@ -64,7 +64,7 @@
 </section> --}}
 <section class=" index-statistics px-5 py-5 mt-0 ">
 
-    <p class="h4 top-header-heading text-right w-100 primery-color my-4">حلول تقنية متكاملة لتقييم مشروعك</p>
+    <p class="h4 top-header-heading text-right w-100 primery-color my-4">حلول تقنية متكاملة</p>
      <div class="row justify-content-center align-items-center">
          <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/google-adword.png" class="img-fluid" width="80%"></div>
          <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%"></div>
