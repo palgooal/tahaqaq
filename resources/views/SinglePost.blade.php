@@ -80,7 +80,7 @@
                                 <small class="text-muted mr-3" style="font-size: 11px !important;">{{$comment->created_at}}</small>
 								</div>
 							</div>
-                        <p class="mt-4 card-p" style="font-size: 13px !important;">{{$comment->comment}}</p>
+                        <p class="mt-4 card-p" style="">{{$comment->comment}}</p>
 						</div>
 					</div>
                     @endforeach
