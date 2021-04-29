@@ -44,8 +44,8 @@
                                                  <td>
                                                     <label class="checkbox checkbox-lg">
                                                         <input type="checkbox" data-blogid="{{$comment->id}}" name="pinOnSlider_{{$comment->id}}" id="pinOnSlider"
-                                                        {{ $comment->pin_to_slider?'checked':''}}
-                                                        onclick="pinOnSliderClick(this);"
+                                                        {{ $comment->pin_to_comment?'checked':''}}
+                                                        onclick="pinOnCommentClick(this);"
                                                         />
                                                         <span></span>
                                                     </label>
@@ -100,10 +100,16 @@
 @section('footerLib')
 <script>
 
-function pinOnSliderClick(s) {
-    const isChecked = s.checked;
-    const blogId =  s.dataset.blogid;
-    const url = '/pg-admin/pinBlogToSlide/'+blogId;
+function pinOnCommentClick(s) {
+    var isChecked = s.checked;
+    var blogId =  s.dataset.blogid;
+	console.log("is" + isChecked + " blogid " + blogId);
+	if(isChecked){
+		isChecked = 1
+	}else{
+		isChecked = 0
+	}
+    const url = '/pg-admin/pinBlogToComment/'+blogId+'/'+isChecked;
     console.log(url);
     $.ajax({
     url: url,

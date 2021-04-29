@@ -57,6 +57,7 @@ Route::resource('/pg-admin/blogs', 'BlogController')->middleware('auth');
 Route::get('/blogs', 'BlogController@Indexshow');
 Route::get('/blogs/{slug}', 'BlogController@show');
 Route::post('/pg-admin/pinBlogToSlide/{id}', 'BlogController@pinToSlider' );
+Route::post('/pg-admin/pinBlogToComment/{id}/{isChecked}', 'BlogController@pintToComments' );
 
 
 //template

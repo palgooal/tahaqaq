@@ -95,7 +95,7 @@ class BlogController extends Controller
         $lang = App::getLocale();
         $menus = Menu::get();
         $blog = Blog::where('slug', $slug)->first();
-        $comments = Comments::where('blog_id','=',$blog->id)->get();
+        $comments = Comments::where('blog_id','=',$blog->id)->where('pin_to_comment','=',1)->get();
         $sysVarFooter = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_Footer,$lang);
         $sysVarSocialMedia = $this->sysVarLogic->GetByTypeAsResult(SysVarTypes::Type_SocialMedia,$lang);
 
@@ -196,6 +196,15 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $blog->pin_to_slider = !$blog->pin_to_slider;
         $blog->save();
+
+        return response('ok', 200)->header('Content-Type', 'text/plain');
+    }
+
+
+    public function pintToComments(Request $request, $id, $isChecked){
+        $comment = Comments::find($id);
+        $comment->pin_to_comment = $request->isChecked;
+        $comment->save();
 
         return response('ok', 200)->header('Content-Type', 'text/plain');
     }
