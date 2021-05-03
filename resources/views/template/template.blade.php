@@ -22,16 +22,16 @@ style="margin-top: 100px;">
 <div class="mr-5 pr-5"></div>
 
 </section>
-{{-- custom alert --}}
-<div class="alert alert-secondary alert-dismissible fade show container" id="customRequest" role="alert" style=" ">
-  <div class="row">
-    <div class="col-lg-9 col-sm-12 col-right">
+{{-- custom alert alert-secondary--}}
+<div class="alert  alert-dismissible fade show container" id="customRequest" role="alert" style=" ">
+  <div class="row text-center">
+    {{-- <div class="col-lg-9 col-sm-12 col-right">
 
-      <span>{{$sysVar[0]->value_ar}} </span>
-    </div>
-    <div class="col-lg-3 col-sm-12 col-left">
-      <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$sysVar[0]->key}}" target="" style="">
-        ابدأ الآن
+       <span>{{$sysVar[0]->value_ar}} </span> -
+    </div> col-lg-3 col-sm-12 col-left --}}
+    <div class="" style="display: table; margin: auto; ">
+      <a class="btn nav-inverted-button index-button my-2 my-sm-0  ml-3 px-4 py-2 res-nav-link " href="{{$sysVar[0]->key}}" target="" style="width: 114%;">
+        {{$sysVar[0]->value_ar}} 
       </a>
     </div>
   </div>
