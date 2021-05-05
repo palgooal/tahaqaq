@@ -350,6 +350,9 @@
 	</div>
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.section')
+	<div class="container text-center">
+	<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
+	</div>
 </Section>
 {{-- end section template --}}
 
@@ -361,8 +364,11 @@
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
 	</div>
+	
 	<div class="mr-5 pr-5"></div>
+	
 	@include('template.partials.sectionMobile')
+	
 </section>
 
 {{-- end section template mobile --}}

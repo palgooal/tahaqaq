@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Menu;
-use Illuminate\Http \Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Logic\SysVar\SysVarLogic;
 use App\Logic\SysVar\SysVarTypes;
@@ -73,7 +73,7 @@ class HomeController extends Controller
 
 
         //template
-        $templateAll = Template::orderBy('id','desc')->get();
+        $templateAll = Template::orderBy('id','desc')->paginate(6);
 
         // $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         // $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
