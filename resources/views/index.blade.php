@@ -339,7 +339,7 @@
 		{{-- <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
 		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> --}}
 	</div>
-	<video width="400"  style=" width: 100%; height: auto;" autoplay>
+	<video width="400"  style=" width: 100%; height: auto;" controls autoplay loop>
 		<source src="tahqq.mp4" type="video/mp4">
 		{{-- <source src="mov_bbb.ogg" type="video/ogg"> --}}
 		Your browser does not support HTML video.
