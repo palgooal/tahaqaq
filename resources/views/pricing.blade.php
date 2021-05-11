@@ -202,7 +202,9 @@
 					<div class="p-cell">
 						<img class="res-tick" src="./img/ture.png" alt="">
 					</div>
-					<div class="p-cell">سيقوم فريقنا بالمساعدة والدعم الكامل للتحقق</div>
+						<div class="p-cell">
+						<img class="res-tick" src="./img/ture.png" alt="">
+					</div>
 				</div>
 				<div class="p-table">
 					<div class="p-cell">بناء الفكرة حسب طلبك</div>
@@ -213,7 +215,7 @@
 						<img class="res-tick" src="./img/false.png" alt="">
 					</div>
 					<div class="p-cell">
-						<img class="res-tick" src="./img/ture.png" alt="">
+					غير محدود
 					</div>
 				</div>
 				<div class="p-table bg-color">

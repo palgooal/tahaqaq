@@ -339,10 +339,10 @@
 		{{-- <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
 		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> --}}
 	</div>
-	<video width="400"  style=" width: 100%; height: auto;" controls autoplay loop>
+	<video width="400"  style="width: 65%; height: auto; margin-left: 300px;" controls autoplay loop>
 		<source src="tahqq.mp4" type="video/mp4">
 		{{-- <source src="mov_bbb.ogg" type="video/ogg"> --}}
-		Your browser does not support HTML video.
+		
 	  </video>
 	{{-- <div class="how-to-do w-100 m-auto ">
 	
@@ -350,7 +350,7 @@
 </section>
 
 {{-- start section template --}}
-<Section class="container templates" id="templateDisktop" style="margin-bottom: 1.5rem">
+<Section class="py-5 section-six templates" id="templateDisktop" style="margin-bottom: 1.5rem">
 	<br><br>
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
@@ -366,7 +366,7 @@
 
 
 {{-- sart section template mobile --}}
-<section class="container templates" id="templateMobile"> 
+<section class="py-5 section-six templates" id="templateMobile"> 
 	<br><br>
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
