@@ -7,7 +7,11 @@
 
 @section('headcss')
 <link rel="stylesheet" href="newasset/css/index.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">@endsection @section('content') @include('partials.navbarnew')
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="newasset/css/sliderlogo.css">
+
+@endsection
+@section('content') @include('partials.navbarnew')
 <!--content first-section-->
 <section class="container d-flex align-items-center justify-content-center pt-5 ">
 	<div class="d-grid pt-5">
@@ -35,8 +39,6 @@
 	</div>
 </section>
 </header>
-
-
 <!-- second-section  -->
 {{-- <section class=" index-statistics px-5 py-5 mt-0 ">
 	<h5 class="text-right">حلول تقنية متكاملة لتقييم مشروعك</h5>
@@ -71,7 +73,7 @@
          <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/facebook-ads.png" width="80%"></div>
          <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/mailchemp.png" width="80%"></div>
          <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/hotjar.png" width="80%"></div>
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/wordpress.png" width="80%"></div>
+         <!--<div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/wordpress.png" width="80%"></div>-->
      </div>
  </section>
 <!-- <section class=" index-statistics px-5 py-5 mt-5 ">
@@ -121,7 +123,7 @@
 	<div class="d-grid">
 		<div class="row pt-5">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  d-flex  align-items-center justify-content-center offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1 mb-5 wow bounceInRight">
-				<img class="index-main-vector " src="newasset/img/Untitled.gif" alt="">
+				<img class="index-main-vector " src="./img/Elements-Image-Browser-1.png" alt="">
 			</div>
 			<div class="col  col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center wow bounceInLeft">
 				<div class="text-right ">
@@ -286,21 +288,21 @@
 		</div>
 		<!--/.First slide-->
 		<!--Second slide-->
-		<div class="carousel-item">
-			<div class="col-md-11">
-				<div class="card who-card mb-2">
-					<div class="card-body">
-						<div class="d-flex justify-content-center align-items-center">
-							<img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">
-							<div class="d-flex flex-column text-right"> <span style="font-size: 20px">محمد الثبيتي</span>
-								<small class="text-muted">مدير التسويق</small>
-							</div>
-						</div>
-						<p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه .</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!--<div class="carousel-item">-->
+		<!--	<div class="col-md-11">-->
+		<!--		<div class="card who-card mb-2">-->
+		<!--			<div class="card-body">-->
+		<!--				<div class="d-flex justify-content-center align-items-center">-->
+		<!--					<img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">-->
+		<!--					<div class="d-flex flex-column text-right"> <span style="font-size: 20px">محمد الثبيتي</span>-->
+		<!--						<small class="text-muted">مدير التسويق</small>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--				<p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه .</p>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
 		<!--/.Second slide-->
 		<!--Third slide-->{{--
 		<div class="carousel-item">
@@ -322,63 +324,60 @@
 	</div>
 	<!--/.Slides-->
 	<!--Controls-->
-	<div class="controls-top d-flex justify-content-center mt-5">
-		 <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next">
-			 <i class="fas fa-arrow-right"></i>
-		</a>
-		<a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev">
-			<i class="fas fa-arrow-left"></i></a>
+	<div class="controls-top d-flex justify-content-center mt-5"> <a class="btn-floating car-indicators" href="#multi-item-example" data-slide="next"><i
+                    class="fas fa-arrow-right"></i></a>
+		<a class="btn-floating car-indicators" href="#multi-item-example" data-slide="prev"><i
+                    class="fas fa-arrow-left"></i></a>
 	</div>
 	<!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
 <!-- نهاية ماذا قالو عن تحقق -->
 <!-- fifth section  -->
-<section class="container  py-5 section-five">
+<section class=" py-5 section-five">
 	<div class="text-center mb-5 wow bounceInDown">
-		{{-- <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
-		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> --}}
+		<!-- <p class="top-of-the-head mt-0">{{ __('index.How does it work? Tahqq') }}</p>
+		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> -->
 	</div>
-	<video width="400"  style="width: 65%; height: auto; margin-left: 300px;" controls autoplay loop>
+	<div class="container">
+	<video width="400"  style=" width: 100%; height:auto; margin-left: 300px;"  controls  loop>
 		<source src="tahqq.mp4" type="video/mp4">
-		{{-- <source src="mov_bbb.ogg" type="video/ogg"> --}}
-		
-	  </video>
-	{{-- <div class="how-to-do w-100 m-auto ">
+		<!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
 	
-	</div> --}}
+	  </video>
+	  </div>
+	<!-- <div class="how-to-do w-100 m-auto ">
+	
+	</div> -->
 </section>
 
-{{-- start section template --}}
-<Section class="py-5 section-six templates" id="templateDisktop" style="margin-bottom: 1.5rem">
+<!-- start section template -->
+<Section class="py-5 section-six templates" id="templateDisktop">
 	<br><br>
 	<div class="wow fadeInDown ">
-		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
+		<h1 class="h3 primery-color font-weight-bold text-center" style="margin-bottom: 1.5rem">اختر النموذج المناسب</h1>
 	</div>
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.section')
-	<div class="container text-center">
+	<div class="container text-center" style="margin-bottom: 30px;">
 	<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
 	</div>
 </Section>
-{{-- end section template --}}
+<!-- end section template -->
 
 
-
-{{-- sart section template mobile --}}
-<section class="py-5 section-six templates" id="templateMobile"> 
-	<br><br>
+<!-- sart section template mobile -->
+<section class="py-5 section-six templates " id="templateMobile"> 
+    <br><br>
 	<div class="wow fadeInDown ">
 		<h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
 	</div>
-	
 	<div class="mr-5 pr-5"></div>
-	
 	@include('template.partials.sectionMobile')
-	
 </section>
 
-{{-- end section template mobile --}}
+<!-- end section template mobile -->
+
 <!-- sixth section  -->{{--
 <section class=" py-5 section-six">
 	<div class="">
@@ -410,11 +409,51 @@
 	<div class="container text-center">
 		<h3 class="mb-4 title-forsa">جرب مجاناً مع منصة تحقق</h3>
 		<p class="title-forsabody text-center mt-0">مع تحقق أنت من يصنع الفرق، يمكنك الآن اختبار مشروعك وإطلاقه خلال دقائق 
-			استغل العرض خلال فترة الإنطلاق واحصل على شهر اشتراك مجاناً</p>
+استغل العرض خلال فترة الإنطلاق واحصل على شهر اشتراك مجاناً</p>
 		<br/>{{--
 		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك شهر مجاناً</a>
 	</div>
 </section>
+
+<section class="py-5">
+<div class="container">
+  <h2 class="h3 primery-color font-weight-bold text-center">من عملائنا</h2>
+   <section class="customer-logos slider">
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+      <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+   </section>
+</div>
+</section> 
+<script>
+	$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
 <!-- last section-->
 <div class="container cards-container p-0 mt-5 d-grid">
 	<div class="my-5 wow bounceInDown">

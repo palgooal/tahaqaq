@@ -22,10 +22,14 @@
         <link rel="stylesheet" href="newasset/css/who-us-style.css">
         <link rel="stylesheet" href="newasset/css/call-us.css">
         @yield('headcss')
+        
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
         <script src="{{asset('newasset/js/jquery.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="newasset/img/favicon.ico" type="image/x-icon">
+        
 
     @endenv
     @env('prod')
@@ -72,13 +76,17 @@
     <script src="{{asset('newasset/js/bootstrap.min.js')}}"></script>
     <script src="newasset/js/wow.min.js"></script>
     <script>new WOW().init();</script>
+    
     <script src="{{asset('newasset/js/signup.js')}}"></script>
     <script src="newasset/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    
     @endenv
 
     @yield('footerJs')
 
     @yield('jsCustome')
+
 </body>
 
 </html>
