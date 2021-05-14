@@ -56,7 +56,7 @@
 		<div class="col p-5" style="text-align: right !important;">
 			<ul class="list-unstyled ">
 				<li class="footer-linkes" style="font-size: 20px">{{__('footer.Follow us')}}</li>
-				<li class="d-flex mt-5 ">
+				<li class="d-flex mt-3 ">
 					<a href="{{$sysVarSocialMedia->GetValue(App\Logic\SysVar\SysVarTypes::Type_SocialMedia_Facbook)}}" class="ml-4 img-hover img-resize-none">
 						<img src="./img/logo-fb-simple.png" alt="fb">
 					</a>
@@ -70,7 +70,7 @@
 						<img src="./img/logo-youtube.png" alt="youtube">
 					</a>
 				</li>
-				<li class="footer-linkes mt-4" style="font-size: 10px !important;">{{__('footer.all rights are save')}}</li>
+				<li class="footer-linkes mt-4">{{__('footer.all rights are save')}}</li>
 			</ul>
 		</div>
 	</div>
