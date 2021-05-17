@@ -195,12 +195,12 @@
 					</div>
 				</div>
 				<div class="p-table bg-color">
-					<div class="p-cell">عدد المستخدمين محدود</div>
+					<div class="p-cell">عدد المستخدمين غير محدود</div>
 					<div class="p-cell">
-						<img class="res-tick" src="./img/ture.png" alt="">
+						<img class="res-tick" src="./img/false.png" alt="">
 					</div>
 					<div class="p-cell">
-						<img class="res-tick" src="./img/ture.png" alt="">
+						<img class="res-tick" src="./img/false.png" alt="">
 					</div>
 						<div class="p-cell">
 						<img class="res-tick" src="./img/ture.png" alt="">
@@ -215,7 +215,7 @@
 						<img class="res-tick" src="./img/false.png" alt="">
 					</div>
 					<div class="p-cell">
-					غير محدود
+				<img class="res-tick" src="./img/ture.png" alt="">
 					</div>
 				</div>
 				<div class="p-table bg-color">

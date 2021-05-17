@@ -491,4 +491,4 @@
 				</div>
 			</div>
 		</div>@endforeach</div>
-</div>@endsection
+</div>@endsection 
