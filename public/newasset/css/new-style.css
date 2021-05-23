@@ -14,47 +14,52 @@
   }*/
 
   /* font converted using font-converter.net. thank you! */
-@font-face {
-    font-family: "FFShamelFamily-SansOneBolds";
+/*@font-face {*/
+/*    font-family: "FFShamelFamily-SansOneBolds";*/
     
-    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot"); /* IE9 Compat Modes */
-    src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-      url("../fonts/ff/FFShamelFamily-SansOneBold.otf") format("opentype"), /* Open Type Font */
-      url("../fonts/ff/FFShamelFamily-SansOneBold.svg") format("svg"), /* Legacy iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneBold.ttf") format("truetype"), /* Safari, Android, iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneBold.woff") format("woff"), /* Modern Browsers */
-      url("../fonts/ff/FFShamelFamily-SansOneBold.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
-  }
+    /*src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot"); /* IE9 Compat Modes 
+    /*src: url("../fonts/ff/FFShamelFamily-SansOneBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 
+     /*url("../fonts/ff/FFShamelFamily-SansOneBold.otf") format("opentype"), /* Open Type Font */
+     /* url("../fonts/ff/FFShamelFamily-SansOneBold.svg") format("svg"), /* Legacy iOS */
+      /*url("../fonts/ff/FFShamelFamily-SansOneBold.ttf") format("truetype"), /* Safari, Android, iOS */
+     /* url("../fonts/ff/FFShamelFamily-SansOneBold.woff") format("woff"), /* Modern Browsers */
+      /*url("../fonts/ff/FFShamelFamily-SansOneBold.woff2") format("woff2"); /* Modern Browsers */
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*  }*/
 
   /* font converted using font-converter.net. thank you! */
-@font-face {
+/*@font-face {*/
     /* font-family: "FFShamelFamily-SansOneBook"; */
-    font-family: "JANNA-LT-REGULAR.TTF";
+    /*font-family: "JANNA-LT-REGULAR.TTF";*/
 
-    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot"); /* IE9 Compat Modes */
-    src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-      url("../fonts/ff/FFShamelFamily-SansOneBook.otf") format("opentype"), /* Open Type Font */
-      url("../fonts/ff/FFShamelFamily-SansOneBook.svg") format("svg"), /* Legacy iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneBook.ttf") format("truetype"), /* Safari, Android, iOS */
-      url("../fonts/ff/FFShamelFamily-SansOneBook.woff") format("woff"), /* Modern Browsers */
-      url("../fonts/ff/FFShamelFamily-SansOneBook.woff2") format("woff2"); /* Modern Browsers */
+    /*src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot"); /* IE9 Compat Modes 
+     src: url("../fonts/ff/FFShamelFamily-SansOneBook.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 
+      url("../fonts/ff/FFShamelFamily-SansOneBook.otf") format("opentype"), /* Open Type Font 
+      url("../fonts/ff/FFShamelFamily-SansOneBook.svg") format("svg"), /* Legacy iOS 
+      url("../fonts/ff/FFShamelFamily-SansOneBook.ttf") format("truetype"), /* Safari, Android, iOS 
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff") format("woff"), /* Modern Browsers 
+      url("../fonts/ff/FFShamelFamily-SansOneBook.woff2") format("woff2"); /* Modern Browsers 
     font-weight: normal;
     font-style: normal;
-  }
+  } */
 
   @font-face{
       font-family: "FFShamelFamily-SansOneBold";
-      src: url("../fonts/newFont/JANNA-LT-BOLD.TTF");
+      font-style: normal;
+      font-weight: 600;
+      src: url("/public/newasset/fonts/newFont/JANNA-LT-BOLD.TTF");
+      font-display: swap;
   }
 
   @font-face{
     /* font-family: "JANNA-LT-REGULAR.TTF";
      */
     font-family: "FFShamelFamily-SansOneBook";
-
-    src: url("../fonts/newFont/JANNA-LT-REGULAR.TTF");
+    font-style: normal;
+    font-weight: 400;
+    src: url("/public/newasset/fonts/newFont/JANNA-LT-REGULAR.TTF");
+    font-display: swap;
 }
 
 /*  Generals  */
@@ -116,7 +121,7 @@ color: #2e6da4;
 */
 .h1,.h2,.h3,.h4,.h5,.h6{
     font-family: "FFShamelFamily-SansOneBold" !important;
-    font-size: 30px !important;
+    font-size: 20px !important;
 
 }
 a {
@@ -1173,11 +1178,10 @@ form input::placeholder , textarea::placeholder{
     }
 }
 
-
 h1,h2,h3,h4,h5,h6{
-    font-family: "FFShamelFamily-SansOneBold";
+    font-family: "FFShamelFamily-SansOneBold" !important;
 }
 
 p{
-    font-family: "FFShamelFamily-SansOneBook";
+    font-family: "FFShamelFamily-SansOneBook" !important;
 }
