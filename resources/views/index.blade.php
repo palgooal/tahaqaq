@@ -2,6 +2,9 @@
 @section('meta')
 <meta name="keywords" content="">
 <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
+<style>
+
+</style>
 @endsection
 
 
@@ -407,11 +410,31 @@
 </section>--}}
 <section class="content-section bg-primary text-white  py-5">
 	<div class="container text-center">
-		<h3 class="mb-4 title-forsa">جرب مجاناً مع منصة تحقق</h3>
-		<p class="title-forsabody text-center mt-0">مع تحقق أنت من يصنع الفرق، يمكنك الآن اختبار مشروعك وإطلاقه خلال دقائق 
-استغل العرض خلال فترة الإنطلاق واحصل على شهر اشتراك مجاناً</p>
+		<h3 class="mb-4 title-forsa">جرب شهر مجانا</h3>
+		<p class="title-forsabody text-center mt-0">
+			انت على وشك تحقيق حلمك في انطلاق مشروعك الرقمي بدقائق فقط ومجاناً !
+كيف ؟		
+		</p>
+		<p class="title-forsabody text-center mt-0" style="word-spacing: 20px;">
+					<span>
+						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
+						<span>اطلق</span>
+					</span>
+					<span>
+						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
+						<span>سوق</span>
+					</span>
+					<span>
+						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
+						<span>تحقق</span>
+					</span>
+					
+				
+		
+		</p>
 		<br/>{{--
-		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك شهر مجاناً</a>
+		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} 
+		<a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك الان</a>
 	</div>
 </section>
 
