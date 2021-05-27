@@ -55,7 +55,7 @@
                                                 </td>
                                                 <td>
                                                     <a type="button" class="btn btn-success" href="/pg-admin/said/{{$said->id}}">مشاهدة</a>
-                                                    <button type="button" class="btn btn-danger" data-commentid="{{$said->id}}" data-toggle="modal" data-target="#deletecomment">حذف</button>
+                                                    <button type="button" class="btn btn-danger" data-saidid="{{$said->id}}" data-toggle="modal" data-target="#deletecomment">حذف</button>
                                                 </td>
                                             </tr>
                                         @endforeach
