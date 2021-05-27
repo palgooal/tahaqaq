@@ -73,7 +73,7 @@
 													<form action="{{route('said.destroy', 'test')}}" method="post">
 														@method('delete') @csrf
 														<div class="modal-body">هل انت متأكد انك تريد الحذف
-															<input type="hidden" name="comment_id" id="comment_id" value="">
+															<input type="hidden" name="said_id" id="said_id" value="">
 														</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-default" data-dismiss="modal">لا ارجع للمدونة</button>

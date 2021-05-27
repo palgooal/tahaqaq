@@ -131,8 +131,12 @@ class SaidController extends Controller
      * @param  \App\Model\said  $said
      * @return \Illuminate\Http\Response
      */
-    public function destroy(said $said)
+    public function destroy(Request $request)
     {
-        //
+        {
+            $said = said::findOrFail($request->said_id);
+            $said->delete();
+            return back()->with('delete',trans('تم الحذف  بنجاح'));
+        }
     }
 }
