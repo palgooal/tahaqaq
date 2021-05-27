@@ -19,7 +19,7 @@
 					</div>
 					<div class="card-body">
 						<p>ملاجظة: هذا الرابط يعطى لمن اراد ان يعطي رأيه عن الموقع
-							<a href="http://127.0.0.1:8000/EnterSaid">http://127.0.0.1:8000/EnterSaid</a>
+							<a href="https://tahqq.com/EnterSaid">https://tahqq.com/EnterSaid</a>
 						</p>
 						<!--begin::Example-->
 						<div class="example mb-10">
@@ -54,7 +54,7 @@
                                                     </label>
                                                 </td>
                                                 <td>
-                                                    <a type="button" class="btn btn-success" href="/pg-admin/comment/{{$said->id}}">مشاهدة</a>
+                                                    <a type="button" class="btn btn-success" href="/pg-admin/said/{{$said->id}}">مشاهدة</a>
                                                     <button type="button" class="btn btn-danger" data-commentid="{{$said->id}}" data-toggle="modal" data-target="#deletecomment">حذف</button>
                                                 </td>
                                             </tr>
@@ -70,7 +70,8 @@
 														</button>
 														<h4 class="modal-title" id="myModalLabel">تحذير من حذف التدوينة</h4>
 													</div>
-													<form action="{{route('comment.destroy', 'test')}}" method="post">@method('delete') @csrf
+													<form action="{{route('said.destroy', 'test')}}" method="post">
+														@method('delete') @csrf
 														<div class="modal-body">هل انت متأكد انك تريد الحذف
 															<input type="hidden" name="comment_id" id="comment_id" value="">
 														</div>
