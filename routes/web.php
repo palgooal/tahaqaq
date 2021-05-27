@@ -105,6 +105,12 @@ Route::resource('/pg-admin/comment', 'CommentsController');
 Route::get('/pg-admin/comment', 'CommentsController@index')->middleware('auth');
 Route::get('/pg-admin/comment/{id}', 'CommentsController@show')->middleware('auth');
 
+//said
+Route::resource('/pg-admin/said','SaidController');
+Route::get('/EnterSaid', 'SaidController@create');
+Route::post('/pg-admin/pinSaid/{id}/{isChecked}', 'SaidController@pinSaid' );
+
+
 // logout
 Route::get('pg-admin/logout', function () {
     Auth::logout();

@@ -14,6 +14,7 @@ use App\Model\Package;
 use App\Model\pricing;
 use App\User;
 use App\Model\Template;
+use App\Model\said;
 
 
 class HomeController extends Controller
@@ -75,9 +76,12 @@ class HomeController extends Controller
         //template
         $templateAll = Template::orderBy('id','desc')->paginate(6);
 
+        $said = said::where('pin_to_said','=',1)->get();
+        
+
         // $isClientLogin  = TahaqqSessionInfo::IsClientLogin();
         // $loggedClientName = TahaqqSessionInfo::GetLoggedClientName();
-        return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl',
+        return view('index', compact(['menus', 'blogs','header_title','header_details','header_startNowUrl','header_tryNowUrl','said',
         // 'footer_subscription','footer_pricing','footer_blog','footer_about','footer_privacyPolicy','footer_howDoWeWork','footer_contact','footer_services',
         // 'socialMedia_facbook','socialMedia_twitter','socialMedia_instagram','socialMedia_youtube',
        'sysVarWhyTahaqaq', 'sysVarFooter','sysVarSocialMedia','sysVarTahaqaqInfo1','sysVarTahaqaqInfo2','sysVarTahaqaqInfo3','sysVarTahaqaqInfo4','users', 'packages','templateAll']));
