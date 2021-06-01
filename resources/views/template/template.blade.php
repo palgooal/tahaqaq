@@ -5,6 +5,13 @@
 @endsection
 @section('content') @include('partials.InternalNavparnew')
 <!-- Top of the slider -->
+<style>
+  @media only screen and (max-width: 600px) {
+    .custome-shoose-template{
+       font-size: 20px;
+    }
+}
+</style>
 <section class=" p-5 pt-3 mx-5 d-flex align-items-center justify-content-between top-slider"
 style="margin-top: 100px;">
 <div class="back">
@@ -15,7 +22,7 @@ style="margin-top: 100px;">
     </a>
 </div>
 <div class="wow fadeInDown ">
-    <h1 class="h3 primery-color font-weight-bold text-center">اختر النموذج المناسب</h1>
+    <h1 class="h3 primery-color font-weight-bold text-center custome-shoose-template" >اختر النموذج المناسب</h1>
       
 </div>
 
