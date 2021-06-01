@@ -93,7 +93,7 @@
     <div class="" id="p">
         <div class=" text-center mb-5 wow bounceInDown">
             <!-- <p class="top-of-the-head mt-0">أسعار الباقات</p> -->
-            <p class="h3 primery-color my-4">اختر باقة الاشتراك</p>
+            <p class="h3 primery-color my-4">اختر باقتك السنوية</p>
 
         </div>
         <form action="/PlanSelected" role="form" method="post" name="planSelectFrm">

@@ -91,7 +91,7 @@ body {
 .primery-color {
     color: #7657E5  ;
     fill: #7657E5;
-    font-size: 17px;
+    /*font-size: 17px;*/
 }
 .inverted{
     background: #fff !important;
