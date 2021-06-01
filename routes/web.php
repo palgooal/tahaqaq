@@ -111,6 +111,9 @@ Route::get('/EnterSaid', 'SaidController@create');
 Route::post('/pg-admin/pinSaid/{id}/{isChecked}', 'SaidController@pinSaid' );
 
 
+//our client
+Route::resource('/pg-admin/ourClient','OuerClientController');
+
 // logout
 Route::get('pg-admin/logout', function () {
     Auth::logout();

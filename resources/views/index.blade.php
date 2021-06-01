@@ -416,11 +416,17 @@
 <div class="container">
   <h2 class="h3 primery-color font-weight-bold text-center">من عملائنا</h2>
    <section class="customer-logos slider">
-      <div class="slide"><a href="https://www.ma-hal.com/" target="_blank"><img src="/images/images/xMVWyvI3uvGHCeqwOIDAzQe5EaL0vSFqLMA6ZBu2.png"></a></div>
-      <div class="slide"><a href="https://www.mosemapp.com/" target="_blank"><img src="/images/images/qtHgYx2AOnk9xTenvslDWjZSslwOkL1MAbUEwTur.png"></a></div>
+	   @foreach ($ouer_client as $ouer_client)   
+			<div class="slide">
+				<a href="{{$ouer_client->url}}" target="_blank">
+					<img src="/images/{{$ouer_client->image}}">
+				</a>
+			</div>
+	   @endforeach
+      {{-- <div class="slide"><a href="https://www.mosemapp.com/" target="_blank"><img src="/images/images/qtHgYx2AOnk9xTenvslDWjZSslwOkL1MAbUEwTur.png"></a></div>
       <div class="slide"><a href="https://www.lightexpressions.tahqq.com/" target="_blank"><img src="/images/images/gnrR0A4kFUXElJEUQ2mZuUKIsdNsVTQj3lq4cgyr.png"></a></div>
       <div class="slide"><a href="https://www.astreh.app/" target="_blank"><img src="/images/images/hzqDKtfMA3ZplfvIF1tBsdRk62Tq5PeVohuYAAYt.png"></a></div>
-      <div class="slide"><a href="https://www.ready-app.com/" target="_blank"><img src="/images/images/4grTLRQqmJcRqS2TzYVXLcuKkldNPcBkIYaDsRah.png"></a></div>
+      <div class="slide"><a href="https://www.ready-app.com/" target="_blank"><img src="/images/images/4grTLRQqmJcRqS2TzYVXLcuKkldNPcBkIYaDsRah.png"></a></div> --}}
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
