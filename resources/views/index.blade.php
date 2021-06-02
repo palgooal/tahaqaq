@@ -337,7 +337,7 @@
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.section')
 	<div class="container text-center" style="margin-bottom: 30px;">
-	<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
+		<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
 	</div>
 </Section>
 <!-- end section template -->
@@ -351,7 +351,13 @@
 	</div>
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.sectionMobile')
+	<br>
+	<div class="container text-center" style="margin-bottom: 10px;">
+		<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
+	</div>
 </section>
+
+
 
 <!-- end section template mobile -->
 
@@ -419,7 +425,7 @@
 	   @foreach ($ouer_client as $ouer_client)   
 			<div class="slide">
 				<a href="{{$ouer_client->url}}" target="_blank">
-					<img src="/images/{{$ouer_client->image}}">
+					<img class="lazyloaded" data-src="/images/{{$ouer_client->image}}">
 				</a>
 			</div>
 	   @endforeach
