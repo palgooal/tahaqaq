@@ -20,7 +20,7 @@
 			الرجوع الى الرئيسية</a>
 	</div>
 	<form action="">
-		<input class="form-control search-top px-5 py-3 mt-0 " type="search" placeholder="ابحث عن ما تريد" id="">
+		<input class="form-control search-top px-5 py-3 mt-0 " type="search" placeholder="ابحث عن ما تريد" id="" style="width: max-content;">
 	</form>
 </section>
 </header>
@@ -31,7 +31,7 @@
 	  <div class="u-align-center u-container-style u-expanded-width u-group u-shape-rectangle u-similar-fill u-group-1">
 		<div class="u-container-layout u-container-layout-1">
 		  <h1 class="u-text u-text-1">
-			<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"  data-page-id="9063726">{{$blogs->getTitle(App::getLocale())}}</a>
+			<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"  data-page-id="9063726" style="font-size: 28px;">{{$blogs->getTitle(App::getLocale())}}</a>
 		  </h1>
 		</div>
 	  </div>

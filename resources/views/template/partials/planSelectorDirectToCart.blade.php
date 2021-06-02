@@ -27,7 +27,7 @@
         {{-- <div class="btn primery-button start-now-btn py-2 px-5"> <a onclick="planStartNow_Click('bronze')" class="border-radius: 12px !important;">ابدء الان</a>
         </div> --}}
         <a href="https://client.tahqq.com/cart.php?a=add&pid={{$templateOne->whmcs_bronze_pid}}&carttpl=cartx" class="btn primery-button start-now-btn py-2 px-5"
-        style="border-radius: 12px !important;">أبداالان</a>
+        style="border-radius: 12px !important;">أبدا الان</a>
     </div>
     <!-- End -->
     <!-- Start  -->
