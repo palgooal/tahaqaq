@@ -2,9 +2,7 @@
 @section('meta')
 <meta name="keywords" content="">
 <meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
-<style>
 
-</style>
 @endsection
 
 
@@ -20,7 +18,7 @@
 	<div class="d-grid pt-5">
 		<div class="row pt-5">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5 ">
-				<img class="index-main-vector" src="./img/Illustration4.png" alt="">
+				<img class="index-main-vector lazyload" data-src="./img/Illustration4.png" alt="">
 			</div>
 			<div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0  wow bounceInRight" data-wow-delay="">
 				<div class="text-right ">
@@ -36,7 +34,7 @@
 				</div>
 			</div>
 			<div class="col col-lg-5 col-md-4 col-sm-11 col-xs-12  d-flex  align-items-center justify-content-center res-hide-index wow bounceInLeft">
-				<img class="index-main-vector " src="./img/Illustration4.png" alt="">
+				<img class="index-main-vector lazyload" data-src="./img/Illustration4.png" alt="">
 			</div>
 		</div>
 	</div>
@@ -48,22 +46,22 @@
 	<br/>
 	<div class="row">
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6 ">
-			<img src="newasset/img/google-adword.png" class="img-fluid" width="80%" />
+			<img data-src="newasset/img/google-adword.png" class="img-fluid lazyload" width="80%" />
 		</div>
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6 ">
-			<img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%" />
+			<img data-src="newasset/img/googleanalytic.png" class="img-fluid lazyload" width="80%" />
 		</div>
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
-			<img src="newasset/img/facebook-ads.png" width="80%" />
+			<img data-src="newasset/img/facebook-ads.png" class="lazyload" width="80%" />
 		</div>
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
-			<img src="newasset/img/mailchemp.png" width="80%" />
+			<img data-src="newasset/img/mailchemp.png" class="lazyload" width="80%" />
 		</div>
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
-			<img src="newasset/img/hotjar.png" width="80%" />
+			<img data-src="newasset/img/hotjar.png" class="lazyload" width="80%" />
 		</div>
 		<div class="col-md-3 col-lg-2 col-sm-6 col-6">
-			<img src="newasset/img/wordpress.png" width="80%" />
+			<img data-src="newasset/img/wordpress.png" class="lazyload" width="80%" />
 		</div>
 	</div>
 </section> --}}
@@ -71,11 +69,11 @@
 
     <p class="h4 top-header-heading text-right w-100 primery-color my-4">حلول تقنية متكاملة</p>
      <div class="row justify-content-center align-items-center">
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/google-adword.png" class="img-fluid" width="80%"></div>
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%"></div>
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/facebook-ads.png" width="80%"></div>
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/mailchemp.png" width="80%"></div>
-         <div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/hotjar.png" width="80%"></div>
+         <div class=" col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/google-adword.png" class="img-fluid" width="80%"></div>
+         <div class=" col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/googleanalytic.png" class="img-fluid" width="80%"></div>
+         <!--<div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/facebook-ads.png" width="80%"></div>-->
+         <div class=" col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/mailchemp.png" width="80%"></div>
+         <div class="col-md-3 col-lg-2 col-sm-6 col-6"><img src="newasset/img/hotjar.png" width="80%"></div>
          <!--<div class=" mt-5 d-flex justify-content-center align-items-center"><img src="newasset/img/wordpress.png" width="80%"></div>-->
      </div>
  </section>
@@ -295,9 +293,41 @@
 			</div>
 			<?php $counterTemp++ ?>
 		@endforeach
-
-
-
+		<!--/.First slide-->
+		<!--Second slide-->
+		<!--<div class="carousel-item">-->
+		<!--	<div class="col-md-11">-->
+		<!--		<div class="card who-card mb-2">-->
+		<!--			<div class="card-body">-->
+		<!--				<div class="d-flex justify-content-center align-items-center">-->
+		<!--					<img class="who-card-img ml-4" src="newasset/img/محمد الثبيتي.jpeg" alt="">-->
+		<!--					<div class="d-flex flex-column text-right"> <span style="font-size: 20px">محمد الثبيتي</span>-->
+		<!--						<small class="text-muted">مدير التسويق</small>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--				<p class="card-text who-card-text my-5">اطلق نسخة اوليه من منتجك بابسط طريقة واقل التكاليف ،ركز على القيمة الاساسية لمنتجك لتعلم هل السوق يهتم لمنتجك اصلا او لا ، تعرف على رغبات شريحتك المستهدفه .</p>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+		<!--/.Second slide-->
+		<!--Third slide-->{{--
+		<div class="carousel-item">
+			<div class="col-md-11">
+				<div class="card who-card mb-2">
+					<div class="card-body">
+						<div class="d-flex justify-content-center align-items-center">
+							<img class="who-card-img ml-4" src="https://source.unsplash.com/random/58×58" alt="">
+							<div class="d-flex flex-column text-right"> <span>محمد عوض </span>
+								<small class="text-muted">مؤسس شركة عكار</small>
+							</div>
+						</div>
+						<p class="card-text who-card-text my-5">تعمل منصة سلة على حماية معلومات التُجّار والمتاجر بموجب أنظمة حماية إلكترونية وتقنية ذات جودة عالية وتُحدّث بشكل مستمر ودوري.</p>
+					</div>
+				</div>
+			</div>
+		</div>--}}
+		<!--/.Third slide-->
 	</div>
 	<!--/.Slides-->
 	<!--Controls-->
@@ -317,7 +347,7 @@
 		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> -->
 	</div>
 	<div class="container">
-	<video width="400"  style=" width: 100%; height:auto; margin-left: 300px;"  controls  loop>
+	<video width="400"  style=" width: 100%; height:auto; margin-left: 300px;" poster="http://sales.tahqq.com/wp-content/uploads/2021/04/heroImg.png" controls  loop>
 		<source src="tahqq.mp4" type="video/mp4">
 		<!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
 	
@@ -337,7 +367,7 @@
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.section')
 	<div class="container text-center" style="margin-bottom: 30px;">
-		<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
+	<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
 	</div>
 </Section>
 <!-- end section template -->
@@ -351,13 +381,11 @@
 	</div>
 	<div class="mr-5 pr-5"></div>
 	@include('template.partials.sectionMobile')
-	<br>
+		<br>
 	<div class="container text-center" style="margin-bottom: 10px;">
 		<a class="button index-sign-button py-2 px-5" role="button" href="/template">شاهد جميع القوالب</a>
 	</div>
 </section>
-
-
 
 <!-- end section template mobile -->
 
@@ -388,6 +416,19 @@
 		</div>
 	</div>
 </section>--}}
+<!--
+<section class="content-section bg-primary text-white  py-5">
+	<div class="container text-center">
+		<h3 class="mb-4 title-forsa">جرب مجاناً </h3>
+		<p class="title-forsabody text-center mt-0">مع تحقق أنت من يصنع الفرق، يمكنك الآن اختبار مشروعك وإطلاقه خلال دقائق 
+استغل العرض خلال فترة الإنطلاق واحصل على شهر اشتراك مجاناً</p>
+		<br/>
+		{{--<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} <a class="button index-sign-button py-2 px-5" role="button" href="/template">اشترك شهر مجاناً</a>
+	</div>
+</section>
+-->
+
+
 <section class="content-section bg-primary text-white  py-5">
 	<div class="container text-center">
 		<h3 class="mb-4 title-forsa">جرب شهر مجانا</h3>
@@ -396,21 +437,16 @@
 كيف ؟		
 		</p>
 		<p class="title-forsabody text-center mt-0" style="word-spacing: 20px;">
-					<span>
-						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
-						<span>اطلق</span>
-					</span>
-					<span>
-						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
-						<span>سوق</span>
-					</span>
-					<span>
-						<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea; font-size: 40px;"> </i>
-						<span>تحقق</span>
-					</span>
-					
+		            <i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea;"> </i>
+					اطلق
 				
-		
+					<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea;"> </i>
+					سوق
+				
+			
+					<i class="fas fa-caret-left" style="margin-left: -18px; color: #f582ea;"> </i>
+					تحقق
+				
 		</p>
 		<br/>{{--
 		<h3 class="mb-4">اشترك معنا لمدة شهر مجانا</h3> --}} 
@@ -418,26 +454,28 @@
 	</div>
 </section>
 
+
 <section class="py-5">
 <div class="container">
   <h2 class="h3 primery-color font-weight-bold text-center">من عملائنا</h2>
    <section class="customer-logos slider">
-	   @foreach ($ouer_client as $ouer_client)   
-	   {{-- <img src="/images/{{$ouer_client->image}}"> --}}
+	   @foreach ($ouer_clients as $ouer_client)   
 			<div class="slide">
 				<a href="{{$ouer_client->url}}" target="_blank">
-					<img class="lazyloaded" data-src="/images/{{$ouer_client->image}}" src="/images/{{$ouer_client->image}}">
+                    <img class="lazyload"  data-src="/images/{{$ouer_client->image}}">
 				</a>
 			</div>
 	   @endforeach
-      {{-- <div class="slide"><a href="https://www.mosemapp.com/" target="_blank"><img src="/images/images/qtHgYx2AOnk9xTenvslDWjZSslwOkL1MAbUEwTur.png"></a></div>
+      <!-- <div class="slide"><a href="https://www.mosemapp.com/" target="_blank"><img src="/images/images/qtHgYx2AOnk9xTenvslDWjZSslwOkL1MAbUEwTur.png"></a></div>
       <div class="slide"><a href="https://www.lightexpressions.tahqq.com/" target="_blank"><img src="/images/images/gnrR0A4kFUXElJEUQ2mZuUKIsdNsVTQj3lq4cgyr.png"></a></div>
       <div class="slide"><a href="https://www.astreh.app/" target="_blank"><img src="/images/images/hzqDKtfMA3ZplfvIF1tBsdRk62Tq5PeVohuYAAYt.png"></a></div>
-      <div class="slide"><a href="https://www.ready-app.com/" target="_blank"><img src="/images/images/4grTLRQqmJcRqS2TzYVXLcuKkldNPcBkIYaDsRah.png"></a></div> --}}
+      <div class="slide"><a href="https://www.ready-app.com/" target="_blank"><img src="/images/images/4grTLRQqmJcRqS2TzYVXLcuKkldNPcBkIYaDsRah.png"></a></div> -->
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
       <!--<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>-->
    </section>
+</div>
+</section> 
 </div>
 </section> 
 <script>
@@ -476,7 +514,7 @@
 			<div class="card custom-card p-0" style="max-width: 500px;">
 				<div class="row no-gutters">
 					<div class="col-sm-5 image-backgrond overflow-hidden" style="/*! background : url('/images/images/D2WYe1IO0HzismIUI58UXto186GtLkpLsm9MEw35.png') ; */"> <a href="/blogs/{{$blog->slug}}" class="card-img-hover">
-<img src="/images/{{$blog->image}}" style="height: 191px;width: 100%;">
+<img data-src="/images/{{$blog->image}}"  class="lazyload" style="height: 191px;width: 100%;">
 
                       </a>
 					</div>
@@ -501,4 +539,4 @@
 				</div>
 			</div>
 		</div>@endforeach</div>
-</div>@endsection 
+</div>@endsection

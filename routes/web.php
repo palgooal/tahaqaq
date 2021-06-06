@@ -112,7 +112,7 @@ Route::post('/pg-admin/pinSaid/{id}/{isChecked}', 'SaidController@pinSaid' );
 
 
 //our client
-Route::resource('/pg-admin/ourClient','OuerClientController');
+Route::resource('/pg-admin/ourClient','OuerClientController')->middleware('auth');
 
 // logout
 Route::get('pg-admin/logout', function () {

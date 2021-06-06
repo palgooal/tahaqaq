@@ -57,7 +57,7 @@
 										</tr>
 									</thead>
 									<tbody>
-                                        @foreach ($our_client as $index=>$our_client)
+                                        @foreach ($our_clients as $index=>$our_client)
 										<tr>
 											<th scope="row"></th>
 											<td>{{$our_client->url}}</td>
@@ -65,23 +65,21 @@
                                                 <img src="/images/{{$our_client->image}}" width="150px" height="150px">
                                             </td>
 											<td>
-												<button type="button" class="btn btn-danger" data-clientid="{{$our_client->id}}" data-toggle="modal" data-target="#deletecontact">حذف</button>
+												<button type="button" class="btn btn-danger" data-clientid="{{$our_client->id}}" data-toggle="modal" data-target="#deleteclient">حذف</button>
 											</td>
                                             @endforeach
                                         </tr>
 										<!-- Button trigger modal -->
 										<!-- Modal -->
-										<div class="modal fade" id="deletecontact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+										<div class="modal fade" id="deleteclient" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
 														</button>
 														<h4 class="modal-title" id="myModalLabel">تحذير من حذف الصفحة</h4>
 													</div>
-													<form action="/pg-admin/ourClient" method="put">
-														@method('delete') @csrf
+													<form action="{{route('ourClient.destroy', 'test')}}" method="post">@method('delete') @csrf
 														<div class="modal-body">هل انت متأكد انك تريد الحذف
 															<input type="hidden" name="client_id" id="client_id" value="">
 														</div>

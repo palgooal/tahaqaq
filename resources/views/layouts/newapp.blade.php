@@ -69,6 +69,7 @@
     <script>new WOW().init();</script>
     <script src="newasset/js/signup.js"></script>
     <script src="newasset/js/index.js"></script>
+    <script src="newasset/js/lazysizes.min.js" async></script>
      @endenv
 
     @env('local')
@@ -80,7 +81,7 @@
     <script src="{{asset('newasset/js/signup.js')}}"></script>
     <script src="newasset/js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    
+    <script src="newasset/js/lazysizes.min.js" async></script>
     @endenv
 
     @yield('footerJs')

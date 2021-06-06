@@ -92,7 +92,7 @@ $('#deleteuser').on('show.bs.modal', function (event) {
 
 
         //our client
-        $('#deletecomment').on('show.bs.modal', function (event) {
+        $('#deleteclient').on('show.bs.modal', function (event) {
 
             var button = $(event.relatedTarget)
             var client_id = button.data('clientid')

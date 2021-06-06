@@ -18,7 +18,7 @@ class OuerClientController extends Controller
         $our_client = ouer_client::orderBy('created_at','DESC')->get();
         return view('admin.our_client.index_our_client')
         ->with('users',$users)
-        ->with('our_client',$our_client);
+        ->with('our_clients',$our_client);
     }
 
     /**
@@ -91,7 +91,7 @@ class OuerClientController extends Controller
      */
     public function destroy(Request $request)
     {
-        $client = ouer_client::findOrFail($request->id);
+        $client = ouer_client::findOrFail($request->client_id);
         $client->delete();
         return back()->with('delete',trans('تم الحذف  بنجاح'));
 
