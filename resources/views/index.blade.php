@@ -423,9 +423,10 @@
   <h2 class="h3 primery-color font-weight-bold text-center">من عملائنا</h2>
    <section class="customer-logos slider">
 	   @foreach ($ouer_client as $ouer_client)   
+	   {{-- <img src="/images/{{$ouer_client->image}}"> --}}
 			<div class="slide">
 				<a href="{{$ouer_client->url}}" target="_blank">
-					<img class="lazyloaded" data-src="/images/{{$ouer_client->image}}">
+					<img class="lazyloaded" data-src="/images/{{$ouer_client->image}}" src="/images/{{$ouer_client->image}}">
 				</a>
 			</div>
 	   @endforeach
