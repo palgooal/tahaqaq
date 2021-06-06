@@ -65,7 +65,7 @@
                                                 <img src="/images/{{$our_client->image}}" width="150px" height="150px">
                                             </td>
 											<td>
-												<button type="button" class="btn btn-danger" data-contactid="" data-toggle="modal" data-target="#deletecontact">حذف</button>
+												<button type="button" class="btn btn-danger" data-clientid="{{$our_client->id}}" data-toggle="modal" data-target="#deletecontact">حذف</button>
 											</td>
                                             @endforeach
                                         </tr>
@@ -75,13 +75,15 @@
 											<div class="modal-dialog" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
 														</button>
 														<h4 class="modal-title" id="myModalLabel">تحذير من حذف الصفحة</h4>
 													</div>
-													<form action="{{route('Contactus.destroy', 'test')}}" method="post">@method('delete') @csrf
+													<form action="/pg-admin/ourClient" method="put">
+														@method('delete') @csrf
 														<div class="modal-body">هل انت متأكد انك تريد الحذف
-															<input type="hidden" name="contact_id" id="contact_id" value="">
+															<input type="hidden" name="client_id" id="client_id" value="">
 														</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-default" data-dismiss="modal">لا ارجع للقائمة</button>

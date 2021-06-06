@@ -89,8 +89,11 @@ class OuerClientController extends Controller
      * @param  \App\Model\ouer_client  $ouer_client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ouer_client $ouer_client)
+    public function destroy(Request $request)
     {
-        //
+        $client = ouer_client::findOrFail($request->id);
+        $client->delete();
+        return back()->with('delete',trans('تم الحذف  بنجاح'));
+
     }
 }
