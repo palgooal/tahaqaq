@@ -18,7 +18,7 @@
 	<div class="d-grid pt-5">
 		<div class="row pt-5">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5 ">
-				<img class="index-main-vector lazyload" data-src="./img/Illustration4.png" alt="">
+				<img class="index-main-vector lazyload" data-src="newasset/img/Illustration4.png" alt="">
 			</div>
 			<div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0  wow bounceInRight" data-wow-delay="">
 				<div class="text-right ">
@@ -141,7 +141,7 @@
 	<div class="d-grid ">
 		<div class="row pt-5 wow bounceInDown">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5">
-				<img class="index-main-vector " src="./img/Image-Browser-1.png" alt="">
+				<img class="index-main-vector " src="./img/google.png" alt="">
 			</div>
 			<div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0 wow bounceInDown">
 				<div class="d-grid ">
@@ -481,7 +481,7 @@
 <script>
 	$(document).ready(function(){
     $('.customer-logos').slick({
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1500,
