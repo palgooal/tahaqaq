@@ -99,7 +99,7 @@
 			<div class="ssh">
 				<div class="p-header mt-5">المميزات الرئيسية</div>
 				<div class="p-table bg-color">
-					<div class="p-cell">صفحة الهبوط</div>
+					<div class="p-cell">موقع الكتروني</div>
 					<div class="p-cell">
 						<img class="res-tick" src="./img/ture.png" alt="">
 					</div>

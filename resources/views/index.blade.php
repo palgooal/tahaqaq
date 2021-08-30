@@ -1,7 +1,11 @@
 @extends('layouts.newapp')
 @section('meta')
 <meta name="keywords" content="">
-<meta name="description" content="% 90 من المشاريع تفشل بسبب عدم التحقق من فكرة المشروع كن من أصحاب المشاريع الناجحة من خلال تحقق">
+<meta name="description" content="خذ افكارك الى السوق
+
+حول 
+فكرتك إلى منتج في أقل من 10 دقائق، منصة "تحقق" أسهل وأسرع أداة لدخول السوق والوصول لجمهورك المستهدف">
+<meta property="og:image" content="https://tahqq.com/public/img/logo.png">
 
 @endsection
 
@@ -18,7 +22,7 @@
 	<div class="d-grid pt-5">
 		<div class="row pt-5">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5 ">
-				<img class="index-main-vector lazyload" data-src="newasset/img/Illustration4.png" alt="">
+				<img class="index-main-vector lazyload" data-src="./img/Illustration4.png" alt="">
 			</div>
 			<div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0  wow bounceInRight" data-wow-delay="">
 				<div class="text-right ">
@@ -141,7 +145,7 @@
 	<div class="d-grid ">
 		<div class="row pt-5 wow bounceInDown">
 			<div class="col col-lg-5 col-md-4 col-sm-12 col-xs-12  res-show mb-3 mt-5">
-				<img class="index-main-vector " src="./img/google.png" alt="">
+				<img class="index-main-vector " src="./img/Image-Browser-1.png" alt="">
 			</div>
 			<div class="col right-col col-lg-6 col-md-7 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center offset-lg-1 offset-md-1 offset-sm-0 offset-xs-0 wow bounceInDown">
 				<div class="d-grid ">
@@ -347,11 +351,28 @@
 		<p class="h3 primery-color my-4">{{ __('index.What is important is not the idea, the important thing is to verify it.') }}</p> -->
 	</div>
 	<div class="container">
-	<video width="400"  style=" width: 100%; height:auto; margin-left: 300px;" poster="http://sales.tahqq.com/wp-content/uploads/2021/04/heroImg.png" controls  loop>
+	<!--<video width="400"  style=" width: 100%; height:auto; margin-left: 300px;" poster="http://sales.tahqq.com/wp-content/uploads/2021/04/heroImg.png" controls  loop>
 		<source src="tahqq.mp4" type="video/mp4">
-		<!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
-	
-	  </video>
+	  </video>-->
+	  <style>
+	      #iframYoutube{
+	          width: 90%;
+	          height: 430px;
+	          display: table;
+	          margin: auto;
+	          
+	      }
+	      @media only screen and (max-width: 600px) {
+	          #iframYoutube{
+	              width: 100%;
+	              height: 366px;
+	              
+	          }
+	      }
+	  </style>
+	  <iframe src="https://www.youtube.com/embed/LOalG1USGYM" id="iframYoutube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	      
+	  </iframe>
 	  </div>
 	<!-- <div class="how-to-do w-100 m-auto ">
 	
@@ -431,7 +452,7 @@
 
 <section class="content-section bg-primary text-white  py-5">
 	<div class="container text-center">
-		<h3 class="mb-4 title-forsa">جرب شهر مجانا</h3>
+		<h3 class="mb-4 title-forsa" style="line-height: 1.8;">فرصة لا تعوض !!<br> 50% كوبون خصم عند التسجيل المبكر</h3>
 		<p class="title-forsabody text-center mt-0">
 			انت على وشك تحقيق حلمك في انطلاق مشروعك الرقمي بدقائق فقط ومجاناً !
 كيف ؟		
